@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Codex Auction Relay Settings</title>
+    <link rel="stylesheet" href="extension.css">
+  </head>
+  <body class="options">
+    <main>
+      <div class="brand"><span>W</span><div><strong>Auction Relay Settings</strong><small>Local connection</small></div></div>
+      <label for="app-base-url">Auction Room URL</label>
+      <input id="app-base-url" type="url" spellcheck="false" placeholder="http://localhost:3001">
+      <p class="hint">Only localhost and 127.0.0.1 are allowed in this local version.</p>
+      <div class="actions"><button id="save">Save</button><button id="test" class="secondary">Test connection</button></div>
+      <p id="result" role="status"></p>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

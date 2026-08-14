@@ -1,0 +1,7 @@
+.next/
+node_modules/
+data/*.json
+data/*.ndjson
+!.gitkeep
+.DS_Store
+*.log

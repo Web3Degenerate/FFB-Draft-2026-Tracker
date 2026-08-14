@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Codex Auction Relay</title>
+    <link rel="stylesheet" href="extension.css">
+  </head>
+  <body class="popup">
+    <main>
+      <div class="brand"><span>W</span><div><strong>Auction Relay</strong><small>ESPN → Codex</small></div></div>
+      <section class="status-card">
+        <div class="status-line"><i id="status-dot"></i><strong id="status-title">Checking…</strong></div>
+        <p id="status-message">Reading extension status.</p>
+        <code id="base-url"></code>
+      </section>
+      <p class="warning" id="warning" hidden></p>
+      <button id="open-options">Settings</button>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

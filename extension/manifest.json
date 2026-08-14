@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Codex Fantasy Auction Relay",
+  "version": "0.2.0",
+  "description": "Read-only bridge from ESPN auction drafts to the local Codex Auction Room.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "http://localhost/*",
+    "http://127.0.0.1/*",
+    "https://lm-api-reads.fantasy.espn.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Codex Fantasy Auction Relay",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://fantasy.espn.com/football/draft*"],
+      "js": ["sale-parser.js", "relay.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://fantasy.espn.com/football/draft*"],
+      "js": ["socket-main.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
