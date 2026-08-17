@@ -76,7 +76,7 @@ export async function fetchPlayers(config: DraftConfig): Promise<Player[]> {
       position,
       nflTeam: NFL_TEAMS[player.proTeamId ?? 0] ?? "FA",
       projectedPoints: Number(projection.toFixed(1)),
-      espnValue: Math.max(1, Math.round(ranks.auctionValue ?? 1)),
+      espnKeeperValue: Math.max(1, Math.round(ranks.auctionValue ?? 1)),
       overallRank: ranks.rank ?? index + 1,
     }];
   });

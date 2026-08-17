@@ -7,7 +7,10 @@ export type Player = {
   position: Position;
   nflTeam: string;
   projectedPoints: number;
-  espnValue: number;
+  projectionSource?: "espn" | "fantasy-index";
+  fantasyIndexRank?: number;
+  espnKeeperValue: number;
+  espnAuctionValue?: number;
   overallRank: number;
   positionRank: number;
   tier: string;
@@ -73,6 +76,9 @@ export type DraftState = {
   keepers: Keeper[];
   nomination: Nomination;
   tierOverrides: Record<string, string>;
+  tierOrders: Record<string, number[]>;
+  watchList: number[];
+  watchListOrders: Partial<Record<Position, number[]>>;
   relay: RelayStatus;
   updatedAt: string;
 };

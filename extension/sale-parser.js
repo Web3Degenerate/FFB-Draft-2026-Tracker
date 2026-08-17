@@ -26,5 +26,39 @@
     return [...root.querySelectorAll("li.pick-message__container")].map(parseSaleRow).filter(Boolean);
   }
 
-  globalThis.CodexFfbSaleParser = { clean, identity, number, parseSaleRow, readSales };
+  function parseAuctionValueRow(row, priceIndex) {
+    const name = clean(row.querySelector(".playerinfo__playername")?.textContent);
+    if (!name) return null;
+    const cells = [...row.children];
+    const priceText = priceIndex >= 0 ? clean(cells[priceIndex]?.textContent) : "";
+    const priceMatch = priceText.match(/^\$(\d+)$/);
+    if (!priceMatch) return null;
+    const image = row.querySelector('img[src*="full/"]');
+    const idMatch = image?.getAttribute("src")?.match(/full\/(\d+)\.png/);
+    return {
+      playerId: idMatch ? Number(idMatch[1]) : undefined,
+      playerName: name,
+      amount: Number(priceMatch[1]),
+    };
+  }
+
+  function readAuctionValues(root = document) {
+    const values = new Map();
+    [...root.querySelectorAll("table")].forEach((table) => {
+      const headerRows = [...table.querySelectorAll("thead tr")];
+      const header = headerRows.at(-1);
+      if (!header) return;
+      const headers = [...header.children].map((cell) => clean(cell.textContent).toLowerCase());
+      const priceIndex = headers.findIndex((label) => label === "$" || label === "value" || label === "auction value");
+      if (priceIndex < 0) return;
+      table.querySelectorAll("tbody tr").forEach((row) => {
+        const value = parseAuctionValueRow(row, priceIndex);
+        if (!value) return;
+        values.set(value.playerId ? `id:${value.playerId}` : `name:${identity(value.playerName)}`, value);
+      });
+    });
+    return [...values.values()];
+  }
+
+  globalThis.CodexFfbSaleParser = { clean, identity, number, parseSaleRow, readSales, parseAuctionValueRow, readAuctionValues };
 })();

@@ -6,14 +6,17 @@ import {
 } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { FantasyIndexRank } from "@/app/components/fantasy-index-rank";
 import { availablePlayers, calculateInflation, calculateMarketMultiplier, teamSnapshots, tierSnapshots } from "@/lib/auction";
 import { teamDisplayName } from "@/lib/teams";
+import { sortPlayersByTierOrder } from "@/lib/tier-order";
 import type { DashboardPayload, DraftState, Player, TeamSnapshot } from "@/lib/types";
 import { POSITIONS } from "@/lib/types";
 
 type Toast = { kind: "success" | "error"; text: string } | null;
 
 const money = (value: number) => `$${Math.round(value)}`;
+const auctionMoney = (player: Player) => player.espnAuctionValue === undefined ? "—" : money(player.espnAuctionValue);
 const positionClass = (position: string) => `pos pos-${position.toLowerCase()}`;
 
 async function jsonFetch<T>(url: string, init?: RequestInit): Promise<T> {
@@ -81,8 +84,8 @@ export default function Home() {
     if (!ready) return;
     const timer = window.setInterval(async () => {
       try {
-        const result = await jsonFetch<{ state: DraftState }>("/api/state?stateOnly=1");
-        setPayload((current) => current ? { ...current, state: result.state } : current);
+        const result = await jsonFetch<DashboardPayload>("/api/state?stateOnly=1&includePlayers=1");
+        setPayload(result);
       } catch { /* keep the last usable snapshot */ }
     }, 1500);
     return () => window.clearInterval(timer);
@@ -108,6 +111,7 @@ export default function Home() {
 
   const state = payload?.state;
   const players = useMemo(() => payload?.players ?? [], [payload?.players]);
+  const playerById = useMemo(() => new Map(players.map((player) => [player.id, player])), [players]);
   const available = useMemo(() => state ? availablePlayers(state, players) : [], [state, players]);
   const teams = useMemo(() => state ? teamSnapshots(state) : [], [state]);
   const tiers = useMemo(() => state ? tierSnapshots(state, players) : [], [state, players]);
@@ -125,20 +129,21 @@ export default function Home() {
     if (!nomineeId) return;
     const timer = window.setTimeout(() => {
       const player = players.find((item) => item.id === nomineeId);
-      setBid(askingBid ?? player?.espnValue ?? 1);
+      setBid(askingBid ?? player?.espnAuctionValue ?? player?.espnKeeperValue ?? 1);
     }, 0);
     return () => window.clearTimeout(timer);
   }, [askingBid, nomineeId, players]);
 
   const tierNames = useMemo(() => ["ALL", ...new Set(available.filter((player) => position === "ALL" || player.position === position).map((player) => player.tier))], [available, position]);
   const visiblePlayers = useMemo(() => {
+    if (!state) return [];
     const query = search.trim().toLowerCase();
-    return available
+    return sortPlayersByTierOrder(available
       .filter((player) => position === "ALL" || player.position === position)
       .filter((player) => tierFilter === "ALL" || player.tier === tierFilter)
-      .filter((player) => !query || `${player.name} ${player.nflTeam} ${player.position} ${player.tier}`.toLowerCase().includes(query))
+      .filter((player) => !query || `${player.name} ${player.nflTeam} ${player.position} ${player.tier}`.toLowerCase().includes(query)), state)
       .slice(0, 160);
-  }, [available, position, tierFilter, search]);
+  }, [available, position, tierFilter, search, state]);
   const searchSuggestions = useMemo(() => {
     if (!search.trim()) return [];
     const query = search.trim().toLowerCase();
@@ -160,7 +165,7 @@ export default function Home() {
 
   const nominate = (player: Player) => {
     setSearch("");
-    setBid(Math.max(1, player.espnValue));
+    setBid(Math.max(1, player.espnAuctionValue ?? player.espnKeeperValue));
     action({ type: "nominate", playerId: player.id });
   };
 
@@ -188,7 +193,7 @@ export default function Home() {
           <div><h1>Auction Room</h1><p>{state.config.leagueName} · {state.config.seasonId}</p></div>
         </div>
         <div className="header-actions">
-          <nav className="manager-nav"><Link href="/keepers">Keepers</Link><Link href="/tiers">Tier editor</Link></nav>
+          <nav className="manager-nav"><Link href="/keepers">Keepers</Link><Link href="/tiers">Tier editor</Link><Link href="/watch-list">Watch list</Link></nav>
           <button className={`relay-pill ${relayFresh ? "live" : ""}`} onClick={() => setShowRelay(true)}>
             <Broadcast weight="fill" /> {relayLabel}
           </button>
@@ -214,11 +219,12 @@ export default function Home() {
                   <span className="eyebrow"><Target weight="fill" /> ON THE BLOCK {state.nomination?.source === "espn-relay" && <em>LIVE</em>}</span>
                   <div className="nominee-row">
                     <span className={positionClass(nominee.position)}>{nominee.position}</span>
-                    <div><h2>{nominee.name}</h2><p>{nominee.nflTeam} · {nominee.tier} · #{nominee.positionRank} {nominee.position}</p></div>
+                    <div><h2>{nominee.name}</h2><p>{nominee.nflTeam} · {nominee.tier} · #{nominee.positionRank} {nominee.position}<FantasyIndexRank rank={nominee.fantasyIndexRank} /></p></div>
                   </div>
                 </div>
                 <div className="nominee-market">
-                  <div><span>ESPN value</span><strong>{money(nominee.espnValue)}</strong></div>
+                  <div><span>ESPN Auction $</span><strong>{auctionMoney(nominee)}</strong></div>
+                  <div><span>ESPN Keeper $</span><strong>{money(nominee.espnKeeperValue)}</strong></div>
                   <div><span>Projection</span><strong>{nominee.projectedPoints.toFixed(1)}</strong></div>
                   <div className={selectedTier?.pressure === "LAST CALL" || selectedTier?.pressure === "TIGHT" ? "danger" : ""}>
                     <span>{nominee.tier} supply</span><strong>{selectedTier?.playersLeft ?? "—"} left</strong>
@@ -249,7 +255,7 @@ export default function Home() {
                 <kbd>/</kbd>
                 {searchSuggestions.length > 0 && (
                   <div className="suggestions">
-                    {searchSuggestions.map((player) => <button key={player.id} onClick={() => nominate(player)}><span className={positionClass(player.position)}>{player.position}</span><span><strong>{player.name}</strong><small>{player.nflTeam} · {player.tier}</small></span><b>{money(player.espnValue)}</b></button>)}
+                    {searchSuggestions.map((player) => <button key={player.id} onClick={() => nominate(player)}><span className={positionClass(player.position)}>{player.position}</span><span><strong>{player.name}</strong><small>{player.nflTeam} · {player.tier}<FantasyIndexRank rank={player.fantasyIndexRank} /></small></span><b title={`ESPN Keeper ${money(player.espnKeeperValue)}`}>{auctionMoney(player)}</b></button>)}
                   </div>
                 )}
               </div>
@@ -260,16 +266,17 @@ export default function Home() {
             </div>
             <div className="player-table-wrap">
               <table className="player-table">
-                <thead><tr><th>RK</th><th>PLAYER</th><th>TIER</th><th>PROJ</th><th>ESPN $</th><th>MARKET $</th><th /></tr></thead>
+                <thead><tr><th>RK</th><th>PLAYER</th><th>TIER</th><th>PROJ</th><th>ESPN AUCTION $</th><th>ESPN KEEPER $</th><th>MARKET $</th><th /></tr></thead>
                 <tbody>{visiblePlayers.map((player) => {
                   const snapshot = tiers.find((tier) => tier.tier === player.tier);
                   return <tr key={player.id} onDoubleClick={() => nominate(player)}>
                     <td className="rank">{player.positionRank}</td>
-                    <td><div className="player-cell"><span className={positionClass(player.position)}>{player.position}</span><span><strong>{player.name}</strong><small>{player.nflTeam}</small></span></div></td>
+                    <td><div className="player-cell"><span className={positionClass(player.position)}>{player.position}</span><span><strong>{player.name}</strong><small>{player.nflTeam}<FantasyIndexRank rank={player.fantasyIndexRank} /></small></span></div></td>
                     <td><span className={`tier-chip pressure-${snapshot?.pressure.toLowerCase().replace(" ", "-")}`}>{player.tier}<small>{snapshot?.playersLeft} left</small></span></td>
                     <td className="mono">{player.projectedPoints.toFixed(1)}</td>
-                    <td className="mono">{money(player.espnValue)}</td>
-                    <td className="mono market-value">{money(1 + Math.max(0, player.espnValue - 1) * marketMultiplier)}</td>
+                    <td className="mono auction-value">{auctionMoney(player)}</td>
+                    <td className="mono keeper-value">{money(player.espnKeeperValue)}</td>
+                    <td className="mono market-value">{money(1 + Math.max(0, player.espnKeeperValue - 1) * marketMultiplier)}</td>
                     <td><button className="nominate-button" onClick={() => nominate(player)}>Nominate</button></td>
                   </tr>;
                 })}</tbody>
@@ -312,7 +319,8 @@ export default function Home() {
             <div className="recent-list">
               {state.sales.length ? state.sales.slice().reverse().slice(0, 8).map((sale) => {
                 const team = state.teams.find((item) => item.id === sale.teamId);
-                return <div className="recent-row" key={sale.id}><span className={positionClass(sale.position)}>{sale.position}</span><span><strong>{sale.playerName}</strong><small>{team ? teamDisplayName(team) : "Unknown team"}</small></span><b>{money(sale.amount)}</b></div>;
+                const salePlayer = playerById.get(sale.playerId);
+                return <div className="recent-row" key={sale.id}><span className={positionClass(sale.position)}>{sale.position}</span><span><strong>{sale.playerName}</strong><small>{team ? teamDisplayName(team) : "Unknown team"}<FantasyIndexRank rank={salePlayer?.fantasyIndexRank} /></small></span><b>{money(sale.amount)}</b></div>;
               }) : <Empty>Sales appear here as the draft moves.</Empty>}
             </div>
           </div>

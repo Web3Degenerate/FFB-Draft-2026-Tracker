@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { assertValidSale } from "@/lib/auction";
-import { getPlayers, getState, mutateState, replaceLeague } from "@/lib/store";
+import { getPlayers, getState, mutateState, replaceLeague, saveEspnAuctionValues } from "@/lib/store";
 import type { Position, Sale } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -11,6 +11,7 @@ type RelayPayload = {
   league?: { leagueId: number; seasonId: number; myTeamId: number };
   nomination?: { playerId?: number; playerName?: string; askingBid?: number } | null;
   sales?: Array<{ playerId?: number; playerName: string; position?: Position; teamName: string; amount: number }>;
+  auctionValues?: Array<{ playerId?: number; playerName: string; amount: number }>;
 };
 
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "Content-Type", "Access-Control-Allow-Methods": "POST, OPTIONS" };
@@ -52,6 +53,16 @@ export async function POST(request: NextRequest) {
     } else {
       players = await getPlayers();
     }
+    const resolvedAuctionValues = (payload.auctionValues ?? []).flatMap((incoming) => {
+      const player = players.find((item) => item.id === incoming.playerId)
+        ?? players.find((item) => normalize(item.name) === normalize(incoming.playerName));
+      const amount = Number(incoming.amount);
+      if (!player || !Number.isInteger(amount) || amount < 0 || amount > 200) return [];
+      return [{ playerId: player.id, playerName: player.name, amount }];
+    });
+    const auctionValuesChanged = resolvedAuctionValues.length
+      ? await saveEspnAuctionValues((await getState()).config, resolvedAuctionValues)
+      : 0;
     let imported = 0;
     const skipped: Array<{ player: string; reason: string }> = [];
     const saved = await mutateState((state) => {
@@ -101,7 +112,15 @@ export async function POST(request: NextRequest) {
         }
       }
     });
-    return NextResponse.json({ ok: true, sales: saved.sales.length, received: payload.sales?.length ?? 0, imported, skipped }, { headers: cors });
+    return NextResponse.json({
+      ok: true,
+      sales: saved.sales.length,
+      received: payload.sales?.length ?? 0,
+      imported,
+      skipped,
+      auctionValuesReceived: resolvedAuctionValues.length,
+      auctionValuesChanged,
+    }, { headers: cors });
   } catch (error) {
     return NextResponse.json({ error: error instanceof Error ? error.message : "Relay failed" }, { status: 400, headers: cors });
   }

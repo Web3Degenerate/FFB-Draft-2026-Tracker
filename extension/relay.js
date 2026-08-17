@@ -1,10 +1,11 @@
 /* global chrome */
 (() => {
-  const VERSION = "0.2.0";
+  const VERSION = "0.3.0";
   const parser = globalThis.CodexFfbSaleParser;
   if (!parser) return;
 
   const socketFrames = [];
+  const auctionValues = new Map();
   let socketFlushActive = false;
   let lastTeamSyncAt = 0;
 
@@ -40,10 +41,13 @@
   async function pulse() {
     const nomination = readNomination();
     const sales = parser.readSales().filter((sale) => parser.identity(sale.playerName) !== parser.identity(nomination?.playerName));
+    parser.readAuctionValues().forEach((value) => {
+      auctionValues.set(value.playerId ? `id:${value.playerId}` : `name:${parser.identity(value.playerName)}`, value);
+    });
     try {
       const result = await chrome.runtime.sendMessage({
         type: "relay-pulse",
-        payload: { type: "snapshot", transport: "extension", league: leagueFromLocation(), nomination, sales },
+        payload: { type: "snapshot", transport: "extension", league: leagueFromLocation(), nomination, sales, auctionValues: [...auctionValues.values()] },
       });
       if (result?.skipped?.length) console.warn("Codex Auction Relay skipped sales:", result.skipped);
       if (Date.now() - lastTeamSyncAt >= 60_000) {

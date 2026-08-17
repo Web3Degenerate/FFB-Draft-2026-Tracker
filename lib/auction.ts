@@ -45,10 +45,10 @@ export function availablePlayers(state: DraftState, players: Player[]): Player[]
 export function calculateInflation(state: DraftState, players: Player[]): number {
   const teams = teamSnapshots(state);
   const premiumCash = teams.reduce((sum, team) => sum + Math.max(0, team.budgetLeft - team.spotsLeft), 0);
-  const premiumValue = availablePlayers(state, players).reduce((sum, player) => sum + Math.max(0, player.espnValue - 1), 0);
+  const premiumValue = availablePlayers(state, players).reduce((sum, player) => sum + Math.max(0, player.espnKeeperValue - 1), 0);
   if (premiumValue <= 0) return 1;
   const initialPremiumCash = state.teams.length * Math.max(0, state.config.budget - state.config.rosterSize);
-  const initialPremiumValue = players.reduce((sum, player) => sum + Math.max(0, player.espnValue - 1), 0);
+  const initialPremiumValue = players.reduce((sum, player) => sum + Math.max(0, player.espnKeeperValue - 1), 0);
   const initialRatio = initialPremiumValue > 0 ? initialPremiumCash / initialPremiumValue : 1;
   return (premiumCash / premiumValue) / initialRatio;
 }
@@ -56,7 +56,7 @@ export function calculateInflation(state: DraftState, players: Player[]): number
 export function calculateMarketMultiplier(state: DraftState, players: Player[]): number {
   const teams = teamSnapshots(state);
   const premiumCash = teams.reduce((sum, team) => sum + Math.max(0, team.budgetLeft - team.spotsLeft), 0);
-  const premiumValue = availablePlayers(state, players).reduce((sum, player) => sum + Math.max(0, player.espnValue - 1), 0);
+  const premiumValue = availablePlayers(state, players).reduce((sum, player) => sum + Math.max(0, player.espnKeeperValue - 1), 0);
   return premiumValue > 0 ? premiumCash / premiumValue : 1;
 }
 
@@ -69,7 +69,7 @@ export function tierSnapshots(state: DraftState, players: Player[]): TierSnapsho
   });
   return [...groups.entries()].map(([, group]) => {
     const first = group[0];
-    const benchmark = Math.max(1, Math.round(group.reduce((sum, p) => sum + p.espnValue, 0) / group.length));
+    const benchmark = Math.max(1, Math.round(group.reduce((sum, p) => sum + p.espnKeeperValue, 0) / group.length));
     const teamsNeeding = teams.filter((team) => team.needs.includes(first.position)).length;
     const teamsCanAfford = teams.filter((team) => team.maxBid >= benchmark).length;
     const effectiveDemand = Math.min(teamsNeeding, teamsCanAfford);

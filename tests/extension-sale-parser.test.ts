@@ -4,7 +4,8 @@ import { JSDOM } from "jsdom";
 import { describe, expect, it } from "vitest";
 
 type ParsedSale = { playerId?: number; playerName: string; position: string; teamName: string; amount: number };
-type Parser = { readSales(root: Document): ParsedSale[] };
+type AuctionValue = { playerId?: number; playerName: string; amount: number };
+type Parser = { readSales(root: Document): ParsedSale[]; readAuctionValues(root: Document): AuctionValue[] };
 
 const context: Record<string, unknown> = {};
 vm.runInNewContext(readFileSync(new URL("../extension/sale-parser.js", import.meta.url), "utf8"), context);
@@ -38,5 +39,27 @@ describe("ESPN extension sale parser", () => {
 
   it("preserves suffixed player names", () => {
     expect(parse(fixture({ id: 5, name: "Brian Robinson Jr.", position: "RB", amount: 8 }))).toMatchObject({ playerName: "Brian Robinson Jr." });
+  });
+
+  it("reads ESPN estimated prices from the Players table dollar column", () => {
+    const dom = new JSDOM(`
+      <table>
+        <thead><tr><th>Player</th><th>Pos</th><th>$</th><th>Proj</th></tr></thead>
+        <tbody><tr>
+          <td><img src="https://a.espncdn.com/i/headshots/nfl/players/full/4241389.png"><span class="playerinfo__playername">CeeDee Lamb</span></td>
+          <td>WR</td><td>$64</td><td>287.4</td>
+        </tr></tbody>
+      </table>
+    `);
+    expect(parser.readAuctionValues(dom.window.document)).toEqual([{ playerId: 4241389, playerName: "CeeDee Lamb", amount: 64 }]);
+  });
+
+  it("does not mistake a completed-picks bid column for player estimates", () => {
+    const dom = new JSDOM(`
+      <table><thead><tr><th>Player</th><th>Bid</th></tr></thead><tbody><tr>
+        <td><span class="playerinfo__playername">CeeDee Lamb</span></td><td>$64</td>
+      </tr></tbody></table>
+    `);
+    expect(parser.readAuctionValues(dom.window.document)).toEqual([]);
   });
 });
