@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { assertValidSale } from "@/lib/auction";
+import { leagueSwitchBlockReason } from "@/lib/league-switch";
 import { getPlayers, getState, mutateState, replaceLeague, saveEspnAuctionValues } from "@/lib/store";
 import type { Position, Sale } from "@/lib/types";
 
@@ -37,9 +38,10 @@ export async function POST(request: NextRequest) {
     const current = await getState();
     let players;
     if (payload.league?.leagueId && payload.league.leagueId !== current.config.leagueId) {
-      if (current.sales.length) {
+      const protectedSetup = leagueSwitchBlockReason(current);
+      if (protectedSetup) {
         return NextResponse.json({
-          error: `The app is tracking league ${current.config.leagueId}. Reset that draft before connecting league ${payload.league.leagueId}.`,
+          error: `The app is tracking league ${current.config.leagueId}, where ${protectedSetup}. It will not automatically replace that setup with league ${payload.league.leagueId}. Close the other ESPN draft tab or explicitly change leagues first.`,
           code: "LEAGUE_MISMATCH",
         }, { status: 409, headers: cors });
       }

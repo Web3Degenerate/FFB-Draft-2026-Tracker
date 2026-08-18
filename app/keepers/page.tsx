@@ -121,7 +121,7 @@ export default function KeepersPage() {
 
   return <main className="management-shell">
     <header className="management-header">
-      <div><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><span className="eyebrow">PRE-DRAFT SETUP</span><h1>Keeper Manager</h1><p>Assign up to two keepers per team. Their prices immediately reduce auction budgets and the players leave the draft pool.</p></div>
+      <div><nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/schedules" className="back-link">Schedules</Link></nav><span className="eyebrow">PRE-DRAFT SETUP</span><h1>Keeper Manager</h1><p>Assign up to two keepers per team. Their prices immediately reduce auction budgets and the players leave the draft pool.</p></div>
       <div className="management-header-tools"><button className="sync-teams-button" disabled={saving} onClick={() => void syncTeamNames()}><ArrowsClockwise /> Sync ESPN names</button><div className="management-summary"><span><strong>{state.keepers.length}</strong><small>keepers</small></span><span><strong>{money(committed)}</strong><small>committed</small></span><span><strong>{state.teams.filter((team) => state.keepers.some((keeper) => keeper.teamId === team.id)).length}</strong><small>teams set</small></span></div></div>
     </header>
 

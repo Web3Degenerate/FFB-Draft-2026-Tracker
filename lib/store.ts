@@ -3,7 +3,6 @@ import path from "node:path";
 import type { DraftConfig, DraftState, Player } from "./types";
 import { fetchLeague, fetchPlayers } from "./espn";
 import { mergeFantasyIndexRankings, type FantasyIndexSnapshot } from "./fantasy-index";
-import { carryTeamAliases } from "./teams";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const STATE_PATH = path.join(DATA_DIR, "draft-state.json");
@@ -167,13 +166,12 @@ export async function replaceLeague(config: DraftConfig): Promise<{ state: Draft
   const current = await getState();
   const league = await fetchLeague(config);
   const players = await fetchPlayers({ ...config, leagueName: league.name, budget: league.budget, rosterSize: league.rosterSize });
-  const teamIds = new Set(league.teams.map((team) => team.id));
   const playerIds = new Set(players.map((player) => player.id));
   const state: DraftState = {
     config: { ...config, leagueName: league.name, budget: league.budget, rosterSize: league.rosterSize },
-    teams: carryTeamAliases(current.teams, league.teams),
+    teams: league.teams.map((team) => ({ ...team, alias: "" })),
     sales: [],
-    keepers: current.keepers.filter((keeper) => teamIds.has(keeper.teamId) && playerIds.has(keeper.playerId)),
+    keepers: [],
     nomination: null,
     tierOverrides: Object.fromEntries(Object.entries(current.tierOverrides).filter(([playerId]) => playerIds.has(Number(playerId)))),
     tierOrders: Object.fromEntries(Object.entries(current.tierOrders ?? {}).map(([tier, orderedIds]) => [tier, orderedIds.filter((playerId) => playerIds.has(playerId))])),

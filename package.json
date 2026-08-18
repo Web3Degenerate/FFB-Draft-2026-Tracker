@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "schedules:refresh": "node scripts/refresh-schedule-data.mjs",
+    "schedules:league-model": "../FFB-2026-Model/.venv/bin/python scripts/build-league-schedule-model.py"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

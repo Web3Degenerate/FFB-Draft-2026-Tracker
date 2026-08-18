@@ -1,0 +1,4936 @@
+{
+  "season": 2026,
+  "generatedAt": "2026-08-18T21:31:30.164Z",
+  "sources": {
+    "schedules": "https://www.espn.com/nfl/schedule/_/year/2026",
+    "officialSchedule": "https://www.nfl.com/schedules/2026/by-team",
+    "matchupRatings": {
+      "QB": "https://www.fantasypros.com/nfl/matchups/qb.php",
+      "RB": "https://www.fantasypros.com/nfl/matchups/rb.php",
+      "WR": "https://www.fantasypros.com/nfl/matchups/wr.php",
+      "TE": "https://www.fantasypros.com/nfl/matchups/te.php",
+      "K": "https://www.fantasypros.com/nfl/matchups/k.php",
+      "DST": "https://www.fantasypros.com/nfl/matchups/dst.php"
+    }
+  },
+  "methodology": {
+    "QB": "FantasyPros preseason matchup rating of opponent defenses for quarterback scoring.",
+    "RB": "FantasyPros preseason matchup rating of opponent defenses for running back scoring.",
+    "WR": "FantasyPros preseason matchup rating of opponent defenses for wide receiver scoring.",
+    "TE": "FantasyPros preseason matchup rating of opponent defenses for tight end scoring.",
+    "K": "FantasyPros preseason matchup rating of opponent defenses and kicking environments for kicker scoring.",
+    "DST": "FantasyPros preseason matchup rating of opponent offenses for D/ST scoring, including offense-driven sack and turnover opportunity."
+  },
+  "teams": [
+    {
+      "id": 22,
+      "abbreviation": "ARI",
+      "displayName": "Arizona Cardinals",
+      "shortName": "Cardinals",
+      "color": "#a40227",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "LAC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T20:25Z"
+        },
+        {
+          "week": 2,
+          "opponent": "SEA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T20:25Z"
+        },
+        {
+          "week": 3,
+          "opponent": "SF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T20:05Z"
+        },
+        {
+          "week": 4,
+          "opponent": "NYG",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "DET",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T20:25Z"
+        },
+        {
+          "week": 6,
+          "opponent": "LAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T20:05Z"
+        },
+        {
+          "week": 7,
+          "opponent": "DEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T20:05Z"
+        },
+        {
+          "week": 8,
+          "opponent": "DAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "SEA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T21:25Z"
+        },
+        {
+          "week": 10,
+          "opponent": "LAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T21:05Z"
+        },
+        {
+          "week": 11,
+          "opponent": "KC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "WAS",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-29T21:25Z"
+        },
+        {
+          "week": 13,
+          "opponent": "PHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T21:05Z"
+        },
+        {
+          "week": 15,
+          "opponent": "NYJ",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T21:05Z"
+        },
+        {
+          "week": 16,
+          "opponent": "NO",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "LV",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T21:05Z"
+        },
+        {
+          "week": 18,
+          "opponent": "SF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "abbreviation": "ATL",
+      "displayName": "Atlanta Falcons",
+      "shortName": "Falcons",
+      "color": "#a71930",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "PIT",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "CAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "GB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-25T00:15Z"
+        },
+        {
+          "week": 4,
+          "opponent": "NO",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-06T00:15Z"
+        },
+        {
+          "week": 5,
+          "opponent": "BAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-12T00:20Z"
+        },
+        {
+          "week": 6,
+          "opponent": "CHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "SF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "TB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "CIN",
+          "homeAway": "home",
+          "neutralSite": true,
+          "date": "2026-11-08T14:30Z"
+        },
+        {
+          "week": 10,
+          "opponent": "KC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "MIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "DET",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "CLE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "WAS",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "TB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T05:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "NO",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "CAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "abbreviation": "BAL",
+      "displayName": "Baltimore Ravens",
+      "shortName": "Ravens",
+      "color": "#29126f",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "IND",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "NO",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "DAL",
+          "homeAway": "away",
+          "neutralSite": true,
+          "date": "2026-09-27T20:25Z"
+        },
+        {
+          "week": 4,
+          "opponent": "TEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "ATL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-12T00:20Z"
+        },
+        {
+          "week": 6,
+          "opponent": "CLE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "CIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "BUF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "JAX",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-06T01:15Z"
+        },
+        {
+          "week": 10,
+          "opponent": "LAC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-17T01:15Z"
+        },
+        {
+          "week": 11,
+          "opponent": "CAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "HOU",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "TB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "PIT",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "CLE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "CIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-01T01:15Z"
+        },
+        {
+          "week": 18,
+          "opponent": "PIT",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "abbreviation": "BUF",
+      "displayName": "Buffalo Bills",
+      "shortName": "Bills",
+      "color": "#00338d",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "HOU",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "DET",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-18T00:15Z"
+        },
+        {
+          "week": 3,
+          "opponent": "LAC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "NE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "LAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-13T00:15Z"
+        },
+        {
+          "week": 6,
+          "opponent": "LV",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T20:25Z"
+        },
+        {
+          "week": 8,
+          "opponent": "BAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "MIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-10T01:15Z"
+        },
+        {
+          "week": 10,
+          "opponent": "NYJ",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "MIA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "KC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-27T01:20Z"
+        },
+        {
+          "week": 13,
+          "opponent": "NE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T21:25Z"
+        },
+        {
+          "week": 14,
+          "opponent": "GB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-14T01:20Z"
+        },
+        {
+          "week": 15,
+          "opponent": "CHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T01:20Z"
+        },
+        {
+          "week": 16,
+          "opponent": "DEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-25T21:30Z"
+        },
+        {
+          "week": 17,
+          "opponent": "MIA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "NYJ",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "abbreviation": "CAR",
+      "displayName": "Carolina Panthers",
+      "shortName": "Panthers",
+      "color": "#0085ca",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/car.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "CHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "ATL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "CLE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "DET",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-05T00:20Z"
+        },
+        {
+          "week": 6,
+          "opponent": "PHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "TB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "GB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-30T00:15Z"
+        },
+        {
+          "week": 9,
+          "opponent": "DEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "NO",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "BAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "TB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-01T01:15Z"
+        },
+        {
+          "week": 13,
+          "opponent": "MIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T21:25Z"
+        },
+        {
+          "week": 14,
+          "opponent": "NO",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "CIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "PIT",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T05:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "SEA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "ATL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "abbreviation": "CHI",
+      "displayName": "Chicago Bears",
+      "shortName": "Bears",
+      "color": "#0b1c3a",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "CAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "MIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "PHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-29T00:15Z"
+        },
+        {
+          "week": 4,
+          "opponent": "NYJ",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "GB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T20:25Z"
+        },
+        {
+          "week": 6,
+          "opponent": "ATL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "NE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-23T00:15Z"
+        },
+        {
+          "week": 8,
+          "opponent": "SEA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-03T01:15Z"
+        },
+        {
+          "week": 9,
+          "opponent": "TB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-09T01:20Z"
+        },
+        {
+          "week": 11,
+          "opponent": "NO",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "DET",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-26T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "JAX",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "MIA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "BUF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T01:20Z"
+        },
+        {
+          "week": 16,
+          "opponent": "GB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-25T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "DET",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T21:25Z"
+        },
+        {
+          "week": 18,
+          "opponent": "MIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "abbreviation": "CIN",
+      "displayName": "Cincinnati Bengals",
+      "shortName": "Bengals",
+      "color": "#fb4f14",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "TB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "HOU",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "PIT",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "JAX",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "MIA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "BAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "TEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "ATL",
+          "homeAway": "away",
+          "neutralSite": true,
+          "date": "2026-11-08T14:30Z"
+        },
+        {
+          "week": 10,
+          "opponent": "PIT",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-16T01:20Z"
+        },
+        {
+          "week": 11,
+          "opponent": "WAS",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-24T01:15Z"
+        },
+        {
+          "week": 12,
+          "opponent": "NO",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "CLE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "KC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T21:25Z"
+        },
+        {
+          "week": 15,
+          "opponent": "CAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "IND",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T05:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "BAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-01T01:15Z"
+        },
+        {
+          "week": 18,
+          "opponent": "CLE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "abbreviation": "CLE",
+      "displayName": "Cleveland Browns",
+      "shortName": "Browns",
+      "color": "#472a08",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "JAX",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "TB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "CAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "PIT",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-02T00:15Z"
+        },
+        {
+          "week": 5,
+          "opponent": "NYJ",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "BAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "TEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "PIT",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "NO",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "HOU",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "LV",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "CIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "ATL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "NYG",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "BAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "IND",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "CIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "abbreviation": "DAL",
+      "displayName": "Dallas Cowboys",
+      "shortName": "Cowboys",
+      "color": "#002a5c",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "NYG",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-14T00:20Z"
+        },
+        {
+          "week": 2,
+          "opponent": "WAS",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T20:25Z"
+        },
+        {
+          "week": 3,
+          "opponent": "BAL",
+          "homeAway": "home",
+          "neutralSite": true,
+          "date": "2026-09-27T20:25Z"
+        },
+        {
+          "week": 4,
+          "opponent": "HOU",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "TB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-09T00:15Z"
+        },
+        {
+          "week": 6,
+          "opponent": "GB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-19T00:20Z"
+        },
+        {
+          "week": 7,
+          "opponent": "PHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-27T00:15Z"
+        },
+        {
+          "week": 8,
+          "opponent": "ARI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "IND",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "SF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T21:25Z"
+        },
+        {
+          "week": 11,
+          "opponent": "TEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "PHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-26T21:30Z"
+        },
+        {
+          "week": 13,
+          "opponent": "SEA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-08T01:15Z"
+        },
+        {
+          "week": 15,
+          "opponent": "LAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T21:25Z"
+        },
+        {
+          "week": 16,
+          "opponent": "JAX",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-28T01:20Z"
+        },
+        {
+          "week": 17,
+          "opponent": "NYG",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "WAS",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "abbreviation": "DEN",
+      "displayName": "Denver Broncos",
+      "shortName": "Broncos",
+      "color": "#0a2343",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "KC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-15T00:15Z"
+        },
+        {
+          "week": 2,
+          "opponent": "JAX",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T20:05Z"
+        },
+        {
+          "week": 3,
+          "opponent": "LAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-28T00:20Z"
+        },
+        {
+          "week": 4,
+          "opponent": "SF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T20:25Z"
+        },
+        {
+          "week": 5,
+          "opponent": "LAC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T20:05Z"
+        },
+        {
+          "week": 6,
+          "opponent": "SEA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-16T00:15Z"
+        },
+        {
+          "week": 7,
+          "opponent": "ARI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T20:05Z"
+        },
+        {
+          "week": 8,
+          "opponent": "KC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T21:25Z"
+        },
+        {
+          "week": 9,
+          "opponent": "CAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "LV",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T21:25Z"
+        },
+        {
+          "week": 12,
+          "opponent": "PIT",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-27T20:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "MIA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T21:05Z"
+        },
+        {
+          "week": 14,
+          "opponent": "NYJ",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "LV",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T21:25Z"
+        },
+        {
+          "week": 16,
+          "opponent": "BUF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-25T21:30Z"
+        },
+        {
+          "week": 17,
+          "opponent": "NE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T05:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "LAC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "abbreviation": "DET",
+      "displayName": "Detroit Lions",
+      "shortName": "Lions",
+      "color": "#0076b6",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "NO",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "BUF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-18T00:15Z"
+        },
+        {
+          "week": 3,
+          "opponent": "NYJ",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "CAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-05T00:20Z"
+        },
+        {
+          "week": 5,
+          "opponent": "ARI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T20:25Z"
+        },
+        {
+          "week": 7,
+          "opponent": "GB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T20:25Z"
+        },
+        {
+          "week": 8,
+          "opponent": "MIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "MIA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "NE",
+          "homeAway": "home",
+          "neutralSite": true,
+          "date": "2026-11-15T14:30Z"
+        },
+        {
+          "week": 11,
+          "opponent": "TB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "CHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-26T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "ATL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "TEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "MIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-21T01:20Z"
+        },
+        {
+          "week": 16,
+          "opponent": "NYG",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-29T01:15Z"
+        },
+        {
+          "week": 17,
+          "opponent": "CHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T21:25Z"
+        },
+        {
+          "week": 18,
+          "opponent": "GB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "abbreviation": "GB",
+      "displayName": "Green Bay Packers",
+      "shortName": "Packers",
+      "color": "#204e32",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "MIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T20:25Z"
+        },
+        {
+          "week": 2,
+          "opponent": "NYJ",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "ATL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-25T00:15Z"
+        },
+        {
+          "week": 4,
+          "opponent": "TB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "CHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T20:25Z"
+        },
+        {
+          "week": 6,
+          "opponent": "DAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-19T00:20Z"
+        },
+        {
+          "week": 7,
+          "opponent": "DET",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T20:25Z"
+        },
+        {
+          "week": 8,
+          "opponent": "CAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-30T00:15Z"
+        },
+        {
+          "week": 9,
+          "opponent": "NE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T21:25Z"
+        },
+        {
+          "week": 10,
+          "opponent": "MIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "LAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-26T01:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "NO",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "BUF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-14T01:20Z"
+        },
+        {
+          "week": 15,
+          "opponent": "MIA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "CHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-25T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "HOU",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-05T01:15Z"
+        },
+        {
+          "week": 18,
+          "opponent": "DET",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "abbreviation": "HOU",
+      "displayName": "Houston Texans",
+      "shortName": "Texans",
+      "color": "#021018",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "BUF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "CIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "IND",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "DAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "TEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "JAX",
+          "homeAway": "away",
+          "neutralSite": true,
+          "date": "2026-10-18T13:30Z"
+        },
+        {
+          "week": 7,
+          "opponent": "NYG",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "LAC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T21:05Z"
+        },
+        {
+          "week": 10,
+          "opponent": "CLE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "IND",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-20T01:15Z"
+        },
+        {
+          "week": 12,
+          "opponent": "BAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "PIT",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-07T01:20Z"
+        },
+        {
+          "week": 14,
+          "opponent": "WAS",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "JAX",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "PHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-25T01:15Z"
+        },
+        {
+          "week": 17,
+          "opponent": "GB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-05T01:15Z"
+        },
+        {
+          "week": 18,
+          "opponent": "TEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "abbreviation": "IND",
+      "displayName": "Indianapolis Colts",
+      "shortName": "Colts",
+      "color": "#003b75",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "BAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "KC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-21T00:20Z"
+        },
+        {
+          "week": 3,
+          "opponent": "HOU",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "WAS",
+          "homeAway": "away",
+          "neutralSite": true,
+          "date": "2026-10-04T13:30Z"
+        },
+        {
+          "week": 5,
+          "opponent": "PIT",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "TEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "MIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "JAX",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "DAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "MIA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "HOU",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-20T01:15Z"
+        },
+        {
+          "week": 12,
+          "opponent": "NYG",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "PHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "TEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "CIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T05:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "CLE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "JAX",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "abbreviation": "JAX",
+      "displayName": "Jacksonville Jaguars",
+      "shortName": "Jaguars",
+      "color": "#007487",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "CLE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "DEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T20:05Z"
+        },
+        {
+          "week": 3,
+          "opponent": "NE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "CIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "PHI",
+          "homeAway": "home",
+          "neutralSite": true,
+          "date": "2026-10-11T13:30Z"
+        },
+        {
+          "week": 6,
+          "opponent": "HOU",
+          "homeAway": "home",
+          "neutralSite": true,
+          "date": "2026-10-18T13:30Z"
+        },
+        {
+          "week": 8,
+          "opponent": "IND",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "BAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-06T01:15Z"
+        },
+        {
+          "week": 10,
+          "opponent": "TEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "NYG",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "TEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-29T21:05Z"
+        },
+        {
+          "week": 13,
+          "opponent": "CHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "PIT",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-15T01:15Z"
+        },
+        {
+          "week": 15,
+          "opponent": "HOU",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "DAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-28T01:20Z"
+        },
+        {
+          "week": 17,
+          "opponent": "WAS",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T05:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "IND",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "abbreviation": "KC",
+      "displayName": "Kansas City Chiefs",
+      "shortName": "Chiefs",
+      "color": "#e31837",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "DEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-15T00:15Z"
+        },
+        {
+          "week": 2,
+          "opponent": "IND",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-21T00:20Z"
+        },
+        {
+          "week": 3,
+          "opponent": "MIA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "LV",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T20:25Z"
+        },
+        {
+          "week": 6,
+          "opponent": "LAC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T20:25Z"
+        },
+        {
+          "week": 7,
+          "opponent": "SEA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-26T00:20Z"
+        },
+        {
+          "week": 8,
+          "opponent": "DEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T21:25Z"
+        },
+        {
+          "week": 9,
+          "opponent": "NYJ",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "ATL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "ARI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "BUF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-27T01:20Z"
+        },
+        {
+          "week": 13,
+          "opponent": "LAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-04T01:15Z"
+        },
+        {
+          "week": 14,
+          "opponent": "CIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T21:25Z"
+        },
+        {
+          "week": 15,
+          "opponent": "NE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-22T01:15Z"
+        },
+        {
+          "week": 16,
+          "opponent": "SF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T21:25Z"
+        },
+        {
+          "week": 17,
+          "opponent": "LAC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T05:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "LV",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "abbreviation": "LV",
+      "displayName": "Las Vegas Raiders",
+      "shortName": "Raiders",
+      "color": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "MIA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T20:25Z"
+        },
+        {
+          "week": 2,
+          "opponent": "LAC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T20:05Z"
+        },
+        {
+          "week": 3,
+          "opponent": "NO",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T20:25Z"
+        },
+        {
+          "week": 4,
+          "opponent": "KC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T20:25Z"
+        },
+        {
+          "week": 5,
+          "opponent": "NE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "BUF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T20:25Z"
+        },
+        {
+          "week": 7,
+          "opponent": "LAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T20:25Z"
+        },
+        {
+          "week": 8,
+          "opponent": "NYJ",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "SF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T21:05Z"
+        },
+        {
+          "week": 10,
+          "opponent": "SEA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T21:05Z"
+        },
+        {
+          "week": 11,
+          "opponent": "DEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T21:25Z"
+        },
+        {
+          "week": 12,
+          "opponent": "CLE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "LAC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T21:05Z"
+        },
+        {
+          "week": 15,
+          "opponent": "DEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T21:25Z"
+        },
+        {
+          "week": 16,
+          "opponent": "TEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T21:05Z"
+        },
+        {
+          "week": 17,
+          "opponent": "ARI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T21:05Z"
+        },
+        {
+          "week": 18,
+          "opponent": "KC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "abbreviation": "LAC",
+      "displayName": "Los Angeles Chargers",
+      "shortName": "Chargers",
+      "color": "#0080c6",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "ARI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T20:25Z"
+        },
+        {
+          "week": 2,
+          "opponent": "LV",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T20:05Z"
+        },
+        {
+          "week": 3,
+          "opponent": "BUF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "SEA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T20:25Z"
+        },
+        {
+          "week": 5,
+          "opponent": "DEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T20:05Z"
+        },
+        {
+          "week": 6,
+          "opponent": "KC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T20:25Z"
+        },
+        {
+          "week": 8,
+          "opponent": "LAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T21:05Z"
+        },
+        {
+          "week": 9,
+          "opponent": "HOU",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T21:05Z"
+        },
+        {
+          "week": 10,
+          "opponent": "BAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-17T01:15Z"
+        },
+        {
+          "week": 11,
+          "opponent": "NYJ",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T21:05Z"
+        },
+        {
+          "week": 12,
+          "opponent": "NE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-30T01:20Z"
+        },
+        {
+          "week": 13,
+          "opponent": "TB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "LV",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T21:05Z"
+        },
+        {
+          "week": 15,
+          "opponent": "SF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-18T01:15Z"
+        },
+        {
+          "week": 16,
+          "opponent": "MIA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "KC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T05:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "DEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "abbreviation": "LAR",
+      "displayName": "Los Angeles Rams",
+      "shortName": "Rams",
+      "color": "#003594",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "SF",
+          "homeAway": "home",
+          "neutralSite": true,
+          "date": "2026-09-11T00:35Z"
+        },
+        {
+          "week": 2,
+          "opponent": "NYG",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-22T00:15Z"
+        },
+        {
+          "week": 3,
+          "opponent": "DEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-28T00:20Z"
+        },
+        {
+          "week": 4,
+          "opponent": "PHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "BUF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-13T00:15Z"
+        },
+        {
+          "week": 6,
+          "opponent": "ARI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T20:05Z"
+        },
+        {
+          "week": 7,
+          "opponent": "LV",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T20:25Z"
+        },
+        {
+          "week": 8,
+          "opponent": "LAC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T21:05Z"
+        },
+        {
+          "week": 9,
+          "opponent": "WAS",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "ARI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T21:05Z"
+        },
+        {
+          "week": 12,
+          "opponent": "GB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-26T01:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "KC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-04T01:15Z"
+        },
+        {
+          "week": 14,
+          "opponent": "SF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T21:25Z"
+        },
+        {
+          "week": 15,
+          "opponent": "DAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T21:25Z"
+        },
+        {
+          "week": 16,
+          "opponent": "SEA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-26T01:15Z"
+        },
+        {
+          "week": 17,
+          "opponent": "TB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T05:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "SEA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "abbreviation": "MIA",
+      "displayName": "Miami Dolphins",
+      "shortName": "Dolphins",
+      "color": "#008e97",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "LV",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T20:25Z"
+        },
+        {
+          "week": 2,
+          "opponent": "SF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T20:25Z"
+        },
+        {
+          "week": 3,
+          "opponent": "KC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "MIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T20:05Z"
+        },
+        {
+          "week": 5,
+          "opponent": "CIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "NYJ",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "NE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T21:25Z"
+        },
+        {
+          "week": 9,
+          "opponent": "DET",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "IND",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "BUF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "NYJ",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "DEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T21:05Z"
+        },
+        {
+          "week": 14,
+          "opponent": "CHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "GB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "LAC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "BUF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "NE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "abbreviation": "MIN",
+      "displayName": "Minnesota Vikings",
+      "shortName": "Vikings",
+      "color": "#4f2683",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "GB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T20:25Z"
+        },
+        {
+          "week": 2,
+          "opponent": "CHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "TB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T20:05Z"
+        },
+        {
+          "week": 4,
+          "opponent": "MIA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T20:05Z"
+        },
+        {
+          "week": 5,
+          "opponent": "NO",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "IND",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "DET",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "BUF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-10T01:15Z"
+        },
+        {
+          "week": 10,
+          "opponent": "GB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "SF",
+          "homeAway": "away",
+          "neutralSite": true,
+          "date": "2026-11-23T01:20Z"
+        },
+        {
+          "week": 12,
+          "opponent": "ATL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "CAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T21:25Z"
+        },
+        {
+          "week": 14,
+          "opponent": "NE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-11T01:15Z"
+        },
+        {
+          "week": 15,
+          "opponent": "DET",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-21T01:20Z"
+        },
+        {
+          "week": 16,
+          "opponent": "WAS",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T05:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "NYJ",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "CHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "abbreviation": "NE",
+      "displayName": "New England Patriots",
+      "shortName": "Patriots",
+      "color": "#002a5c",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "SEA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-10T00:20Z"
+        },
+        {
+          "week": 2,
+          "opponent": "PIT",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "JAX",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "BUF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "LV",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "NYJ",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "CHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-23T00:15Z"
+        },
+        {
+          "week": 8,
+          "opponent": "MIA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T21:25Z"
+        },
+        {
+          "week": 9,
+          "opponent": "GB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T21:25Z"
+        },
+        {
+          "week": 10,
+          "opponent": "DET",
+          "homeAway": "away",
+          "neutralSite": true,
+          "date": "2026-11-15T14:30Z"
+        },
+        {
+          "week": 12,
+          "opponent": "LAC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-30T01:20Z"
+        },
+        {
+          "week": 13,
+          "opponent": "BUF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T21:25Z"
+        },
+        {
+          "week": 14,
+          "opponent": "MIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-11T01:15Z"
+        },
+        {
+          "week": 15,
+          "opponent": "KC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-22T01:15Z"
+        },
+        {
+          "week": 16,
+          "opponent": "NYJ",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "DEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T05:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "MIA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "abbreviation": "NO",
+      "displayName": "New Orleans Saints",
+      "shortName": "Saints",
+      "color": "#d3bc8d",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/no.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "DET",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "BAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "LV",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T20:25Z"
+        },
+        {
+          "week": 4,
+          "opponent": "ATL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-06T00:15Z"
+        },
+        {
+          "week": 5,
+          "opponent": "MIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "NYG",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "PIT",
+          "homeAway": "home",
+          "neutralSite": true,
+          "date": "2026-10-25T13:30Z"
+        },
+        {
+          "week": 9,
+          "opponent": "CLE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "CAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "CHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "CIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "GB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "CAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "TB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "ARI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "ATL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "TB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "abbreviation": "NYG",
+      "displayName": "New York Giants",
+      "shortName": "Giants",
+      "color": "#003c7f",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "DAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-14T00:20Z"
+        },
+        {
+          "week": 2,
+          "opponent": "LAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-22T00:15Z"
+        },
+        {
+          "week": 3,
+          "opponent": "TEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "ARI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "WAS",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "NO",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "HOU",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "PHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "WAS",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-13T01:15Z"
+        },
+        {
+          "week": 11,
+          "opponent": "JAX",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "IND",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "SF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "SEA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T21:25Z"
+        },
+        {
+          "week": 15,
+          "opponent": "CLE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "DET",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-29T01:15Z"
+        },
+        {
+          "week": 17,
+          "opponent": "DAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "PHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "abbreviation": "NYJ",
+      "displayName": "New York Jets",
+      "shortName": "Jets",
+      "color": "#115740",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "TEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "GB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "DET",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "CHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "CLE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "NE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "MIA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "LV",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "KC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "BUF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "LAC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T21:05Z"
+        },
+        {
+          "week": 12,
+          "opponent": "MIA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-29T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "DEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "ARI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-20T21:05Z"
+        },
+        {
+          "week": 16,
+          "opponent": "NE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T18:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "MIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "BUF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "abbreviation": "PHI",
+      "displayName": "Philadelphia Eagles",
+      "shortName": "Eagles",
+      "color": "#06424d",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "WAS",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T20:25Z"
+        },
+        {
+          "week": 2,
+          "opponent": "TEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "CHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-29T00:15Z"
+        },
+        {
+          "week": 4,
+          "opponent": "LAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "JAX",
+          "homeAway": "away",
+          "neutralSite": true,
+          "date": "2026-10-11T13:30Z"
+        },
+        {
+          "week": 6,
+          "opponent": "CAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "DAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-27T00:15Z"
+        },
+        {
+          "week": 8,
+          "opponent": "WAS",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-02T01:20Z"
+        },
+        {
+          "week": 9,
+          "opponent": "NYG",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "PIT",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-22T21:25Z"
+        },
+        {
+          "week": 12,
+          "opponent": "DAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-26T21:30Z"
+        },
+        {
+          "week": 13,
+          "opponent": "ARI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T21:05Z"
+        },
+        {
+          "week": 14,
+          "opponent": "IND",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "SEA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-19T22:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "HOU",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-25T01:15Z"
+        },
+        {
+          "week": 17,
+          "opponent": "SF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-04T01:20Z"
+        },
+        {
+          "week": 18,
+          "opponent": "NYG",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "abbreviation": "PIT",
+      "displayName": "Pittsburgh Steelers",
+      "shortName": "Steelers",
+      "color": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "ATL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "NE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "CIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "CLE",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-02T00:15Z"
+        },
+        {
+          "week": 5,
+          "opponent": "IND",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "TB",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "NO",
+          "homeAway": "away",
+          "neutralSite": true,
+          "date": "2026-10-25T13:30Z"
+        },
+        {
+          "week": 8,
+          "opponent": "CLE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "CIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-16T01:20Z"
+        },
+        {
+          "week": 11,
+          "opponent": "PHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T21:25Z"
+        },
+        {
+          "week": 12,
+          "opponent": "DEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-27T20:00Z"
+        },
+        {
+          "week": 13,
+          "opponent": "HOU",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-07T01:20Z"
+        },
+        {
+          "week": 14,
+          "opponent": "JAX",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-15T01:15Z"
+        },
+        {
+          "week": 15,
+          "opponent": "BAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "CAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-27T05:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "TEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "BAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "abbreviation": "SF",
+      "displayName": "San Francisco 49ers",
+      "shortName": "49ers",
+      "color": "#aa0000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "LAR",
+          "homeAway": "away",
+          "neutralSite": true,
+          "date": "2026-09-11T00:35Z"
+        },
+        {
+          "week": 2,
+          "opponent": "MIA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T20:25Z"
+        },
+        {
+          "week": 3,
+          "opponent": "ARI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T20:05Z"
+        },
+        {
+          "week": 4,
+          "opponent": "DEN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T20:25Z"
+        },
+        {
+          "week": 5,
+          "opponent": "SEA",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-11T20:25Z"
+        },
+        {
+          "week": 6,
+          "opponent": "WAS",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-20T00:15Z"
+        },
+        {
+          "week": 7,
+          "opponent": "ATL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "LV",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T21:05Z"
+        },
+        {
+          "week": 10,
+          "opponent": "DAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T21:25Z"
+        },
+        {
+          "week": 11,
+          "opponent": "MIN",
+          "homeAway": "home",
+          "neutralSite": true,
+          "date": "2026-11-23T01:20Z"
+        },
+        {
+          "week": 12,
+          "opponent": "SEA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-29T21:25Z"
+        },
+        {
+          "week": 13,
+          "opponent": "NYG",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "LAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T21:25Z"
+        },
+        {
+          "week": 15,
+          "opponent": "LAC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-18T01:15Z"
+        },
+        {
+          "week": 16,
+          "opponent": "KC",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T21:25Z"
+        },
+        {
+          "week": 17,
+          "opponent": "PHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-04T01:20Z"
+        },
+        {
+          "week": 18,
+          "opponent": "ARI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "abbreviation": "SEA",
+      "displayName": "Seattle Seahawks",
+      "shortName": "Seahawks",
+      "color": "#002a5c",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "NE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-10T00:20Z"
+        },
+        {
+          "week": 2,
+          "opponent": "ARI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T20:25Z"
+        },
+        {
+          "week": 3,
+          "opponent": "WAS",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "LAC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T20:25Z"
+        },
+        {
+          "week": 5,
+          "opponent": "SF",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T20:25Z"
+        },
+        {
+          "week": 6,
+          "opponent": "DEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-16T00:15Z"
+        },
+        {
+          "week": 7,
+          "opponent": "KC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-26T00:20Z"
+        },
+        {
+          "week": 8,
+          "opponent": "CHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-03T01:15Z"
+        },
+        {
+          "week": 9,
+          "opponent": "ARI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T21:25Z"
+        },
+        {
+          "week": 10,
+          "opponent": "LV",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-15T21:05Z"
+        },
+        {
+          "week": 12,
+          "opponent": "SF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-29T21:25Z"
+        },
+        {
+          "week": 13,
+          "opponent": "DAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-08T01:15Z"
+        },
+        {
+          "week": 14,
+          "opponent": "NYG",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T21:25Z"
+        },
+        {
+          "week": 15,
+          "opponent": "PHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-19T22:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "LAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-26T01:15Z"
+        },
+        {
+          "week": 17,
+          "opponent": "CAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "LAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "abbreviation": "TB",
+      "displayName": "Tampa Bay Buccaneers",
+      "shortName": "Buccaneers",
+      "color": "#bd1c36",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "CIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "CLE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "MIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T20:05Z"
+        },
+        {
+          "week": 4,
+          "opponent": "GB",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "DAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-09T00:15Z"
+        },
+        {
+          "week": 6,
+          "opponent": "PIT",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "CAR",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "ATL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 9,
+          "opponent": "CHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-09T01:20Z"
+        },
+        {
+          "week": 11,
+          "opponent": "DET",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "CAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-01T01:15Z"
+        },
+        {
+          "week": 13,
+          "opponent": "LAC",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "BAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "NO",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "ATL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T05:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "LAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T05:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "NO",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "abbreviation": "TEN",
+      "displayName": "Tennessee Titans",
+      "shortName": "Titans",
+      "color": "#4495d2",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "NYJ",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-13T17:00Z"
+        },
+        {
+          "week": 2,
+          "opponent": "PHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-20T17:00Z"
+        },
+        {
+          "week": 3,
+          "opponent": "NYG",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "BAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-04T17:00Z"
+        },
+        {
+          "week": 5,
+          "opponent": "HOU",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "IND",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-18T17:00Z"
+        },
+        {
+          "week": 7,
+          "opponent": "CLE",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-25T17:00Z"
+        },
+        {
+          "week": 8,
+          "opponent": "CIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-01T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "JAX",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-15T18:00Z"
+        },
+        {
+          "week": 11,
+          "opponent": "DAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-22T18:00Z"
+        },
+        {
+          "week": 12,
+          "opponent": "JAX",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-29T21:05Z"
+        },
+        {
+          "week": 13,
+          "opponent": "WAS",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "DET",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "IND",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "LV",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T21:05Z"
+        },
+        {
+          "week": 17,
+          "opponent": "PIT",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-03T18:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "HOU",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "abbreviation": "WAS",
+      "displayName": "Washington Commanders",
+      "shortName": "Commanders",
+      "color": "#5a1414",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png",
+      "games": [
+        {
+          "week": 1,
+          "opponent": "PHI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-13T20:25Z"
+        },
+        {
+          "week": 2,
+          "opponent": "DAL",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-09-20T20:25Z"
+        },
+        {
+          "week": 3,
+          "opponent": "SEA",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-09-27T17:00Z"
+        },
+        {
+          "week": 4,
+          "opponent": "IND",
+          "homeAway": "home",
+          "neutralSite": true,
+          "date": "2026-10-04T13:30Z"
+        },
+        {
+          "week": 5,
+          "opponent": "NYG",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-10-11T17:00Z"
+        },
+        {
+          "week": 6,
+          "opponent": "SF",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-10-20T00:15Z"
+        },
+        {
+          "week": 8,
+          "opponent": "PHI",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-02T01:20Z"
+        },
+        {
+          "week": 9,
+          "opponent": "LAR",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-08T18:00Z"
+        },
+        {
+          "week": 10,
+          "opponent": "NYG",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-13T01:15Z"
+        },
+        {
+          "week": 11,
+          "opponent": "CIN",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-11-24T01:15Z"
+        },
+        {
+          "week": 12,
+          "opponent": "ARI",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-11-29T21:25Z"
+        },
+        {
+          "week": 13,
+          "opponent": "TEN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-06T18:00Z"
+        },
+        {
+          "week": 14,
+          "opponent": "HOU",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-13T18:00Z"
+        },
+        {
+          "week": 15,
+          "opponent": "ATL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2026-12-20T18:00Z"
+        },
+        {
+          "week": 16,
+          "opponent": "MIN",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2026-12-27T05:00Z"
+        },
+        {
+          "week": 17,
+          "opponent": "JAX",
+          "homeAway": "away",
+          "neutralSite": false,
+          "date": "2027-01-03T05:00Z"
+        },
+        {
+          "week": 18,
+          "opponent": "DAL",
+          "homeAway": "home",
+          "neutralSite": false,
+          "date": "2027-01-10T05:00Z"
+        }
+      ]
+    }
+  ],
+  "ratings": {
+    "QB": {
+      "ARI": {
+        "grade": 3,
+        "rank": 15
+      },
+      "ATL": {
+        "grade": 3,
+        "rank": 19
+      },
+      "BAL": {
+        "grade": 2,
+        "rank": 24
+      },
+      "BUF": {
+        "grade": 3,
+        "rank": 21
+      },
+      "CAR": {
+        "grade": 3,
+        "rank": 23
+      },
+      "CHI": {
+        "grade": 5,
+        "rank": 4
+      },
+      "CIN": {
+        "grade": 4,
+        "rank": 6
+      },
+      "CLE": {
+        "grade": 2,
+        "rank": 26
+      },
+      "DAL": {
+        "grade": 5,
+        "rank": 1
+      },
+      "DEN": {
+        "grade": 1,
+        "rank": 30
+      },
+      "DET": {
+        "grade": 3,
+        "rank": 13
+      },
+      "GB": {
+        "grade": 3,
+        "rank": 12
+      },
+      "HOU": {
+        "grade": 1,
+        "rank": 31
+      },
+      "IND": {
+        "grade": 3,
+        "rank": 20
+      },
+      "JAX": {
+        "grade": 3,
+        "rank": 16
+      },
+      "KC": {
+        "grade": 3,
+        "rank": 22
+      },
+      "LAC": {
+        "grade": 2,
+        "rank": 29
+      },
+      "LAR": {
+        "grade": 3,
+        "rank": 17
+      },
+      "LV": {
+        "grade": 3,
+        "rank": 14
+      },
+      "MIA": {
+        "grade": 4,
+        "rank": 5
+      },
+      "MIN": {
+        "grade": 2,
+        "rank": 27
+      },
+      "NE": {
+        "grade": 4,
+        "rank": 8
+      },
+      "NO": {
+        "grade": 2,
+        "rank": 25
+      },
+      "NYG": {
+        "grade": 3,
+        "rank": 18
+      },
+      "NYJ": {
+        "grade": 4,
+        "rank": 7
+      },
+      "PHI": {
+        "grade": 2,
+        "rank": 28
+      },
+      "PIT": {
+        "grade": 4,
+        "rank": 11
+      },
+      "SEA": {
+        "grade": 1,
+        "rank": 32
+      },
+      "SF": {
+        "grade": 4,
+        "rank": 10
+      },
+      "TB": {
+        "grade": 4,
+        "rank": 9
+      },
+      "TEN": {
+        "grade": 5,
+        "rank": 2
+      },
+      "WAS": {
+        "grade": 5,
+        "rank": 3
+      }
+    },
+    "RB": {
+      "ARI": {
+        "grade": 5,
+        "rank": 1
+      },
+      "ATL": {
+        "grade": 3,
+        "rank": 14
+      },
+      "BAL": {
+        "grade": 3,
+        "rank": 12
+      },
+      "BUF": {
+        "grade": 4,
+        "rank": 3
+      },
+      "CAR": {
+        "grade": 4,
+        "rank": 11
+      },
+      "CHI": {
+        "grade": 3,
+        "rank": 15
+      },
+      "CIN": {
+        "grade": 4,
+        "rank": 10
+      },
+      "CLE": {
+        "grade": 2,
+        "rank": 25
+      },
+      "DAL": {
+        "grade": 5,
+        "rank": 2
+      },
+      "DEN": {
+        "grade": 2,
+        "rank": 24
+      },
+      "DET": {
+        "grade": 2,
+        "rank": 27
+      },
+      "GB": {
+        "grade": 3,
+        "rank": 16
+      },
+      "HOU": {
+        "grade": 3,
+        "rank": 13
+      },
+      "IND": {
+        "grade": 2,
+        "rank": 26
+      },
+      "JAX": {
+        "grade": 3,
+        "rank": 21
+      },
+      "KC": {
+        "grade": 2,
+        "rank": 30
+      },
+      "LAC": {
+        "grade": 3,
+        "rank": 22
+      },
+      "LAR": {
+        "grade": 2,
+        "rank": 28
+      },
+      "LV": {
+        "grade": 3,
+        "rank": 17
+      },
+      "MIA": {
+        "grade": 4,
+        "rank": 4
+      },
+      "MIN": {
+        "grade": 3,
+        "rank": 20
+      },
+      "NE": {
+        "grade": 2,
+        "rank": 29
+      },
+      "NO": {
+        "grade": 3,
+        "rank": 23
+      },
+      "NYG": {
+        "grade": 4,
+        "rank": 5
+      },
+      "NYJ": {
+        "grade": 4,
+        "rank": 8
+      },
+      "PHI": {
+        "grade": 3,
+        "rank": 18
+      },
+      "PIT": {
+        "grade": 2,
+        "rank": 31
+      },
+      "SEA": {
+        "grade": 1,
+        "rank": 32
+      },
+      "SF": {
+        "grade": 4,
+        "rank": 9
+      },
+      "TB": {
+        "grade": 3,
+        "rank": 19
+      },
+      "TEN": {
+        "grade": 4,
+        "rank": 7
+      },
+      "WAS": {
+        "grade": 4,
+        "rank": 6
+      }
+    },
+    "WR": {
+      "ARI": {
+        "grade": 3,
+        "rank": 24
+      },
+      "ATL": {
+        "grade": 4,
+        "rank": 4
+      },
+      "BAL": {
+        "grade": 3,
+        "rank": 13
+      },
+      "BUF": {
+        "grade": 3,
+        "rank": 18
+      },
+      "CAR": {
+        "grade": 3,
+        "rank": 20
+      },
+      "CHI": {
+        "grade": 4,
+        "rank": 5
+      },
+      "CIN": {
+        "grade": 3,
+        "rank": 12
+      },
+      "CLE": {
+        "grade": 4,
+        "rank": 10
+      },
+      "DAL": {
+        "grade": 5,
+        "rank": 1
+      },
+      "DEN": {
+        "grade": 2,
+        "rank": 31
+      },
+      "DET": {
+        "grade": 4,
+        "rank": 8
+      },
+      "GB": {
+        "grade": 3,
+        "rank": 14
+      },
+      "HOU": {
+        "grade": 3,
+        "rank": 21
+      },
+      "IND": {
+        "grade": 3,
+        "rank": 16
+      },
+      "JAX": {
+        "grade": 2,
+        "rank": 28
+      },
+      "KC": {
+        "grade": 2,
+        "rank": 25
+      },
+      "LAC": {
+        "grade": 2,
+        "rank": 30
+      },
+      "LAR": {
+        "grade": 3,
+        "rank": 17
+      },
+      "LV": {
+        "grade": 3,
+        "rank": 19
+      },
+      "MIA": {
+        "grade": 5,
+        "rank": 2
+      },
+      "MIN": {
+        "grade": 2,
+        "rank": 29
+      },
+      "NE": {
+        "grade": 4,
+        "rank": 6
+      },
+      "NO": {
+        "grade": 4,
+        "rank": 11
+      },
+      "NYG": {
+        "grade": 3,
+        "rank": 23
+      },
+      "NYJ": {
+        "grade": 4,
+        "rank": 9
+      },
+      "PHI": {
+        "grade": 1,
+        "rank": 32
+      },
+      "PIT": {
+        "grade": 3,
+        "rank": 22
+      },
+      "SEA": {
+        "grade": 2,
+        "rank": 27
+      },
+      "SF": {
+        "grade": 3,
+        "rank": 15
+      },
+      "TB": {
+        "grade": 2,
+        "rank": 26
+      },
+      "TEN": {
+        "grade": 4,
+        "rank": 3
+      },
+      "WAS": {
+        "grade": 4,
+        "rank": 7
+      }
+    },
+    "TE": {
+      "ARI": {
+        "grade": 4,
+        "rank": 7
+      },
+      "ATL": {
+        "grade": 2,
+        "rank": 26
+      },
+      "BAL": {
+        "grade": 2,
+        "rank": 24
+      },
+      "BUF": {
+        "grade": 4,
+        "rank": 11
+      },
+      "CAR": {
+        "grade": 3,
+        "rank": 16
+      },
+      "CHI": {
+        "grade": 3,
+        "rank": 20
+      },
+      "CIN": {
+        "grade": 4,
+        "rank": 3
+      },
+      "CLE": {
+        "grade": 2,
+        "rank": 31
+      },
+      "DAL": {
+        "grade": 4,
+        "rank": 4
+      },
+      "DEN": {
+        "grade": 3,
+        "rank": 19
+      },
+      "DET": {
+        "grade": 3,
+        "rank": 22
+      },
+      "GB": {
+        "grade": 3,
+        "rank": 13
+      },
+      "HOU": {
+        "grade": 3,
+        "rank": 21
+      },
+      "IND": {
+        "grade": 4,
+        "rank": 10
+      },
+      "JAX": {
+        "grade": 2,
+        "rank": 25
+      },
+      "KC": {
+        "grade": 3,
+        "rank": 17
+      },
+      "LAC": {
+        "grade": 4,
+        "rank": 5
+      },
+      "LAR": {
+        "grade": 2,
+        "rank": 30
+      },
+      "LV": {
+        "grade": 4,
+        "rank": 9
+      },
+      "MIA": {
+        "grade": 3,
+        "rank": 12
+      },
+      "MIN": {
+        "grade": 3,
+        "rank": 23
+      },
+      "NE": {
+        "grade": 3,
+        "rank": 14
+      },
+      "NO": {
+        "grade": 2,
+        "rank": 29
+      },
+      "NYG": {
+        "grade": 2,
+        "rank": 27
+      },
+      "NYJ": {
+        "grade": 4,
+        "rank": 6
+      },
+      "PHI": {
+        "grade": 2,
+        "rank": 32
+      },
+      "PIT": {
+        "grade": 3,
+        "rank": 15
+      },
+      "SEA": {
+        "grade": 3,
+        "rank": 18
+      },
+      "SF": {
+        "grade": 2,
+        "rank": 28
+      },
+      "TB": {
+        "grade": 5,
+        "rank": 1
+      },
+      "TEN": {
+        "grade": 4,
+        "rank": 8
+      },
+      "WAS": {
+        "grade": 5,
+        "rank": 2
+      }
+    },
+    "K": {
+      "ARI": {
+        "grade": 5,
+        "rank": 6
+      },
+      "ATL": {
+        "grade": 5,
+        "rank": 8
+      },
+      "BAL": {
+        "grade": 1,
+        "rank": 26
+      },
+      "BUF": {
+        "grade": 1,
+        "rank": 23
+      },
+      "CAR": {
+        "grade": 5,
+        "rank": 1
+      },
+      "CHI": {
+        "grade": 2,
+        "rank": 19
+      },
+      "CIN": {
+        "grade": 5,
+        "rank": 7
+      },
+      "CLE": {
+        "grade": 1,
+        "rank": 31
+      },
+      "DAL": {
+        "grade": 3,
+        "rank": 14
+      },
+      "DEN": {
+        "grade": 5,
+        "rank": 9
+      },
+      "DET": {
+        "grade": 2,
+        "rank": 20
+      },
+      "GB": {
+        "grade": 1,
+        "rank": 27
+      },
+      "HOU": {
+        "grade": 3,
+        "rank": 16
+      },
+      "IND": {
+        "grade": 5,
+        "rank": 3
+      },
+      "JAX": {
+        "grade": 1,
+        "rank": 21
+      },
+      "KC": {
+        "grade": 1,
+        "rank": 22
+      },
+      "LAC": {
+        "grade": 1,
+        "rank": 30
+      },
+      "LAR": {
+        "grade": 3,
+        "rank": 15
+      },
+      "LV": {
+        "grade": 5,
+        "rank": 5
+      },
+      "MIA": {
+        "grade": 5,
+        "rank": 12
+      },
+      "MIN": {
+        "grade": 5,
+        "rank": 10
+      },
+      "NE": {
+        "grade": 1,
+        "rank": 24
+      },
+      "NO": {
+        "grade": 2,
+        "rank": 18
+      },
+      "NYG": {
+        "grade": 5,
+        "rank": 4
+      },
+      "NYJ": {
+        "grade": 5,
+        "rank": 11
+      },
+      "PHI": {
+        "grade": 1,
+        "rank": 25
+      },
+      "PIT": {
+        "grade": 1,
+        "rank": 32
+      },
+      "SEA": {
+        "grade": 1,
+        "rank": 28
+      },
+      "SF": {
+        "grade": 1,
+        "rank": 29
+      },
+      "TB": {
+        "grade": 2,
+        "rank": 17
+      },
+      "TEN": {
+        "grade": 5,
+        "rank": 2
+      },
+      "WAS": {
+        "grade": 5,
+        "rank": 13
+      }
+    },
+    "DST": {
+      "ARI": {
+        "grade": 4,
+        "rank": 10
+      },
+      "ATL": {
+        "grade": 3,
+        "rank": 15
+      },
+      "BAL": {
+        "grade": 3,
+        "rank": 14
+      },
+      "BUF": {
+        "grade": 2,
+        "rank": 22
+      },
+      "CAR": {
+        "grade": 4,
+        "rank": 9
+      },
+      "CHI": {
+        "grade": 1,
+        "rank": 32
+      },
+      "CIN": {
+        "grade": 4,
+        "rank": 8
+      },
+      "CLE": {
+        "grade": 5,
+        "rank": 3
+      },
+      "DAL": {
+        "grade": 2,
+        "rank": 26
+      },
+      "DEN": {
+        "grade": 2,
+        "rank": 23
+      },
+      "DET": {
+        "grade": 1,
+        "rank": 28
+      },
+      "GB": {
+        "grade": 1,
+        "rank": 27
+      },
+      "HOU": {
+        "grade": 2,
+        "rank": 25
+      },
+      "IND": {
+        "grade": 1,
+        "rank": 31
+      },
+      "JAX": {
+        "grade": 2,
+        "rank": 19
+      },
+      "KC": {
+        "grade": 3,
+        "rank": 17
+      },
+      "LAC": {
+        "grade": 4,
+        "rank": 7
+      },
+      "LAR": {
+        "grade": 1,
+        "rank": 30
+      },
+      "LV": {
+        "grade": 5,
+        "rank": 5
+      },
+      "MIA": {
+        "grade": 4,
+        "rank": 11
+      },
+      "MIN": {
+        "grade": 5,
+        "rank": 4
+      },
+      "NE": {
+        "grade": 3,
+        "rank": 16
+      },
+      "NO": {
+        "grade": 4,
+        "rank": 6
+      },
+      "NYG": {
+        "grade": 3,
+        "rank": 13
+      },
+      "NYJ": {
+        "grade": 5,
+        "rank": 1
+      },
+      "PHI": {
+        "grade": 2,
+        "rank": 21
+      },
+      "PIT": {
+        "grade": 3,
+        "rank": 18
+      },
+      "SEA": {
+        "grade": 2,
+        "rank": 24
+      },
+      "SF": {
+        "grade": 1,
+        "rank": 29
+      },
+      "TB": {
+        "grade": 2,
+        "rank": 20
+      },
+      "TEN": {
+        "grade": 5,
+        "rank": 2
+      },
+      "WAS": {
+        "grade": 4,
+        "rank": 12
+      }
+    }
+  }
+}

@@ -128,7 +128,7 @@ export default function TierEditorPage() {
 
   return <main className="management-shell">
     <header className="management-header">
-      <div><nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/watch-list" className="back-link"><Eye /> Watch List</Link></nav><span className="eyebrow">PLAYER CLASSIFICATION</span><h1>Tier Editor</h1><p>Override calculated tiers, set the order inside each tier, and choose players for your persistent Watch List.</p></div>
+      <div><nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/watch-list" className="back-link"><Eye /> Watch List</Link><Link href="/schedules" className="back-link">Schedules</Link></nav><span className="eyebrow">PLAYER CLASSIFICATION</span><h1>Tier Editor</h1><p>Override calculated tiers, set the order inside each tier, and choose players for your persistent Watch List.</p></div>
       <div className="management-summary"><span><strong>{state.watchList.length}</strong><small>watched</small></span><span><strong>{Object.keys(state.tierOverrides).length}</strong><small>overrides</small></span><span><strong>{tierCounts.length}</strong><small>{position} tiers</small></span></div>
     </header>
 

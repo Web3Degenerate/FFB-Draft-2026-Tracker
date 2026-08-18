@@ -7,6 +7,7 @@ import { FantasyIndexRank } from "@/app/components/fantasy-index-rank";
 import { STARTER_TARGETS, teamSnapshots } from "@/lib/auction";
 import { opponentPositionSpend, sortOpponentTeamsByPosition } from "@/lib/opponent-sort";
 import { assignTeamRoster } from "@/lib/rosters";
+import { playoffScheduleStrengthForPlayer } from "@/lib/schedule-strength";
 import { teamDisplayName } from "@/lib/teams";
 import { sortWatchListPlayers } from "@/lib/watch-list-order";
 import type { DashboardPayload, DraftState, Player, Position } from "@/lib/types";
@@ -142,7 +143,7 @@ export default function WatchListPage() {
   return <main className="watch-shell">
     <header className="watch-header">
       <div>
-        <nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/tiers" className="back-link"><SlidersHorizontal /> Tier Editor</Link></nav>
+        <nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/tiers" className="back-link"><SlidersHorizontal /> Tier Editor</Link><Link href="/schedules" className="back-link">Schedules</Link></nav>
         <span className="eyebrow">LIVE DRAFT SHORTLIST</span>
         <h1>Watch List</h1>
         <p>Track your priority targets while every opponent roster, remaining salary, and legal max bid updates beside the live auction.</p>
@@ -165,9 +166,10 @@ export default function WatchListPage() {
                 const status = playerStatus(player);
                 const tier = state.tierOverrides[String(player.id)] ?? player.tier;
                 const drafted = status.className !== "available";
+                const playoffStrength = playoffScheduleStrengthForPlayer(player);
                 return <div className={`watch-player watch-player-${status.className} ${drafted ? "watch-player-drafted" : ""} ${isEditing ? "watch-player-order-editing" : ""} ${draggingPlayerId === player.id ? "dragging" : ""}`} draggable={isEditing} key={player.id} onDragStart={(event) => { if (!isEditing) return; event.dataTransfer.effectAllowed = "move"; event.dataTransfer.setData("text/plain", String(player.id)); setDraggingPlayerId(player.id); }} onDragEnter={() => { if (isEditing) moveOrderPlayer(draggingPlayerId, player.id); }} onDragOver={(event) => { if (isEditing) event.preventDefault(); }} onDrop={(event) => { if (!isEditing) return; event.preventDefault(); setDraggingPlayerId(0); }} onDragEnd={() => setDraggingPlayerId(0)}>
                   {isEditing && <div className="watch-player-drag-handle"><DotsSixVertical /><span>{orderIndex + 1}</span></div>}
-                  {drafted ? <div className="watch-player-drafted-line"><strong className="watch-player-drafted-name">{player.name}</strong><FantasyIndexRank rank={player.fantasyIndexRank} /></div> : <><div><strong>{player.name}</strong><small>{player.nflTeam} · {tier} · ESPN Auction {player.espnAuctionValue === undefined ? "—" : money(player.espnAuctionValue)} · ESPN Keeper {money(player.espnKeeperValue)}<FantasyIndexRank rank={player.fantasyIndexRank} /></small></div><span>{status.label}</span></>}
+                  {drafted ? <div className="watch-player-drafted-line"><strong className="watch-player-drafted-name">{player.name}</strong><FantasyIndexRank rank={player.fantasyIndexRank} /></div> : <><div><strong>{player.name}</strong><small>{player.nflTeam} · {tier} · ESPN Auction {player.espnAuctionValue === undefined ? "—" : money(player.espnAuctionValue)} · ESPN Keeper {money(player.espnKeeperValue)} · Playoffs <b className="watch-playoff-strength">{playoffStrength === null ? "—" : Math.round(playoffStrength)}</b><FantasyIndexRank rank={player.fantasyIndexRank} /></small></div><span>{status.label}</span></>}
                 </div>;
               })}
               {!groupPlayers.length && <div className="watch-empty"><Check /><span>Select {positionLabel(group.position)} players in the Tier Editor</span></div>}

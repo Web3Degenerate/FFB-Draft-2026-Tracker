@@ -7,7 +7,30 @@ A local-first fantasy football auction assistant for the 2026 UTH Wink league. I
 - Open `/keepers` from the **Keepers** header link to assign zero, one, or two keepers to every team and record each keeper price. Keeper prices and roster slots are included in every budget, max-bid, and position-need calculation, and kept players are removed from the auction pool.
 - The Keeper Manager also stores an optional personal nickname for every team. Nicknames are keyed to ESPN team IDs, so they survive team-name changes, league refreshes, and Auction Room resets.
 - Open `/tiers` from **Tier editor** to override any player’s calculated position tier or restore the calculated default.
+- Open `/schedules` from **Schedules** to view any 2026 NFL team schedule or compare multiple teams by projected QB, RB, WR, TE, K, or D/ST matchup difficulty. The page starts with Denver, Seattle, Minnesota, Houston, and the LA Rams selected, and can expand to all 32 teams.
 - The Auction Room reset clears completed auction sales and the active nomination while preserving keepers, keeper prices, and tier overrides.
+
+## Schedule data
+
+The schedule comparison is a checked-in snapshot so the page loads instantly and remains available without an internet connection. Game locations come from ESPN's 2026 regular-season schedule feed and are cross-referenced against the NFL schedule. Position matchup colours come from FantasyPros' 2026 matchup calendar, while schedule ordering uses the more precise 1–32 opponent rank. The default ranking window is this league's Weeks 1–17 fantasy season; playoff strength always shows Weeks 15–17 separately.
+
+QB and D/ST rankings receive a second UTH-specific adjustment from weighted 2024–2025 nflverse play-by-play. QB blends the current opponent baseline with defensive sack rate because this league subtracts 0.5 points per sack taken. D/ST uses the league's actual values for sacks, interceptions, forced fumbles, recoveries, stuffs, safeties, turnover touchdowns, and its custom points-allowed ladder. RB, WR, TE, and K remain clearly labelled generic preseason baselines until league-specific components are added.
+
+Refresh and validate the snapshot whenever the schedule or preseason projections change:
+
+```bash
+npm run schedules:refresh
+```
+
+The refresh requires internet access and refuses to replace the snapshot unless it finds all 32 teams, 17 games per team, and ratings for all six supported fantasy positions.
+
+The checked-in UTH model can be rebuilt where the sibling model project's 2024 and 2025 nflverse parquet files are available:
+
+```bash
+npm run schedules:league-model
+```
+
+This model build requires Python with pandas and pyarrow. Both schedule scripts write atomically; the online refresh retries transient failures, caps ESPN request concurrency, and refuses unusually large rating-distribution changes.
 
 ## Run locally
 
