@@ -37,19 +37,27 @@ export async function POST(request: NextRequest) {
     const payload = JSON.parse(text) as RelayPayload;
     const current = await getState();
     let players;
-    if (payload.league?.leagueId && payload.league.leagueId !== current.config.leagueId) {
+    const incomingLeagueId = Number(payload.league?.leagueId || 0);
+    const draftLeagueId = current.relay.draftLeagueId ?? null;
+    if (draftLeagueId && incomingLeagueId && incomingLeagueId !== draftLeagueId) {
+      return NextResponse.json({
+        error: `The app is set to listen to ESPN draft league ${draftLeagueId}, but this tab is league ${incomingLeagueId}. Enter ${incomingLeagueId} in Auction Room's live-link panel before using this tab.`,
+        code: "LEAGUE_MISMATCH",
+      }, { status: 409, headers: cors });
+    }
+    if (!draftLeagueId && incomingLeagueId && incomingLeagueId !== current.config.leagueId) {
       const protectedSetup = leagueSwitchBlockReason(current);
       if (protectedSetup) {
         return NextResponse.json({
-          error: `The app is tracking league ${current.config.leagueId}, where ${protectedSetup}. It will not automatically replace that setup with league ${payload.league.leagueId}. Close the other ESPN draft tab or explicitly change leagues first.`,
+          error: `The app is tracking league ${current.config.leagueId}, where ${protectedSetup}. It will not automatically replace that setup with league ${incomingLeagueId}. Enter ${incomingLeagueId} in Auction Room's live-link panel to use it without replacing your setup.`,
           code: "LEAGUE_MISMATCH",
         }, { status: 409, headers: cors });
       }
       const replacement = await replaceLeague({
         ...current.config,
-        leagueId: payload.league.leagueId,
-        seasonId: payload.league.seasonId || current.config.seasonId,
-        myTeamId: payload.league.myTeamId || current.config.myTeamId,
+        leagueId: incomingLeagueId,
+        seasonId: payload.league?.seasonId || current.config.seasonId,
+        myTeamId: payload.league?.myTeamId || current.config.myTeamId,
       });
       players = replacement.players;
     } else {
@@ -79,6 +87,7 @@ export async function POST(request: NextRequest) {
           ? `${sourceLabel} connected · ${visibleSales} sales visible`
           : state.relay.message,
         source,
+        draftLeagueId: state.relay.draftLeagueId ?? null,
       };
       for (const incoming of payload.sales ?? []) {
         const player = players.find((item) => item.id === incoming.playerId)

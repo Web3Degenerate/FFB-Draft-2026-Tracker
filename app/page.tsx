@@ -60,6 +60,7 @@ export default function Home() {
   const [bid, setBid] = useState(1);
   const [winner, setWinner] = useState(0);
   const [showRelay, setShowRelay] = useState(false);
+  const [draftLeagueIdInput, setDraftLeagueIdInput] = useState("");
   const [showAllTeams, setShowAllTeams] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [clock, setClock] = useState(0);
@@ -183,6 +184,23 @@ export default function Home() {
     await action({ type: "reset" }, "Draft board reset");
   };
 
+  const saveDraftLeagueId = async () => {
+    const value = draftLeagueIdInput.trim();
+    if (value && !/^\d+$/.test(value)) {
+      setToast({ kind: "error", text: "Enter the numeric leagueId from the ESPN draft URL." });
+      return;
+    }
+    const leagueId = value ? Number(value) : null;
+    if (leagueId !== null && (!Number.isSafeInteger(leagueId) || leagueId <= 0)) {
+      setToast({ kind: "error", text: "Enter a valid ESPN league ID." });
+      return;
+    }
+    await action(
+      { type: "set-relay-league", leagueId },
+      leagueId ? `Listening for ESPN draft league ${leagueId}` : "ESPN draft league filter cleared",
+    );
+  };
+
   if (loading) return <main className="loading-screen"><div className="football-loader">W</div><p>Loading the auction room…</p></main>;
   if (error || !state) return <main className="loading-screen"><Warning size={36} /><h1>Couldn’t open the war room</h1><p>{error}</p><button className="primary" onClick={load}>Try again</button></main>;
 
@@ -194,8 +212,8 @@ export default function Home() {
           <div><h1>Auction Room</h1><p>{state.config.leagueName} · {state.config.seasonId}</p></div>
         </div>
         <div className="header-actions">
-          <nav className="manager-nav"><Link href="/keepers">Keepers</Link><Link href="/tiers">Tier editor</Link><Link href="/watch-list">Watch list</Link><Link href="/schedules">Schedules</Link></nav>
-          <button className={`relay-pill ${relayFresh ? "live" : ""}`} onClick={() => setShowRelay(true)}>
+          <nav className="manager-nav"><Link href="/keepers">Keepers</Link><Link href="/tiers">Tier editor</Link><Link href="/watch-list">Watch list</Link><Link href="/player-data">Player data</Link><Link href="/schedules">Schedules</Link></nav>
+          <button className={`relay-pill ${relayFresh ? "live" : ""}`} onClick={() => { setDraftLeagueIdInput(state.relay.draftLeagueId ? String(state.relay.draftLeagueId) : ""); setShowRelay(true); }}>
             <Broadcast weight="fill" /> {relayLabel}
           </button>
           <button className="icon-button" aria-label="Undo last sale" title="Undo last sale" disabled={!state.sales.length || submitting} onClick={() => action({ type: "undo" }, "Last sale undone")}><ArrowCounterClockwise /></button>
@@ -334,6 +352,11 @@ export default function Home() {
         <button className="modal-close" onClick={() => setShowRelay(false)}><X /></button>
         <div className="modal-icon"><Broadcast weight="fill" /></div><span className="eyebrow">OPTIONAL LIVE LINK</span><h2>Connect the open ESPN draft</h2>
         <p>The relay only reads the visible nomination and completed-sale messages in your signed-in ESPN tab. It sends no credentials and changes nothing on ESPN.</p>
+        <div className="relay-league-setting">
+          <label htmlFor="draft-league-id"><span>ESPN draft league ID <em>optional</em></span><small>Paste the <code>leagueId</code> from the ESPN draft URL.</small></label>
+          <div><input id="draft-league-id" inputMode="numeric" pattern="[0-9]*" placeholder="e.g. 1447096059" value={draftLeagueIdInput} onChange={(event) => setDraftLeagueIdInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter") void saveDraftLeagueId(); }} /><button disabled={submitting} onClick={() => void saveDraftLeagueId()}>Save</button></div>
+          <p>{state.relay.draftLeagueId ? <>Only ESPN draft <strong>{state.relay.draftLeagueId}</strong> can feed this room.</> : <>No draft league is selected. Manual entry still works, and protected league data will not be replaced.</>} Your league <strong>{state.config.leagueId}</strong> and its {state.keepers.length} keepers stay unchanged.</p>
+        </div>
         <ol><li>Keep this app running in this browser.</li><li>Open ESPN’s draft tab and its Developer Console.</li><li>Paste the copied relay below and press Return.</li></ol>
         <div className="code-box"><code>Self-contained relay—no ESPN-side fetch</code><button onClick={async () => { try { const origin = window.location.origin; const source = await fetch("/espn-relay.js", { cache: "no-store" }).then((response) => response.text()); await navigator.clipboard.writeText(source.replaceAll("__CODEX_FFB_BASE__", origin)); setToast({ kind: "success", text: "Complete relay copied" }); } catch { setToast({ kind: "error", text: "Could not copy relay" }); } }} >Copy relay</button></div>
         <div className={`relay-status ${relayFresh ? "live" : ""}`}><span />{relayFresh ? "Connected and listening" : "Waiting for ESPN tab"}</div>

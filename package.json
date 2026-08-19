@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "test": "vitest run",
     "schedules:refresh": "node scripts/refresh-schedule-data.mjs",
-    "schedules:league-model": "../FFB-2026-Model/.venv/bin/python scripts/build-league-schedule-model.py"
+    "schedules:league-model": "../FFB-2026-Model/.venv/bin/python scripts/build-league-schedule-model.py",
+    "fetch:player-data": "node scripts/fetch-player-data.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

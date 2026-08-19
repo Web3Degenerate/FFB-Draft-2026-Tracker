@@ -22,6 +22,7 @@ type Action =
   | { type: "update-keeper-price"; keeperId: string; amount: number }
   | { type: "remove-keeper"; keeperId: string }
   | { type: "set-team-alias"; teamId: number; alias: string }
+  | { type: "set-relay-league"; leagueId: number | null }
   | { type: "reset" };
 
 export async function POST(request: NextRequest) {
@@ -100,6 +101,14 @@ export async function POST(request: NextRequest) {
         const alias = String(action.alias ?? "").trim();
         if (alias.length > 24) throw new Error("Team nickname must be 24 characters or fewer.");
         team.alias = alias;
+      } else if (action.type === "set-relay-league") {
+        const leagueId = action.leagueId === null ? null : Number(action.leagueId);
+        if (leagueId !== null && (!Number.isSafeInteger(leagueId) || leagueId <= 0)) throw new Error("Enter a valid ESPN league ID.");
+        draft.relay.draftLeagueId = leagueId;
+        draft.relay.connected = false;
+        draft.relay.lastSeenAt = null;
+        draft.relay.source = null;
+        draft.relay.message = leagueId ? `Waiting for ESPN draft league ${leagueId}` : "Manual mode ready";
       } else if (action.type === "reset") {
         clearAuctionResults(draft);
       }

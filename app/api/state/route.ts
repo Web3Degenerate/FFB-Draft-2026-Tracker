@@ -39,7 +39,9 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(players ? { state, players } : { state });
     }
     const players = await getPlayers();
-    state = await syncRestPicks(players);
+    if (!state.relay.draftLeagueId || state.relay.draftLeagueId === state.config.leagueId) {
+      state = await syncRestPicks(players);
+    }
     return NextResponse.json({ state, players });
   } catch (error) {
     return NextResponse.json({ error: error instanceof Error ? error.message : "Unable to load draft room" }, { status: 500 });

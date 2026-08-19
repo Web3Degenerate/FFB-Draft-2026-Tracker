@@ -1,0 +1,1860 @@
+{
+  "games": [
+    {
+      "gameId": "2026_01_NE_SEA",
+      "week": 1,
+      "homeTeam": "SEA",
+      "awayTeam": "NE",
+      "totalLine": 44.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_01_SF_LA",
+      "week": 1,
+      "homeTeam": "LAR",
+      "awayTeam": "SF",
+      "totalLine": 48.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_01_CHI_CAR",
+      "week": 1,
+      "homeTeam": "CAR",
+      "awayTeam": "CHI",
+      "totalLine": 47.5,
+      "spreadLine": -2.5
+    },
+    {
+      "gameId": "2026_01_TB_CIN",
+      "week": 1,
+      "homeTeam": "CIN",
+      "awayTeam": "TB",
+      "totalLine": 51.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_01_NO_DET",
+      "week": 1,
+      "homeTeam": "DET",
+      "awayTeam": "NO",
+      "totalLine": 48.5,
+      "spreadLine": 7
+    },
+    {
+      "gameId": "2026_01_BUF_HOU",
+      "week": 1,
+      "homeTeam": "HOU",
+      "awayTeam": "BUF",
+      "totalLine": 44.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_01_BAL_IND",
+      "week": 1,
+      "homeTeam": "IND",
+      "awayTeam": "BAL",
+      "totalLine": 48.5,
+      "spreadLine": -3.5
+    },
+    {
+      "gameId": "2026_01_CLE_JAX",
+      "week": 1,
+      "homeTeam": "JAX",
+      "awayTeam": "CLE",
+      "totalLine": 40.5,
+      "spreadLine": 7.5
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "week": 1,
+      "homeTeam": "PIT",
+      "awayTeam": "ATL",
+      "totalLine": 41.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_01_NYJ_TEN",
+      "week": 1,
+      "homeTeam": "TEN",
+      "awayTeam": "NYJ",
+      "totalLine": 38.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_01_ARI_LAC",
+      "week": 1,
+      "homeTeam": "LAC",
+      "awayTeam": "ARI",
+      "totalLine": 46.5,
+      "spreadLine": 10.5
+    },
+    {
+      "gameId": "2026_01_MIA_LV",
+      "week": 1,
+      "homeTeam": "LV",
+      "awayTeam": "MIA",
+      "totalLine": 40.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_01_GB_MIN",
+      "week": 1,
+      "homeTeam": "MIN",
+      "awayTeam": "GB",
+      "totalLine": 45.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_01_WAS_PHI",
+      "week": 1,
+      "homeTeam": "PHI",
+      "awayTeam": "WAS",
+      "totalLine": 47.5,
+      "spreadLine": 4.5
+    },
+    {
+      "gameId": "2026_01_DAL_NYG",
+      "week": 1,
+      "homeTeam": "NYG",
+      "awayTeam": "DAL",
+      "totalLine": 48.5,
+      "spreadLine": -2.5
+    },
+    {
+      "gameId": "2026_01_DEN_KC",
+      "week": 1,
+      "homeTeam": "KC",
+      "awayTeam": "DEN",
+      "totalLine": 42.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_02_DET_BUF",
+      "week": 2,
+      "homeTeam": "BUF",
+      "awayTeam": "DET",
+      "totalLine": 52.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_02_CAR_ATL",
+      "week": 2,
+      "homeTeam": "ATL",
+      "awayTeam": "CAR",
+      "totalLine": 44.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_02_NO_BAL",
+      "week": 2,
+      "homeTeam": "BAL",
+      "awayTeam": "NO",
+      "totalLine": 46.5,
+      "spreadLine": 7.5
+    },
+    {
+      "gameId": "2026_02_MIN_CHI",
+      "week": 2,
+      "homeTeam": "CHI",
+      "awayTeam": "MIN",
+      "totalLine": 45.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_02_CIN_HOU",
+      "week": 2,
+      "homeTeam": "HOU",
+      "awayTeam": "CIN",
+      "totalLine": 46.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_02_PIT_NE",
+      "week": 2,
+      "homeTeam": "NE",
+      "awayTeam": "PIT",
+      "totalLine": 43.5,
+      "spreadLine": 4.5
+    },
+    {
+      "gameId": "2026_02_GB_NYJ",
+      "week": 2,
+      "homeTeam": "NYJ",
+      "awayTeam": "GB",
+      "totalLine": 42.5,
+      "spreadLine": -5.5
+    },
+    {
+      "gameId": "2026_02_CLE_TB",
+      "week": 2,
+      "homeTeam": "TB",
+      "awayTeam": "CLE",
+      "totalLine": 42.5,
+      "spreadLine": 5.5
+    },
+    {
+      "gameId": "2026_02_PHI_TEN",
+      "week": 2,
+      "homeTeam": "TEN",
+      "awayTeam": "PHI",
+      "totalLine": 42.5,
+      "spreadLine": -4.5
+    },
+    {
+      "gameId": "2026_02_JAX_DEN",
+      "week": 2,
+      "homeTeam": "DEN",
+      "awayTeam": "JAX",
+      "totalLine": 43.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_02_LV_LAC",
+      "week": 2,
+      "homeTeam": "LAC",
+      "awayTeam": "LV",
+      "totalLine": 42.5,
+      "spreadLine": 8.5
+    },
+    {
+      "gameId": "2026_02_SEA_ARI",
+      "week": 2,
+      "homeTeam": "ARI",
+      "awayTeam": "SEA",
+      "totalLine": 44.5,
+      "spreadLine": -10
+    },
+    {
+      "gameId": "2026_02_WAS_DAL",
+      "week": 2,
+      "homeTeam": "DAL",
+      "awayTeam": "WAS",
+      "totalLine": 51.5,
+      "spreadLine": 4.5
+    },
+    {
+      "gameId": "2026_02_MIA_SF",
+      "week": 2,
+      "homeTeam": "SF",
+      "awayTeam": "MIA",
+      "totalLine": 46.5,
+      "spreadLine": 10.5
+    },
+    {
+      "gameId": "2026_02_IND_KC",
+      "week": 2,
+      "homeTeam": "KC",
+      "awayTeam": "IND",
+      "totalLine": 47.5,
+      "spreadLine": 6.5
+    },
+    {
+      "gameId": "2026_02_NYG_LA",
+      "week": 2,
+      "homeTeam": "LAR",
+      "awayTeam": "NYG",
+      "totalLine": 48.5,
+      "spreadLine": 8.5
+    },
+    {
+      "gameId": "2026_03_ATL_GB",
+      "week": 3,
+      "homeTeam": "GB",
+      "awayTeam": "ATL",
+      "totalLine": 46.5,
+      "spreadLine": 7.5
+    },
+    {
+      "gameId": "2026_03_LAC_BUF",
+      "week": 3,
+      "homeTeam": "BUF",
+      "awayTeam": "LAC",
+      "totalLine": 48.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_03_CAR_CLE",
+      "week": 3,
+      "homeTeam": "CLE",
+      "awayTeam": "CAR",
+      "totalLine": 39.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_03_NYJ_DET",
+      "week": 3,
+      "homeTeam": "DET",
+      "awayTeam": "NYJ",
+      "totalLine": 45.5,
+      "spreadLine": 9.5
+    },
+    {
+      "gameId": "2026_03_HOU_IND",
+      "week": 3,
+      "homeTeam": "IND",
+      "awayTeam": "HOU",
+      "totalLine": 45.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "week": 3,
+      "homeTeam": "JAX",
+      "awayTeam": "NE",
+      "totalLine": 45.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_03_KC_MIA",
+      "week": 3,
+      "homeTeam": "MIA",
+      "awayTeam": "KC",
+      "totalLine": 44.5,
+      "spreadLine": -7.5
+    },
+    {
+      "gameId": "2026_03_TEN_NYG",
+      "week": 3,
+      "homeTeam": "NYG",
+      "awayTeam": "TEN",
+      "totalLine": 44.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_03_CIN_PIT",
+      "week": 3,
+      "homeTeam": "PIT",
+      "awayTeam": "CIN",
+      "totalLine": 46.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_03_SEA_WAS",
+      "week": 3,
+      "homeTeam": "WAS",
+      "awayTeam": "SEA",
+      "totalLine": 46.5,
+      "spreadLine": -3.5
+    },
+    {
+      "gameId": "2026_03_ARI_SF",
+      "week": 3,
+      "homeTeam": "SF",
+      "awayTeam": "ARI",
+      "totalLine": 46.5,
+      "spreadLine": 11.5
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "week": 3,
+      "homeTeam": "TB",
+      "awayTeam": "MIN",
+      "totalLine": 44.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "week": 3,
+      "homeTeam": "DAL",
+      "awayTeam": "BAL",
+      "totalLine": 51.5,
+      "spreadLine": -2.5
+    },
+    {
+      "gameId": "2026_03_LV_NO",
+      "week": 3,
+      "homeTeam": "NO",
+      "awayTeam": "LV",
+      "totalLine": 42.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_03_LA_DEN",
+      "week": 3,
+      "homeTeam": "DEN",
+      "awayTeam": "LAR",
+      "totalLine": 45.5,
+      "spreadLine": -3
+    },
+    {
+      "gameId": "2026_03_PHI_CHI",
+      "week": 3,
+      "homeTeam": "CHI",
+      "awayTeam": "PHI",
+      "totalLine": 46.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "week": 4,
+      "homeTeam": "CLE",
+      "awayTeam": "PIT",
+      "totalLine": 40.5,
+      "spreadLine": -2.5
+    },
+    {
+      "gameId": "2026_04_IND_WAS",
+      "week": 4,
+      "homeTeam": "WAS",
+      "awayTeam": "IND",
+      "totalLine": 50.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_04_TEN_BAL",
+      "week": 4,
+      "homeTeam": "BAL",
+      "awayTeam": "TEN",
+      "totalLine": 47.5,
+      "spreadLine": 8.5
+    },
+    {
+      "gameId": "2026_04_NE_BUF",
+      "week": 4,
+      "homeTeam": "BUF",
+      "awayTeam": "NE",
+      "totalLine": 49.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_04_NYJ_CHI",
+      "week": 4,
+      "homeTeam": "CHI",
+      "awayTeam": "NYJ",
+      "totalLine": 45.5,
+      "spreadLine": 8.5
+    },
+    {
+      "gameId": "2026_04_JAX_CIN",
+      "week": 4,
+      "homeTeam": "CIN",
+      "awayTeam": "JAX",
+      "totalLine": 51.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_04_DAL_HOU",
+      "week": 4,
+      "homeTeam": "HOU",
+      "awayTeam": "DAL",
+      "totalLine": 47.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_04_ARI_NYG",
+      "week": 4,
+      "homeTeam": "NYG",
+      "awayTeam": "ARI",
+      "totalLine": 45.5,
+      "spreadLine": 7
+    },
+    {
+      "gameId": "2026_04_LA_PHI",
+      "week": 4,
+      "homeTeam": "PHI",
+      "awayTeam": "LAR",
+      "totalLine": 47.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_04_GB_TB",
+      "week": 4,
+      "homeTeam": "TB",
+      "awayTeam": "GB",
+      "totalLine": 47.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_04_MIA_MIN",
+      "week": 4,
+      "homeTeam": "MIN",
+      "awayTeam": "MIA",
+      "totalLine": 43.5,
+      "spreadLine": 7.5
+    },
+    {
+      "gameId": "2026_04_KC_LV",
+      "week": 4,
+      "homeTeam": "LV",
+      "awayTeam": "KC",
+      "totalLine": 43.5,
+      "spreadLine": -5.5
+    },
+    {
+      "gameId": "2026_04_LAC_SEA",
+      "week": 4,
+      "homeTeam": "SEA",
+      "awayTeam": "LAC",
+      "totalLine": 45.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_04_DEN_SF",
+      "week": 4,
+      "homeTeam": "SF",
+      "awayTeam": "DEN",
+      "totalLine": 46.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_04_DET_CAR",
+      "week": 4,
+      "homeTeam": "CAR",
+      "awayTeam": "DET",
+      "totalLine": 47.5,
+      "spreadLine": -3
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "week": 4,
+      "homeTeam": "NO",
+      "awayTeam": "ATL",
+      "totalLine": 45.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "week": 5,
+      "homeTeam": "DAL",
+      "awayTeam": "TB",
+      "totalLine": 52.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_05_PHI_JAX",
+      "week": 5,
+      "homeTeam": "JAX",
+      "awayTeam": "PHI",
+      "totalLine": 45.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_05_CIN_MIA",
+      "week": 5,
+      "homeTeam": "MIA",
+      "awayTeam": "CIN",
+      "totalLine": 49.5,
+      "spreadLine": -6
+    },
+    {
+      "gameId": "2026_05_LV_NE",
+      "week": 5,
+      "homeTeam": "NE",
+      "awayTeam": "LV",
+      "totalLine": 44.5,
+      "spreadLine": 8.5
+    },
+    {
+      "gameId": "2026_05_MIN_NO",
+      "week": 5,
+      "homeTeam": "NO",
+      "awayTeam": "MIN",
+      "totalLine": 44.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_05_CLE_NYJ",
+      "week": 5,
+      "homeTeam": "NYJ",
+      "awayTeam": "CLE",
+      "totalLine": 39.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_05_IND_PIT",
+      "week": 5,
+      "homeTeam": "PIT",
+      "awayTeam": "IND",
+      "totalLine": 47.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_05_HOU_TEN",
+      "week": 5,
+      "homeTeam": "TEN",
+      "awayTeam": "HOU",
+      "totalLine": 43.5,
+      "spreadLine": -3.5
+    },
+    {
+      "gameId": "2026_05_NYG_WAS",
+      "week": 5,
+      "homeTeam": "WAS",
+      "awayTeam": "NYG",
+      "totalLine": 48.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_05_DEN_LAC",
+      "week": 5,
+      "homeTeam": "LAC",
+      "awayTeam": "DEN",
+      "totalLine": 44.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_05_DET_ARI",
+      "week": 5,
+      "homeTeam": "ARI",
+      "awayTeam": "DET",
+      "totalLine": 48.5,
+      "spreadLine": -8.5
+    },
+    {
+      "gameId": "2026_05_CHI_GB",
+      "week": 5,
+      "homeTeam": "GB",
+      "awayTeam": "CHI",
+      "totalLine": 49.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_05_SF_SEA",
+      "week": 5,
+      "homeTeam": "SEA",
+      "awayTeam": "SF",
+      "totalLine": 48.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_05_BAL_ATL",
+      "week": 5,
+      "homeTeam": "ATL",
+      "awayTeam": "BAL",
+      "totalLine": 48.5,
+      "spreadLine": -4.5
+    },
+    {
+      "gameId": "2026_05_BUF_LA",
+      "week": 5,
+      "homeTeam": "LAR",
+      "awayTeam": "BUF",
+      "totalLine": 53.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "week": 6,
+      "homeTeam": "DEN",
+      "awayTeam": "SEA",
+      "totalLine": 43.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_06_HOU_JAX",
+      "week": 6,
+      "homeTeam": "JAX",
+      "awayTeam": "HOU",
+      "totalLine": 42.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_06_CHI_ATL",
+      "week": 6,
+      "homeTeam": "ATL",
+      "awayTeam": "CHI",
+      "totalLine": 47.5,
+      "spreadLine": -3
+    },
+    {
+      "gameId": "2026_06_BAL_CLE",
+      "week": 6,
+      "homeTeam": "CLE",
+      "awayTeam": "BAL",
+      "totalLine": 44.5,
+      "spreadLine": -6.5
+    },
+    {
+      "gameId": "2026_06_TEN_IND",
+      "week": 6,
+      "homeTeam": "IND",
+      "awayTeam": "TEN",
+      "totalLine": 47.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_06_NYJ_NE",
+      "week": 6,
+      "homeTeam": "NE",
+      "awayTeam": "NYJ",
+      "totalLine": 42.5,
+      "spreadLine": 9.5
+    },
+    {
+      "gameId": "2026_06_NO_NYG",
+      "week": 6,
+      "homeTeam": "NYG",
+      "awayTeam": "NO",
+      "totalLine": 44.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_06_CAR_PHI",
+      "week": 6,
+      "homeTeam": "PHI",
+      "awayTeam": "CAR",
+      "totalLine": 43.5,
+      "spreadLine": 6.5
+    },
+    {
+      "gameId": "2026_06_PIT_TB",
+      "week": 6,
+      "homeTeam": "TB",
+      "awayTeam": "PIT",
+      "totalLine": 45.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_06_ARI_LA",
+      "week": 6,
+      "homeTeam": "LAR",
+      "awayTeam": "ARI",
+      "totalLine": 47.5,
+      "spreadLine": 13.5
+    },
+    {
+      "gameId": "2026_06_LAC_KC",
+      "week": 6,
+      "homeTeam": "KC",
+      "awayTeam": "LAC",
+      "totalLine": 46.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_06_BUF_LV",
+      "week": 6,
+      "homeTeam": "LV",
+      "awayTeam": "BUF",
+      "totalLine": 47.5,
+      "spreadLine": -6.5
+    },
+    {
+      "gameId": "2026_06_DAL_GB",
+      "week": 6,
+      "homeTeam": "GB",
+      "awayTeam": "DAL",
+      "totalLine": 51.5,
+      "spreadLine": 3
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "week": 6,
+      "homeTeam": "SF",
+      "awayTeam": "WAS",
+      "totalLine": 50.5,
+      "spreadLine": 5.5
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "week": 7,
+      "homeTeam": "CHI",
+      "awayTeam": "NE",
+      "totalLine": 47.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_07_PIT_NO",
+      "week": 7,
+      "homeTeam": "NO",
+      "awayTeam": "PIT",
+      "totalLine": 42.5,
+      "spreadLine": -2.5
+    },
+    {
+      "gameId": "2026_07_SF_ATL",
+      "week": 7,
+      "homeTeam": "ATL",
+      "awayTeam": "SF",
+      "totalLine": 47.5,
+      "spreadLine": -4.5
+    },
+    {
+      "gameId": "2026_07_CIN_BAL",
+      "week": 7,
+      "homeTeam": "BAL",
+      "awayTeam": "CIN",
+      "totalLine": 51.5,
+      "spreadLine": 3.5
+    },
+    {
+      "gameId": "2026_07_TB_CAR",
+      "week": 7,
+      "homeTeam": "CAR",
+      "awayTeam": "TB"
+    },
+    {
+      "gameId": "2026_07_NYG_HOU",
+      "week": 7,
+      "homeTeam": "HOU",
+      "awayTeam": "NYG",
+      "totalLine": 43.5,
+      "spreadLine": 5.5
+    },
+    {
+      "gameId": "2026_07_IND_MIN",
+      "week": 7,
+      "homeTeam": "MIN",
+      "awayTeam": "IND",
+      "totalLine": 46.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_07_MIA_NYJ",
+      "week": 7,
+      "homeTeam": "NYJ",
+      "awayTeam": "MIA",
+      "totalLine": 41.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_07_CLE_TEN",
+      "week": 7,
+      "homeTeam": "TEN",
+      "awayTeam": "CLE"
+    },
+    {
+      "gameId": "2026_07_DEN_ARI",
+      "week": 7,
+      "homeTeam": "ARI",
+      "awayTeam": "DEN"
+    },
+    {
+      "gameId": "2026_07_GB_DET",
+      "week": 7,
+      "homeTeam": "DET",
+      "awayTeam": "GB"
+    },
+    {
+      "gameId": "2026_07_LA_LV",
+      "week": 7,
+      "homeTeam": "LV",
+      "awayTeam": "LAR"
+    },
+    {
+      "gameId": "2026_07_KC_SEA",
+      "week": 7,
+      "homeTeam": "SEA",
+      "awayTeam": "KC"
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "week": 7,
+      "homeTeam": "PHI",
+      "awayTeam": "DAL"
+    },
+    {
+      "gameId": "2026_08_CAR_GB",
+      "week": 8,
+      "homeTeam": "GB",
+      "awayTeam": "CAR"
+    },
+    {
+      "gameId": "2026_08_BAL_BUF",
+      "week": 8,
+      "homeTeam": "BUF",
+      "awayTeam": "BAL"
+    },
+    {
+      "gameId": "2026_08_TEN_CIN",
+      "week": 8,
+      "homeTeam": "CIN",
+      "awayTeam": "TEN"
+    },
+    {
+      "gameId": "2026_08_ARI_DAL",
+      "week": 8,
+      "homeTeam": "DAL",
+      "awayTeam": "ARI"
+    },
+    {
+      "gameId": "2026_08_MIN_DET",
+      "week": 8,
+      "homeTeam": "DET",
+      "awayTeam": "MIN"
+    },
+    {
+      "gameId": "2026_08_IND_JAX",
+      "week": 8,
+      "homeTeam": "JAX",
+      "awayTeam": "IND"
+    },
+    {
+      "gameId": "2026_08_LV_NYJ",
+      "week": 8,
+      "homeTeam": "NYJ",
+      "awayTeam": "LV"
+    },
+    {
+      "gameId": "2026_08_CLE_PIT",
+      "week": 8,
+      "homeTeam": "PIT",
+      "awayTeam": "CLE"
+    },
+    {
+      "gameId": "2026_08_ATL_TB",
+      "week": 8,
+      "homeTeam": "TB",
+      "awayTeam": "ATL"
+    },
+    {
+      "gameId": "2026_08_LAC_LA",
+      "week": 8,
+      "homeTeam": "LAR",
+      "awayTeam": "LAC"
+    },
+    {
+      "gameId": "2026_08_KC_DEN",
+      "week": 8,
+      "homeTeam": "DEN",
+      "awayTeam": "KC"
+    },
+    {
+      "gameId": "2026_08_NE_MIA",
+      "week": 8,
+      "homeTeam": "MIA",
+      "awayTeam": "NE"
+    },
+    {
+      "gameId": "2026_08_PHI_WAS",
+      "week": 8,
+      "homeTeam": "WAS",
+      "awayTeam": "PHI"
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "week": 8,
+      "homeTeam": "SEA",
+      "awayTeam": "CHI"
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "week": 9,
+      "homeTeam": "BAL",
+      "awayTeam": "JAX"
+    },
+    {
+      "gameId": "2026_09_CIN_ATL",
+      "week": 9,
+      "homeTeam": "ATL",
+      "awayTeam": "CIN",
+      "totalLine": 49.5,
+      "spreadLine": -4.5
+    },
+    {
+      "gameId": "2026_09_DEN_CAR",
+      "week": 9,
+      "homeTeam": "CAR",
+      "awayTeam": "DEN"
+    },
+    {
+      "gameId": "2026_09_DAL_IND",
+      "week": 9,
+      "homeTeam": "IND",
+      "awayTeam": "DAL"
+    },
+    {
+      "gameId": "2026_09_NYJ_KC",
+      "week": 9,
+      "homeTeam": "KC",
+      "awayTeam": "NYJ"
+    },
+    {
+      "gameId": "2026_09_DET_MIA",
+      "week": 9,
+      "homeTeam": "MIA",
+      "awayTeam": "DET"
+    },
+    {
+      "gameId": "2026_09_CLE_NO",
+      "week": 9,
+      "homeTeam": "NO",
+      "awayTeam": "CLE"
+    },
+    {
+      "gameId": "2026_09_NYG_PHI",
+      "week": 9,
+      "homeTeam": "PHI",
+      "awayTeam": "NYG"
+    },
+    {
+      "gameId": "2026_09_LA_WAS",
+      "week": 9,
+      "homeTeam": "WAS",
+      "awayTeam": "LAR"
+    },
+    {
+      "gameId": "2026_09_HOU_LAC",
+      "week": 9,
+      "homeTeam": "LAC",
+      "awayTeam": "HOU"
+    },
+    {
+      "gameId": "2026_09_LV_SF",
+      "week": 9,
+      "homeTeam": "SF",
+      "awayTeam": "LV"
+    },
+    {
+      "gameId": "2026_09_GB_NE",
+      "week": 9,
+      "homeTeam": "NE",
+      "awayTeam": "GB"
+    },
+    {
+      "gameId": "2026_09_ARI_SEA",
+      "week": 9,
+      "homeTeam": "SEA",
+      "awayTeam": "ARI"
+    },
+    {
+      "gameId": "2026_09_TB_CHI",
+      "week": 9,
+      "homeTeam": "CHI",
+      "awayTeam": "TB"
+    },
+    {
+      "gameId": "2026_09_BUF_MIN",
+      "week": 9,
+      "homeTeam": "MIN",
+      "awayTeam": "BUF"
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "week": 10,
+      "homeTeam": "NYG",
+      "awayTeam": "WAS"
+    },
+    {
+      "gameId": "2026_10_NE_DET",
+      "week": 10,
+      "homeTeam": "DET",
+      "awayTeam": "NE",
+      "totalLine": 49.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_10_KC_ATL",
+      "week": 10,
+      "homeTeam": "ATL",
+      "awayTeam": "KC"
+    },
+    {
+      "gameId": "2026_10_HOU_CLE",
+      "week": 10,
+      "homeTeam": "CLE",
+      "awayTeam": "HOU"
+    },
+    {
+      "gameId": "2026_10_MIN_GB",
+      "week": 10,
+      "homeTeam": "GB",
+      "awayTeam": "MIN"
+    },
+    {
+      "gameId": "2026_10_MIA_IND",
+      "week": 10,
+      "homeTeam": "IND",
+      "awayTeam": "MIA"
+    },
+    {
+      "gameId": "2026_10_CAR_NO",
+      "week": 10,
+      "homeTeam": "NO",
+      "awayTeam": "CAR"
+    },
+    {
+      "gameId": "2026_10_BUF_NYJ",
+      "week": 10,
+      "homeTeam": "NYJ",
+      "awayTeam": "BUF"
+    },
+    {
+      "gameId": "2026_10_JAX_TEN",
+      "week": 10,
+      "homeTeam": "TEN",
+      "awayTeam": "JAX"
+    },
+    {
+      "gameId": "2026_10_LA_ARI",
+      "week": 10,
+      "homeTeam": "ARI",
+      "awayTeam": "LAR"
+    },
+    {
+      "gameId": "2026_10_SEA_LV",
+      "week": 10,
+      "homeTeam": "LV",
+      "awayTeam": "SEA"
+    },
+    {
+      "gameId": "2026_10_SF_DAL",
+      "week": 10,
+      "homeTeam": "DAL",
+      "awayTeam": "SF"
+    },
+    {
+      "gameId": "2026_10_PIT_CIN",
+      "week": 10,
+      "homeTeam": "CIN",
+      "awayTeam": "PIT"
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "week": 10,
+      "homeTeam": "BAL",
+      "awayTeam": "LAC"
+    },
+    {
+      "gameId": "2026_11_IND_HOU",
+      "week": 11,
+      "homeTeam": "HOU",
+      "awayTeam": "IND"
+    },
+    {
+      "gameId": "2026_11_MIA_BUF",
+      "week": 11,
+      "homeTeam": "BUF",
+      "awayTeam": "MIA"
+    },
+    {
+      "gameId": "2026_11_BAL_CAR",
+      "week": 11,
+      "homeTeam": "CAR",
+      "awayTeam": "BAL"
+    },
+    {
+      "gameId": "2026_11_NO_CHI",
+      "week": 11,
+      "homeTeam": "CHI",
+      "awayTeam": "NO"
+    },
+    {
+      "gameId": "2026_11_TEN_DAL",
+      "week": 11,
+      "homeTeam": "DAL",
+      "awayTeam": "TEN"
+    },
+    {
+      "gameId": "2026_11_TB_DET",
+      "week": 11,
+      "homeTeam": "DET",
+      "awayTeam": "TB"
+    },
+    {
+      "gameId": "2026_11_ARI_KC",
+      "week": 11,
+      "homeTeam": "KC",
+      "awayTeam": "ARI"
+    },
+    {
+      "gameId": "2026_11_JAX_NYG",
+      "week": 11,
+      "homeTeam": "NYG",
+      "awayTeam": "JAX"
+    },
+    {
+      "gameId": "2026_11_NYJ_LAC",
+      "week": 11,
+      "homeTeam": "LAC",
+      "awayTeam": "NYJ"
+    },
+    {
+      "gameId": "2026_11_LV_DEN",
+      "week": 11,
+      "homeTeam": "DEN",
+      "awayTeam": "LV"
+    },
+    {
+      "gameId": "2026_11_PIT_PHI",
+      "week": 11,
+      "homeTeam": "PHI",
+      "awayTeam": "PIT"
+    },
+    {
+      "gameId": "2026_11_MIN_SF",
+      "week": 11,
+      "homeTeam": "SF",
+      "awayTeam": "MIN",
+      "totalLine": 47.5,
+      "spreadLine": 4.5
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "week": 11,
+      "homeTeam": "WAS",
+      "awayTeam": "CIN"
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "week": 12,
+      "homeTeam": "LAR",
+      "awayTeam": "GB",
+      "totalLine": 48.5,
+      "spreadLine": 5.5
+    },
+    {
+      "gameId": "2026_12_CHI_DET",
+      "week": 12,
+      "homeTeam": "DET",
+      "awayTeam": "CHI",
+      "totalLine": 53.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_12_PHI_DAL",
+      "week": 12,
+      "homeTeam": "DAL",
+      "awayTeam": "PHI",
+      "totalLine": 49.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_12_KC_BUF",
+      "week": 12,
+      "homeTeam": "BUF",
+      "awayTeam": "KC",
+      "totalLine": 50.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_12_DEN_PIT",
+      "week": 12,
+      "homeTeam": "PIT",
+      "awayTeam": "DEN",
+      "totalLine": 39.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_12_NO_CIN",
+      "week": 12,
+      "homeTeam": "CIN",
+      "awayTeam": "NO"
+    },
+    {
+      "gameId": "2026_12_LV_CLE",
+      "week": 12,
+      "homeTeam": "CLE",
+      "awayTeam": "LV"
+    },
+    {
+      "gameId": "2026_12_BAL_HOU",
+      "week": 12,
+      "homeTeam": "HOU",
+      "awayTeam": "BAL"
+    },
+    {
+      "gameId": "2026_12_NYG_IND",
+      "week": 12,
+      "homeTeam": "IND",
+      "awayTeam": "NYG"
+    },
+    {
+      "gameId": "2026_12_NYJ_MIA",
+      "week": 12,
+      "homeTeam": "MIA",
+      "awayTeam": "NYJ"
+    },
+    {
+      "gameId": "2026_12_ATL_MIN",
+      "week": 12,
+      "homeTeam": "MIN",
+      "awayTeam": "ATL"
+    },
+    {
+      "gameId": "2026_12_TEN_JAX",
+      "week": 12,
+      "homeTeam": "JAX",
+      "awayTeam": "TEN"
+    },
+    {
+      "gameId": "2026_12_WAS_ARI",
+      "week": 12,
+      "homeTeam": "ARI",
+      "awayTeam": "WAS"
+    },
+    {
+      "gameId": "2026_12_SEA_SF",
+      "week": 12,
+      "homeTeam": "SF",
+      "awayTeam": "SEA"
+    },
+    {
+      "gameId": "2026_12_NE_LAC",
+      "week": 12,
+      "homeTeam": "LAC",
+      "awayTeam": "NE"
+    },
+    {
+      "gameId": "2026_12_CAR_TB",
+      "week": 12,
+      "homeTeam": "TB",
+      "awayTeam": "CAR"
+    },
+    {
+      "gameId": "2026_13_KC_LA",
+      "week": 13,
+      "homeTeam": "LAR",
+      "awayTeam": "KC"
+    },
+    {
+      "gameId": "2026_13_DET_ATL",
+      "week": 13,
+      "homeTeam": "ATL",
+      "awayTeam": "DET"
+    },
+    {
+      "gameId": "2026_13_JAX_CHI",
+      "week": 13,
+      "homeTeam": "CHI",
+      "awayTeam": "JAX"
+    },
+    {
+      "gameId": "2026_13_CIN_CLE",
+      "week": 13,
+      "homeTeam": "CLE",
+      "awayTeam": "CIN"
+    },
+    {
+      "gameId": "2026_13_GB_NO",
+      "week": 13,
+      "homeTeam": "NO",
+      "awayTeam": "GB"
+    },
+    {
+      "gameId": "2026_13_SF_NYG",
+      "week": 13,
+      "homeTeam": "NYG",
+      "awayTeam": "SF"
+    },
+    {
+      "gameId": "2026_13_LAC_TB",
+      "week": 13,
+      "homeTeam": "TB",
+      "awayTeam": "LAC"
+    },
+    {
+      "gameId": "2026_13_WAS_TEN",
+      "week": 13,
+      "homeTeam": "TEN",
+      "awayTeam": "WAS"
+    },
+    {
+      "gameId": "2026_13_PHI_ARI",
+      "week": 13,
+      "homeTeam": "ARI",
+      "awayTeam": "PHI"
+    },
+    {
+      "gameId": "2026_13_MIA_DEN",
+      "week": 13,
+      "homeTeam": "DEN",
+      "awayTeam": "MIA"
+    },
+    {
+      "gameId": "2026_13_CAR_MIN",
+      "week": 13,
+      "homeTeam": "MIN",
+      "awayTeam": "CAR"
+    },
+    {
+      "gameId": "2026_13_BUF_NE",
+      "week": 13,
+      "homeTeam": "NE",
+      "awayTeam": "BUF"
+    },
+    {
+      "gameId": "2026_13_HOU_PIT",
+      "week": 13,
+      "homeTeam": "PIT",
+      "awayTeam": "HOU"
+    },
+    {
+      "gameId": "2026_13_DAL_SEA",
+      "week": 13,
+      "homeTeam": "SEA",
+      "awayTeam": "DAL"
+    },
+    {
+      "gameId": "2026_14_MIN_NE",
+      "week": 14,
+      "homeTeam": "NE",
+      "awayTeam": "MIN"
+    },
+    {
+      "gameId": "2026_14_TB_BAL",
+      "week": 14,
+      "homeTeam": "BAL",
+      "awayTeam": "TB"
+    },
+    {
+      "gameId": "2026_14_NO_CAR",
+      "week": 14,
+      "homeTeam": "CAR",
+      "awayTeam": "NO"
+    },
+    {
+      "gameId": "2026_14_ATL_CLE",
+      "week": 14,
+      "homeTeam": "CLE",
+      "awayTeam": "ATL"
+    },
+    {
+      "gameId": "2026_14_TEN_DET",
+      "week": 14,
+      "homeTeam": "DET",
+      "awayTeam": "TEN"
+    },
+    {
+      "gameId": "2026_14_CHI_MIA",
+      "week": 14,
+      "homeTeam": "MIA",
+      "awayTeam": "CHI"
+    },
+    {
+      "gameId": "2026_14_DEN_NYJ",
+      "week": 14,
+      "homeTeam": "NYJ",
+      "awayTeam": "DEN"
+    },
+    {
+      "gameId": "2026_14_IND_PHI",
+      "week": 14,
+      "homeTeam": "PHI",
+      "awayTeam": "IND"
+    },
+    {
+      "gameId": "2026_14_HOU_WAS",
+      "week": 14,
+      "homeTeam": "WAS",
+      "awayTeam": "HOU"
+    },
+    {
+      "gameId": "2026_14_LAC_LV",
+      "week": 14,
+      "homeTeam": "LV",
+      "awayTeam": "LAC"
+    },
+    {
+      "gameId": "2026_14_KC_CIN",
+      "week": 14,
+      "homeTeam": "CIN",
+      "awayTeam": "KC"
+    },
+    {
+      "gameId": "2026_14_NYG_SEA",
+      "week": 14,
+      "homeTeam": "SEA",
+      "awayTeam": "NYG"
+    },
+    {
+      "gameId": "2026_14_LA_SF",
+      "week": 14,
+      "homeTeam": "SF",
+      "awayTeam": "LAR"
+    },
+    {
+      "gameId": "2026_14_BUF_GB",
+      "week": 14,
+      "homeTeam": "GB",
+      "awayTeam": "BUF"
+    },
+    {
+      "gameId": "2026_14_PIT_JAX",
+      "week": 14,
+      "homeTeam": "JAX",
+      "awayTeam": "PIT"
+    },
+    {
+      "gameId": "2026_15_SF_LAC",
+      "week": 15,
+      "homeTeam": "LAC",
+      "awayTeam": "SF"
+    },
+    {
+      "gameId": "2026_15_SEA_PHI",
+      "week": 15,
+      "homeTeam": "PHI",
+      "awayTeam": "SEA"
+    },
+    {
+      "gameId": "2026_15_CHI_BUF",
+      "week": 15,
+      "homeTeam": "BUF",
+      "awayTeam": "CHI"
+    },
+    {
+      "gameId": "2026_15_CIN_CAR",
+      "week": 15,
+      "homeTeam": "CAR",
+      "awayTeam": "CIN"
+    },
+    {
+      "gameId": "2026_15_MIA_GB",
+      "week": 15,
+      "homeTeam": "GB",
+      "awayTeam": "MIA"
+    },
+    {
+      "gameId": "2026_15_JAX_HOU",
+      "week": 15,
+      "homeTeam": "HOU",
+      "awayTeam": "JAX"
+    },
+    {
+      "gameId": "2026_15_CLE_NYG",
+      "week": 15,
+      "homeTeam": "NYG",
+      "awayTeam": "CLE"
+    },
+    {
+      "gameId": "2026_15_BAL_PIT",
+      "week": 15,
+      "homeTeam": "PIT",
+      "awayTeam": "BAL"
+    },
+    {
+      "gameId": "2026_15_NO_TB",
+      "week": 15,
+      "homeTeam": "TB",
+      "awayTeam": "NO"
+    },
+    {
+      "gameId": "2026_15_IND_TEN",
+      "week": 15,
+      "homeTeam": "TEN",
+      "awayTeam": "IND"
+    },
+    {
+      "gameId": "2026_15_ATL_WAS",
+      "week": 15,
+      "homeTeam": "WAS",
+      "awayTeam": "ATL"
+    },
+    {
+      "gameId": "2026_15_NYJ_ARI",
+      "week": 15,
+      "homeTeam": "ARI",
+      "awayTeam": "NYJ"
+    },
+    {
+      "gameId": "2026_15_DAL_LA",
+      "week": 15,
+      "homeTeam": "LAR",
+      "awayTeam": "DAL"
+    },
+    {
+      "gameId": "2026_15_DEN_LV",
+      "week": 15,
+      "homeTeam": "LV",
+      "awayTeam": "DEN"
+    },
+    {
+      "gameId": "2026_15_DET_MIN",
+      "week": 15,
+      "homeTeam": "MIN",
+      "awayTeam": "DET"
+    },
+    {
+      "gameId": "2026_15_NE_KC",
+      "week": 15,
+      "homeTeam": "KC",
+      "awayTeam": "NE"
+    },
+    {
+      "gameId": "2026_16_HOU_PHI",
+      "week": 16,
+      "homeTeam": "PHI",
+      "awayTeam": "HOU",
+      "totalLine": 38.5,
+      "spreadLine": 2.5
+    },
+    {
+      "gameId": "2026_16_GB_CHI",
+      "week": 16,
+      "homeTeam": "CHI",
+      "awayTeam": "GB",
+      "totalLine": 47.5,
+      "spreadLine": 1.5
+    },
+    {
+      "gameId": "2026_16_BUF_DEN",
+      "week": 16,
+      "homeTeam": "DEN",
+      "awayTeam": "BUF",
+      "totalLine": 46.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_16_LA_SEA",
+      "week": 16,
+      "homeTeam": "SEA",
+      "awayTeam": "LAR",
+      "totalLine": 45.5,
+      "spreadLine": -1.5
+    },
+    {
+      "gameId": "2026_16_TB_ATL",
+      "week": 16,
+      "homeTeam": "ATL",
+      "awayTeam": "TB"
+    },
+    {
+      "gameId": "2026_16_CLE_BAL",
+      "week": 16,
+      "homeTeam": "BAL",
+      "awayTeam": "CLE"
+    },
+    {
+      "gameId": "2026_16_CIN_IND",
+      "week": 16,
+      "homeTeam": "IND",
+      "awayTeam": "CIN"
+    },
+    {
+      "gameId": "2026_16_LAC_MIA",
+      "week": 16,
+      "homeTeam": "MIA",
+      "awayTeam": "LAC"
+    },
+    {
+      "gameId": "2026_16_WAS_MIN",
+      "week": 16,
+      "homeTeam": "MIN",
+      "awayTeam": "WAS"
+    },
+    {
+      "gameId": "2026_16_ARI_NO",
+      "week": 16,
+      "homeTeam": "NO",
+      "awayTeam": "ARI"
+    },
+    {
+      "gameId": "2026_16_NE_NYJ",
+      "week": 16,
+      "homeTeam": "NYJ",
+      "awayTeam": "NE"
+    },
+    {
+      "gameId": "2026_16_CAR_PIT",
+      "week": 16,
+      "homeTeam": "PIT",
+      "awayTeam": "CAR"
+    },
+    {
+      "gameId": "2026_16_TEN_LV",
+      "week": 16,
+      "homeTeam": "LV",
+      "awayTeam": "TEN"
+    },
+    {
+      "gameId": "2026_16_SF_KC",
+      "week": 16,
+      "homeTeam": "KC",
+      "awayTeam": "SF"
+    },
+    {
+      "gameId": "2026_16_JAX_DAL",
+      "week": 16,
+      "homeTeam": "DAL",
+      "awayTeam": "JAX"
+    },
+    {
+      "gameId": "2026_16_NYG_DET",
+      "week": 16,
+      "homeTeam": "DET",
+      "awayTeam": "NYG"
+    },
+    {
+      "gameId": "2026_17_BAL_CIN",
+      "week": 17,
+      "homeTeam": "CIN",
+      "awayTeam": "BAL"
+    },
+    {
+      "gameId": "2026_17_NO_ATL",
+      "week": 17,
+      "homeTeam": "ATL",
+      "awayTeam": "NO"
+    },
+    {
+      "gameId": "2026_17_SEA_CAR",
+      "week": 17,
+      "homeTeam": "CAR",
+      "awayTeam": "SEA"
+    },
+    {
+      "gameId": "2026_17_IND_CLE",
+      "week": 17,
+      "homeTeam": "CLE",
+      "awayTeam": "IND"
+    },
+    {
+      "gameId": "2026_17_NYG_DAL",
+      "week": 17,
+      "homeTeam": "DAL",
+      "awayTeam": "NYG"
+    },
+    {
+      "gameId": "2026_17_WAS_JAX",
+      "week": 17,
+      "homeTeam": "JAX",
+      "awayTeam": "WAS"
+    },
+    {
+      "gameId": "2026_17_KC_LAC",
+      "week": 17,
+      "homeTeam": "LAC",
+      "awayTeam": "KC"
+    },
+    {
+      "gameId": "2026_17_BUF_MIA",
+      "week": 17,
+      "homeTeam": "MIA",
+      "awayTeam": "BUF"
+    },
+    {
+      "gameId": "2026_17_DEN_NE",
+      "week": 17,
+      "homeTeam": "NE",
+      "awayTeam": "DEN"
+    },
+    {
+      "gameId": "2026_17_MIN_NYJ",
+      "week": 17,
+      "homeTeam": "NYJ",
+      "awayTeam": "MIN"
+    },
+    {
+      "gameId": "2026_17_LA_TB",
+      "week": 17,
+      "homeTeam": "TB",
+      "awayTeam": "LAR"
+    },
+    {
+      "gameId": "2026_17_PIT_TEN",
+      "week": 17,
+      "homeTeam": "TEN",
+      "awayTeam": "PIT"
+    },
+    {
+      "gameId": "2026_17_LV_ARI",
+      "week": 17,
+      "homeTeam": "ARI",
+      "awayTeam": "LV"
+    },
+    {
+      "gameId": "2026_17_DET_CHI",
+      "week": 17,
+      "homeTeam": "CHI",
+      "awayTeam": "DET"
+    },
+    {
+      "gameId": "2026_17_PHI_SF",
+      "week": 17,
+      "homeTeam": "SF",
+      "awayTeam": "PHI"
+    },
+    {
+      "gameId": "2026_17_HOU_GB",
+      "week": 17,
+      "homeTeam": "GB",
+      "awayTeam": "HOU"
+    },
+    {
+      "gameId": "2026_18_SF_ARI",
+      "week": 18,
+      "homeTeam": "ARI",
+      "awayTeam": "SF"
+    },
+    {
+      "gameId": "2026_18_PIT_BAL",
+      "week": 18,
+      "homeTeam": "BAL",
+      "awayTeam": "PIT"
+    },
+    {
+      "gameId": "2026_18_NYJ_BUF",
+      "week": 18,
+      "homeTeam": "BUF",
+      "awayTeam": "NYJ"
+    },
+    {
+      "gameId": "2026_18_ATL_CAR",
+      "week": 18,
+      "homeTeam": "CAR",
+      "awayTeam": "ATL"
+    },
+    {
+      "gameId": "2026_18_CLE_CIN",
+      "week": 18,
+      "homeTeam": "CIN",
+      "awayTeam": "CLE"
+    },
+    {
+      "gameId": "2026_18_LAC_DEN",
+      "week": 18,
+      "homeTeam": "DEN",
+      "awayTeam": "LAC"
+    },
+    {
+      "gameId": "2026_18_DET_GB",
+      "week": 18,
+      "homeTeam": "GB",
+      "awayTeam": "DET"
+    },
+    {
+      "gameId": "2026_18_TEN_HOU",
+      "week": 18,
+      "homeTeam": "HOU",
+      "awayTeam": "TEN"
+    },
+    {
+      "gameId": "2026_18_JAX_IND",
+      "week": 18,
+      "homeTeam": "IND",
+      "awayTeam": "JAX"
+    },
+    {
+      "gameId": "2026_18_LV_KC",
+      "week": 18,
+      "homeTeam": "KC",
+      "awayTeam": "LV"
+    },
+    {
+      "gameId": "2026_18_SEA_LA",
+      "week": 18,
+      "homeTeam": "LAR",
+      "awayTeam": "SEA"
+    },
+    {
+      "gameId": "2026_18_CHI_MIN",
+      "week": 18,
+      "homeTeam": "MIN",
+      "awayTeam": "CHI"
+    },
+    {
+      "gameId": "2026_18_MIA_NE",
+      "week": 18,
+      "homeTeam": "NE",
+      "awayTeam": "MIA"
+    },
+    {
+      "gameId": "2026_18_TB_NO",
+      "week": 18,
+      "homeTeam": "NO",
+      "awayTeam": "TB"
+    },
+    {
+      "gameId": "2026_18_PHI_NYG",
+      "week": 18,
+      "homeTeam": "NYG",
+      "awayTeam": "PHI"
+    },
+    {
+      "gameId": "2026_18_DAL_WAS",
+      "week": 18,
+      "homeTeam": "WAS",
+      "awayTeam": "DAL"
+    }
+  ]
+}

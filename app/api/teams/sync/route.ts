@@ -30,6 +30,9 @@ export async function POST(request: NextRequest) {
     const requestedLeagueId = Number(payload.league?.leagueId || current.config.leagueId);
     const requestedSeasonId = Number(payload.league?.seasonId || current.config.seasonId);
     if (requestedLeagueId !== current.config.leagueId || requestedSeasonId !== current.config.seasonId) {
+      if (requestedLeagueId === current.relay.draftLeagueId) {
+        return NextResponse.json({ ok: true, changed: [], message: "Using the configured league's team names for this ESPN draft." }, { headers: cors });
+      }
       return NextResponse.json({
         error: "Auction Room is still switching to this ESPN league. Team names will retry automatically.",
         code: "LEAGUE_NOT_READY",

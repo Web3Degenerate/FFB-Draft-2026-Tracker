@@ -143,7 +143,7 @@ export default function WatchListPage() {
   return <main className="watch-shell">
     <header className="watch-header">
       <div>
-        <nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/tiers" className="back-link"><SlidersHorizontal /> Tier Editor</Link><Link href="/schedules" className="back-link">Schedules</Link></nav>
+        <nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/tiers" className="back-link"><SlidersHorizontal /> Tier Editor</Link><Link href="/player-data" className="back-link">Player Data</Link><Link href="/schedules" className="back-link">Schedules</Link></nav>
         <span className="eyebrow">LIVE DRAFT SHORTLIST</span>
         <h1>Watch List</h1>
         <p>Track your priority targets while every opponent roster, remaining salary, and legal max bid updates beside the live auction.</p>

@@ -67,6 +67,7 @@ export type RelayStatus = {
   lastSeenAt: string | null;
   message: string;
   source?: "extension" | "pasted" | null;
+  draftLeagueId?: number | null;
 };
 
 export type DraftState = {

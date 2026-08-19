@@ -80,6 +80,7 @@ export async function getState(): Promise<DraftState> {
     tierOrders: existing.tierOrders ?? {},
     watchList: existing.watchList ?? [],
     watchListOrders: existing.watchListOrders ?? {},
+    relay: { ...existing.relay, draftLeagueId: existing.relay.draftLeagueId ?? null },
   };
   const league = await fetchLeague(DEFAULT_CONFIG);
   const now = new Date().toISOString();
@@ -93,7 +94,7 @@ export async function getState(): Promise<DraftState> {
     tierOrders: {},
     watchList: [],
     watchListOrders: {},
-    relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null },
+    relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null, draftLeagueId: null },
     updatedAt: now,
   };
   await atomicWrite(STATE_PATH, state);
@@ -132,6 +133,23 @@ export async function getPlayers(force = false): Promise<Player[]> {
   const players = await fetchPlayers(state.config);
   await atomicWrite(PLAYERS_PATH, { version: PLAYER_CACHE_VERSION, leagueId: state.config.leagueId, seasonId: state.config.seasonId, players } satisfies PlayerCache);
   return withPlayerSources(players, state.config);
+}
+
+/** Read-only draft-day research input. This deliberately never falls back to ESPN. */
+export async function getLocalPlayerDataBase(): Promise<{ players: Player[]; watchList: number[] }> {
+  const [state, existing] = await Promise.all([
+    readJson<DraftState>(STATE_PATH),
+    readJson<PlayerCache>(PLAYERS_PATH),
+  ]);
+  if (!state) throw new Error("Local draft state is missing. Open the Auction Room once before using Player Data.");
+  if (!existing?.players.length) throw new Error("Local player cache is missing. Refresh the Auction Room before using Player Data.");
+  if (existing.leagueId !== state.config.leagueId || existing.seasonId !== state.config.seasonId) {
+    throw new Error("Local player cache does not match the active league and season.");
+  }
+  return {
+    players: await withPlayerSources(upgradeCachedPlayers(existing.players), state.config),
+    watchList: state.watchList ?? [],
+  };
 }
 
 export function saveEspnAuctionValues(config: DraftConfig, incoming: Array<{ playerId: number; playerName: string; amount: number }>): Promise<number> {
@@ -177,7 +195,7 @@ export async function replaceLeague(config: DraftConfig): Promise<{ state: Draft
     tierOrders: Object.fromEntries(Object.entries(current.tierOrders ?? {}).map(([tier, orderedIds]) => [tier, orderedIds.filter((playerId) => playerIds.has(playerId))])),
     watchList: (current.watchList ?? []).filter((playerId) => playerIds.has(playerId)),
     watchListOrders: Object.fromEntries(Object.entries(current.watchListOrders ?? {}).map(([position, orderedIds]) => [position, orderedIds.filter((playerId) => playerIds.has(playerId))])),
-    relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null },
+    relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null, draftLeagueId: null },
     updatedAt: new Date().toISOString(),
   };
   await atomicWrite(STATE_PATH, state);
