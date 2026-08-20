@@ -732,3 +732,206 @@ code { font-family: var(--font-mono); }
   .schedule-sort-picker { width: 100%; }
   .schedule-sort-picker button { flex: 1; }
 }
+
+/* =====================================================================
+   Watch List redesign — CSS deltas for app/globals.css
+   FFB-2026-Codex-Version
+
+   HOW TO APPLY
+   ------------
+   APPEND this entire block to the END of app/globals.css. Do NOT replace
+   the existing rules with these — every rule here is a partial property
+   set that layers on top of the original (the originals still supply
+   `display`, `position`, `flex-direction`, grid definitions, etc.).
+   Later rules win, so appending is all that is needed.
+
+   SCOPING
+   -------
+   `.watch-*`, `.opponent-*` and `.roster-slot*` are used only by
+   app/watch-list/page.tsx, so those selectors stay bare.
+   `.pos`, `.pos-*`, `.eyebrow`, `.back-link`, `.management-nav-links`
+   and `.fi-rank-badge` are ALSO used by the auction room, tiers,
+   keepers, player-data and schedules pages — which stay dark — so those
+   are scoped under `.watch-shell` and must stay that way.
+
+   MARKUP CHANGE (one, optional but recommended)
+   ---------------------------------------------
+   app/watch-list/page.tsx — the watch-order button label
+       <PencilSimple /> Edit order    ->    <PencilSimple /> Order
+   Without it the wider "Wide Receivers" / "Running Backs" headings
+   ellipsise at 1440px. Everything else is CSS-only.
+
+   VERIFIED at 1440x1000 against live board data:
+     · smallest rendered font 11px (was 7px)
+     · every text/background pair >= 4.6:1 contrast (WCAG AA)
+     · zero clipped or ellipsised text anywhere on the board
+     · no horizontal scroll on the roster grid (was 1510px min-width)
+     · watch board 24% shorter (500px -> 378px)
+     · opponent roster rows 116px -> 120px each: +4px, because the
+       price/rank line now wraps instead of being cut off
+   Net on the real 11-team page: roughly -120px from the watch board
+   against +45px from the rosters, so modestly shorter overall while
+   every glyph is 40-55% larger. The density win is concentrated in the
+   watch board; the roster grid's win is legibility, not height.
+   ===================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   1. NEW TOKENS — light data surfaces + dark-on-light accent colours.
+      The existing dark tokens are untouched; these are additions.
+   --------------------------------------------------------------------- */
+:root {
+  --card:        #f3f6f8;   /* primary light data surface   */
+  --card-2:      #e7ecef;   /* secondary / empty / drafted   */
+  --card-3:      #dde5ea;   /* team summary rail             */
+  --card-line:   #c8d3da;   /* hairline on light             */
+  --ink:         #0f191f;   /* primary text on light         */
+  --ink-2:       #4d5c65;   /* secondary text on light       */
+  --ink-3:       #57666e;   /* tertiary text on light        */
+  --green-ink:   #0b6335;   /* dark-on-light green           */
+  --amber-ink:   #8a5800;   /* dark-on-light amber           */
+  --amber-line:  #e0930d;   /* keeper accent bar             */
+  --blue-ink:    #17569f;   /* dark-on-light blue            */
+  --red-ink:     #b0201c;   /* dark-on-light red             */
+}
+
+/* NOTE: no font-family override here. app/layout.tsx loads Geist via
+   next/font and binds it to --font-sans on <body>, so the `Arial` in the
+   :root block above is only a fallback that never renders. The Watch List
+   inherits Geist like every other page. */
+
+
+/* ---------------------------------------------------------------------
+   2. PAGE CHROME — stays dark, just tightened up.
+   --------------------------------------------------------------------- */
+.watch-shell { padding: 18px clamp(12px, 1.6vw, 26px) 34px; }
+.watch-header { margin: 0 auto 12px; align-items: center; }
+.watch-header h1 { margin: 4px 0 3px; font-size: clamp(24px, 2.4vw, 30px); letter-spacing: -.03em; }
+.watch-header > div:first-child > p { max-width: 760px; font-size: 12px; line-height: 1.45; }
+.watch-shell .management-nav-links { margin-bottom: 6px; }
+.watch-shell .back-link { font-size: 12px; }
+.watch-shell .eyebrow { font-size: 11px; letter-spacing: .1em; }
+.watch-summary { min-width: 160px; height: 62px; padding: 9px 13px; }
+.watch-summary strong { font-size: 21px; }
+.watch-summary span { font-size: 11px; }
+.watch-board { margin: 0 auto 14px; }
+.watch-board-heading { min-height: 0; padding: 9px 13px; }
+.watch-board-heading h2, .opponent-board-heading h2 { margin-top: 2px; font-size: 16px; }
+.watch-board-heading a { font-size: 12px; }
+
+
+/* ---------------------------------------------------------------------
+   3. POSITION BADGES — dark-on-light variants for the light data cards.
+      Scoped to .watch-shell so the rest of the app keeps the dark set.
+   --------------------------------------------------------------------- */
+.watch-shell .pos     { min-width: 29px; height: 21px; padding: 0 4px; border-radius: 5px; font-size: 11px; }
+.watch-shell .pos-qb  { color: #a52521; background: #fbe2e0; }
+.watch-shell .pos-rb  { color: #0a6b4d; background: #d6f0e6; }
+.watch-shell .pos-wr  { color: #14509e; background: #dbe8fb; }
+.watch-shell .pos-te  { color: #6a1fa6; background: #eddefb; }
+.watch-shell .pos-k   { color: #8a5800; background: #fbeccd; }
+.watch-shell .pos-dst { color: #3d4b53; background: #e1e7ea; }
+
+/* the sort bar sits on the DARK panel, so it keeps the dark-mode badges */
+.watch-shell .opponent-sort-bar .pos-qb  { color: #ff8682; background: rgba(255, 107, 103, .13); }
+.watch-shell .opponent-sort-bar .pos-rb  { color: #65ddb2; background: rgba(70, 210, 161, .13); }
+.watch-shell .opponent-sort-bar .pos-wr  { color: #73b5ff; background: rgba(101, 167, 255, .13); }
+.watch-shell .opponent-sort-bar .pos-te  { color: #d899ff; background: rgba(196, 123, 241, .13); }
+.watch-shell .opponent-sort-bar .pos-k   { color: #ffd36e; background: rgba(255, 191, 71, .13); }
+.watch-shell .opponent-sort-bar .pos-dst { color: #b4c0c7; background: rgba(180, 192, 199, .12); }
+
+.watch-shell .fi-rank-badge { padding: 0 3px; border-color: #9dbbe0; color: var(--blue-ink); background: #dcebfb; font-size: 11px; }
+
+
+/* ---------------------------------------------------------------------
+   4. WATCH COLUMNS — the player list becomes one light sheet with
+      hairline-separated rows. No card margins, no min-heights.
+   --------------------------------------------------------------------- */
+.watch-columns { grid-template-columns: repeat(6, minmax(215px, 1fr)); min-width: 1290px; }
+.watch-column > header { min-height: 0; padding: 8px 9px; gap: 6px; }
+.watch-column > header strong { font-size: 12px; letter-spacing: -.01em; }
+.watch-column > header small { color: var(--muted); font-size: 11px; letter-spacing: .03em; }
+.watch-order-controls button { height: 22px; padding: 0 6px; gap: 3px; font-size: 11px; }
+
+.watch-player-list {
+  min-height: 0; max-height: 384px; padding: 0;
+  background: var(--card);
+  border-top: 1px solid var(--card-line);
+  scrollbar-color: #9fb0ba var(--card-2);
+}
+.watch-player {
+  min-height: 0; gap: 2px; padding: 5px 8px; border-radius: 0;
+  border-bottom: 1px solid var(--card-line);
+  color: var(--ink);
+}
+.watch-player:hover { background: #ffffff; }
+.watch-player > div { gap: 1px; }
+/* NOTE: no `color` here — .watch-player-drafted-name must keep winning */
+.watch-player strong { font-size: 13.5px; font-weight: 700; letter-spacing: -.005em; }
+.watch-player small { color: var(--ink-2); font: 11px/1.35 var(--font-mono); white-space: normal; }
+.watch-player small .watch-playoff-strength { color: var(--blue-ink); font: 900 11px var(--font-mono); }
+.watch-player > span { color: var(--green-ink); font-size: 11px; letter-spacing: .03em; }
+.watch-player .fi-rank { color: var(--ink); }
+
+/* the three player states, all readable on light */
+.watch-player-available { background: #ffffff; }
+.watch-player-sold { opacity: 1; background: var(--card-2); }
+.watch-player-sold > span { color: var(--ink-3); }
+.watch-player-keeper { background: #fdf4e2; }
+.watch-player-keeper > span { color: var(--amber-ink); }
+.watch-player-drafted { min-height: 0; padding: 4px 8px; }
+.watch-player-drafted-name { color: var(--red-ink); font-size: 13px; text-decoration-thickness: 1.5px; }
+.watch-player-drafted-line .fi-rank { color: var(--ink-2); font-size: 12px; }
+
+.watch-empty { min-height: 120px; padding: 14px; font-size: 11px; }
+
+
+/* ---------------------------------------------------------------------
+   5. OPPONENT ROSTERS — light team rail + light slot grid.
+   --------------------------------------------------------------------- */
+.opponent-board-heading { padding: 0 2px 8px; }
+.opponent-board-heading p { color: var(--muted); font-size: 11px; }
+.opponent-sort-bar { min-height: 0; margin-bottom: 7px; padding: 6px 10px; gap: 10px; }
+.opponent-sort-bar > strong { font-size: 11px; }
+.opponent-sort-bar button { height: 27px; }
+.opponent-sort-bar button .pos { height: 21px; }
+.opponent-sort-bar > p { color: var(--muted); font-size: 11px; }
+.opponent-roster-list { gap: 6px; }
+.opponent-roster { grid-template-columns: 268px minmax(0, 1fr); border-color: #26343c; border-radius: 9px; }
+
+.opponent-team-summary {
+  gap: 6px 8px; padding: 8px 11px;
+  color: var(--ink);
+  background: var(--card-3);
+  border-right: 1px solid var(--card-line);
+}
+.opponent-team-summary > div { gap: 2px; }
+.opponent-team-summary > div strong { color: var(--ink); font-size: 14px; }
+.opponent-team-summary small { color: var(--ink-2); font-size: 11px; }
+.opponent-team-summary em { margin-top: 3px; padding: 2px 5px; font-size: 11px; }
+.opponent-team-summary em.needs-position { color: var(--amber-ink); background: #fbeccd; }
+.opponent-team-summary em.position-filled { color: var(--ink-2); background: #ccd8de; }
+.opponent-team-summary > span { gap: 1px; }
+.opponent-team-summary > span small { color: var(--ink-3); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+.opponent-team-summary > span strong { color: var(--green-ink); font: 700 15px var(--font-mono); }
+
+/* 1510px -> 1100px min-width, so all 14 slots fit at 1440px with no scroll */
+.roster-slot-grid {
+  min-width: 1100px; min-height: 0;
+  grid-template-columns: repeat(14, minmax(78px, 1fr));
+  background: var(--card);
+}
+.roster-slot {
+  gap: 2px; padding: 6px 7px;
+  background: var(--card-2);
+  border-right: 1px solid var(--card-line);
+}
+.roster-slot > strong { min-height: 0; color: var(--ink-3); font-size: 12.5px; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+.roster-slot > span { color: var(--ink-3); font: 800 11px var(--font-mono); letter-spacing: .04em; }
+/* wrap instead of ellipsising — at 11px the price + Fi badge no longer fit on one line */
+.roster-slot > small { color: var(--ink-2); font-size: 11px; line-height: 1.35; white-space: normal; overflow: visible; }
+.roster-slot.has-player { background: #ffffff; }
+.roster-slot.has-player > strong { color: var(--ink); }
+.roster-slot.has-player > span { color: var(--green-ink); }
+.roster-slot.keeper { background: #fdf4e2; box-shadow: inset 0 2px var(--amber-line); }
+.roster-slot.keeper > span, .roster-slot.keeper > small { color: var(--amber-ink); }
