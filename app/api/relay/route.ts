@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { assertValidSale } from "@/lib/auction";
+import { inferDraftTeamBudgets } from "@/lib/draft-budgets";
 import { leagueSwitchBlockReason } from "@/lib/league-switch";
 import { getPlayers, getState, mutateState, replaceLeague, saveEspnAuctionValues } from "@/lib/store";
 import type { Position, Sale } from "@/lib/types";
@@ -13,7 +14,7 @@ type RelayPayload = {
   nomination?: { playerId?: number; playerName?: string; askingBid?: number; leadingTeamName?: string } | null;
   sales?: Array<{ playerId?: number; playerName: string; position?: Position; teamName: string; amount: number }>;
   auctionValues?: Array<{ playerId?: number; playerName: string; amount: number }>;
-  draftTeams?: Array<{ slot: number; teamName: string }>;
+  draftTeams?: Array<{ slot: number; teamName: string; remainingBudget?: number }>;
 };
 
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "Content-Type", "Access-Control-Allow-Methods": "POST, OPTIONS" };
@@ -94,11 +95,12 @@ export async function POST(request: NextRequest) {
         draftTeamOrder: state.relay.draftTeamOrder ?? [],
         draftTeamAliases: state.relay.draftTeamAliases ?? {},
         draftTeamNames: state.relay.draftTeamNames ?? {},
+        draftTeamBudgets: state.relay.draftTeamBudgets ?? {},
       };
       const incomingDraftTeams = (payload.draftTeams ?? []).slice().sort((a, b) => Number(a.slot) - Number(b.slot));
       const draftTeamMatches = incomingDraftTeams.map((incoming) => ({
         incoming,
-        teamId: resolveTeam(state.teams, String(incoming.teamName ?? "")).team?.id,
+        teamId: resolveTeam(state.teams, String(incoming.teamName ?? ""), state.relay.draftTeamAliases).team?.id,
       }));
       const matchedTeamIds = new Set(draftTeamMatches.flatMap((match) => match.teamId ?? []));
       const unmatched = draftTeamMatches.filter((match) => match.teamId === undefined);
@@ -107,18 +109,41 @@ export async function POST(request: NextRequest) {
       const uniqueDraftOrder = [...new Set(draftTeamMatches.flatMap((match) => match.teamId ?? []))];
       if (uniqueDraftOrder.length) {
         state.relay.draftTeamOrder = uniqueDraftOrder;
-        state.relay.draftTeamAliases = Object.fromEntries(draftTeamMatches.flatMap((match) => match.teamId === undefined
-          ? []
-          : [[normalize(String(match.incoming.teamName ?? "")), match.teamId]]));
-        state.relay.draftTeamNames = Object.fromEntries(draftTeamMatches.flatMap((match) => match.teamId === undefined
-          ? []
-          : [[String(match.teamId), String(match.incoming.teamName ?? "").trim()]]));
+        state.relay.draftTeamAliases = {
+          ...state.relay.draftTeamAliases,
+          ...Object.fromEntries(draftTeamMatches.flatMap((match) => match.teamId === undefined
+            ? []
+            : [[normalize(String(match.incoming.teamName ?? "")), match.teamId]])),
+        };
+        state.relay.draftTeamNames = {
+          ...state.relay.draftTeamNames,
+          ...Object.fromEntries(draftTeamMatches.flatMap((match) => match.teamId === undefined
+            ? []
+            : [[String(match.teamId), String(match.incoming.teamName ?? "").trim()]])),
+        };
       }
-      for (const incoming of payload.sales ?? []) {
+      const incomingSales = (payload.sales ?? []).map((incoming) => {
         const player = players.find((item) => item.id === incoming.playerId)
           ?? players.find((item) => normalize(item.name) === normalize(incoming.playerName));
         const teamMatch = resolveTeam(state.teams, incoming.teamName, state.relay.draftTeamAliases);
-        const team = teamMatch.team;
+        return { incoming, player, teamMatch, team: teamMatch.team };
+      });
+      state.relay.draftTeamBudgets = inferDraftTeamBudgets(
+        state,
+        draftTeamMatches.flatMap(({ incoming, teamId }) => {
+          const remainingBudget = Number(incoming.remainingBudget);
+          return teamId !== undefined && Number.isInteger(remainingBudget) && remainingBudget >= 0
+            ? [{ teamId, remainingBudget }]
+            : [];
+        }),
+        incomingSales.flatMap(({ incoming, player, team }) => team ? [{
+          playerId: player?.id ?? incoming.playerId,
+          playerName: player?.name ?? incoming.playerName,
+          teamId: team.id,
+          amount: Number(incoming.amount),
+        }] : []),
+      );
+      for (const { incoming, player, teamMatch, team } of incomingSales) {
         if (!player) {
           skipped.push({ player: incoming.playerName, reason: "Player was not found in the ESPN universe" });
           continue;

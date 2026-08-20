@@ -37,6 +37,17 @@ describe("auction math", () => {
     expect(teamSnapshots(ebby)[0]).toMatchObject({ budgetLeft: 69, spotsLeft: 10, maxBid: 60 });
   });
 
+  it("uses ESPN's individualized draft budget for traded auction dollars", () => {
+    const traded = {
+      ...state,
+      relay: { ...state.relay, draftTeamBudgets: { "1": 215, "2": 185 } },
+    };
+    expect(teamSnapshots(traded)).toMatchObject([
+      { id: 1, startingBudget: 215, budgetLeft: 215, maxBid: 202 },
+      { id: 2, startingBudget: 185, budgetLeft: 185, maxBid: 172 },
+    ]);
+  });
+
   it("rejects a sale above the team's legal max bid", () => {
     expect(assertValidSale(state, players[0], 1, 188)).toMatch(/at most \$187/);
   });
@@ -94,5 +105,6 @@ describe("auction math", () => {
     expect(draft.tierOverrides).toEqual({ "1": "RB2" });
     expect(draft.tierOrders).toEqual({ RB2: [1] });
     expect(draft.watchList).toEqual([1, 2]);
+    expect(draft.relay.draftTeamBudgets).toBeUndefined();
   });
 });

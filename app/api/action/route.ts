@@ -111,6 +111,7 @@ export async function POST(request: NextRequest) {
         draft.relay.draftTeamOrder = [];
         draft.relay.draftTeamAliases = {};
         draft.relay.draftTeamNames = {};
+        draft.relay.draftTeamBudgets = {};
         draft.relay.message = leagueId ? `Waiting for ESPN draft league ${leagueId}` : "Manual mode ready";
       } else if (action.type === "reset") {
         clearAuctionResults(draft);

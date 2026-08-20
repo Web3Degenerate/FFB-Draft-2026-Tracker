@@ -72,6 +72,7 @@ export type RelayStatus = {
   draftTeamOrder?: number[];
   draftTeamAliases?: Record<string, number>;
   draftTeamNames?: Record<string, string>;
+  draftTeamBudgets?: Record<string, number>;
 };
 
 export type DraftState = {
@@ -89,6 +90,7 @@ export type DraftState = {
 };
 
 export type TeamSnapshot = LeagueTeam & {
+  startingBudget: number;
   spent: number;
   budgetLeft: number;
   rosterCount: number;

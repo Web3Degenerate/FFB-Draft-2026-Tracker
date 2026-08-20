@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { fetchLeague } from "@/lib/espn";
 import { getState, mutateState } from "@/lib/store";
-import { mergeEspnTeamNames } from "@/lib/teams";
+import { mapDraftTeamsById, mergeEspnTeamNames } from "@/lib/teams";
 import type { LeagueTeam } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -29,9 +29,32 @@ export async function POST(request: NextRequest) {
     const current = await getState();
     const requestedLeagueId = Number(payload.league?.leagueId || current.config.leagueId);
     const requestedSeasonId = Number(payload.league?.seasonId || current.config.seasonId);
+    const suppliedTeams = (payload.teams ?? []).flatMap((team) => {
+      const id = Number(team.id);
+      const name = String(team.name ?? "").trim();
+      if (!Number.isInteger(id) || !name) return [];
+      return [{ id, name, abbreviation: String(team.abbreviation || `T${id}`).trim(), alias: "" }];
+    });
     if (requestedLeagueId !== current.config.leagueId || requestedSeasonId !== current.config.seasonId) {
       if (requestedLeagueId === current.relay.draftLeagueId) {
-        return NextResponse.json({ ok: true, changed: [], message: "Using the configured league's team names for this ESPN draft." }, { headers: cors });
+        const mapping = mapDraftTeamsById(current.teams, suppliedTeams);
+        const state = await mutateState((draft) => {
+          if (draft.relay.draftLeagueId !== requestedLeagueId) throw new Error("ESPN draft changed while team aliases were loading. Try again.");
+          draft.relay.draftTeamAliases = {
+            ...(draft.relay.draftTeamAliases ?? {}),
+            ...mapping.aliases,
+          };
+          draft.relay.draftTeamNames = {
+            ...(draft.relay.draftTeamNames ?? {}),
+            ...mapping.names,
+          };
+        });
+        return NextResponse.json({
+          ok: true,
+          changed: mapping.changed,
+          state,
+          message: "Mapped this ESPN draft's team names to the configured league by team ID.",
+        }, { headers: cors });
       }
       return NextResponse.json({
         error: "Auction Room is still switching to this ESPN league. Team names will retry automatically.",
@@ -39,12 +62,6 @@ export async function POST(request: NextRequest) {
       }, { status: 409, headers: cors });
     }
 
-    const suppliedTeams = (payload.teams ?? []).flatMap((team) => {
-      const id = Number(team.id);
-      const name = String(team.name ?? "").trim();
-      if (!Number.isInteger(id) || !name) return [];
-      return [{ id, name, abbreviation: String(team.abbreviation || `T${id}`).trim(), alias: "" }];
-    });
     const league = suppliedTeams.length
       ? { name: String(payload.leagueName || current.config.leagueName), teams: suppliedTeams }
       : await fetchLeague(current.config);

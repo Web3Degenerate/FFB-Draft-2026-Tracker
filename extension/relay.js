@@ -1,6 +1,6 @@
 /* global chrome */
 (() => {
-  const VERSION = "0.3.1";
+  const VERSION = "0.3.3";
   const parser = globalThis.CodexFfbSaleParser;
   if (!parser) return;
 
@@ -8,6 +8,7 @@
   const auctionValues = new Map();
   let socketFlushActive = false;
   let lastTeamSyncAt = 0;
+  let initialTeamSync;
 
   function leagueFromLocation() {
     const params = new URLSearchParams(window.location.search);
@@ -40,6 +41,11 @@
   }
 
   async function pulse() {
+    if (!initialTeamSync) {
+      lastTeamSyncAt = Date.now();
+      initialTeamSync = syncTeamNames();
+    }
+    await initialTeamSync;
     const nomination = readNomination(parser.readLeadingBid());
     const sales = parser.readSales().filter((sale) => parser.identity(sale.playerName) !== parser.identity(nomination?.playerName));
     parser.readAuctionValues().forEach((value) => {

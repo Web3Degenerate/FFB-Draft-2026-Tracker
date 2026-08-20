@@ -372,7 +372,7 @@ code { font-family: var(--font-mono); }
 .team-alias-editor button:hover:not(:disabled) { color: var(--green); border-color: rgba(95,226,142,.45); }
 .team-alias-editor button:disabled { opacity: .3; cursor: default; }
 .team-alias-editor button svg { width: 14px; }
-.keeper-card-budget { display: grid; grid-template-columns: repeat(3, 1fr); background: #0a1012; border-bottom: 1px solid var(--line-soft); }
+.keeper-card-budget { display: grid; grid-template-columns: repeat(4, 1fr); background: #0a1012; border-bottom: 1px solid var(--line-soft); }
 .keeper-card-budget > span { padding: 10px; border-right: 1px solid var(--line-soft); }
 .keeper-card-budget > span:last-child { border: 0; }
 .keeper-card-budget small, .keeper-card-budget strong { display: block; }

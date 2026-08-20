@@ -76,7 +76,10 @@
       const numberedName = clean(card.querySelector(".team-name")?.textContent);
       const slot = Number(numberedName.match(/^(\d+)\./)?.[1]) || index + 1;
       const teamName = clean(card.getAttribute("title") || numberedName.replace(/^\d+\.\s*/, ""));
-      return teamName ? [{ slot, teamName }] : [];
+      const cashText = clean(card.querySelector(".cash")?.textContent);
+      const cashMatch = cashText.match(/\$(\d+)/);
+      const remainingBudget = cashMatch ? Number(cashMatch[1]) : undefined;
+      return teamName ? [{ slot, teamName, ...(remainingBudget === undefined ? {} : { remainingBudget }) }] : [];
     }).sort((a, b) => a.slot - b.slot);
   }
 
