@@ -805,7 +805,7 @@ code { font-family: var(--font-mono); }
    2. PAGE CHROME — stays dark, just tightened up.
    --------------------------------------------------------------------- */
 .watch-shell { padding: 18px clamp(12px, 1.6vw, 26px) 34px; }
-.watch-header { margin: 0 auto 12px; align-items: center; }
+.watch-header { display: block; margin: 0 auto 12px; }
 .watch-header h1 { margin: 4px 0 3px; font-size: clamp(24px, 2.4vw, 30px); letter-spacing: -.03em; }
 .watch-header > div:first-child > p { max-width: 760px; font-size: 12px; line-height: 1.45; }
 .watch-shell .management-nav-links { margin-bottom: 6px; }
@@ -814,6 +814,23 @@ code { font-family: var(--font-mono); }
 .watch-summary { min-width: 160px; height: 62px; padding: 9px 13px; }
 .watch-summary strong { font-size: 21px; }
 .watch-summary span { font-size: 11px; }
+.watch-team-strip-shell { overflow-x: auto; border: 1px solid #24562c; border-radius: 9px; background: #031205; box-shadow: 0 10px 28px rgba(0,0,0,.22); scrollbar-color: #2d6f39 #061b09; }
+.watch-team-strip { min-width: 1416px; display: grid; grid-template-columns: repeat(12, minmax(118px, 1fr)); }
+.watch-team-card { min-width: 0; min-height: 82px; padding: 7px 8px 8px; border-right: 1px solid #17431f; color: #d9f1dc; background: linear-gradient(180deg, #0b3311, #071f0b); box-shadow: inset 0 3px rgba(83,224,102,.08); }
+.watch-team-card:last-child { border-right: 0; }
+.watch-team-card.mine { background: linear-gradient(180deg, #185e26, #10451b); box-shadow: inset 0 3px var(--green); }
+.watch-team-card.leading { background: linear-gradient(180deg, #246d2e, #174d20); box-shadow: inset 0 4px var(--amber); }
+.watch-team-card-name { min-width: 0; height: 27px; display: flex; align-items: flex-start; gap: 4px; }
+.watch-team-card-name > span { flex: 0 0 auto; color: #7f9f84; font: 800 9px var(--font-mono); }
+.watch-team-card-name > strong { min-width: 0; overflow: hidden; color: #cfe4d2; font-size: 9px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.watch-team-card-name > em { flex: 0 0 auto; position: relative; margin-left: auto; padding: 3px 4px; border-radius: 3px; color: #2b1b00; background: var(--amber); font: 900 8px var(--font-mono); font-style: normal; white-space: nowrap; box-shadow: 0 2px 7px rgba(0,0,0,.3); }
+.watch-team-card-name > em::before { content: ""; position: absolute; left: -4px; top: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-right: 5px solid var(--amber); }
+.watch-team-card-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; }
+.watch-team-card-metrics > span { min-width: 0; padding: 5px 3px 4px; border: 1px solid rgba(160,220,169,.12); border-radius: 5px; text-align: center; background: rgba(0,0,0,.16); }
+.watch-team-card-metrics small, .watch-team-card-metrics strong { display: block; }
+.watch-team-card-metrics small { overflow: hidden; color: #86a88c; font-size: 7px; font-weight: 800; letter-spacing: .035em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+.watch-team-card-metrics strong { margin-top: 2px; color: #f0fff2; font: 800 12px var(--font-mono); }
+.watch-team-card.leading .watch-team-card-metrics strong { color: #fff2c8; }
 .watch-board { margin: 0 auto 14px; }
 .watch-board-heading { min-height: 0; padding: 9px 13px; }
 .watch-board-heading h2, .opponent-board-heading h2 { margin-top: 2px; font-size: 16px; }

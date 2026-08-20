@@ -80,7 +80,7 @@ export async function getState(): Promise<DraftState> {
     tierOrders: existing.tierOrders ?? {},
     watchList: existing.watchList ?? [],
     watchListOrders: existing.watchListOrders ?? {},
-    relay: { ...existing.relay, draftLeagueId: existing.relay.draftLeagueId ?? null },
+    relay: { ...existing.relay, draftLeagueId: existing.relay.draftLeagueId ?? null, draftTeamOrder: existing.relay.draftTeamOrder ?? [], draftTeamAliases: existing.relay.draftTeamAliases ?? {}, draftTeamNames: existing.relay.draftTeamNames ?? {} },
   };
   const league = await fetchLeague(DEFAULT_CONFIG);
   const now = new Date().toISOString();
@@ -94,7 +94,7 @@ export async function getState(): Promise<DraftState> {
     tierOrders: {},
     watchList: [],
     watchListOrders: {},
-    relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null, draftLeagueId: null },
+    relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null, draftLeagueId: null, draftTeamOrder: [], draftTeamAliases: {}, draftTeamNames: {} },
     updatedAt: now,
   };
   await atomicWrite(STATE_PATH, state);
@@ -195,7 +195,7 @@ export async function replaceLeague(config: DraftConfig): Promise<{ state: Draft
     tierOrders: Object.fromEntries(Object.entries(current.tierOrders ?? {}).map(([tier, orderedIds]) => [tier, orderedIds.filter((playerId) => playerIds.has(playerId))])),
     watchList: (current.watchList ?? []).filter((playerId) => playerIds.has(playerId)),
     watchListOrders: Object.fromEntries(Object.entries(current.watchListOrders ?? {}).map(([position, orderedIds]) => [position, orderedIds.filter((playerId) => playerIds.has(playerId))])),
-    relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null, draftLeagueId: null },
+    relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null, draftLeagueId: null, draftTeamOrder: [], draftTeamAliases: {}, draftTeamNames: {} },
     updatedAt: new Date().toISOString(),
   };
   await atomicWrite(STATE_PATH, state);

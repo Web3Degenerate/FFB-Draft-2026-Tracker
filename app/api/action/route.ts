@@ -108,6 +108,9 @@ export async function POST(request: NextRequest) {
         draft.relay.connected = false;
         draft.relay.lastSeenAt = null;
         draft.relay.source = null;
+        draft.relay.draftTeamOrder = [];
+        draft.relay.draftTeamAliases = {};
+        draft.relay.draftTeamNames = {};
         draft.relay.message = leagueId ? `Waiting for ESPN draft league ${leagueId}` : "Manual mode ready";
       } else if (action.type === "reset") {
         clearAuctionResults(draft);

@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 
 type ParsedSale = { playerId?: number; playerName: string; position: string; teamName: string; amount: number };
 type AuctionValue = { playerId?: number; playerName: string; amount: number };
-type Parser = { readSales(root: Document): ParsedSale[]; readAuctionValues(root: Document): AuctionValue[] };
+type Parser = { readSales(root: Document): ParsedSale[]; readAuctionValues(root: Document): AuctionValue[]; readLeadingBid(root: Document): { teamName: string; amount: number } | null; readDraftTeams(root: Document): Array<{ slot: number; teamName: string }> };
 
 const context: Record<string, unknown> = {};
 vm.runInNewContext(readFileSync(new URL("../extension/sale-parser.js", import.meta.url), "utf8"), context);
@@ -61,5 +61,14 @@ describe("ESPN extension sale parser", () => {
       </tr></tbody></table>
     `);
     expect(parser.readAuctionValues(dom.window.document)).toEqual([]);
+  });
+
+  it("reads the visible leading bidder from ESPN's team strip", () => {
+    const dom = new JSDOM(`
+      <div data-testid="auction-pick" title="Team One"><div class="team-name">1. Team One</div><div class="bid-amount" style="opacity: 0">$null</div></div>
+      <div data-testid="auction-pick" title="Team Two"><div class="team-name">2. Team Two</div><div class="bid-amount" style="opacity: 1">$4</div></div>
+    `);
+    expect(parser.readLeadingBid(dom.window.document)).toEqual({ teamName: "Team Two", amount: 4 });
+    expect(parser.readDraftTeams(dom.window.document)).toEqual([{ slot: 1, teamName: "Team One" }, { slot: 2, teamName: "Team Two" }]);
   });
 });

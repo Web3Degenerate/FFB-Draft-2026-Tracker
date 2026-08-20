@@ -1,6 +1,6 @@
 /* global chrome */
 (() => {
-  const VERSION = "0.3.0";
+  const VERSION = "0.3.1";
   const parser = globalThis.CodexFfbSaleParser;
   if (!parser) return;
 
@@ -18,7 +18,7 @@
     };
   }
 
-  function readNomination() {
+  function readNomination(leadingBid) {
     const offerNode = [...document.querySelectorAll("body *")]
       .find((node) => node.children.length === 0 && /^Current offer:\s*\$\d+$/i.test(parser.clean(node.textContent)));
     if (!offerNode) return null;
@@ -32,14 +32,15 @@
       return {
         playerId: idMatch ? Number(idMatch[1]) : undefined,
         playerName: parser.clean(name.textContent),
-        askingBid: parser.number(offerNode.textContent),
+        askingBid: leadingBid?.amount ?? parser.number(offerNode.textContent),
+        leadingTeamName: leadingBid?.teamName,
       };
     }
     return null;
   }
 
   async function pulse() {
-    const nomination = readNomination();
+    const nomination = readNomination(parser.readLeadingBid());
     const sales = parser.readSales().filter((sale) => parser.identity(sale.playerName) !== parser.identity(nomination?.playerName));
     parser.readAuctionValues().forEach((value) => {
       auctionValues.set(value.playerId ? `id:${value.playerId}` : `name:${parser.identity(value.playerName)}`, value);
@@ -47,7 +48,7 @@
     try {
       const result = await chrome.runtime.sendMessage({
         type: "relay-pulse",
-        payload: { type: "snapshot", transport: "extension", league: leagueFromLocation(), nomination, sales, auctionValues: [...auctionValues.values()] },
+        payload: { type: "snapshot", transport: "extension", league: leagueFromLocation(), nomination, sales, auctionValues: [...auctionValues.values()], draftTeams: parser.readDraftTeams() },
       });
       if (result?.skipped?.length) console.warn("Codex Auction Relay skipped sales:", result.skipped);
       if (Date.now() - lastTeamSyncAt >= 60_000) {

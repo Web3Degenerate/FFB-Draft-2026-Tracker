@@ -60,5 +60,25 @@
     return [...values.values()];
   }
 
-  globalThis.CodexFfbSaleParser = { clean, identity, number, parseSaleRow, readSales, parseAuctionValueRow, readAuctionValues };
+  function readLeadingBid(root = document) {
+    return [...root.querySelectorAll('[data-testid="auction-pick"]')].flatMap((card) => {
+      const bid = card.querySelector(".bid-amount");
+      if (!bid || bid.style?.opacity === "0" || bid.hidden || bid.getAttribute("aria-hidden") === "true") return [];
+      const amount = number(bid.textContent);
+      const numberedName = clean(card.querySelector(".team-name")?.textContent);
+      const teamName = clean(card.getAttribute("title") || numberedName.replace(/^\d+\.\s*/, ""));
+      return amount > 0 && teamName ? [{ teamName, amount }] : [];
+    })[0] ?? null;
+  }
+
+  function readDraftTeams(root = document) {
+    return [...root.querySelectorAll('[data-testid="auction-pick"]')].flatMap((card, index) => {
+      const numberedName = clean(card.querySelector(".team-name")?.textContent);
+      const slot = Number(numberedName.match(/^(\d+)\./)?.[1]) || index + 1;
+      const teamName = clean(card.getAttribute("title") || numberedName.replace(/^\d+\.\s*/, ""));
+      return teamName ? [{ slot, teamName }] : [];
+    }).sort((a, b) => a.slot - b.slot);
+  }
+
+  globalThis.CodexFfbSaleParser = { clean, identity, number, parseSaleRow, readSales, parseAuctionValueRow, readAuctionValues, readLeadingBid, readDraftTeams };
 })();

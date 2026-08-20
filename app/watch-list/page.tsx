@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, Check, DotsSixVertical, Eye, FloppyDisk, PencilSimple, SlidersHorizontal, Warning, X } from "@phosphor-icons/react";
+import { ArrowLeft, Check, DotsSixVertical, FloppyDisk, PencilSimple, SlidersHorizontal, Warning, X } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FantasyIndexRank } from "@/app/components/fantasy-index-rank";
@@ -77,11 +77,16 @@ export default function WatchListPage() {
     const selected = new Set(state.watchList);
     return players.filter((player) => selected.has(player.id));
   }, [players, state]);
+  const draftTeams = useMemo(() => {
+    if (!state) return [];
+    const order = new Map((state.relay.draftTeamOrder ?? []).map((teamId, index) => [teamId, index]));
+    return teamSnapshots(state).sort((a, b) => (order.get(a.id) ?? 1000 + a.id) - (order.get(b.id) ?? 1000 + b.id));
+  }, [state]);
   const opponentTeams = useMemo(() => {
     if (!state) return [];
-    const opponents = teamSnapshots(state).filter((team) => team.id !== state.config.myTeamId);
+    const opponents = draftTeams.filter((team) => team.id !== state.config.myTeamId);
     return sortOpponentTeamsByPosition(state, opponents, opponentSortPosition);
-  }, [opponentSortPosition, state]);
+  }, [draftTeams, opponentSortPosition, state]);
 
   const beginOrderEdit = (position: Position) => {
     if (!state) return;
@@ -142,13 +147,23 @@ export default function WatchListPage() {
 
   return <main className="watch-shell">
     <header className="watch-header">
-      <div>
-        <nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/tiers" className="back-link"><SlidersHorizontal /> Tier Editor</Link><Link href="/player-data" className="back-link">Player Data</Link><Link href="/schedules" className="back-link">Schedules</Link></nav>
-        <span className="eyebrow">LIVE DRAFT SHORTLIST</span>
-        <h1>Watch List</h1>
-        <p>Track your priority targets while every opponent roster, remaining salary, and legal max bid updates beside the live auction.</p>
+      <nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/tiers" className="back-link"><SlidersHorizontal /> Tier Editor</Link><Link href="/player-data" className="back-link">Player Data</Link><Link href="/schedules" className="back-link">Schedules</Link></nav>
+      <div className="watch-team-strip-shell" aria-label="Live team budgets and bidding limits">
+        <div className="watch-team-strip" role="list">
+          {draftTeams.map((team, index) => {
+            const isLeading = state.nomination?.leadingTeamId === team.id && state.nomination.askingBid !== undefined;
+            const draftTeamName = state.relay.draftTeamNames?.[String(team.id)] || team.name;
+            return <article className={`watch-team-card ${team.id === state.config.myTeamId ? "mine" : ""} ${isLeading ? "leading" : ""}`} role="listitem" key={team.id}>
+              <div className="watch-team-card-name"><span>{index + 1}.</span><strong title={draftTeamName}>{draftTeamName}</strong>{isLeading && <em title="Current highest bidder">LEADS {money(state.nomination?.askingBid ?? 0)}</em>}</div>
+              <div className="watch-team-card-metrics">
+                <span><small>Budget</small><strong>{money(team.budgetLeft)}</strong></span>
+                <span><small>Max bid</small><strong>{money(team.maxBid)}</strong></span>
+                <span><small>Open</small><strong>{team.spotsLeft}</strong></span>
+              </div>
+            </article>;
+          })}
+        </div>
       </div>
-      <div className="watch-summary"><Eye weight="fill" /><strong>{watchedPlayers.length}</strong><span>players watched</span></div>
     </header>
 
     <section className="watch-board panel">

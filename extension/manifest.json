@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Codex Fantasy Auction Relay",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Read-only bridge from ESPN auction drafts to the local Codex Auction Room.",
   "permissions": ["storage"],
   "host_permissions": [

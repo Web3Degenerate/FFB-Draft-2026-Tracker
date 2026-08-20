@@ -50,6 +50,7 @@ export type Nomination = {
   playerId: number;
   askingBid?: number;
   nominatingTeamId?: number;
+  leadingTeamId?: number;
   source: "manual" | "espn-relay";
 } | null;
 
@@ -68,6 +69,9 @@ export type RelayStatus = {
   message: string;
   source?: "extension" | "pasted" | null;
   draftLeagueId?: number | null;
+  draftTeamOrder?: number[];
+  draftTeamAliases?: Record<string, number>;
+  draftTeamNames?: Record<string, string>;
 };
 
 export type DraftState = {
