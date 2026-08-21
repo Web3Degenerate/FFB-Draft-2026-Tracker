@@ -5,13 +5,14 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FantasyIndexRank } from "@/app/components/fantasy-index-rank";
 import { STARTER_TARGETS, teamSnapshots } from "@/lib/auction";
+import { budgetPlannerSummary, DEFAULT_OPEN_SLOT_AMOUNT } from "@/lib/budget-planner";
 import { opponentPositionSpend, sortOpponentTeamsByPosition } from "@/lib/opponent-sort";
 import { assignTeamRoster } from "@/lib/rosters";
 import { playoffScheduleStrengthForPlayer } from "@/lib/schedule-strength";
 import { teamDisplayName } from "@/lib/teams";
 import { rosterSlotPosition, whoNeedsMarker } from "@/lib/watch-list-needs";
 import { sortWatchListPlayers } from "@/lib/watch-list-order";
-import type { DashboardPayload, DraftState, Player, Position } from "@/lib/types";
+import type { BudgetPlanner, DashboardPayload, DraftState, Player, Position } from "@/lib/types";
 
 const WATCH_GROUPS: Array<{ position: Position; label: string }> = [
   { position: "RB", label: "Running Backs" },
@@ -44,10 +45,16 @@ export default function WatchListPage() {
   const [savingOrder, setSavingOrder] = useState(false);
   const [opponentSortPosition, setOpponentSortPosition] = useState<Position>("RB");
   const [whoNeedsPosition, setWhoNeedsPosition] = useState<Position | null>(null);
+  const [budgetPlannerDraft, setBudgetPlannerDraft] = useState<BudgetPlanner>({});
+  const [budgetPlannerDirty, setBudgetPlannerDirty] = useState(false);
+  const [savingBudgetPlanner, setSavingBudgetPlanner] = useState(false);
 
   const load = useCallback(async () => {
     try {
-      setPayload(await jsonFetch<DashboardPayload>("/api/state"));
+      const result = await jsonFetch<DashboardPayload>("/api/state");
+      setPayload(result);
+      setBudgetPlannerDraft(result.state.budgetPlanner ?? {});
+      setBudgetPlannerDirty(false);
       setError("");
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Could not load the Watch List");
@@ -129,8 +136,36 @@ export default function WatchListPage() {
     } finally { setSavingOrder(false); }
   };
 
+  const updateBudgetPlanner = (slotKey: string, field: "note" | "amount", value: string) => {
+    setBudgetPlannerDraft((current) => {
+      const existing = current[slotKey] ?? { note: "", amount: DEFAULT_OPEN_SLOT_AMOUNT };
+      return {
+        ...current,
+        [slotKey]: field === "note"
+          ? { ...existing, note: value }
+          : { ...existing, amount: value === "" ? 0 : Math.max(0, Math.min(999, Math.round(Number(value) || 0))) },
+      };
+    });
+    setBudgetPlannerDirty(true);
+  };
+
+  const saveBudgetPlanner = async () => {
+    setSavingBudgetPlanner(true);
+    try {
+      const result = await jsonFetch<{ state: DraftState }>("/api/action", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ type: "set-budget-planner", planner: budgetPlannerDraft }) });
+      setPayload((current) => current ? { ...current, state: result.state } : current);
+      setBudgetPlannerDraft(result.state.budgetPlanner ?? {});
+      setBudgetPlannerDirty(false);
+      setNotice({ kind: "success", text: "Budget plan saved." });
+    } catch (cause) {
+      setNotice({ kind: "error", text: cause instanceof Error ? cause.message : "Could not save the budget plan" });
+    } finally { setSavingBudgetPlanner(false); }
+  };
+
   if (error) return <main className="loading-screen"><Warning size={36} /><h1>Couldn’t open the Watch List</h1><p>{error}</p><button className="primary" onClick={load}>Try again</button></main>;
   if (!state) return <main className="loading-screen"><div className="football-loader">W</div><p>Loading your Watch List…</p></main>;
+
+  const budgetPlan = budgetPlannerSummary(state, budgetPlannerDraft);
 
   const saleByPlayer = new Map(state.sales.map((sale) => [sale.playerId, sale]));
   const keeperByPlayer = new Map(state.keepers.map((keeper) => [keeper.playerId, keeper]));
@@ -174,6 +209,26 @@ export default function WatchListPage() {
         </div>
       </div>
     </header>
+
+    <section className={`budget-planner panel ${budgetPlan.remaining < 0 ? "over-budget" : ""}`} aria-labelledby="budget-planner-title">
+      <header className="budget-planner-heading">
+        <div><span className="eyebrow">LIVE ROSTER CALCULATOR</span><strong id="budget-planner-title">Your Budget Plan</strong><small>Drafted players lock automatically · open slots reserve $1</small></div>
+        <div className="budget-planner-summary">
+          <span><small>Allocated</small><strong>{money(budgetPlan.allocated)} / {money(state.config.budget)}</strong></span>
+          <span className={budgetPlan.remaining < 0 ? "over" : "remaining"}><small>{budgetPlan.remaining < 0 ? "Over budget" : "Remaining"}</small><strong>{money(Math.abs(budgetPlan.remaining))}</strong></span>
+          <button disabled={!budgetPlannerDirty || savingBudgetPlanner} onClick={() => void saveBudgetPlanner()}><FloppyDisk />{savingBudgetPlanner ? "Saving…" : budgetPlannerDirty ? "Save plan" : "Saved"}</button>
+        </div>
+      </header>
+      <div className="budget-planner-scroll">
+        <div className="budget-planner-grid">
+          {budgetPlan.rows.map((row) => <article className={`budget-planner-slot ${row.locked ? "locked" : "open"} ${row.isKeeper ? "keeper" : ""}`} key={row.key}>
+            <strong>{row.label}</strong>
+            <input aria-label={`${row.label} ${row.locked ? "drafted player" : "player note"}`} maxLength={60} placeholder="Player / note" readOnly={row.locked} title={row.locked ? `${row.playerName} is locked to your live roster` : `Planning note for ${row.label}`} value={row.playerName} onChange={(event) => updateBudgetPlanner(row.key, "note", event.currentTarget.value)} />
+            <label><span>$</span><input aria-label={`${row.label} ${row.locked ? "price paid" : "planned amount"}`} inputMode="numeric" min={0} max={999} readOnly={row.locked} step={1} title={row.locked ? `${money(row.amount)} paid — locked to your live roster` : `Planned amount for ${row.label}`} type="number" value={row.amount} onChange={(event) => updateBudgetPlanner(row.key, "amount", event.currentTarget.value)} /></label>
+          </article>)}
+        </div>
+      </div>
+    </section>
 
     <section className="watch-board panel">
       <div className="watch-board-heading"><div><span className="eyebrow">YOUR TARGETS</span><h2>Positional Watch List</h2></div><Link href="/tiers">Edit selections</Link></div>

@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { assertValidKeeper, assertValidKeeperPrice, assertValidSale, clearAuctionResults } from "@/lib/auction";
+import { parseBudgetPlanner } from "@/lib/budget-planner";
 import { getPlayers, mutateState } from "@/lib/store";
 import { isCompleteTierOrder } from "@/lib/tier-order";
 import { isCompleteWatchListOrder } from "@/lib/watch-list-order";
-import type { Keeper, Sale } from "@/lib/types";
+import type { BudgetPlanner, Keeper, Sale } from "@/lib/types";
 import type { Position } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -18,6 +19,7 @@ type Action =
   | { type: "set-tier-order"; tier: string; playerIds: number[] }
   | { type: "set-watch-list-player"; playerId: number; included: boolean }
   | { type: "set-watch-list-order"; position: Position; playerIds: number[] }
+  | { type: "set-budget-planner"; planner: BudgetPlanner }
   | { type: "add-keeper"; playerId: number; teamId: number; amount: number }
   | { type: "update-keeper-price"; keeperId: string; amount: number }
   | { type: "remove-keeper"; keeperId: string }
@@ -74,6 +76,8 @@ export async function POST(request: NextRequest) {
         const playerIds = Array.isArray(action.playerIds) ? action.playerIds.map(Number) : [];
         if (!VALID_POSITIONS.has(position) || !playerIds.every(Number.isInteger) || !isCompleteWatchListOrder(draft, players, position, playerIds)) throw new Error("Watch List order must include every watched player in that position exactly once.");
         draft.watchListOrders[position] = playerIds;
+      } else if (action.type === "set-budget-planner") {
+        draft.budgetPlanner = parseBudgetPlanner(action.planner);
       } else if (action.type === "add-keeper") {
         const player = players.find((item) => item.id === action.playerId);
         if (!player) throw new Error("Player not found.");

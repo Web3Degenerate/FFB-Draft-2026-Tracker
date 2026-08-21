@@ -75,6 +75,13 @@ export type RelayStatus = {
   draftTeamBudgets?: Record<string, number>;
 };
 
+export type BudgetPlannerEntry = {
+  note: string;
+  amount: number;
+};
+
+export type BudgetPlanner = Partial<Record<string, BudgetPlannerEntry>>;
+
 export type DraftState = {
   config: DraftConfig;
   teams: LeagueTeam[];
@@ -85,6 +92,7 @@ export type DraftState = {
   tierOrders: Record<string, number[]>;
   watchList: number[];
   watchListOrders: Partial<Record<Position, number[]>>;
+  budgetPlanner?: BudgetPlanner;
   relay: RelayStatus;
   updatedAt: string;
 };

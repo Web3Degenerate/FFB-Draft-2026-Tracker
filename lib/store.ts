@@ -80,6 +80,7 @@ export async function getState(): Promise<DraftState> {
     tierOrders: existing.tierOrders ?? {},
     watchList: existing.watchList ?? [],
     watchListOrders: existing.watchListOrders ?? {},
+    budgetPlanner: existing.budgetPlanner ?? {},
     relay: { ...existing.relay, draftLeagueId: existing.relay.draftLeagueId ?? null, draftTeamOrder: existing.relay.draftTeamOrder ?? [], draftTeamAliases: existing.relay.draftTeamAliases ?? {}, draftTeamNames: existing.relay.draftTeamNames ?? {}, draftTeamBudgets: existing.relay.draftTeamBudgets ?? {} },
   };
   const league = await fetchLeague(DEFAULT_CONFIG);
@@ -94,6 +95,7 @@ export async function getState(): Promise<DraftState> {
     tierOrders: {},
     watchList: [],
     watchListOrders: {},
+    budgetPlanner: {},
     relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null, draftLeagueId: null, draftTeamOrder: [], draftTeamAliases: {}, draftTeamNames: {}, draftTeamBudgets: {} },
     updatedAt: now,
   };
@@ -195,6 +197,7 @@ export async function replaceLeague(config: DraftConfig): Promise<{ state: Draft
     tierOrders: Object.fromEntries(Object.entries(current.tierOrders ?? {}).map(([tier, orderedIds]) => [tier, orderedIds.filter((playerId) => playerIds.has(playerId))])),
     watchList: (current.watchList ?? []).filter((playerId) => playerIds.has(playerId)),
     watchListOrders: Object.fromEntries(Object.entries(current.watchListOrders ?? {}).map(([position, orderedIds]) => [position, orderedIds.filter((playerId) => playerIds.has(playerId))])),
+    budgetPlanner: {},
     relay: { connected: false, lastSeenAt: null, message: "Manual mode ready", source: null, draftLeagueId: null, draftTeamOrder: [], draftTeamAliases: {}, draftTeamNames: {}, draftTeamBudgets: {} },
     updatedAt: new Date().toISOString(),
   };
