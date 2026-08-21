@@ -104,6 +104,7 @@
 .tableStatus button { padding: 4px 7px; border: 1px solid var(--line); border-radius: 5px; color: var(--blue); background: var(--panel-3); font-size: 9px; font-weight: 800; cursor: pointer; }
 .tableStatus button:hover { border-color: rgba(101, 167, 255, .55); }
 .tableWrap { max-height: 520px; overflow: auto; scrollbar-color: #304049 transparent; }
+.expandedTableWrap { max-height: min(1600px, max(1100px, calc(100vh - 96px))); }
 .table { width: 100%; min-width: 1040px; border-collapse: collapse; }
 .table thead { position: sticky; top: 0; z-index: 3; }
 .table th { height: 39px; padding: 0 11px; text-align: left; border-bottom: 1px solid var(--line); background: #0b1114; }
@@ -169,4 +170,5 @@
   .sectionHeader { align-items: flex-start; flex-direction: column; }
   .summary { width: 100%; justify-content: space-between; }
   .tableWrap { max-height: 430px; }
+  .expandedTableWrap { max-height: 680px; }
 }

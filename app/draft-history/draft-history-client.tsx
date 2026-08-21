@@ -59,6 +59,7 @@ function HistoryTable({
   onFilter,
   onClearFilters,
   priceLabel,
+  expanded = false,
 }: {
   rows: DraftHistoryEntry[];
   sort: DraftHistorySort;
@@ -67,6 +68,7 @@ function HistoryTable({
   onFilter: (column: DraftHistoryColumn, value: string) => void;
   onClearFilters: () => void;
   priceLabel: string;
+  expanded?: boolean;
 }) {
   const columns: Column[] = [...BASE_COLUMNS, { key: "amount", label: priceLabel, numeric: true }];
   const filteredRows = useMemo(() => filterAndSortDraftHistoryEntries(rows, filters, sort), [filters, rows, sort]);
@@ -79,7 +81,7 @@ function HistoryTable({
         <span>Showing <strong>{filteredRows.length}</strong> of {rows.length}</span>
         {hasActiveFilters && <button type="button" onClick={onClearFilters}>Clear filters</button>}
       </div>
-      <div className={styles.tableWrap}>
+      <div className={`${styles.tableWrap} ${expanded ? styles.expandedTableWrap : ""}`}>
         <table className={styles.table}>
           <thead>
             <tr>
@@ -239,6 +241,7 @@ export default function DraftHistoryClient({ data }: { data: DraftHistoryData })
             onFilter={(column, value) => setAuctionFilters((current) => ({ ...current, [column]: value }))}
             onClearFilters={() => setAuctionFilters({})}
             priceLabel="Amount"
+            expanded
           />
         </section>
       </div>

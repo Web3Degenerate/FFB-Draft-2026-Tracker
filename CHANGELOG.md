@@ -10,6 +10,7 @@
 - Added accessible sort state, season summaries, ESPN source links, responsive styling, and a navigation link from the Auction Room.
 - Added unit coverage for numeric and natural-text sorting.
 - Added per-column filters to both Draft History tables, including a position dropdown and clear-filter controls.
+- Expanded the Auction Results table viewport to show substantially more purchases before internal scrolling.
 - Ignored generated TypeScript build-info files so local verification does not dirty the repository.
 
 ### Repository transfer notes
