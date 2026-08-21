@@ -5,6 +5,7 @@ node_modules/
 # or licensed subscriber exports. Keep them local in this public repository.
 data/*.json
 data/*.ndjson
+data/*.zip
 
 # Curated historical source snapshots are reviewed and intentionally tracked.
 !data/raw/
@@ -13,3 +14,4 @@ data/*.ndjson
 
 .DS_Store
 *.log
+~$*.xlsx
