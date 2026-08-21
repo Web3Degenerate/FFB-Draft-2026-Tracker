@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { sortDraftHistoryEntries, type DraftHistoryEntry } from "../lib/draft-history";
+import { filterAndSortDraftHistoryEntries, sortDraftHistoryEntries, type DraftHistoryEntry } from "../lib/draft-history";
 
 const rows: DraftHistoryEntry[] = [
   { number: 3, teamId: 7, manager: "Zoe", teamName: "Team 10", player: "Player C", nflTeam: "MIN", position: "WR", amount: 12 },
@@ -18,5 +18,13 @@ describe("draft history sorting", () => {
       "Team 2",
       "Team 10",
     ]);
+  });
+
+  it("filters by position before applying the selected sort", () => {
+    expect(filterAndSortDraftHistoryEntries(rows, { position: "RB" }, { column: "amount", direction: "desc" })).toEqual([rows[1]]);
+  });
+
+  it("combines filters across columns case-insensitively", () => {
+    expect(filterAndSortDraftHistoryEntries(rows, { manager: "BRE", amount: "12" }, { column: "number", direction: "asc" })).toEqual([rows[2]]);
   });
 });

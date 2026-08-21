@@ -26,6 +26,9 @@ export type DraftHistorySort = {
   column: DraftHistoryColumn;
   direction: "asc" | "desc";
 };
+export type DraftHistoryFilters = Partial<Record<DraftHistoryColumn, string>>;
+
+const displayValue = (entry: DraftHistoryEntry, column: DraftHistoryColumn) => String(entry[column]);
 
 export function sortDraftHistoryEntries(
   entries: DraftHistoryEntry[],
@@ -43,4 +46,19 @@ export function sortDraftHistoryEntries(
 
     return (sort.direction === "asc" ? comparison : -comparison) || left.number - right.number;
   });
+}
+
+export function filterAndSortDraftHistoryEntries(
+  entries: DraftHistoryEntry[],
+  filters: DraftHistoryFilters,
+  sort: DraftHistorySort,
+): DraftHistoryEntry[] {
+  const activeFilters = Object.entries(filters).filter(
+    (entry): entry is [DraftHistoryColumn, string] => Boolean(entry[1]?.trim()),
+  );
+  const filtered = entries.filter((entry) => activeFilters.every(([column, query]) =>
+    displayValue(entry, column).toLowerCase().includes(query.trim().toLowerCase()),
+  ));
+
+  return sortDraftHistoryEntries(filtered, sort);
 }

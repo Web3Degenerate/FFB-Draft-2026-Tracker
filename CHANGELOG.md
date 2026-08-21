@@ -9,6 +9,7 @@
 - Extracted the workbook values from `FFB_Auction_Draft_Analysis_2023_2025_sortable_keepers.xlsx` into a tracked, browser-ready JSON snapshot.
 - Added accessible sort state, season summaries, ESPN source links, responsive styling, and a navigation link from the Auction Room.
 - Added unit coverage for numeric and natural-text sorting.
+- Added per-column filters to both Draft History tables, including a position dropdown and clear-filter controls.
 - Ignored generated TypeScript build-info files so local verification does not dirty the repository.
 
 ### Repository transfer notes

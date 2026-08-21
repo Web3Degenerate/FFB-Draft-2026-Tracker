@@ -12,10 +12,11 @@ import {
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
-  sortDraftHistoryEntries,
+  filterAndSortDraftHistoryEntries,
   type DraftHistoryColumn,
   type DraftHistoryData,
   type DraftHistoryEntry,
+  type DraftHistoryFilters,
   type DraftHistorySort,
 } from "@/lib/draft-history";
 import styles from "./draft-history.module.css";
@@ -53,51 +54,90 @@ function SortIcon({ column, sort }: { column: DraftHistoryColumn; sort: DraftHis
 function HistoryTable({
   rows,
   sort,
+  filters,
   onSort,
+  onFilter,
+  onClearFilters,
   priceLabel,
 }: {
   rows: DraftHistoryEntry[];
   sort: DraftHistorySort;
+  filters: DraftHistoryFilters;
   onSort: (column: DraftHistoryColumn) => void;
+  onFilter: (column: DraftHistoryColumn, value: string) => void;
+  onClearFilters: () => void;
   priceLabel: string;
 }) {
   const columns: Column[] = [...BASE_COLUMNS, { key: "amount", label: priceLabel, numeric: true }];
-  const sortedRows = useMemo(() => sortDraftHistoryEntries(rows, sort), [rows, sort]);
+  const filteredRows = useMemo(() => filterAndSortDraftHistoryEntries(rows, filters, sort), [filters, rows, sort]);
+  const positions = useMemo(() => [...new Set(rows.map(({ position }) => position))].sort(), [rows]);
+  const hasActiveFilters = Object.values(filters).some((value) => value?.trim());
 
   return (
-    <div className={styles.tableWrap}>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            {columns.map((column) => (
-              <th
-                aria-sort={sort.column === column.key ? (sort.direction === "asc" ? "ascending" : "descending") : "none"}
-                className={column.numeric ? styles.numeric : undefined}
-                key={column.key}
-              >
-                <button type="button" onClick={() => onSort(column.key)}>
-                  <span>{column.label}</span>
-                  <SortIcon column={column.key} sort={sort} />
-                </button>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {sortedRows.map((entry) => (
-            <tr key={`${entry.number}-${entry.teamId}-${entry.player}`}>
-              <td className={`${styles.numeric} ${styles.mono}`}>{entry.number}</td>
-              <td className={`${styles.numeric} ${styles.mono}`}>{entry.teamId}</td>
-              <td>{entry.manager}</td>
-              <td>{entry.teamName}</td>
-              <td className={styles.player}>{entry.player}</td>
-              <td className={styles.mono}>{entry.nflTeam}</td>
-              <td><span className={`${styles.position} ${positionClass(entry.position)}`}>{entry.position}</span></td>
-              <td className={`${styles.numeric} ${styles.price}`}>${entry.amount}</td>
+    <div className={styles.tableFrame}>
+      <div className={styles.tableStatus}>
+        <span>Showing <strong>{filteredRows.length}</strong> of {rows.length}</span>
+        {hasActiveFilters && <button type="button" onClick={onClearFilters}>Clear filters</button>}
+      </div>
+      <div className={styles.tableWrap}>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              {columns.map((column) => (
+                <th
+                  aria-sort={sort.column === column.key ? (sort.direction === "asc" ? "ascending" : "descending") : "none"}
+                  className={column.numeric ? styles.numeric : undefined}
+                  key={column.key}
+                >
+                  <button type="button" onClick={() => onSort(column.key)}>
+                    <span>{column.label}</span>
+                    <SortIcon column={column.key} sort={sort} />
+                  </button>
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+            <tr className={styles.filterRow}>
+              {columns.map((column) => (
+                <th key={column.key}>
+                  {column.key === "position" ? (
+                    <select
+                      aria-label="Filter Pos"
+                      value={filters.position ?? ""}
+                      onChange={(event) => onFilter("position", event.target.value)}
+                    >
+                      <option value="">All</option>
+                      {positions.map((position) => <option value={position} key={position}>{position}</option>)}
+                    </select>
+                  ) : (
+                    <input
+                      aria-label={`Filter ${column.label}`}
+                      inputMode={column.numeric ? "numeric" : "text"}
+                      placeholder="Filter"
+                      value={filters[column.key] ?? ""}
+                      onChange={(event) => onFilter(column.key, event.target.value)}
+                    />
+                  )}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {filteredRows.map((entry) => (
+              <tr key={`${entry.number}-${entry.teamId}-${entry.player}`}>
+                <td className={`${styles.numeric} ${styles.mono}`}>{entry.number}</td>
+                <td className={`${styles.numeric} ${styles.mono}`}>{entry.teamId}</td>
+                <td>{entry.manager}</td>
+                <td>{entry.teamName}</td>
+                <td className={styles.player}>{entry.player}</td>
+                <td className={styles.mono}>{entry.nflTeam}</td>
+                <td><span className={`${styles.position} ${positionClass(entry.position)}`}>{entry.position}</span></td>
+                <td className={`${styles.numeric} ${styles.price}`}>${entry.amount}</td>
+              </tr>
+            ))}
+            {!filteredRows.length && <tr><td className={styles.empty} colSpan={columns.length}>No players match the current filters.</td></tr>}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
@@ -110,6 +150,8 @@ export default function DraftHistoryClient({ data }: { data: DraftHistoryData })
   const [activeYear, setActiveYear] = useState(data.seasons[0]?.year ?? 2025);
   const [keeperSort, setKeeperSort] = useState<DraftHistorySort>({ column: "number", direction: "asc" });
   const [auctionSort, setAuctionSort] = useState<DraftHistorySort>({ column: "number", direction: "asc" });
+  const [keeperFilters, setKeeperFilters] = useState<DraftHistoryFilters>({});
+  const [auctionFilters, setAuctionFilters] = useState<DraftHistoryFilters>({});
   const season = data.seasons.find(({ year }) => year === activeYear) ?? data.seasons[0];
 
   if (!season) return null;
@@ -120,6 +162,8 @@ export default function DraftHistoryClient({ data }: { data: DraftHistoryData })
     setActiveYear(year);
     setKeeperSort({ column: "number", direction: "asc" });
     setAuctionSort({ column: "number", direction: "asc" });
+    setKeeperFilters({});
+    setAuctionFilters({});
   };
 
   return (
@@ -133,7 +177,7 @@ export default function DraftHistoryClient({ data }: { data: DraftHistoryData })
           </nav>
           <span className="eyebrow">LEAGUE MARKET MEMORY</span>
           <h1>Draft History</h1>
-          <p>Keepers and auction purchases from the 2023–2025 league drafts. Select any column header to sort that table.</p>
+          <p>Keepers and auction purchases from the 2023–2025 league drafts. Sort with the column titles or filter beneath each header.</p>
         </div>
         <div className={styles.yearCard}>
           <ClockCounterClockwise aria-hidden />
@@ -174,7 +218,10 @@ export default function DraftHistoryClient({ data }: { data: DraftHistoryData })
           <HistoryTable
             rows={season.keepers}
             sort={keeperSort}
+            filters={keeperFilters}
             onSort={(column) => setKeeperSort((current) => nextSort(current, column))}
+            onFilter={(column, value) => setKeeperFilters((current) => ({ ...current, [column]: value }))}
+            onClearFilters={() => setKeeperFilters({})}
             priceLabel="Keeper Cost"
           />
         </section>
@@ -187,7 +234,10 @@ export default function DraftHistoryClient({ data }: { data: DraftHistoryData })
           <HistoryTable
             rows={season.auctions}
             sort={auctionSort}
+            filters={auctionFilters}
             onSort={(column) => setAuctionSort((current) => nextSort(current, column))}
+            onFilter={(column, value) => setAuctionFilters((current) => ({ ...current, [column]: value }))}
+            onClearFilters={() => setAuctionFilters({})}
             priceLabel="Amount"
           />
         </section>

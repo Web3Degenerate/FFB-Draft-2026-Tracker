@@ -88,6 +88,21 @@
 .summary { display: flex; align-items: center; gap: 10px; }
 .summary strong { padding: 7px 9px; border-radius: 7px; color: var(--green); background: rgba(93, 229, 138, .08); font: 800 12px var(--font-mono); }
 
+.tableFrame { background: var(--panel); }
+.tableStatus {
+  min-height: 34px;
+  padding: 6px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--muted);
+  font: 700 10px var(--font-mono);
+}
+.tableStatus strong { color: var(--text); }
+.tableStatus button { padding: 4px 7px; border: 1px solid var(--line); border-radius: 5px; color: var(--blue); background: var(--panel-3); font-size: 9px; font-weight: 800; cursor: pointer; }
+.tableStatus button:hover { border-color: rgba(101, 167, 255, .55); }
 .tableWrap { max-height: 520px; overflow: auto; scrollbar-color: #304049 transparent; }
 .table { width: 100%; min-width: 1040px; border-collapse: collapse; }
 .table thead { position: sticky; top: 0; z-index: 3; }
@@ -112,6 +127,20 @@
 .table th button:hover { color: var(--text); }
 .table th button svg { width: 13px; height: 13px; flex: 0 0 auto; color: var(--blue); }
 .table th.numeric button { justify-content: flex-end; }
+.filterRow th { height: 39px; padding: 5px 6px 7px; }
+.filterRow input, .filterRow select {
+  width: 100%;
+  height: 28px;
+  padding: 0 7px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  outline: none;
+  color: var(--text);
+  background: var(--panel-3);
+  font-size: 10px;
+}
+.filterRow input:focus, .filterRow select:focus { border-color: rgba(101, 167, 255, .65); box-shadow: 0 0 0 2px rgba(101, 167, 255, .08); }
+.filterRow input::placeholder { color: #62727b; }
 .table td { height: 43px; padding: 0 11px; border-bottom: 1px solid var(--line-soft); color: var(--muted); font-size: 11.5px; }
 .table tbody tr:last-child td { border-bottom: 0; }
 .table tbody tr:hover td { color: var(--text); background: rgba(101, 167, 255, .035); }
@@ -119,6 +148,7 @@
 .table .player { color: var(--text); font-weight: 750; }
 .mono { font-family: var(--font-mono); }
 .price { color: var(--green) !important; font: 800 12px var(--font-mono); }
+.table td.empty { height: 96px; color: var(--muted); text-align: center; }
 
 .position { min-width: 42px; padding: 4px 6px; display: inline-flex; justify-content: center; border-radius: 5px; font: 850 9px var(--font-mono); }
 .qb { color: #ff8d88; background: rgba(255, 107, 102, .11); }
