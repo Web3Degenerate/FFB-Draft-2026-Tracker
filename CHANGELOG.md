@@ -21,6 +21,12 @@
 - Added allocated, remaining, and red over-budget summaries against the league budget, plus persistent saved plans.
 - Added server-side validation and unit coverage for locked values, default reserves, over-budget math, and planner input validation.
 
+### ESPN live relay reliability
+
+- Switched the Watch List team strip to ESPN's authoritative auction `pickOrder` instead of relying on a fragile page selector.
+- Promoted captured ESPN socket bids and completed sales into the active draft state so leading bidders, prices, and rosters update in real time.
+- Kept the existing DOM snapshot relay as a fallback and bumped the unpacked Chrome extension to version 0.3.4.
+
 ### Repository transfer notes
 
 - Safe to push: application source, tests, the derived draft-history JSON, and `/outputs` artifacts.

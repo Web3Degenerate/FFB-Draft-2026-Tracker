@@ -42,3 +42,11 @@ export function mapDraftTeamsById(configuredTeams: LeagueTeam[], draftTeams: Lea
       .map(({ incoming, configured }) => ({ id: configured.id, from: configured.name, to: incoming.name })),
   };
 }
+
+export function validateDraftTeamOrder(value: unknown, teams: LeagueTeam[]): number[] {
+  if (!Array.isArray(value)) return [];
+  const order = value.map(Number);
+  const configuredIds = new Set(teams.map((team) => team.id));
+  if (order.length !== configuredIds.size || new Set(order).size !== order.length) return [];
+  return order.every((teamId) => Number.isInteger(teamId) && configuredIds.has(teamId)) ? order : [];
+}

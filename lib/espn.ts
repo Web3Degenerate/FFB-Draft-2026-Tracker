@@ -48,6 +48,13 @@ export async function fetchLeague(config: DraftConfig): Promise<{ name: string; 
   };
 }
 
+export async function fetchDraftTeamOrder(config: Pick<DraftConfig, "leagueId" | "seasonId">): Promise<number[]> {
+  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${config.seasonId}/segments/0/leagues/${config.leagueId}?view=mSettings`;
+  const data = await espnJson<{ settings?: { draftSettings?: { pickOrder?: number[] } } }>(url);
+  const order = (data.settings?.draftSettings?.pickOrder ?? []).map(Number).filter((teamId) => Number.isInteger(teamId) && teamId > 0);
+  return [...new Set(order)];
+}
+
 export async function fetchPlayers(config: DraftConfig): Promise<Player[]> {
   const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${config.seasonId}/segments/0/leagues/${config.leagueId}?view=kona_player_info`;
   const limit = 1200;

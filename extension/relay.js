@@ -1,6 +1,6 @@
 /* global chrome */
 (() => {
-  const VERSION = "0.3.3";
+  const VERSION = "0.3.4";
   const parser = globalThis.CodexFfbSaleParser;
   if (!parser) return;
 

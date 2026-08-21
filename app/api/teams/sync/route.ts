@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { fetchLeague } from "@/lib/espn";
+import { fetchDraftTeamOrder, fetchLeague } from "@/lib/espn";
 import { getState, mutateState } from "@/lib/store";
-import { mapDraftTeamsById, mergeEspnTeamNames } from "@/lib/teams";
+import { mapDraftTeamsById, mergeEspnTeamNames, validateDraftTeamOrder } from "@/lib/teams";
 import type { LeagueTeam } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -10,6 +10,7 @@ type SyncPayload = {
   league?: { leagueId?: number; seasonId?: number; myTeamId?: number };
   leagueName?: string;
   teams?: LeagueTeam[];
+  draftTeamOrder?: number[];
 };
 
 const cors = {
@@ -35,6 +36,12 @@ export async function POST(request: NextRequest) {
       if (!Number.isInteger(id) || !name) return [];
       return [{ id, name, abbreviation: String(team.abbreviation || `T${id}`).trim(), alias: "" }];
     });
+    let draftTeamOrder = validateDraftTeamOrder(payload.draftTeamOrder, current.teams);
+    if (!draftTeamOrder.length && requestedLeagueId === current.relay.draftLeagueId && (current.relay.draftTeamOrder?.length ?? 0) !== current.teams.length) {
+      try {
+        draftTeamOrder = validateDraftTeamOrder(await fetchDraftTeamOrder({ leagueId: requestedLeagueId, seasonId: requestedSeasonId }), current.teams);
+      } catch { /* keep team-name syncing available if ESPN's settings endpoint is temporarily unavailable */ }
+    }
     if (requestedLeagueId !== current.config.leagueId || requestedSeasonId !== current.config.seasonId) {
       if (requestedLeagueId === current.relay.draftLeagueId) {
         const mapping = mapDraftTeamsById(current.teams, suppliedTeams);
@@ -48,6 +55,7 @@ export async function POST(request: NextRequest) {
             ...(draft.relay.draftTeamNames ?? {}),
             ...mapping.names,
           };
+          if (draftTeamOrder.length) draft.relay.draftTeamOrder = draftTeamOrder;
         });
         return NextResponse.json({
           ok: true,
@@ -76,6 +84,7 @@ export async function POST(request: NextRequest) {
       }
       draft.config.leagueName = league.name;
       draft.teams = mergeEspnTeamNames(draft.teams, league.teams);
+      if (draftTeamOrder.length) draft.relay.draftTeamOrder = draftTeamOrder;
     });
     return NextResponse.json({ ok: true, changed, state }, { headers: cors });
   } catch (error) {
