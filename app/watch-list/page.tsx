@@ -9,6 +9,7 @@ import { opponentPositionSpend, sortOpponentTeamsByPosition } from "@/lib/oppone
 import { assignTeamRoster } from "@/lib/rosters";
 import { playoffScheduleStrengthForPlayer } from "@/lib/schedule-strength";
 import { teamDisplayName } from "@/lib/teams";
+import { rosterSlotPosition, whoNeedsMarker } from "@/lib/watch-list-needs";
 import { sortWatchListPlayers } from "@/lib/watch-list-order";
 import type { DashboardPayload, DraftState, Player, Position } from "@/lib/types";
 
@@ -42,6 +43,7 @@ export default function WatchListPage() {
   const [draggingPlayerId, setDraggingPlayerId] = useState(0);
   const [savingOrder, setSavingOrder] = useState(false);
   const [opponentSortPosition, setOpponentSortPosition] = useState<Position>("RB");
+  const [whoNeedsPosition, setWhoNeedsPosition] = useState<Position | null>(null);
 
   const load = useCallback(async () => {
     try {
@@ -148,13 +150,20 @@ export default function WatchListPage() {
   return <main className="watch-shell">
     <header className="watch-header">
       <nav className="management-nav-links"><Link href="/" className="back-link"><ArrowLeft /> Auction Room</Link><Link href="/tiers" className="back-link"><SlidersHorizontal /> Tier Editor</Link><Link href="/player-data" className="back-link">Player Data</Link><Link href="/schedules" className="back-link">Schedules</Link></nav>
+      <div className="who-needs-bar" role="group" aria-label="Show which teams need a position">
+        <strong>Who Needs:</strong>
+        <div>{OPPONENT_SORT_POSITIONS.map((item) => <button aria-pressed={whoNeedsPosition === item} className={whoNeedsPosition === item ? "selected" : ""} key={item} onClick={() => setWhoNeedsPosition((current) => current === item ? null : item)}><span className={positionClass(item)}>{positionLabel(item)}</span></button>)}</div>
+        <p>{whoNeedsPosition ? `Showing ${positionLabel(whoNeedsPosition)} roster counts` : "Select a position to mark team needs"}</p>
+      </div>
       <div className="watch-team-strip-shell" aria-label="Live team budgets and bidding limits">
         <div className="watch-team-strip" role="list">
           {draftTeams.map((team, index) => {
             const isLeading = state.nomination?.leadingTeamId === team.id && state.nomination.askingBid !== undefined;
             const draftTeamName = state.relay.draftTeamNames?.[String(team.id)] || team.name;
+            const needMarker = whoNeedsPosition ? whoNeedsMarker(team.counts, whoNeedsPosition) : null;
             return <article className={`watch-team-card ${team.id === state.config.myTeamId ? "mine" : ""} ${isLeading ? "leading" : ""}`} role="listitem" key={team.id}>
               <div className="watch-team-card-name"><span>{index + 1}.</span><strong title={draftTeamName}>{draftTeamName}</strong>{isLeading && <em title="Current highest bidder">LEADS {money(state.nomination?.askingBid ?? 0)}</em>}</div>
+              {whoNeedsPosition && <div className="watch-team-need-slot">{needMarker && <b className={`watch-team-need-${needMarker.tone}`}>{needMarker.count} {positionLabel(whoNeedsPosition)}</b>}</div>}
               <div className="watch-team-card-metrics">
                 <span><small>Budget</small><strong>{money(team.budgetLeft)}</strong></span>
                 <span><small>Max bid</small><strong>{money(team.maxBid)}</strong></span>
@@ -218,11 +227,13 @@ export default function WatchListPage() {
               <span><small>WR paid</small><strong>{money(wrPaid)}</strong></span>
             </header>
             <div className="roster-scroll"><div className="roster-slot-grid">
-              {slots.map((slot) => <div className={`roster-slot ${slot.player ? "has-player" : ""} ${slot.player?.isKeeper ? "keeper" : ""}`} key={slot.key}>
+              {slots.map((slot) => {
+                const slotPosition = rosterSlotPosition(slot.key);
+                return <div className={`roster-slot ${slot.player ? "has-player" : ""} ${slot.player?.isKeeper ? "keeper" : ""} ${slotPosition ? `roster-slot-position-${slotPosition.toLowerCase()}` : ""} ${!slot.player && slotPosition ? `roster-slot-empty-${slotPosition.toLowerCase()}` : ""}`} key={slot.key}>
                 <strong title={slot.player?.playerName}>{slot.player?.playerName ?? "Open"}</strong>
                 <span>{slot.label}</span>
                 <small>{slot.player ? <>{positionLabel(slot.player.position)} · {slot.player.isKeeper ? "KEEPER" : money(slot.player.amount)}<FantasyIndexRank rank={playerById.get(slot.player.playerId)?.fantasyIndexRank} variant="badge" /></> : "Available slot"}</small>
-              </div>)}
+              </div>})}
             </div></div>
           </article>;
         })}

@@ -1,6 +1,6 @@
 import type { Player, Position } from "./types";
 
-export const FANTASY_INDEX_RANKINGS_URL = "https://fantasyindex.com/members/rankings/1425/68208";
+export const FANTASY_INDEX_RANKINGS_URL = "https://fantasyindex.com/members/rankings/1427/68208";
 
 export type FantasyIndexPosition = "QB" | "RB" | "WR" | "TE" | "PK" | "ST";
 

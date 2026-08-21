@@ -1,0 +1,1430 @@
+{
+  "draftDate": "Sun., Sep. 03, 2023",
+  "draftTime": "6:00 PM",
+  "draftType": "Salary Cap",
+  "leagueId": 555583,
+  "leagueName": "UTH Anal Wink ;)",
+  "retrievedAt": "2026-08-21T04:37:20.187Z",
+  "schemaVersion": 1,
+  "seasonId": 2023,
+  "source": "ESPN Fantasy Football draft recap",
+  "sourceUrl": "https://fantasy.espn.com/football/league/draftrecap?seasonId=2023&leagueId=555583",
+  "teams": [
+    {
+      "results": [
+        {
+          "amount": 31,
+          "keeper": true,
+          "nflTeam": "MIA",
+          "order": 1,
+          "playerName": "Tyreek Hill",
+          "position": "WR"
+        },
+        {
+          "amount": 22,
+          "keeper": true,
+          "nflTeam": "DAL",
+          "order": 2,
+          "playerName": "CeeDee Lamb",
+          "position": "WR"
+        },
+        {
+          "amount": 8,
+          "keeper": false,
+          "nflTeam": "LAC",
+          "order": 37,
+          "playerName": "Quentin Johnston",
+          "position": "WR"
+        },
+        {
+          "amount": 13,
+          "keeper": false,
+          "nflTeam": "KC",
+          "order": 45,
+          "playerName": "Isiah Pacheco",
+          "position": "RB"
+        },
+        {
+          "amount": 31,
+          "keeper": false,
+          "nflTeam": "LAC",
+          "order": 50,
+          "playerName": "Justin Herbert",
+          "position": "QB"
+        },
+        {
+          "amount": 32,
+          "keeper": false,
+          "nflTeam": "NYJ",
+          "order": 55,
+          "playerName": "Breece Hall",
+          "position": "RB"
+        },
+        {
+          "amount": 6,
+          "keeper": false,
+          "nflTeam": "KC",
+          "order": 62,
+          "playerName": "Skyy Moore",
+          "position": "WR"
+        },
+        {
+          "amount": 15,
+          "keeper": false,
+          "nflTeam": "DET",
+          "order": 80,
+          "playerName": "David Montgomery",
+          "position": "RB"
+        },
+        {
+          "amount": 10,
+          "keeper": false,
+          "nflTeam": "CHI",
+          "order": 83,
+          "playerName": "Khalil Herbert",
+          "position": "RB"
+        },
+        {
+          "amount": 17,
+          "keeper": false,
+          "nflTeam": "ATL",
+          "order": 98,
+          "playerName": "Kyle Pitts",
+          "position": "TE"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "CHI",
+          "order": 101,
+          "playerName": "Cole Kmet",
+          "position": "TE"
+        },
+        {
+          "amount": 6,
+          "keeper": false,
+          "nflTeam": "DAL",
+          "order": 106,
+          "playerName": "Cowboys D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "DAL",
+          "order": 109,
+          "playerName": "Deuce Vaughn",
+          "position": "RB"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "KC",
+          "order": 128,
+          "playerName": "Harrison Butker",
+          "position": "K"
+        }
+      ],
+      "teamId": 1,
+      "teamName": "Ravenclaw Shirt Sunday"
+    },
+    {
+      "results": [
+        {
+          "amount": 23,
+          "keeper": true,
+          "nflTeam": "NE",
+          "order": 3,
+          "playerName": "Rhamondre Stevenson",
+          "position": "RB"
+        },
+        {
+          "amount": 41,
+          "keeper": true,
+          "nflTeam": "WSH",
+          "order": 4,
+          "playerName": "Austin Ekeler",
+          "position": "RB"
+        },
+        {
+          "amount": 22,
+          "keeper": false,
+          "nflTeam": "CHI",
+          "order": 31,
+          "playerName": "Keenan Allen",
+          "position": "WR"
+        },
+        {
+          "amount": 36,
+          "keeper": false,
+          "nflTeam": "MIA",
+          "order": 35,
+          "playerName": "Jaylen Waddle",
+          "position": "WR"
+        },
+        {
+          "amount": 24,
+          "keeper": false,
+          "nflTeam": "PIT",
+          "order": 38,
+          "playerName": "Justin Fields",
+          "position": "QB"
+        },
+        {
+          "amount": 11,
+          "keeper": false,
+          "nflTeam": "NE",
+          "order": 49,
+          "playerName": "Antonio Gibson",
+          "position": "RB"
+        },
+        {
+          "amount": 18,
+          "keeper": false,
+          "nflTeam": "WSH",
+          "order": 61,
+          "playerName": "Jahan Dotson",
+          "position": "WR"
+        },
+        {
+          "amount": 7,
+          "keeper": false,
+          "nflTeam": "MIA",
+          "order": 73,
+          "playerName": "De'Von Achane",
+          "position": "RB"
+        },
+        {
+          "amount": 10,
+          "keeper": false,
+          "nflTeam": "PIT",
+          "order": 82,
+          "playerName": "Pat Freiermuth",
+          "position": "TE"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "NO",
+          "order": 105,
+          "playerName": "Michael Thomas",
+          "position": "WR"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "BAL",
+          "order": 114,
+          "playerName": "Rashod Bateman",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "ATL",
+          "order": 133,
+          "playerName": "Tyler Allgeier",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NE",
+          "order": 144,
+          "playerName": "Patriots D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "BUF",
+          "order": 146,
+          "playerName": "Tyler Bass",
+          "position": "K"
+        }
+      ],
+      "teamId": 4,
+      "teamName": "The Toothbrush Violater"
+    },
+    {
+      "results": [
+        {
+          "amount": 11,
+          "keeper": true,
+          "nflTeam": "PHI",
+          "order": 5,
+          "playerName": "DeVonta Smith",
+          "position": "WR"
+        },
+        {
+          "amount": 55,
+          "keeper": true,
+          "nflTeam": "SF",
+          "order": 6,
+          "playerName": "Christian McCaffrey",
+          "position": "RB"
+        },
+        {
+          "amount": 48,
+          "keeper": false,
+          "nflTeam": "DET",
+          "order": 30,
+          "playerName": "Amon-Ra St. Brown",
+          "position": "WR"
+        },
+        {
+          "amount": 36,
+          "keeper": false,
+          "nflTeam": "SEA",
+          "order": 74,
+          "playerName": "Kenneth Walker III",
+          "position": "RB"
+        },
+        {
+          "amount": 20,
+          "keeper": false,
+          "nflTeam": "PIT",
+          "order": 86,
+          "playerName": "George Pickens",
+          "position": "WR"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "CLE",
+          "order": 94,
+          "playerName": "David Njoku",
+          "position": "TE"
+        },
+        {
+          "amount": 5,
+          "keeper": false,
+          "nflTeam": "IND",
+          "order": 99,
+          "playerName": "Michael Pittman Jr.",
+          "position": "WR"
+        },
+        {
+          "amount": 8,
+          "keeper": false,
+          "nflTeam": "DEN",
+          "order": 104,
+          "playerName": "Courtland Sutton",
+          "position": "WR"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "IND",
+          "order": 118,
+          "playerName": "Anthony Richardson",
+          "position": "QB"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "ATL",
+          "order": 124,
+          "playerName": "Younghoe Koo",
+          "position": "K"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "BUF",
+          "order": 125,
+          "playerName": "Bills D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "DAL",
+          "order": 141,
+          "playerName": "Michael Gallup",
+          "position": "WR"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "ATL",
+          "order": 148,
+          "playerName": "Kirk Cousins",
+          "position": "QB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "HOU",
+          "order": 158,
+          "playerName": "Dalton Schultz",
+          "position": "TE"
+        }
+      ],
+      "teamId": 5,
+      "teamName": "8================ D"
+    },
+    {
+      "results": [
+        {
+          "amount": 10,
+          "keeper": true,
+          "nflTeam": "BUF",
+          "order": 7,
+          "playerName": "James Cook",
+          "position": "RB"
+        },
+        {
+          "amount": 24,
+          "keeper": true,
+          "nflTeam": "NYG",
+          "order": 8,
+          "playerName": "Darren Waller",
+          "position": "TE"
+        },
+        {
+          "amount": 61,
+          "keeper": false,
+          "nflTeam": "ATL",
+          "order": 25,
+          "playerName": "Bijan Robinson",
+          "position": "RB"
+        },
+        {
+          "amount": 49,
+          "keeper": false,
+          "nflTeam": "DET",
+          "order": 43,
+          "playerName": "Jahmyr Gibbs",
+          "position": "RB"
+        },
+        {
+          "amount": 28,
+          "keeper": false,
+          "nflTeam": "GB",
+          "order": 64,
+          "playerName": "Christian Watson",
+          "position": "WR"
+        },
+        {
+          "amount": 16,
+          "keeper": false,
+          "nflTeam": "ATL",
+          "order": 91,
+          "playerName": "Drake London",
+          "position": "WR"
+        },
+        {
+          "amount": 4,
+          "keeper": false,
+          "nflTeam": "HOU",
+          "order": 102,
+          "playerName": "Nico Collins",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "DAL",
+          "order": 108,
+          "playerName": "Dak Prescott",
+          "position": "QB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "MIA",
+          "order": 120,
+          "playerName": "Raheem Mostert",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "TEN",
+          "order": 132,
+          "playerName": "Tyjae Spears",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "CLE",
+          "order": 143,
+          "playerName": "Elijah Moore",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "KC",
+          "order": 152,
+          "playerName": "Kadarius Toney",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "CLE",
+          "order": 159,
+          "playerName": "Browns D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NYJ",
+          "order": 164,
+          "playerName": "Greg Zuerlein",
+          "position": "K"
+        }
+      ],
+      "teamId": 6,
+      "teamName": "Uncle C-ass"
+    },
+    {
+      "results": [
+        {
+          "amount": 19,
+          "keeper": true,
+          "nflTeam": "CIN",
+          "order": 9,
+          "playerName": "Joe Burrow",
+          "position": "QB"
+        },
+        {
+          "amount": 18,
+          "keeper": true,
+          "nflTeam": "SEA",
+          "order": 10,
+          "playerName": "DK Metcalf",
+          "position": "WR"
+        },
+        {
+          "amount": 46,
+          "keeper": false,
+          "nflTeam": "LV",
+          "order": 29,
+          "playerName": "Davante Adams",
+          "position": "WR"
+        },
+        {
+          "amount": 29,
+          "keeper": false,
+          "nflTeam": "LAR",
+          "order": 32,
+          "playerName": "Cooper Kupp",
+          "position": "WR"
+        },
+        {
+          "amount": 8,
+          "keeper": false,
+          "nflTeam": "BAL",
+          "order": 63,
+          "playerName": "Dalvin Cook",
+          "position": "RB"
+        },
+        {
+          "amount": 6,
+          "keeper": false,
+          "nflTeam": "SF",
+          "order": 77,
+          "playerName": "George Kittle",
+          "position": "TE"
+        },
+        {
+          "amount": 27,
+          "keeper": false,
+          "nflTeam": "BAL",
+          "order": 79,
+          "playerName": "J.K. Dobbins",
+          "position": "RB"
+        },
+        {
+          "amount": 11,
+          "keeper": false,
+          "nflTeam": "SEA",
+          "order": 85,
+          "playerName": "Jaxon Smith-Njigba",
+          "position": "WR"
+        },
+        {
+          "amount": 8,
+          "keeper": false,
+          "nflTeam": "BAL",
+          "order": 103,
+          "playerName": "Zay Flowers",
+          "position": "WR"
+        },
+        {
+          "amount": 5,
+          "keeper": false,
+          "nflTeam": "CHI",
+          "order": 107,
+          "playerName": "D'Andre Swift",
+          "position": "RB"
+        },
+        {
+          "amount": 8,
+          "keeper": false,
+          "nflTeam": "MIN",
+          "order": 110,
+          "playerName": "Jordan Addison",
+          "position": "WR"
+        },
+        {
+          "amount": 10,
+          "keeper": false,
+          "nflTeam": "SF",
+          "order": 111,
+          "playerName": "49ers D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "KC",
+          "order": 115,
+          "playerName": "Jerick McKinnon",
+          "position": "RB"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "LV",
+          "order": 139,
+          "playerName": "Daniel Carlson",
+          "position": "K"
+        }
+      ],
+      "teamId": 7,
+      "teamName": "The Splenic Flexture"
+    },
+    {
+      "results": [
+        {
+          "amount": 10,
+          "keeper": true,
+          "nflTeam": "TB",
+          "order": 11,
+          "playerName": "Rachaad White",
+          "position": "RB"
+        },
+        {
+          "amount": 14,
+          "keeper": true,
+          "nflTeam": "TEN",
+          "order": 12,
+          "playerName": "Tony Pollard",
+          "position": "RB"
+        },
+        {
+          "amount": 31,
+          "keeper": false,
+          "nflTeam": "PHI",
+          "order": 34,
+          "playerName": "Jalen Hurts",
+          "position": "QB"
+        },
+        {
+          "amount": 43,
+          "keeper": false,
+          "nflTeam": "CIN",
+          "order": 48,
+          "playerName": "Tee Higgins",
+          "position": "WR"
+        },
+        {
+          "amount": 34,
+          "keeper": false,
+          "nflTeam": "HOU",
+          "order": 56,
+          "playerName": "Dameon Pierce",
+          "position": "RB"
+        },
+        {
+          "amount": 12,
+          "keeper": false,
+          "nflTeam": "PHI",
+          "order": 76,
+          "playerName": "Dallas Goedert",
+          "position": "TE"
+        },
+        {
+          "amount": 10,
+          "keeper": false,
+          "nflTeam": "GB",
+          "order": 87,
+          "playerName": "AJ Dillon",
+          "position": "RB"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "DAL",
+          "order": 92,
+          "playerName": "Brandin Cooks",
+          "position": "WR"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "GB",
+          "order": 112,
+          "playerName": "Romeo Doubs",
+          "position": "WR"
+        },
+        {
+          "amount": 9,
+          "keeper": false,
+          "nflTeam": "PIT",
+          "order": 117,
+          "playerName": "Steelers D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "CIN",
+          "order": 127,
+          "playerName": "Evan McPherson",
+          "position": "K"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NYG",
+          "order": 140,
+          "playerName": "Jalin Hyatt",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NYJ",
+          "order": 149,
+          "playerName": "Allen Lazard",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NYG",
+          "order": 157,
+          "playerName": "Deon Jackson",
+          "position": "RB"
+        }
+      ],
+      "teamId": 9,
+      "teamName": "Old Money"
+    },
+    {
+      "results": [
+        {
+          "amount": 38,
+          "keeper": true,
+          "nflTeam": "BUF",
+          "order": 13,
+          "playerName": "Josh Allen",
+          "position": "QB"
+        },
+        {
+          "amount": 25,
+          "keeper": true,
+          "nflTeam": "BUF",
+          "order": 14,
+          "playerName": "Stefon Diggs",
+          "position": "WR"
+        },
+        {
+          "amount": 33,
+          "keeper": false,
+          "nflTeam": "JAX",
+          "order": 27,
+          "playerName": "Travis Etienne Jr.",
+          "position": "RB"
+        },
+        {
+          "amount": 60,
+          "keeper": false,
+          "nflTeam": "PHI",
+          "order": 28,
+          "playerName": "Saquon Barkley",
+          "position": "RB"
+        },
+        {
+          "amount": 26,
+          "keeper": false,
+          "nflTeam": "SF",
+          "order": 42,
+          "playerName": "Deebo Samuel",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "TEN",
+          "order": 66,
+          "playerName": "Chigoziem Okonkwo",
+          "position": "TE"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "LAC",
+          "order": 78,
+          "playerName": "Isaiah Spiller",
+          "position": "RB"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "BAL",
+          "order": 90,
+          "playerName": "Ravens D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 5,
+          "keeper": false,
+          "nflTeam": "SF",
+          "order": 96,
+          "playerName": "Brandon Aiyuk",
+          "position": "WR"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "LV",
+          "order": 129,
+          "playerName": "Jakobi Meyers",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "FA",
+          "order": 138,
+          "playerName": "Odell Beckham Jr.",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NYG",
+          "order": 156,
+          "playerName": "Daniel Jones",
+          "position": "QB"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "PHI",
+          "order": 162,
+          "playerName": "Rashaad Penny",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "IND",
+          "order": 163,
+          "playerName": "Matt Gay",
+          "position": "K"
+        }
+      ],
+      "teamId": 14,
+      "teamName": "Rode and Dode"
+    },
+    {
+      "results": [
+        {
+          "amount": 44,
+          "keeper": true,
+          "nflTeam": "BAL",
+          "order": 15,
+          "playerName": "Derrick Henry",
+          "position": "RB"
+        },
+        {
+          "amount": 28,
+          "keeper": true,
+          "nflTeam": "GB",
+          "order": 16,
+          "playerName": "Josh Jacobs",
+          "position": "RB"
+        },
+        {
+          "amount": 17,
+          "keeper": false,
+          "nflTeam": "CHI",
+          "order": 40,
+          "playerName": "DJ Moore",
+          "position": "WR"
+        },
+        {
+          "amount": 26,
+          "keeper": false,
+          "nflTeam": "CLE",
+          "order": 52,
+          "playerName": "Amari Cooper",
+          "position": "WR"
+        },
+        {
+          "amount": 26,
+          "keeper": false,
+          "nflTeam": "JAX",
+          "order": 58,
+          "playerName": "Trevor Lawrence",
+          "position": "QB"
+        },
+        {
+          "amount": 43,
+          "keeper": false,
+          "nflTeam": "LV",
+          "order": 75,
+          "playerName": "Alexander Mattison",
+          "position": "RB"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "JAX",
+          "order": 88,
+          "playerName": "Evan Engram",
+          "position": "TE"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "NYJ",
+          "order": 97,
+          "playerName": "Jets D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 5,
+          "keeper": false,
+          "nflTeam": "JAX",
+          "order": 100,
+          "playerName": "Christian Kirk",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "MIN",
+          "order": 136,
+          "playerName": "Ty Chandler",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "SEA",
+          "order": 154,
+          "playerName": "Zach Charbonnet",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "CAR",
+          "order": 161,
+          "playerName": "Adam Thielen",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "PHI",
+          "order": 165,
+          "playerName": "Eagles D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "PIT",
+          "order": 167,
+          "playerName": "Chris Boswell",
+          "position": "K"
+        }
+      ],
+      "teamId": 15,
+      "teamName": "Ai Mike 🤖 From Orlando 🍺🤣"
+    },
+    {
+      "results": [
+        {
+          "amount": 0,
+          "keeper": true,
+          "nflTeam": "NYJ",
+          "order": 17,
+          "playerName": "Garrett Wilson",
+          "position": "WR"
+        },
+        {
+          "amount": 30,
+          "keeper": true,
+          "nflTeam": "CLE",
+          "order": 18,
+          "playerName": "Nick Chubb",
+          "position": "RB"
+        },
+        {
+          "amount": 55,
+          "keeper": false,
+          "nflTeam": "HOU",
+          "order": 33,
+          "playerName": "Joe Mixon",
+          "position": "RB"
+        },
+        {
+          "amount": 5,
+          "keeper": false,
+          "nflTeam": "CLE",
+          "order": 59,
+          "playerName": "Deshaun Watson",
+          "position": "QB"
+        },
+        {
+          "amount": 26,
+          "keeper": false,
+          "nflTeam": "CAR",
+          "order": 65,
+          "playerName": "Diontae Johnson",
+          "position": "WR"
+        },
+        {
+          "amount": 26,
+          "keeper": false,
+          "nflTeam": "DEN",
+          "order": 67,
+          "playerName": "Javonte Williams",
+          "position": "RB"
+        },
+        {
+          "amount": 9,
+          "keeper": false,
+          "nflTeam": "ARI",
+          "order": 69,
+          "playerName": "James Conner",
+          "position": "RB"
+        },
+        {
+          "amount": 17,
+          "keeper": false,
+          "nflTeam": "WSH",
+          "order": 72,
+          "playerName": "Terry McLaurin",
+          "position": "WR"
+        },
+        {
+          "amount": 8,
+          "keeper": false,
+          "nflTeam": "TB",
+          "order": 84,
+          "playerName": "Mike Evans",
+          "position": "WR"
+        },
+        {
+          "amount": 4,
+          "keeper": false,
+          "nflTeam": "CLE",
+          "order": 93,
+          "playerName": "Jerry Jeudy",
+          "position": "WR"
+        },
+        {
+          "amount": 4,
+          "keeper": false,
+          "nflTeam": "BAL",
+          "order": 116,
+          "playerName": "Justin Tucker",
+          "position": "K"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "NO",
+          "order": 123,
+          "playerName": "Saints D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 4,
+          "keeper": false,
+          "nflTeam": "NYJ",
+          "order": 130,
+          "playerName": "Aaron Rodgers",
+          "position": "QB"
+        },
+        {
+          "amount": 5,
+          "keeper": false,
+          "nflTeam": "DET",
+          "order": 135,
+          "playerName": "Sam LaPorta",
+          "position": "TE"
+        }
+      ],
+      "teamId": 16,
+      "teamName": "Corn-fed Masseuses"
+    },
+    {
+      "results": [
+        {
+          "amount": 43,
+          "keeper": true,
+          "nflTeam": "PHI",
+          "order": 19,
+          "playerName": "A.J. Brown",
+          "position": "WR"
+        },
+        {
+          "amount": 53,
+          "keeper": true,
+          "nflTeam": "KC",
+          "order": 20,
+          "playerName": "Travis Kelce",
+          "position": "TE"
+        },
+        {
+          "amount": 14,
+          "keeper": false,
+          "nflTeam": "SEA",
+          "order": 36,
+          "playerName": "Tyler Lockett",
+          "position": "WR"
+        },
+        {
+          "amount": 40,
+          "keeper": false,
+          "nflTeam": "MIN",
+          "order": 39,
+          "playerName": "Aaron Jones",
+          "position": "RB"
+        },
+        {
+          "amount": 36,
+          "keeper": false,
+          "nflTeam": "KC",
+          "order": 46,
+          "playerName": "Patrick Mahomes",
+          "position": "QB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "LAR",
+          "order": 89,
+          "playerName": "Puka Nacua",
+          "position": "WR"
+        },
+        {
+          "amount": 4,
+          "keeper": false,
+          "nflTeam": "KC",
+          "order": 95,
+          "playerName": "Marquise Brown",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NE",
+          "order": 113,
+          "playerName": "JuJu Smith-Schuster",
+          "position": "WR"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "PIT",
+          "order": 121,
+          "playerName": "Jaylen Warren",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "GB",
+          "order": 137,
+          "playerName": "Packers D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "PHI",
+          "order": 147,
+          "playerName": "Jake Elliott",
+          "position": "K"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "DEN",
+          "order": 155,
+          "playerName": "Samaje Perine",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NYG",
+          "order": 166,
+          "playerName": "Isaiah Hodgins",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NE",
+          "order": 168,
+          "playerName": "Ezekiel Elliott",
+          "position": "RB"
+        }
+      ],
+      "teamId": 17,
+      "teamName": "Trophy Mahome Save me"
+    },
+    {
+      "results": [
+        {
+          "amount": 44,
+          "keeper": true,
+          "nflTeam": "MIN",
+          "order": 21,
+          "playerName": "Justin Jefferson",
+          "position": "WR"
+        },
+        {
+          "amount": 14,
+          "keeper": true,
+          "nflTeam": "NO",
+          "order": 22,
+          "playerName": "Chris Olave",
+          "position": "WR"
+        },
+        {
+          "amount": 34,
+          "keeper": false,
+          "nflTeam": "BAL",
+          "order": 26,
+          "playerName": "Mark Andrews",
+          "position": "TE"
+        },
+        {
+          "amount": 29,
+          "keeper": false,
+          "nflTeam": "BAL",
+          "order": 44,
+          "playerName": "Lamar Jackson",
+          "position": "QB"
+        },
+        {
+          "amount": 20,
+          "keeper": false,
+          "nflTeam": "MIN",
+          "order": 57,
+          "playerName": "Cam Akers",
+          "position": "RB"
+        },
+        {
+          "amount": 13,
+          "keeper": false,
+          "nflTeam": "NO",
+          "order": 60,
+          "playerName": "Alvin Kamara",
+          "position": "RB"
+        },
+        {
+          "amount": 14,
+          "keeper": false,
+          "nflTeam": "TB",
+          "order": 68,
+          "playerName": "Chris Godwin",
+          "position": "WR"
+        },
+        {
+          "amount": 13,
+          "keeper": false,
+          "nflTeam": "NYJ",
+          "order": 71,
+          "playerName": "Mike Williams",
+          "position": "WR"
+        },
+        {
+          "amount": 8,
+          "keeper": false,
+          "nflTeam": "WSH",
+          "order": 81,
+          "playerName": "Brian Robinson Jr.",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NO",
+          "order": 119,
+          "playerName": "Jamaal Williams",
+          "position": "RB"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "TEN",
+          "order": 126,
+          "playerName": "Treylon Burks",
+          "position": "WR"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "JAX",
+          "order": 131,
+          "playerName": "Gabe Davis",
+          "position": "WR"
+        },
+        {
+          "amount": 3,
+          "keeper": false,
+          "nflTeam": "WSH",
+          "order": 142,
+          "playerName": "Commanders D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 2,
+          "keeper": false,
+          "nflTeam": "SEA",
+          "order": 151,
+          "playerName": "Jason Myers",
+          "position": "K"
+        }
+      ],
+      "teamId": 18,
+      "teamName": "Fecal Fiasco"
+    },
+    {
+      "results": [
+        {
+          "amount": 19,
+          "keeper": true,
+          "nflTeam": "CIN",
+          "order": 23,
+          "playerName": "Ja'Marr Chase",
+          "position": "WR"
+        },
+        {
+          "amount": 13,
+          "keeper": true,
+          "nflTeam": "MIN",
+          "order": 24,
+          "playerName": "T.J. Hockenson",
+          "position": "TE"
+        },
+        {
+          "amount": 10,
+          "keeper": false,
+          "nflTeam": "TEN",
+          "order": 41,
+          "playerName": "DeAndre Hopkins",
+          "position": "WR"
+        },
+        {
+          "amount": 24,
+          "keeper": false,
+          "nflTeam": "IND",
+          "order": 47,
+          "playerName": "Jonathan Taylor",
+          "position": "RB"
+        },
+        {
+          "amount": 23,
+          "keeper": false,
+          "nflTeam": "CAR",
+          "order": 51,
+          "playerName": "Miles Sanders",
+          "position": "RB"
+        },
+        {
+          "amount": 44,
+          "keeper": false,
+          "nflTeam": "PIT",
+          "order": 53,
+          "playerName": "Najee Harris",
+          "position": "RB"
+        },
+        {
+          "amount": 35,
+          "keeper": false,
+          "nflTeam": "TEN",
+          "order": 54,
+          "playerName": "Calvin Ridley",
+          "position": "WR"
+        },
+        {
+          "amount": 23,
+          "keeper": false,
+          "nflTeam": "MIA",
+          "order": 70,
+          "playerName": "Tua Tagovailoa",
+          "position": "QB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "KC",
+          "order": 122,
+          "playerName": "Rashee Rice",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NE",
+          "order": 134,
+          "playerName": "K.J. Osborn",
+          "position": "WR"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "MIA",
+          "order": 145,
+          "playerName": "Dolphins D/ST",
+          "position": "D/ST"
+        },
+        {
+          "amount": 4,
+          "keeper": false,
+          "nflTeam": "JAX",
+          "order": 150,
+          "playerName": "Tank Bigsby",
+          "position": "RB"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "NYG",
+          "order": 153,
+          "playerName": "Graham Gano",
+          "position": "K"
+        },
+        {
+          "amount": 1,
+          "keeper": false,
+          "nflTeam": "HOU",
+          "order": 160,
+          "playerName": "John Metchie III",
+          "position": "WR"
+        }
+      ],
+      "teamId": 19,
+      "teamName": "Garbage Time"
+    }
+  ]
+}

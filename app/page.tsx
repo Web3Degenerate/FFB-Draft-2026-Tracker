@@ -212,7 +212,7 @@ export default function Home() {
           <div><h1>Auction Room</h1><p>{state.config.leagueName} · {state.config.seasonId}</p></div>
         </div>
         <div className="header-actions">
-          <nav className="manager-nav"><Link href="/keepers">Keepers</Link><Link href="/tiers">Tier editor</Link><Link href="/watch-list">Watch list</Link><Link href="/player-data">Player data</Link><Link href="/schedules">Schedules</Link></nav>
+          <nav className="manager-nav"><Link href="/keepers">Keepers</Link><Link href="/tiers">Tier editor</Link><Link href="/watch-list">Watch list</Link><Link href="/player-data">Player data</Link><Link href="/schedules">Schedules</Link><Link href="/rankings-history">Rankings history</Link></nav>
           <button className={`relay-pill ${relayFresh ? "live" : ""}`} onClick={() => { setDraftLeagueIdInput(state.relay.draftLeagueId ? String(state.relay.draftLeagueId) : ""); setShowRelay(true); }}>
             <Broadcast weight="fill" /> {relayLabel}
           </button>
