@@ -28,15 +28,26 @@ const FI_POSITION_MAP: Record<FantasyIndexPosition, Position> = {
   ST: "DST",
 };
 
+const NAME_ALIASES = new Map([
+  ["kenneth gainwell", "kenny gainwell"],
+  ["jaylen royals", "jalen royals"],
+]);
+
+const TEAM_ALIASES: Record<string, string> = {
+  JAC: "JAX",
+};
+
 function normalizeName(value: string): string {
-  return value
+  const normalized = value
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
+    .replace(/\([^)]*\)/g, " ")
     .replace(/\bd\s*\/\s*st\b/g, "")
     .replace(/['’`]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
+  return NAME_ALIASES.get(normalized) ?? normalized;
 }
 
 function relaxedName(value: string): string {
@@ -45,7 +56,11 @@ function relaxedName(value: string): string {
 
 const rankingKey = (position: Position, name: string) => `${position}:${normalizeName(name)}`;
 const relaxedRankingKey = (position: Position, name: string) => `${position}:${relaxedName(name)}`;
-const teamKey = (position: Position, team: string) => `${position}:${team.trim().toUpperCase()}`;
+const normalizeTeam = (team: string) => {
+  const normalized = team.trim().toUpperCase();
+  return TEAM_ALIASES[normalized] ?? normalized;
+};
+const teamKey = (position: Position, team: string) => `${position}:${normalizeTeam(team)}`;
 
 export function mergeFantasyIndexRankings(players: Player[], snapshot: FantasyIndexSnapshot | null): Player[] {
   if (!snapshot?.rankings?.length) return players;

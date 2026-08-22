@@ -40,3 +40,10 @@
 - Added a seventh Bench Targets column to the Positional Watch List.
 - Compressed every target to a single line: available players are green with their Fantasy Index positional rank; drafted players are red and struck through with their Fantasy Index rank and actual paid amount.
 - Kept Bench Targets independent from positional Watch selections so a player can appear in either list or both.
+
+### Fantasy Index ranking match audit
+
+- Added safe aliases for Kenny/Kenneth Gainwell and Jalen/Jaylen Royals.
+- Ignored Fantasy Index parenthetical player annotations such as Brandon Aiyuk's “(new team)” note during matching.
+- Normalized Jacksonville's `JAC` Fantasy Index team code to ESPN's `JAX` code for D/ST matching.
+- Audited all 388 players in the August 20 Fantasy Index update against ESPN's active player pool and added regression coverage for every corrected match.
