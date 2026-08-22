@@ -96,6 +96,7 @@ describe("auction math", () => {
       tierOverrides: { "1": "RB2" },
       tierOrders: { RB2: [1] },
       watchList: [1, 2],
+      benchTargets: [2],
       nomination: { playerId: 2, source: "manual" },
     };
     clearAuctionResults(draft);
@@ -105,6 +106,7 @@ describe("auction math", () => {
     expect(draft.tierOverrides).toEqual({ "1": "RB2" });
     expect(draft.tierOrders).toEqual({ RB2: [1] });
     expect(draft.watchList).toEqual([1, 2]);
+    expect(draft.benchTargets).toEqual([2]);
     expect(draft.relay.draftTeamBudgets).toBeUndefined();
   });
 });

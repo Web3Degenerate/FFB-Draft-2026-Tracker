@@ -31,3 +31,12 @@
 
 - Safe to push: application source, tests, the derived draft-history JSON, and `/outputs` artifacts.
 - Local-only by policy: top-level `/data/*.json`, `/data/*.ndjson`, and `/data/*.zip` files because they include runtime state, socket captures, caches, or licensed subscriber exports.
+
+## 2026-08-22
+
+### Bench Targets and compact Watch List
+
+- Added a persistent, position-agnostic Bench Target selection beside Watch in the Tier Editor.
+- Added a seventh Bench Targets column to the Positional Watch List.
+- Compressed every target to a single line: available players are green with their Fantasy Index positional rank; drafted players are red and struck through with their Fantasy Index rank and actual paid amount.
+- Kept Bench Targets independent from positional Watch selections so a player can appear in either list or both.

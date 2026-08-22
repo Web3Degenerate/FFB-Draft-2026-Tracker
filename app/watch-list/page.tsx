@@ -8,19 +8,19 @@ import { STARTER_TARGETS, teamSnapshots } from "@/lib/auction";
 import { budgetPlannerSummary, DEFAULT_OPEN_SLOT_AMOUNT } from "@/lib/budget-planner";
 import { opponentPositionSpend, sortOpponentTeamsByPosition } from "@/lib/opponent-sort";
 import { assignTeamRoster } from "@/lib/rosters";
-import { playoffScheduleStrengthForPlayer } from "@/lib/schedule-strength";
 import { teamDisplayName } from "@/lib/teams";
 import { rosterSlotPosition, whoNeedsMarker } from "@/lib/watch-list-needs";
 import { sortWatchListPlayers } from "@/lib/watch-list-order";
 import type { BudgetPlanner, DashboardPayload, DraftState, Player, Position } from "@/lib/types";
 
-const WATCH_GROUPS: Array<{ position: Position; label: string }> = [
-  { position: "RB", label: "Running Backs" },
-  { position: "WR", label: "Wide Receivers" },
-  { position: "QB", label: "Quarterbacks" },
-  { position: "TE", label: "Tight Ends" },
-  { position: "DST", label: "D/ST" },
-  { position: "K", label: "Kickers" },
+const WATCH_GROUPS: Array<{ key: Position | "BENCH"; position: Position | null; label: string }> = [
+  { key: "RB", position: "RB", label: "Running Backs" },
+  { key: "WR", position: "WR", label: "Wide Receivers" },
+  { key: "QB", position: "QB", label: "Quarterbacks" },
+  { key: "TE", position: "TE", label: "Tight Ends" },
+  { key: "DST", position: "DST", label: "D/ST" },
+  { key: "K", position: "K", label: "Kickers" },
+  { key: "BENCH", position: null, label: "Bench Targets" },
 ];
 const OPPONENT_SORT_POSITIONS: Position[] = ["RB", "WR", "QB", "TE", "K", "DST"];
 
@@ -85,6 +85,15 @@ export default function WatchListPage() {
     if (!state) return [];
     const selected = new Set(state.watchList);
     return players.filter((player) => selected.has(player.id));
+  }, [players, state]);
+  const benchTargetPlayers = useMemo(() => {
+    if (!state) return [];
+    const selected = new Set(state.benchTargets ?? []);
+    return players.filter((player) => selected.has(player.id)).sort((a, b) =>
+      (a.fantasyIndexRank ?? Number.MAX_SAFE_INTEGER) - (b.fantasyIndexRank ?? Number.MAX_SAFE_INTEGER)
+      || a.position.localeCompare(b.position)
+      || a.name.localeCompare(b.name),
+    );
   }, [players, state]);
   const draftTeams = useMemo(() => {
     if (!state) return [];
@@ -174,11 +183,12 @@ export default function WatchListPage() {
     const keeper = keeperByPlayer.get(player.id);
     const sale = saleByPlayer.get(player.id);
     const rostered = keeper ?? sale;
-    if (!rostered) return { label: "Available", className: "available" };
+    if (!rostered) return { label: "Available", className: "available", amount: null };
     const team = state.teams.find((item) => item.id === rostered.teamId);
     return {
       label: `${keeper ? "Keeper" : "Sold"} · ${team ? teamDisplayName(team) : "Unknown team"}`,
       className: keeper ? "keeper" : "sold",
+      amount: rostered.amount,
     };
   };
 
@@ -234,24 +244,27 @@ export default function WatchListPage() {
       <div className="watch-board-heading"><div><span className="eyebrow">YOUR TARGETS</span><h2>Positional Watch List</h2></div><Link href="/tiers">Edit selections</Link></div>
       <div className="watch-columns">
         {WATCH_GROUPS.map((group) => {
-          const savedPlayers = sortWatchListPlayers(watchedPlayers, state, group.position);
+          const savedPlayers = group.position ? sortWatchListPlayers(watchedPlayers, state, group.position) : benchTargetPlayers;
           const playerMap = new Map(savedPlayers.map((player) => [player.id, player]));
-          const isEditing = editingPosition === group.position;
+          const isEditing = group.position !== null && editingPosition === group.position;
           const groupPlayers = isEditing ? orderDraft.flatMap((playerId) => playerMap.get(playerId) ?? []) : savedPlayers;
-          return <article className="watch-column" key={group.position}>
-            <header><span className={positionClass(group.position)}>{positionLabel(group.position)}</span><div><strong>{group.label}</strong><small>{groupPlayers.length} selected</small></div><div className="watch-order-controls">{isEditing ? <><button aria-label={`Cancel ${group.label} order`} title="Cancel order changes" disabled={savingOrder} onClick={cancelOrderEdit}><X /></button><button className="save" aria-label={`Save ${group.label} order`} title="Save order" disabled={savingOrder} onClick={() => void saveOrder()}><FloppyDisk /></button></> : <button className="edit" disabled={Boolean(editingPosition) || !groupPlayers.length} onClick={() => beginOrderEdit(group.position)}><PencilSimple /> Order</button>}</div></header>
+          return <article className="watch-column" key={group.key}>
+            <header><span className={group.position ? positionClass(group.position) : "pos pos-bench"}>{group.position ? positionLabel(group.position) : "B"}</span><div><strong>{group.label}</strong><small>{groupPlayers.length} selected</small></div>{group.position && <div className="watch-order-controls">{isEditing ? <><button aria-label={`Cancel ${group.label} order`} title="Cancel order changes" disabled={savingOrder} onClick={cancelOrderEdit}><X /></button><button className="save" aria-label={`Save ${group.label} order`} title="Save order" disabled={savingOrder} onClick={() => void saveOrder()}><FloppyDisk /></button></> : <button className="edit" disabled={Boolean(editingPosition) || !groupPlayers.length} onClick={() => beginOrderEdit(group.position!)}><PencilSimple /> Order</button>}</div>}</header>
             <div className="watch-player-list">
               {groupPlayers.map((player, orderIndex) => {
                 const status = playerStatus(player);
-                const tier = state.tierOverrides[String(player.id)] ?? player.tier;
                 const drafted = status.className !== "available";
-                const playoffStrength = playoffScheduleStrengthForPlayer(player);
                 return <div className={`watch-player watch-player-${status.className} ${drafted ? "watch-player-drafted" : ""} ${isEditing ? "watch-player-order-editing" : ""} ${draggingPlayerId === player.id ? "dragging" : ""}`} draggable={isEditing} key={player.id} onDragStart={(event) => { if (!isEditing) return; event.dataTransfer.effectAllowed = "move"; event.dataTransfer.setData("text/plain", String(player.id)); setDraggingPlayerId(player.id); }} onDragEnter={() => { if (isEditing) moveOrderPlayer(draggingPlayerId, player.id); }} onDragOver={(event) => { if (isEditing) event.preventDefault(); }} onDrop={(event) => { if (!isEditing) return; event.preventDefault(); setDraggingPlayerId(0); }} onDragEnd={() => setDraggingPlayerId(0)}>
                   {isEditing && <div className="watch-player-drag-handle"><DotsSixVertical /><span>{orderIndex + 1}</span></div>}
-                  {drafted ? <div className="watch-player-drafted-line"><strong className="watch-player-drafted-name">{player.name}</strong><FantasyIndexRank rank={player.fantasyIndexRank} /></div> : <><div><strong>{player.name}</strong><small>{player.nflTeam} · {tier} · ESPN Auction {player.espnAuctionValue === undefined ? "—" : money(player.espnAuctionValue)} · ESPN Keeper {money(player.espnKeeperValue)} · Playoffs <b className="watch-playoff-strength">{playoffStrength === null ? "—" : Math.round(playoffStrength)}</b><FantasyIndexRank rank={player.fantasyIndexRank} /></small></div><span>{status.label}</span></>}
+                  <div className="watch-player-line">
+                    {!group.position && <span className={positionClass(player.position)}>{positionLabel(player.position)}</span>}
+                    <strong className={drafted ? "watch-player-drafted-name" : "watch-player-available-name"}>{player.name}</strong>
+                    <FantasyIndexRank rank={player.fantasyIndexRank} />
+                    {drafted && status.amount !== null && <strong className="watch-player-paid">{money(status.amount)}</strong>}
+                  </div>
                 </div>;
               })}
-              {!groupPlayers.length && <div className="watch-empty"><Check /><span>Select {positionLabel(group.position)} players in the Tier Editor</span></div>}
+              {!groupPlayers.length && <div className="watch-empty"><Check /><span>{group.position ? `Select ${positionLabel(group.position)} players in the Tier Editor` : "Select Bench Target players in the Tier Editor"}</span></div>}
             </div>
           </article>;
         })}

@@ -19,6 +19,7 @@ type Action =
   | { type: "set-tier-order"; tier: string; playerIds: number[] }
   | { type: "set-watch-list-player"; playerId: number; included: boolean }
   | { type: "set-watch-list-order"; position: Position; playerIds: number[] }
+  | { type: "set-bench-target-player"; playerId: number; included: boolean }
   | { type: "set-budget-planner"; planner: BudgetPlanner }
   | { type: "add-keeper"; playerId: number; teamId: number; amount: number }
   | { type: "update-keeper-price"; keeperId: string; amount: number }
@@ -76,6 +77,13 @@ export async function POST(request: NextRequest) {
         const playerIds = Array.isArray(action.playerIds) ? action.playerIds.map(Number) : [];
         if (!VALID_POSITIONS.has(position) || !playerIds.every(Number.isInteger) || !isCompleteWatchListOrder(draft, players, position, playerIds)) throw new Error("Watch List order must include every watched player in that position exactly once.");
         draft.watchListOrders[position] = playerIds;
+      } else if (action.type === "set-bench-target-player") {
+        const player = players.find((item) => item.id === action.playerId);
+        if (!player) throw new Error("Player not found.");
+        const benchTargets = new Set(draft.benchTargets ?? []);
+        if (action.included) benchTargets.add(player.id);
+        else benchTargets.delete(player.id);
+        draft.benchTargets = [...benchTargets];
       } else if (action.type === "set-budget-planner") {
         draft.budgetPlanner = parseBudgetPlanner(action.planner);
       } else if (action.type === "add-keeper") {

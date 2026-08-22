@@ -92,6 +92,7 @@ export type DraftState = {
   tierOrders: Record<string, number[]>;
   watchList: number[];
   watchListOrders: Partial<Record<Position, number[]>>;
+  benchTargets?: number[];
   budgetPlanner?: BudgetPlanner;
   relay: RelayStatus;
   updatedAt: string;
