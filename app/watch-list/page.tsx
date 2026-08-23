@@ -6,6 +6,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { FantasyIndexRank } from "@/app/components/fantasy-index-rank";
 import { STARTER_TARGETS, teamSnapshots } from "@/lib/auction";
 import { budgetPlannerSummary, DEFAULT_OPEN_SLOT_AMOUNT } from "@/lib/budget-planner";
+import { liveAuctionPickNumber } from "@/lib/draft-progress";
 import { opponentPositionSpend, sortOpponentTeamsByPosition } from "@/lib/opponent-sort";
 import { assignTeamRoster } from "@/lib/rosters";
 import { teamDisplayName } from "@/lib/teams";
@@ -175,7 +176,7 @@ export default function WatchListPage() {
   if (!state) return <main className="loading-screen"><div className="football-loader">W</div><p>Loading your Watch List…</p></main>;
 
   const budgetPlan = budgetPlannerSummary(state, budgetPlannerDraft);
-  const livePickNumber = state.sales.length + 1;
+  const livePickNumber = liveAuctionPickNumber(state);
 
   const saleByPlayer = new Map(state.sales.map((sale) => [sale.playerId, sale]));
   const keeperByPlayer = new Map(state.keepers.map((keeper) => [keeper.playerId, keeper]));

@@ -51,6 +51,6 @@
 ### Live auction pick number
 
 - Added the current auction pick number to the Watch List's Your Budget Plan header.
-- Derived the number from completed auction sales so it advances live without counting pre-draft keepers.
+- Derived the number from saved keepers plus completed auction sales, so 22 keepers make the first live auction purchase pick #23.
 - Labels the number as the current pick while a nomination is active and the next pick between nominations.
 - Styled the pick number itself in white while retaining the blue Current Pick/Next Pick label.
