@@ -53,3 +53,4 @@
 - Added the current auction pick number to the Watch List's Your Budget Plan header.
 - Derived the number from completed auction sales so it advances live without counting pre-draft keepers.
 - Labels the number as the current pick while a nomination is active and the next pick between nominations.
+- Styled the pick number itself in white while retaining the blue Current Pick/Next Pick label.

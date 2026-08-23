@@ -846,8 +846,8 @@ code { font-family: var(--font-mono); }
 .budget-planner-summary small { color: var(--muted); font-size: 7px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
 .budget-planner-summary strong { margin-top: 1px; color: var(--text); font: 800 12px var(--font-mono); white-space: nowrap; }
 .budget-planner-summary .live-pick-number { min-width: 74px; border-color: rgba(101,167,255,.42); background: rgba(101,167,255,.08); }
-.budget-planner-summary .live-pick-number small, .budget-planner-summary .live-pick-number strong { color: var(--blue); }
-.budget-planner-summary .live-pick-number strong { font-size: 15px; }
+.budget-planner-summary .live-pick-number small { color: var(--blue); }
+.budget-planner-summary .live-pick-number strong { color: var(--text); font-size: 15px; }
 .budget-planner-summary .remaining strong { color: var(--green); }
 .budget-planner-summary .over { border-color: rgba(255,107,103,.5); background: rgba(255,107,103,.1); }
 .budget-planner-summary .over small, .budget-planner-summary .over strong { color: var(--red); }
