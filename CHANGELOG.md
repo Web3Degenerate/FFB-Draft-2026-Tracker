@@ -47,3 +47,9 @@
 - Ignored Fantasy Index parenthetical player annotations such as Brandon Aiyuk's “(new team)” note during matching.
 - Normalized Jacksonville's `JAC` Fantasy Index team code to ESPN's `JAX` code for D/ST matching.
 - Audited all 388 players in the August 20 Fantasy Index update against ESPN's active player pool and added regression coverage for every corrected match.
+
+### Live auction pick number
+
+- Added the current auction pick number to the Watch List's Your Budget Plan header.
+- Derived the number from completed auction sales so it advances live without counting pre-draft keepers.
+- Labels the number as the current pick while a nomination is active and the next pick between nominations.

@@ -175,6 +175,7 @@ export default function WatchListPage() {
   if (!state) return <main className="loading-screen"><div className="football-loader">W</div><p>Loading your Watch List…</p></main>;
 
   const budgetPlan = budgetPlannerSummary(state, budgetPlannerDraft);
+  const livePickNumber = state.sales.length + 1;
 
   const saleByPlayer = new Map(state.sales.map((sale) => [sale.playerId, sale]));
   const keeperByPlayer = new Map(state.keepers.map((keeper) => [keeper.playerId, keeper]));
@@ -224,6 +225,7 @@ export default function WatchListPage() {
       <header className="budget-planner-heading">
         <div><span className="eyebrow">LIVE ROSTER CALCULATOR</span><strong id="budget-planner-title">Your Budget Plan</strong><small>Drafted players lock automatically · open slots reserve $1</small></div>
         <div className="budget-planner-summary">
+          <span className="live-pick-number"><small>{state.nomination ? "Current pick" : "Next pick"}</small><strong>#{livePickNumber}</strong></span>
           <span><small>Allocated</small><strong>{money(budgetPlan.allocated)} / {money(state.config.budget)}</strong></span>
           <span className={budgetPlan.remaining < 0 ? "over" : "remaining"}><small>{budgetPlan.remaining < 0 ? "Over budget" : "Remaining"}</small><strong>{money(Math.abs(budgetPlan.remaining))}</strong></span>
           <button disabled={!budgetPlannerDirty || savingBudgetPlanner} onClick={() => void saveBudgetPlanner()}><FloppyDisk />{savingBudgetPlanner ? "Saving…" : budgetPlannerDirty ? "Save plan" : "Saved"}</button>
