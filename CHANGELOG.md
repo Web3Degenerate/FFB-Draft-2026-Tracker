@@ -54,3 +54,9 @@
 - Derived the number from saved keepers plus completed auction sales, so 22 keepers make the first live auction purchase pick #23.
 - Labels the number as the current pick while a nomination is active and the next pick between nominations.
 - Styled the pick number itself in white while retaining the blue Current Pick/Next Pick label.
+
+### Budget Plan max-bid and B5 market lock
+
+- Added a live My Max Bid summary that preserves every other drafted and planned roster allocation.
+- Added a persistent lock control to B5 that tracks one dollar above the highest opponent max bid.
+- Made the locked B5 amount update with opponent budgets and display green when affordable or red when it exceeds the plan's B5 maximum.

@@ -1,3 +1,4 @@
+import { teamSnapshots } from "./auction";
 import { assignTeamRoster, ROSTER_SLOTS, type RosterSlotKey } from "./rosters";
 import type { BudgetPlanner, DraftState } from "./types";
 
@@ -48,7 +49,20 @@ export function budgetPlannerRows(state: DraftState, planner: BudgetPlanner = st
 export function budgetPlannerSummary(state: DraftState, planner: BudgetPlanner = state.budgetPlanner ?? {}) {
   const rows = budgetPlannerRows(state, planner);
   const allocated = rows.reduce((total, row) => total + row.amount, 0);
-  return { rows, allocated, remaining: state.config.budget - allocated };
+  const remaining = state.config.budget - allocated;
+  const maxBidBySlot = Object.fromEntries(rows.filter((row) => !row.locked).map((row) => [
+    row.key,
+    Math.max(0, state.config.budget - (allocated - row.amount)),
+  ])) as Partial<Record<RosterSlotKey, number>>;
+  const maxBid = Math.max(0, ...Object.values(maxBidBySlot));
+  return { rows, allocated, remaining, maxBid, maxBidBySlot };
+}
+
+export function marketBidToBeatOpponents(state: DraftState) {
+  const opponentMaxBid = Math.max(0, ...teamSnapshots(state)
+    .filter((team) => team.id !== state.config.myTeamId && team.spotsLeft > 0)
+    .map((team) => team.maxBid));
+  return { opponentMaxBid, winningBid: opponentMaxBid + 1 };
 }
 
 export function parseBudgetPlanner(value: unknown): BudgetPlanner {
@@ -59,9 +73,12 @@ export function parseBudgetPlanner(value: unknown): BudgetPlanner {
     if (!entry || typeof entry !== "object" || Array.isArray(entry)) throw new Error("Budget plan entry is invalid.");
     const note = (entry as { note?: unknown }).note;
     const amount = (entry as { amount?: unknown }).amount;
+    const marketLocked = (entry as { marketLocked?: unknown }).marketLocked;
     if (typeof note !== "string" || note.length > 60) throw new Error("Player notes must be 60 characters or fewer.");
     if (!Number.isInteger(amount) || (amount as number) < 0 || (amount as number) > 999) throw new Error("Planned amounts must be whole dollars from $0 to $999.");
-    planner[key] = { note: note.trim(), amount: amount as number };
+    if (marketLocked !== undefined && typeof marketLocked !== "boolean") throw new Error("Budget plan lock state must be true or false.");
+    if (marketLocked && key !== "BENCH5") throw new Error("Only the B5 roster slot can use the market lock.");
+    planner[key] = { note: note.trim(), amount: amount as number, ...(marketLocked ? { marketLocked: true } : {}) };
   });
   return planner;
 }

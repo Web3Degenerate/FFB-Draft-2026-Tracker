@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { budgetPlannerSummary, parseBudgetPlanner } from "@/lib/budget-planner";
+import { budgetPlannerSummary, marketBidToBeatOpponents, parseBudgetPlanner } from "@/lib/budget-planner";
 import type { DraftState } from "@/lib/types";
 
 const state: DraftState = {
@@ -37,9 +37,25 @@ describe("live budget planner", () => {
     expect(summary.remaining).toBe(-13);
   });
 
+  it("calculates the largest single-slot bid while preserving every other allocation", () => {
+    const summary = budgetPlannerSummary(state);
+    expect(summary).toMatchObject({ allocated: 122, remaining: 78, maxBid: 128 });
+    expect(summary.maxBidBySlot.BENCH5).toBe(79);
+  });
+
+  it("calculates the dollar needed to beat the highest opponent max bid", () => {
+    const withOpponent: DraftState = {
+      ...state,
+      teams: [...state.teams, { id: 2, name: "Opponent", abbreviation: "OPP" }],
+    };
+    expect(marketBidToBeatOpponents(withOpponent)).toEqual({ opponentMaxBid: 187, winningBid: 188 });
+  });
+
   it("accepts only known slots and whole-dollar values", () => {
     expect(parseBudgetPlanner({ WR1: { note: "Target", amount: 38 } })).toEqual({ WR1: { note: "Target", amount: 38 } });
+    expect(parseBudgetPlanner({ BENCH5: { note: "Target", amount: 1, marketLocked: true } })).toEqual({ BENCH5: { note: "Target", amount: 1, marketLocked: true } });
     expect(() => parseBudgetPlanner({ OTHER: { note: "Target", amount: 38 } })).toThrow(/unknown roster slot/i);
     expect(() => parseBudgetPlanner({ WR1: { note: "Target", amount: 2.5 } })).toThrow(/whole dollars/i);
+    expect(() => parseBudgetPlanner({ WR1: { note: "Target", amount: 38, marketLocked: true } })).toThrow(/only the B5/i);
   });
 });

@@ -849,6 +849,9 @@ code { font-family: var(--font-mono); }
 .budget-planner-summary .live-pick-number small { color: var(--blue); }
 .budget-planner-summary .live-pick-number strong { color: var(--text); font-size: 15px; }
 .budget-planner-summary .remaining strong { color: var(--green); }
+.budget-planner-summary .planner-max-bid { border-color: rgba(255,191,71,.42); background: rgba(255,191,71,.08); }
+.budget-planner-summary .planner-max-bid small { color: var(--amber); }
+.budget-planner-summary .planner-max-bid strong { color: var(--text); font-size: 15px; }
 .budget-planner-summary .over { border-color: rgba(255,107,103,.5); background: rgba(255,107,103,.1); }
 .budget-planner-summary .over small, .budget-planner-summary .over strong { color: var(--red); }
 .budget-planner-summary button { min-width: 91px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; padding: 0 9px; border: 1px solid rgba(95,226,142,.38); border-radius: 6px; color: var(--green); background: rgba(95,226,142,.07); font-size: 9px; font-weight: 800; cursor: pointer; }
@@ -859,18 +862,36 @@ code { font-family: var(--font-mono); }
 .budget-planner-slot { min-width: 0; display: grid; grid-template-rows: 21px 29px 27px; border-right: 1px solid var(--card-line); background: #fff; }
 .budget-planner-slot:last-child { border-right: 0; }
 .budget-planner-slot > strong { display: grid; place-items: center; color: var(--ink-2); background: var(--card-2); border-bottom: 1px solid var(--card-line); font: 800 10px var(--font-mono); }
+.budget-planner-slot-header { min-width: 0; display: flex; align-items: center; justify-content: center; gap: 3px; color: var(--ink-2); background: var(--card-2); border-bottom: 1px solid var(--card-line); }
+.budget-planner-slot-header > strong { font: 800 10px var(--font-mono); }
+.budget-planner-slot-header > button { width: 18px; height: 18px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 4px; color: var(--ink-3); background: transparent; cursor: pointer; }
+.budget-planner-slot-header > button:hover:not(:disabled) { color: var(--blue-ink); background: #dbe8fb; }
+.budget-planner-slot-header > button:disabled { opacity: .45; cursor: wait; }
+.budget-planner-slot-header > button svg { width: 11px; height: 11px; }
 .budget-planner-slot > input { min-width: 0; width: 100%; padding: 0 6px; border: 0; border-bottom: 1px solid var(--card-line); border-radius: 0; outline: none; color: var(--ink); background: #fff; font-size: 10px; font-weight: 700; text-align: center; text-overflow: ellipsis; }
 .budget-planner-slot > label { min-width: 0; display: grid; grid-template-columns: 13px minmax(0, 1fr); align-items: center; padding: 0 5px; color: var(--ink-3); background: var(--card-2); font: 700 11px var(--font-mono); }
 .budget-planner-slot > label input { min-width: 0; width: 100%; padding: 0; border: 0; outline: none; color: var(--ink); background: transparent; font: 800 12px var(--font-mono); text-align: center; }
 .budget-planner-slot > input:focus, .budget-planner-slot > label:focus-within { position: relative; z-index: 1; box-shadow: inset 0 0 0 2px var(--blue); }
 .budget-planner-slot.locked { box-shadow: inset 0 3px var(--green-ink); }
 .budget-planner-slot.locked > strong { color: var(--green-ink); background: #d6f0e6; }
+.budget-planner-slot.locked > .budget-planner-slot-header { color: var(--green-ink); background: #d6f0e6; }
 .budget-planner-slot.locked > input, .budget-planner-slot.locked > label { color: var(--green-ink); background: #edf9f5; cursor: default; }
 .budget-planner-slot.locked > label input { color: var(--green-ink); }
 .budget-planner-slot.keeper { box-shadow: inset 0 3px var(--amber-ink); }
 .budget-planner-slot.keeper > strong { color: var(--amber-ink); background: #fbeccd; }
+.budget-planner-slot.keeper > .budget-planner-slot-header { color: var(--amber-ink); background: #fbeccd; }
 .budget-planner-slot.keeper > input, .budget-planner-slot.keeper > label { color: var(--amber-ink); background: #fdf4e2; }
 .budget-planner-slot.keeper > label input { color: var(--amber-ink); }
+.budget-planner-slot.market-locked { box-shadow: inset 0 3px var(--blue-ink); }
+.budget-planner-slot.market-locked > .budget-planner-slot-header { color: var(--blue-ink); background: #dbe8fb; }
+.budget-planner-slot.market-locked > .budget-planner-slot-header button { color: var(--blue-ink); }
+.budget-planner-slot.market-locked > input, .budget-planner-slot.market-locked > label { background: #eef5ff; cursor: default; }
+.budget-planner-slot.market-affordable > label, .budget-planner-slot.market-affordable > label input { color: var(--green-ink); }
+.budget-planner-slot.market-over { box-shadow: inset 0 3px var(--red-ink); }
+.budget-planner-slot.market-over > .budget-planner-slot-header { color: var(--red-ink); background: #fbe2e0; }
+.budget-planner-slot.market-over > .budget-planner-slot-header button,
+.budget-planner-slot.market-over > label,
+.budget-planner-slot.market-over > label input { color: var(--red-ink); }
 .watch-board { margin: 0 auto 14px; }
 .watch-board-heading { min-height: 0; padding: 9px 13px; }
 .watch-board-heading h2, .opponent-board-heading h2 { margin-top: 2px; font-size: 16px; }

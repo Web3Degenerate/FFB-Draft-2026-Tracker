@@ -78,6 +78,7 @@ export type RelayStatus = {
 export type BudgetPlannerEntry = {
   note: string;
   amount: number;
+  marketLocked?: boolean;
 };
 
 export type BudgetPlanner = Partial<Record<string, BudgetPlannerEntry>>;

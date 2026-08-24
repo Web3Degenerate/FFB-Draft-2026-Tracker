@@ -1,11 +1,11 @@
 "use client";
 
-import { ArrowLeft, Check, DotsSixVertical, FloppyDisk, PencilSimple, SlidersHorizontal, Warning, X } from "@phosphor-icons/react";
+import { ArrowLeft, Check, DotsSixVertical, FloppyDisk, Lock, LockOpen, PencilSimple, SlidersHorizontal, Warning, X } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FantasyIndexRank } from "@/app/components/fantasy-index-rank";
 import { STARTER_TARGETS, teamSnapshots } from "@/lib/auction";
-import { budgetPlannerSummary, DEFAULT_OPEN_SLOT_AMOUNT } from "@/lib/budget-planner";
+import { budgetPlannerSummary, DEFAULT_OPEN_SLOT_AMOUNT, marketBidToBeatOpponents } from "@/lib/budget-planner";
 import { liveAuctionPickNumber } from "@/lib/draft-progress";
 import { opponentPositionSpend, sortOpponentTeamsByPosition } from "@/lib/opponent-sort";
 import { assignTeamRoster } from "@/lib/rosters";
@@ -172,10 +172,41 @@ export default function WatchListPage() {
     } finally { setSavingBudgetPlanner(false); }
   };
 
+  const toggleBench5MarketLock = async () => {
+    const previous = budgetPlannerDraft;
+    const existing = previous.BENCH5 ?? { note: "", amount: DEFAULT_OPEN_SLOT_AMOUNT };
+    const marketLocked = !existing.marketLocked;
+    const next: BudgetPlanner = {
+      ...previous,
+      BENCH5: { ...existing, ...(marketLocked ? { marketLocked: true } : { marketLocked: undefined }) },
+    };
+    setBudgetPlannerDraft(next);
+    setSavingBudgetPlanner(true);
+    try {
+      const result = await jsonFetch<{ state: DraftState }>("/api/action", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ type: "set-budget-planner", planner: next }) });
+      setPayload((current) => current ? { ...current, state: result.state } : current);
+      setBudgetPlannerDraft(result.state.budgetPlanner ?? {});
+      setBudgetPlannerDirty(false);
+      setNotice({ kind: "success", text: marketLocked ? "B5 is tracking the live market-winning bid." : "B5 market lock removed." });
+    } catch (cause) {
+      setBudgetPlannerDraft(previous);
+      setNotice({ kind: "error", text: cause instanceof Error ? cause.message : "Could not update the B5 market lock" });
+    } finally { setSavingBudgetPlanner(false); }
+  };
+
   if (error) return <main className="loading-screen"><Warning size={36} /><h1>Couldn’t open the Watch List</h1><p>{error}</p><button className="primary" onClick={load}>Try again</button></main>;
   if (!state) return <main className="loading-screen"><div className="football-loader">W</div><p>Loading your Watch List…</p></main>;
 
-  const budgetPlan = budgetPlannerSummary(state, budgetPlannerDraft);
+  const baseBudgetPlan = budgetPlannerSummary(state, budgetPlannerDraft);
+  const bench5RosterLocked = baseBudgetPlan.rows.find((row) => row.key === "BENCH5")?.locked ?? false;
+  const bench5MarketLocked = Boolean(budgetPlannerDraft.BENCH5?.marketLocked) && !bench5RosterLocked;
+  const marketBid = marketBidToBeatOpponents(state);
+  const effectiveBudgetPlanner: BudgetPlanner = bench5MarketLocked
+    ? { ...budgetPlannerDraft, BENCH5: { ...(budgetPlannerDraft.BENCH5 ?? { note: "", amount: DEFAULT_OPEN_SLOT_AMOUNT }), amount: marketBid.winningBid, marketLocked: true } }
+    : budgetPlannerDraft;
+  const budgetPlan = budgetPlannerSummary(state, effectiveBudgetPlanner);
+  const bench5MaxBid = budgetPlan.maxBidBySlot.BENCH5 ?? 0;
+  const bench5WithinBudget = marketBid.winningBid <= bench5MaxBid;
   const livePickNumber = liveAuctionPickNumber(state);
 
   const saleByPlayer = new Map(state.sales.map((sale) => [sale.playerId, sale]));
@@ -229,16 +260,25 @@ export default function WatchListPage() {
           <span className="live-pick-number"><small>{state.nomination ? "Current pick" : "Next pick"}</small><strong>#{livePickNumber}</strong></span>
           <span><small>Allocated</small><strong>{money(budgetPlan.allocated)} / {money(state.config.budget)}</strong></span>
           <span className={budgetPlan.remaining < 0 ? "over" : "remaining"}><small>{budgetPlan.remaining < 0 ? "Over budget" : "Remaining"}</small><strong>{money(Math.abs(budgetPlan.remaining))}</strong></span>
+          <span className="planner-max-bid" title="Largest bid you can make for one open slot while preserving every other drafted and planned amount"><small>My max bid</small><strong>{money(budgetPlan.maxBid)}</strong></span>
           <button disabled={!budgetPlannerDirty || savingBudgetPlanner} onClick={() => void saveBudgetPlanner()}><FloppyDisk />{savingBudgetPlanner ? "Saving…" : budgetPlannerDirty ? "Save plan" : "Saved"}</button>
         </div>
       </header>
       <div className="budget-planner-scroll">
         <div className="budget-planner-grid">
-          {budgetPlan.rows.map((row) => <article className={`budget-planner-slot ${row.locked ? "locked" : "open"} ${row.isKeeper ? "keeper" : ""}`} key={row.key}>
-            <strong>{row.label}</strong>
-            <input aria-label={`${row.label} ${row.locked ? "drafted player" : "player note"}`} maxLength={60} placeholder="Player / note" readOnly={row.locked} title={row.locked ? `${row.playerName} is locked to your live roster` : `Planning note for ${row.label}`} value={row.playerName} onChange={(event) => updateBudgetPlanner(row.key, "note", event.currentTarget.value)} />
-            <label><span>$</span><input aria-label={`${row.label} ${row.locked ? "price paid" : "planned amount"}`} inputMode="numeric" min={0} max={999} readOnly={row.locked} step={1} title={row.locked ? `${money(row.amount)} paid — locked to your live roster` : `Planned amount for ${row.label}`} type="number" value={row.amount} onChange={(event) => updateBudgetPlanner(row.key, "amount", event.currentTarget.value)} /></label>
-          </article>)}
+          {budgetPlan.rows.map((row) => {
+            const isBench5 = row.key === "BENCH5";
+            const marketLocked = isBench5 && bench5MarketLocked;
+            const inputLocked = row.locked || marketLocked;
+            const lockTitle = marketLocked
+              ? `${money(marketBid.winningBid)} beats the highest opponent max bid of ${money(marketBid.opponentMaxBid)}. Your B5 max is ${money(bench5MaxBid)}.`
+              : "Lock B5 to one dollar above the highest opponent max bid";
+            return <article className={`budget-planner-slot ${row.locked ? "locked" : "open"} ${row.isKeeper ? "keeper" : ""} ${marketLocked ? `market-locked ${bench5WithinBudget ? "market-affordable" : "market-over"}` : ""}`} key={row.key}>
+              {isBench5 ? <div className="budget-planner-slot-header"><strong>{row.label}</strong>{!row.locked && <button aria-label={marketLocked ? "Unlock B5 market bid" : "Lock B5 to the market-winning bid"} aria-pressed={marketLocked} disabled={savingBudgetPlanner} title={lockTitle} onClick={() => void toggleBench5MarketLock()}>{marketLocked ? <Lock weight="fill" /> : <LockOpen />}</button>}</div> : <strong>{row.label}</strong>}
+              <input aria-label={`${row.label} ${inputLocked ? "locked player note" : "player note"}`} maxLength={60} placeholder="Player / note" readOnly={inputLocked} title={row.locked ? `${row.playerName} is locked to your live roster` : marketLocked ? lockTitle : `Planning note for ${row.label}`} value={row.playerName} onChange={(event) => updateBudgetPlanner(row.key, "note", event.currentTarget.value)} />
+              <label><span>$</span><input aria-label={`${row.label} ${row.locked ? "price paid" : marketLocked ? "market-winning amount" : "planned amount"}`} inputMode="numeric" min={0} max={999} readOnly={inputLocked} step={1} title={row.locked ? `${money(row.amount)} paid — locked to your live roster` : marketLocked ? lockTitle : `Planned amount for ${row.label}`} type="number" value={row.amount} onChange={(event) => updateBudgetPlanner(row.key, "amount", event.currentTarget.value)} /></label>
+            </article>;
+          })}
         </div>
       </div>
     </section>
