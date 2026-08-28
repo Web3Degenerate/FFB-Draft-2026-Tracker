@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { carryTeamAliases, mergeEspnTeamNames, teamDisplayName } from "@/lib/teams";
+import { carryTeamAliases, mapDraftTeamsById, mergeEspnTeamNames, teamDisplayName, validateDraftTeamOrder } from "@/lib/teams";
 
 describe("team identity", () => {
   it("puts the personal nickname before the ESPN team name", () => {
@@ -24,5 +24,34 @@ describe("team identity", () => {
       { id: 1, name: "Renamed", abbreviation: "REN", alias: "George" },
       { id: 2, name: "Two", abbreviation: "TWO", alias: "" },
     ]);
+  });
+
+  it("maps a mock draft's renamed teams to configured teams by ESPN team ID", () => {
+    const mapping = mapDraftTeamsById(
+      [
+        { id: 15, name: "Mr Rogers' Naberless Naberhood", abbreviation: "RIP", alias: "ME" },
+        { id: 16, name: "Blockbuster Promking", abbreviation: "BS$$", alias: "Bouds" },
+      ],
+      [
+        { id: 15, name: "Everyone Loves The Drake", abbreviation: "ELD" },
+        { id: 99, name: "Unrelated Team", abbreviation: "NOPE" },
+      ],
+    );
+
+    expect(mapping.aliases).toEqual({ everyonelovesthedrake: 15 });
+    expect(mapping.names).toEqual({ "15": "Everyone Loves The Drake" });
+    expect(mapping.changed).toEqual([{
+      id: 15,
+      from: "Mr Rogers' Naberless Naberhood",
+      to: "Everyone Loves The Drake",
+    }]);
+  });
+
+  it("accepts only a complete unique ESPN draft order", () => {
+    const teams = [{ id: 1, name: "One", abbreviation: "ONE" }, { id: 4, name: "Four", abbreviation: "FOU" }];
+    expect(validateDraftTeamOrder([4, 1], teams)).toEqual([4, 1]);
+    expect(validateDraftTeamOrder([4], teams)).toEqual([]);
+    expect(validateDraftTeamOrder([4, 4], teams)).toEqual([]);
+    expect(validateDraftTeamOrder([4, 99], teams)).toEqual([]);
   });
 });

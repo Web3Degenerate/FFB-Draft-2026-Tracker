@@ -1,0 +1,627 @@
+{
+  "season": 2026,
+  "generatedAt": "2026-08-18T21:36:10.046136Z",
+  "sources": {
+    "playByPlay2024": "nflverse play_by_play_2024.parquet",
+    "playByPlay2025": "nflverse play_by_play_2025.parquet",
+    "leagueScoring": "UTH Wink custom ESPN scoring (scoring.md)"
+  },
+  "methodology": {
+    "QB": "UTH adjusted: 75% current FantasyPros opponent rank and 25% two-year defensive sack-rate rank, reflecting the league's -0.5 points per sack taken.",
+    "DST": "UTH adjusted: 40% current FantasyPros opponent rank and 60% two-year custom D/ST opportunity rank using sacks, interceptions, forced fumbles, recoveries, stuffs, safeties, turnover touchdowns, and the league's points-allowed ladder."
+  },
+  "positions": {
+    "QB": {
+      "ARI": {
+        "rank": 13,
+        "score": 62.097,
+        "baselineRank": 15,
+        "sackRateRank": 6,
+        "sackRate": 0.05462
+      },
+      "ATL": {
+        "rank": 24,
+        "score": 34.677,
+        "baselineRank": 19,
+        "sackRateRank": 28,
+        "sackRate": 0.07543
+      },
+      "BAL": {
+        "rank": 22,
+        "score": 41.129,
+        "baselineRank": 24,
+        "sackRateRank": 5,
+        "sackRate": 0.05456
+      },
+      "BUF": {
+        "rank": 23,
+        "score": 39.516,
+        "baselineRank": 21,
+        "sackRateRank": 16,
+        "sackRate": 0.06513
+      },
+      "CAR": {
+        "rank": 19,
+        "score": 45.161,
+        "baselineRank": 23,
+        "sackRateRank": 3,
+        "sackRate": 0.05346
+      },
+      "CHI": {
+        "rank": 5,
+        "score": 81.452,
+        "baselineRank": 4,
+        "sackRateRank": 15,
+        "sackRate": 0.06271
+      },
+      "CIN": {
+        "rank": 4,
+        "score": 82.258,
+        "baselineRank": 6,
+        "sackRateRank": 8,
+        "sackRate": 0.05665
+      },
+      "CLE": {
+        "rank": 27,
+        "score": 15.323,
+        "baselineRank": 26,
+        "sackRateRank": 31,
+        "sackRate": 0.08587
+      },
+      "DAL": {
+        "rank": 1,
+        "score": 86.29,
+        "baselineRank": 1,
+        "sackRateRank": 18,
+        "sackRate": 0.06626
+      },
+      "DEN": {
+        "rank": 31,
+        "score": 4.839,
+        "baselineRank": 30,
+        "sackRateRank": 32,
+        "sackRate": 0.09487
+      },
+      "DET": {
+        "rank": 16,
+        "score": 52.419,
+        "baselineRank": 13,
+        "sackRateRank": 24,
+        "sackRate": 0.06859
+      },
+      "GB": {
+        "rank": 11,
+        "score": 62.903,
+        "baselineRank": 12,
+        "sackRateRank": 14,
+        "sackRate": 0.06262
+      },
+      "HOU": {
+        "rank": 32,
+        "score": 4.839,
+        "baselineRank": 31,
+        "sackRateRank": 29,
+        "sackRate": 0.07592
+      },
+      "IND": {
+        "rank": 17,
+        "score": 47.581,
+        "baselineRank": 20,
+        "sackRateRank": 9,
+        "sackRate": 0.05705
+      },
+      "JAX": {
+        "rank": 12,
+        "score": 62.903,
+        "baselineRank": 16,
+        "sackRateRank": 2,
+        "sackRate": 0.04744
+      },
+      "KC": {
+        "rank": 20,
+        "score": 41.935,
+        "baselineRank": 22,
+        "sackRateRank": 10,
+        "sackRate": 0.0599
+      },
+      "LAC": {
+        "rank": 29,
+        "score": 11.29,
+        "baselineRank": 29,
+        "sackRateRank": 27,
+        "sackRate": 0.07444
+      },
+      "LAR": {
+        "rank": 18,
+        "score": 45.161,
+        "baselineRank": 17,
+        "sackRateRank": 21,
+        "sackRate": 0.06784
+      },
+      "LV": {
+        "rank": 15,
+        "score": 59.677,
+        "baselineRank": 14,
+        "sackRateRank": 12,
+        "sackRate": 0.0618
+      },
+      "MIA": {
+        "rank": 6,
+        "score": 80.645,
+        "baselineRank": 5,
+        "sackRateRank": 13,
+        "sackRate": 0.06232
+      },
+      "MIN": {
+        "rank": 28,
+        "score": 13.71,
+        "baselineRank": 27,
+        "sackRateRank": 30,
+        "sackRate": 0.08457
+      },
+      "NE": {
+        "rank": 7,
+        "score": 78.226,
+        "baselineRank": 8,
+        "sackRateRank": 7,
+        "sackRate": 0.05502
+      },
+      "NO": {
+        "rank": 25,
+        "score": 21.774,
+        "baselineRank": 25,
+        "sackRateRank": 26,
+        "sackRate": 0.07193
+      },
+      "NYG": {
+        "rank": 21,
+        "score": 41.935,
+        "baselineRank": 18,
+        "sackRateRank": 22,
+        "sackRate": 0.06787
+      },
+      "NYJ": {
+        "rank": 3,
+        "score": 83.065,
+        "baselineRank": 7,
+        "sackRateRank": 4,
+        "sackRate": 0.05431
+      },
+      "PHI": {
+        "rank": 26,
+        "score": 20.161,
+        "baselineRank": 28,
+        "sackRateRank": 19,
+        "sackRate": 0.06647
+      },
+      "PIT": {
+        "rank": 14,
+        "score": 60.484,
+        "baselineRank": 11,
+        "sackRateRank": 20,
+        "sackRate": 0.06716
+      },
+      "SEA": {
+        "rank": 30,
+        "score": 7.258,
+        "baselineRank": 32,
+        "sackRateRank": 23,
+        "sackRate": 0.0684
+      },
+      "SF": {
+        "rank": 8,
+        "score": 78.226,
+        "baselineRank": 10,
+        "sackRateRank": 1,
+        "sackRate": 0.04322
+      },
+      "TB": {
+        "rank": 10,
+        "score": 72.581,
+        "baselineRank": 9,
+        "sackRateRank": 11,
+        "sackRate": 0.06002
+      },
+      "TEN": {
+        "rank": 2,
+        "score": 84.677,
+        "baselineRank": 2,
+        "sackRateRank": 17,
+        "sackRate": 0.06616
+      },
+      "WAS": {
+        "rank": 9,
+        "score": 75.806,
+        "baselineRank": 3,
+        "sackRateRank": 25,
+        "sackRate": 0.07021
+      }
+    },
+    "DST": {
+      "ARI": {
+        "rank": 12,
+        "score": 65.161,
+        "baselineRank": 10,
+        "customRank": 13,
+        "customDstPointsAllowedPerGame": 8.285,
+        "sacksAllowedPerGame": 2.874,
+        "giveawaysPerGame": 1.235,
+        "forcedFumblesPerGame": 0.712,
+        "stuffsAllowedPerGame": 2.012,
+        "turnoverTdsAllowedPerGame": 0.097
+      },
+      "ATL": {
+        "rank": 13,
+        "score": 62.581,
+        "baselineRank": 15,
+        "customRank": 11,
+        "customDstPointsAllowedPerGame": 8.771,
+        "sacksAllowedPerGame": 1.653,
+        "giveawaysPerGame": 1.241,
+        "forcedFumblesPerGame": 0.803,
+        "stuffsAllowedPerGame": 2.541,
+        "turnoverTdsAllowedPerGame": 0.138
+      },
+      "BAL": {
+        "rank": 21,
+        "score": 32.903,
+        "baselineRank": 14,
+        "customRank": 27,
+        "customDstPointsAllowedPerGame": 6.275,
+        "sacksAllowedPerGame": 2.215,
+        "giveawaysPerGame": 1.068,
+        "forcedFumblesPerGame": 0.797,
+        "stuffsAllowedPerGame": 2.168,
+        "turnoverTdsAllowedPerGame": 0.038
+      },
+      "BUF": {
+        "rank": 29,
+        "score": 12.903,
+        "baselineRank": 22,
+        "customRank": 32,
+        "customDstPointsAllowedPerGame": 4.531,
+        "sacksAllowedPerGame": 1.818,
+        "giveawaysPerGame": 0.874,
+        "forcedFumblesPerGame": 0.641,
+        "stuffsAllowedPerGame": 1.879,
+        "turnoverTdsAllowedPerGame": 0.0
+      },
+      "CAR": {
+        "rank": 11,
+        "score": 68.387,
+        "baselineRank": 9,
+        "customRank": 12,
+        "customDstPointsAllowedPerGame": 8.571,
+        "sacksAllowedPerGame": 2.079,
+        "giveawaysPerGame": 1.353,
+        "forcedFumblesPerGame": 0.65,
+        "stuffsAllowedPerGame": 1.491,
+        "turnoverTdsAllowedPerGame": 0.059
+      },
+      "CHI": {
+        "rank": 28,
+        "score": 13.548,
+        "baselineRank": 32,
+        "customRank": 25,
+        "customDstPointsAllowedPerGame": 6.668,
+        "sacksAllowedPerGame": 2.318,
+        "giveawaysPerGame": 0.729,
+        "forcedFumblesPerGame": 0.494,
+        "stuffsAllowedPerGame": 2.238,
+        "turnoverTdsAllowedPerGame": 0.038
+      },
+      "CIN": {
+        "rank": 7,
+        "score": 77.419,
+        "baselineRank": 8,
+        "customRank": 8,
+        "customDstPointsAllowedPerGame": 9.572,
+        "sacksAllowedPerGame": 2.365,
+        "giveawaysPerGame": 1.35,
+        "forcedFumblesPerGame": 0.871,
+        "stuffsAllowedPerGame": 1.303,
+        "turnoverTdsAllowedPerGame": 0.406
+      },
+      "CLE": {
+        "rank": 4,
+        "score": 93.548,
+        "baselineRank": 3,
+        "customRank": 3,
+        "customDstPointsAllowedPerGame": 12.663,
+        "sacksAllowedPerGame": 3.309,
+        "giveawaysPerGame": 1.615,
+        "forcedFumblesPerGame": 0.538,
+        "stuffsAllowedPerGame": 2.285,
+        "turnoverTdsAllowedPerGame": 0.1
+      },
+      "DAL": {
+        "rank": 26,
+        "score": 19.355,
+        "baselineRank": 26,
+        "customRank": 26,
+        "customDstPointsAllowedPerGame": 6.65,
+        "sacksAllowedPerGame": 1.968,
+        "giveawaysPerGame": 1.418,
+        "forcedFumblesPerGame": 0.924,
+        "stuffsAllowedPerGame": 1.541,
+        "turnoverTdsAllowedPerGame": 0.041
+      },
+      "DEN": {
+        "rank": 27,
+        "score": 15.484,
+        "baselineRank": 23,
+        "customRank": 30,
+        "customDstPointsAllowedPerGame": 5.876,
+        "sacksAllowedPerGame": 1.374,
+        "giveawaysPerGame": 0.985,
+        "forcedFumblesPerGame": 0.418,
+        "stuffsAllowedPerGame": 2.303,
+        "turnoverTdsAllowedPerGame": 0.0
+      },
+      "DET": {
+        "rank": 30,
+        "score": 12.903,
+        "baselineRank": 28,
+        "customRank": 28,
+        "customDstPointsAllowedPerGame": 5.931,
+        "sacksAllowedPerGame": 2.171,
+        "giveawaysPerGame": 0.882,
+        "forcedFumblesPerGame": 0.515,
+        "stuffsAllowedPerGame": 2.432,
+        "turnoverTdsAllowedPerGame": 0.021
+      },
+      "GB": {
+        "rank": 31,
+        "score": 12.258,
+        "baselineRank": 27,
+        "customRank": 29,
+        "customDstPointsAllowedPerGame": 5.894,
+        "sacksAllowedPerGame": 1.562,
+        "giveawaysPerGame": 0.947,
+        "forcedFumblesPerGame": 0.606,
+        "stuffsAllowedPerGame": 2.05,
+        "turnoverTdsAllowedPerGame": 0.041
+      },
+      "HOU": {
+        "rank": 24,
+        "score": 26.452,
+        "baselineRank": 25,
+        "customRank": 23,
+        "customDstPointsAllowedPerGame": 7.059,
+        "sacksAllowedPerGame": 2.297,
+        "giveawaysPerGame": 0.909,
+        "forcedFumblesPerGame": 0.435,
+        "stuffsAllowedPerGame": 2.638,
+        "turnoverTdsAllowedPerGame": 0.0
+      },
+      "IND": {
+        "rank": 25,
+        "score": 24.516,
+        "baselineRank": 31,
+        "customRank": 20,
+        "customDstPointsAllowedPerGame": 7.431,
+        "sacksAllowedPerGame": 1.768,
+        "giveawaysPerGame": 1.438,
+        "forcedFumblesPerGame": 0.744,
+        "stuffsAllowedPerGame": 2.091,
+        "turnoverTdsAllowedPerGame": 0.118
+      },
+      "JAX": {
+        "rank": 18,
+        "score": 41.935,
+        "baselineRank": 19,
+        "customRank": 19,
+        "customDstPointsAllowedPerGame": 7.64,
+        "sacksAllowedPerGame": 2.226,
+        "giveawaysPerGame": 1.182,
+        "forcedFumblesPerGame": 0.612,
+        "stuffsAllowedPerGame": 2.247,
+        "turnoverTdsAllowedPerGame": 0.076
+      },
+      "KC": {
+        "rank": 19,
+        "score": 38.71,
+        "baselineRank": 17,
+        "customRank": 22,
+        "customDstPointsAllowedPerGame": 7.203,
+        "sacksAllowedPerGame": 2.641,
+        "giveawaysPerGame": 0.882,
+        "forcedFumblesPerGame": 0.662,
+        "stuffsAllowedPerGame": 1.276,
+        "turnoverTdsAllowedPerGame": 0.038
+      },
+      "LAC": {
+        "rank": 9,
+        "score": 74.839,
+        "baselineRank": 7,
+        "customRank": 10,
+        "customDstPointsAllowedPerGame": 9.087,
+        "sacksAllowedPerGame": 3.2,
+        "giveawaysPerGame": 0.968,
+        "forcedFumblesPerGame": 0.726,
+        "stuffsAllowedPerGame": 2.5,
+        "turnoverTdsAllowedPerGame": 0.076
+      },
+      "LAR": {
+        "rank": 32,
+        "score": 4.516,
+        "baselineRank": 30,
+        "customRank": 31,
+        "customDstPointsAllowedPerGame": 4.578,
+        "sacksAllowedPerGame": 1.518,
+        "giveawaysPerGame": 0.882,
+        "forcedFumblesPerGame": 0.435,
+        "stuffsAllowedPerGame": 1.603,
+        "turnoverTdsAllowedPerGame": 0.076
+      },
+      "LV": {
+        "rank": 2,
+        "score": 94.839,
+        "baselineRank": 5,
+        "customRank": 1,
+        "customDstPointsAllowedPerGame": 13.216,
+        "sacksAllowedPerGame": 3.476,
+        "giveawaysPerGame": 1.476,
+        "forcedFumblesPerGame": 0.494,
+        "stuffsAllowedPerGame": 2.782,
+        "turnoverTdsAllowedPerGame": 0.1
+      },
+      "MIA": {
+        "rank": 8,
+        "score": 77.419,
+        "baselineRank": 11,
+        "customRank": 6,
+        "customDstPointsAllowedPerGame": 10.926,
+        "sacksAllowedPerGame": 2.338,
+        "giveawaysPerGame": 1.368,
+        "forcedFumblesPerGame": 0.732,
+        "stuffsAllowedPerGame": 3.435,
+        "turnoverTdsAllowedPerGame": 0.079
+      },
+      "MIN": {
+        "rank": 5,
+        "score": 88.387,
+        "baselineRank": 4,
+        "customRank": 5,
+        "customDstPointsAllowedPerGame": 11.109,
+        "sacksAllowedPerGame": 3.303,
+        "giveawaysPerGame": 1.541,
+        "forcedFumblesPerGame": 0.821,
+        "stuffsAllowedPerGame": 2.206,
+        "turnoverTdsAllowedPerGame": 0.174
+      },
+      "NE": {
+        "rank": 15,
+        "score": 53.548,
+        "baselineRank": 16,
+        "customRank": 15,
+        "customDstPointsAllowedPerGame": 8.137,
+        "sacksAllowedPerGame": 2.906,
+        "giveawaysPerGame": 1.106,
+        "forcedFumblesPerGame": 1.006,
+        "stuffsAllowedPerGame": 2.371,
+        "turnoverTdsAllowedPerGame": 0.079
+      },
+      "NO": {
+        "rank": 6,
+        "score": 81.935,
+        "baselineRank": 6,
+        "customRank": 7,
+        "customDstPointsAllowedPerGame": 10.462,
+        "sacksAllowedPerGame": 2.635,
+        "giveawaysPerGame": 1.229,
+        "forcedFumblesPerGame": 0.782,
+        "stuffsAllowedPerGame": 2.482,
+        "turnoverTdsAllowedPerGame": 0.1
+      },
+      "NYG": {
+        "rank": 10,
+        "score": 69.032,
+        "baselineRank": 13,
+        "customRank": 9,
+        "customDstPointsAllowedPerGame": 9.459,
+        "sacksAllowedPerGame": 2.824,
+        "giveawaysPerGame": 1.124,
+        "forcedFumblesPerGame": 0.791,
+        "stuffsAllowedPerGame": 1.776,
+        "turnoverTdsAllowedPerGame": 0.141
+      },
+      "NYJ": {
+        "rank": 3,
+        "score": 94.194,
+        "baselineRank": 1,
+        "customRank": 4,
+        "customDstPointsAllowedPerGame": 11.187,
+        "sacksAllowedPerGame": 3.118,
+        "giveawaysPerGame": 1.288,
+        "forcedFumblesPerGame": 0.726,
+        "stuffsAllowedPerGame": 2.491,
+        "turnoverTdsAllowedPerGame": 0.079
+      },
+      "PHI": {
+        "rank": 20,
+        "score": 35.484,
+        "baselineRank": 21,
+        "customRank": 21,
+        "customDstPointsAllowedPerGame": 7.265,
+        "sacksAllowedPerGame": 2.265,
+        "giveawaysPerGame": 0.824,
+        "forcedFumblesPerGame": 0.65,
+        "stuffsAllowedPerGame": 3.053,
+        "turnoverTdsAllowedPerGame": 0.021
+      },
+      "PIT": {
+        "rank": 16,
+        "score": 49.032,
+        "baselineRank": 18,
+        "customRank": 16,
+        "customDstPointsAllowedPerGame": 7.853,
+        "sacksAllowedPerGame": 2.194,
+        "giveawaysPerGame": 0.985,
+        "forcedFumblesPerGame": 0.924,
+        "stuffsAllowedPerGame": 2.362,
+        "turnoverTdsAllowedPerGame": 0.079
+      },
+      "SEA": {
+        "rank": 17,
+        "score": 45.161,
+        "baselineRank": 24,
+        "customRank": 14,
+        "customDstPointsAllowedPerGame": 8.157,
+        "sacksAllowedPerGame": 2.144,
+        "giveawaysPerGame": 1.447,
+        "forcedFumblesPerGame": 0.818,
+        "stuffsAllowedPerGame": 2.774,
+        "turnoverTdsAllowedPerGame": 0.059
+      },
+      "SF": {
+        "rank": 22,
+        "score": 30.968,
+        "baselineRank": 29,
+        "customRank": 18,
+        "customDstPointsAllowedPerGame": 7.718,
+        "sacksAllowedPerGame": 1.774,
+        "giveawaysPerGame": 1.415,
+        "forcedFumblesPerGame": 0.832,
+        "stuffsAllowedPerGame": 2.403,
+        "turnoverTdsAllowedPerGame": 0.038
+      },
+      "TB": {
+        "rank": 23,
+        "score": 30.968,
+        "baselineRank": 20,
+        "customRank": 24,
+        "customDstPointsAllowedPerGame": 6.869,
+        "sacksAllowedPerGame": 2.276,
+        "giveawaysPerGame": 1.165,
+        "forcedFumblesPerGame": 0.847,
+        "stuffsAllowedPerGame": 2.253,
+        "turnoverTdsAllowedPerGame": 0.038
+      },
+      "TEN": {
+        "rank": 1,
+        "score": 96.774,
+        "baselineRank": 2,
+        "customRank": 2,
+        "customDstPointsAllowedPerGame": 12.688,
+        "sacksAllowedPerGame": 3.212,
+        "giveawaysPerGame": 1.482,
+        "forcedFumblesPerGame": 0.826,
+        "stuffsAllowedPerGame": 2.015,
+        "turnoverTdsAllowedPerGame": 0.294
+      },
+      "WAS": {
+        "rank": 14,
+        "score": 54.839,
+        "baselineRank": 12,
+        "customRank": 17,
+        "customDstPointsAllowedPerGame": 7.832,
+        "sacksAllowedPerGame": 2.444,
+        "giveawaysPerGame": 1.129,
+        "forcedFumblesPerGame": 0.879,
+        "stuffsAllowedPerGame": 2.585,
+        "turnoverTdsAllowedPerGame": 0.038
+      }
+    }
+  }
+}

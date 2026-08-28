@@ -1,0 +1,5069 @@
+{
+  "sourceWorkbook": "outputs/keeper_sort_headers_2026-08-19/FFB_Auction_Draft_Analysis_2023_2025_sortable_keepers.xlsx",
+  "seasons": [
+    {
+      "year": 2025,
+      "source": "https://fantasy.espn.com/football/league/draftrecap?seasonId=2025&leagueId=555583",
+      "keepers": [
+        {
+          "number": 1,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Joe Burrow",
+          "nflTeam": "Cin",
+          "position": "QB",
+          "amount": 12
+        },
+        {
+          "number": 2,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "CeeDee Lamb",
+          "nflTeam": "Dal",
+          "position": "WR",
+          "amount": 32
+        },
+        {
+          "number": 3,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "De'Von Achane",
+          "nflTeam": "Mia",
+          "position": "RB",
+          "amount": 17
+        },
+        {
+          "number": 4,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Nico Collins",
+          "nflTeam": "Hou",
+          "position": "WR",
+          "amount": 15
+        },
+        {
+          "number": 5,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Terry McLaurin",
+          "nflTeam": "Wsh",
+          "position": "WR",
+          "amount": 29
+        },
+        {
+          "number": 6,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Ladd McConkey",
+          "nflTeam": "LAC",
+          "position": "WR",
+          "amount": 30
+        },
+        {
+          "number": 7,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Jahmyr Gibbs",
+          "nflTeam": "Det",
+          "position": "RB",
+          "amount": 56
+        },
+        {
+          "number": 8,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Drake London",
+          "nflTeam": "Atl",
+          "position": "WR",
+          "amount": 26
+        },
+        {
+          "number": 9,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Chuba Hubbard",
+          "nflTeam": "Car",
+          "position": "RB",
+          "amount": 13
+        },
+        {
+          "number": 10,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jayden Daniels",
+          "nflTeam": "Wsh",
+          "position": "QB",
+          "amount": 11
+        },
+        {
+          "number": 11,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "James Cook III",
+          "nflTeam": "Buf",
+          "position": "RB",
+          "amount": 20
+        },
+        {
+          "number": 12,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "George Kittle",
+          "nflTeam": "SF",
+          "position": "TE",
+          "amount": 13
+        },
+        {
+          "number": 13,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Malik Nabers",
+          "nflTeam": "NYG",
+          "position": "WR",
+          "amount": 34
+        },
+        {
+          "number": 14,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Brian Thomas Jr.",
+          "nflTeam": "Jax",
+          "position": "WR",
+          "amount": 10
+        },
+        {
+          "number": 15,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Trey McBride",
+          "nflTeam": "Ari",
+          "position": "TE",
+          "amount": 15
+        },
+        {
+          "number": 16,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Chase Brown",
+          "nflTeam": "Cin",
+          "position": "RB",
+          "amount": 32
+        },
+        {
+          "number": 17,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Puka Nacua",
+          "nflTeam": "LAR",
+          "position": "WR",
+          "amount": 15
+        },
+        {
+          "number": 18,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Lamar Jackson",
+          "nflTeam": "Bal",
+          "position": "QB",
+          "amount": 21
+        },
+        {
+          "number": 19,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Bucky Irving",
+          "nflTeam": "TB",
+          "position": "RB",
+          "amount": 10
+        },
+        {
+          "number": 20,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Brock Bowers",
+          "nflTeam": "LV",
+          "position": "TE",
+          "amount": 11
+        },
+        {
+          "number": 21,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Ja'Marr Chase",
+          "nflTeam": "Cin",
+          "position": "WR",
+          "amount": 29
+        },
+        {
+          "number": 22,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Jonathan Taylor",
+          "nflTeam": "Ind",
+          "position": "RB",
+          "amount": 34
+        }
+      ],
+      "auctions": [
+        {
+          "number": 23,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Omarion Hampton",
+          "nflTeam": "LAC",
+          "position": "RB",
+          "amount": 43
+        },
+        {
+          "number": 24,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Bijan Robinson",
+          "nflTeam": "Atl",
+          "position": "RB",
+          "amount": 76
+        },
+        {
+          "number": 25,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Justin Jefferson",
+          "nflTeam": "Min",
+          "position": "WR",
+          "amount": 60
+        },
+        {
+          "number": 26,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Josh Allen",
+          "nflTeam": "Buf",
+          "position": "QB",
+          "amount": 36
+        },
+        {
+          "number": 27,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Christian McCaffrey",
+          "nflTeam": "SF",
+          "position": "RB",
+          "amount": 61
+        },
+        {
+          "number": 28,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Jalen Hurts",
+          "nflTeam": "Phi",
+          "position": "QB",
+          "amount": 29
+        },
+        {
+          "number": 29,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Ashton Jeanty",
+          "nflTeam": "LV",
+          "position": "RB",
+          "amount": 55
+        },
+        {
+          "number": 30,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Saquon Barkley",
+          "nflTeam": "Phi",
+          "position": "RB",
+          "amount": 62
+        },
+        {
+          "number": 31,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Josh Jacobs",
+          "nflTeam": "GB",
+          "position": "RB",
+          "amount": 47
+        },
+        {
+          "number": 32,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Amon-Ra St. Brown",
+          "nflTeam": "Det",
+          "position": "WR",
+          "amount": 53
+        },
+        {
+          "number": 33,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "A.J. Brown",
+          "nflTeam": "Phi",
+          "position": "WR",
+          "amount": 46
+        },
+        {
+          "number": 34,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Tyreek Hill",
+          "nflTeam": "FA",
+          "position": "WR",
+          "amount": 30
+        },
+        {
+          "number": 35,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Davante Adams",
+          "nflTeam": "LAR",
+          "position": "WR",
+          "amount": 22
+        },
+        {
+          "number": 36,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Emeka Egbuka",
+          "nflTeam": "TB",
+          "position": "WR",
+          "amount": 20
+        },
+        {
+          "number": 37,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Jaxon Smith-Njigba",
+          "nflTeam": "Sea",
+          "position": "WR",
+          "amount": 27
+        },
+        {
+          "number": 38,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Tee Higgins",
+          "nflTeam": "Cin",
+          "position": "WR",
+          "amount": 33
+        },
+        {
+          "number": 39,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Derrick Henry",
+          "nflTeam": "Bal",
+          "position": "RB",
+          "amount": 57
+        },
+        {
+          "number": 40,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Kyren Williams",
+          "nflTeam": "LAR",
+          "position": "RB",
+          "amount": 46
+        },
+        {
+          "number": 41,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Alvin Kamara",
+          "nflTeam": "NO",
+          "position": "RB",
+          "amount": 36
+        },
+        {
+          "number": 42,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "TreVeyon Henderson",
+          "nflTeam": "NE",
+          "position": "RB",
+          "amount": 38
+        },
+        {
+          "number": 43,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Courtland Sutton",
+          "nflTeam": "Den",
+          "position": "WR",
+          "amount": 23
+        },
+        {
+          "number": 44,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Travis Hunter",
+          "nflTeam": "Jax",
+          "position": "WR",
+          "amount": 14
+        },
+        {
+          "number": 45,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "James Conner",
+          "nflTeam": "Ari",
+          "position": "RB",
+          "amount": 23
+        },
+        {
+          "number": 46,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Garrett Wilson",
+          "nflTeam": "NYJ",
+          "position": "WR",
+          "amount": 27
+        },
+        {
+          "number": 47,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Marvin Harrison Jr.",
+          "nflTeam": "Ari",
+          "position": "WR",
+          "amount": 29
+        },
+        {
+          "number": 48,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Chris Olave",
+          "nflTeam": "NO",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 49,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "David Montgomery",
+          "nflTeam": "Hou",
+          "position": "RB",
+          "amount": 16
+        },
+        {
+          "number": 50,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "D'Andre Swift",
+          "nflTeam": "Chi",
+          "position": "RB",
+          "amount": 13
+        },
+        {
+          "number": 51,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Patrick Mahomes",
+          "nflTeam": "KC",
+          "position": "QB",
+          "amount": 24
+        },
+        {
+          "number": 52,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Kenneth Walker III",
+          "nflTeam": "Sea",
+          "position": "RB",
+          "amount": 29
+        },
+        {
+          "number": 53,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Stefon Diggs",
+          "nflTeam": "NE",
+          "position": "WR",
+          "amount": 5
+        },
+        {
+          "number": 54,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "DK Metcalf",
+          "nflTeam": "Pit",
+          "position": "WR",
+          "amount": 23
+        },
+        {
+          "number": 55,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Breece Hall",
+          "nflTeam": "NYJ",
+          "position": "RB",
+          "amount": 27
+        },
+        {
+          "number": 56,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Mike Evans",
+          "nflTeam": "TB",
+          "position": "WR",
+          "amount": 20
+        },
+        {
+          "number": 57,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Tetairoa McMillan",
+          "nflTeam": "Car",
+          "position": "WR",
+          "amount": 23
+        },
+        {
+          "number": 58,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Bo Nix",
+          "nflTeam": "Den",
+          "position": "QB",
+          "amount": 15
+        },
+        {
+          "number": 59,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Sam LaPorta",
+          "nflTeam": "Det",
+          "position": "TE",
+          "amount": 21
+        },
+        {
+          "number": 60,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Ricky Pearsall",
+          "nflTeam": "SF",
+          "position": "WR",
+          "amount": 19
+        },
+        {
+          "number": 61,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "DJ Moore",
+          "nflTeam": "Chi",
+          "position": "WR",
+          "amount": 19
+        },
+        {
+          "number": 62,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "T.J. Hockenson",
+          "nflTeam": "Min",
+          "position": "TE",
+          "amount": 13
+        },
+        {
+          "number": 63,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Baker Mayfield",
+          "nflTeam": "TB",
+          "position": "QB",
+          "amount": 13
+        },
+        {
+          "number": 64,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Xavier Worthy",
+          "nflTeam": "KC",
+          "position": "WR",
+          "amount": 17
+        },
+        {
+          "number": 65,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Zay Flowers",
+          "nflTeam": "Bal",
+          "position": "WR",
+          "amount": 11
+        },
+        {
+          "number": 66,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "George Pickens",
+          "nflTeam": "Dal",
+          "position": "WR",
+          "amount": 10
+        },
+        {
+          "number": 67,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Travis Kelce",
+          "nflTeam": "KC",
+          "position": "TE",
+          "amount": 7
+        },
+        {
+          "number": 68,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Dak Prescott",
+          "nflTeam": "Dal",
+          "position": "QB",
+          "amount": 6
+        },
+        {
+          "number": 69,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Kyler Murray",
+          "nflTeam": "Ari",
+          "position": "QB",
+          "amount": 10
+        },
+        {
+          "number": 70,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Brock Purdy",
+          "nflTeam": "SF",
+          "position": "QB",
+          "amount": 2
+        },
+        {
+          "number": 71,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "RJ Harvey",
+          "nflTeam": "Den",
+          "position": "RB",
+          "amount": 34
+        },
+        {
+          "number": 72,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "DeVonta Smith",
+          "nflTeam": "Phi",
+          "position": "WR",
+          "amount": 17
+        },
+        {
+          "number": 73,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Jameson Williams",
+          "nflTeam": "Det",
+          "position": "WR",
+          "amount": 22
+        },
+        {
+          "number": 74,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Aaron Jones Sr.",
+          "nflTeam": "Min",
+          "position": "RB",
+          "amount": 19
+        },
+        {
+          "number": 75,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Isiah Pacheco",
+          "nflTeam": "KC",
+          "position": "RB",
+          "amount": 23
+        },
+        {
+          "number": 76,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Tony Pollard",
+          "nflTeam": "Ten",
+          "position": "RB",
+          "amount": 21
+        },
+        {
+          "number": 77,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Kaleb Johnson",
+          "nflTeam": "Pit",
+          "position": "RB",
+          "amount": 9
+        },
+        {
+          "number": 78,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "David Njoku",
+          "nflTeam": "Cle",
+          "position": "TE",
+          "amount": 3
+        },
+        {
+          "number": 79,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Calvin Ridley",
+          "nflTeam": "Ten",
+          "position": "WR",
+          "amount": 14
+        },
+        {
+          "number": 80,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Rome Odunze",
+          "nflTeam": "Chi",
+          "position": "WR",
+          "amount": 14
+        },
+        {
+          "number": 81,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Tyrone Tracy Jr.",
+          "nflTeam": "NYG",
+          "position": "RB",
+          "amount": 15
+        },
+        {
+          "number": 82,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Tyler Warren",
+          "nflTeam": "Ind",
+          "position": "TE",
+          "amount": 9
+        },
+        {
+          "number": 83,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Jacory Croskey-Merritt",
+          "nflTeam": "Wsh",
+          "position": "RB",
+          "amount": 17
+        },
+        {
+          "number": 84,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jaylen Waddle",
+          "nflTeam": "Mia",
+          "position": "WR",
+          "amount": 18
+        },
+        {
+          "number": 85,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Jakobi Meyers",
+          "nflTeam": "Jax",
+          "position": "WR",
+          "amount": 12
+        },
+        {
+          "number": 86,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jaylen Warren",
+          "nflTeam": "Pit",
+          "position": "RB",
+          "amount": 9
+        },
+        {
+          "number": 87,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Jerry Jeudy",
+          "nflTeam": "Cle",
+          "position": "WR",
+          "amount": 7
+        },
+        {
+          "number": 88,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Mark Andrews",
+          "nflTeam": "Bal",
+          "position": "TE",
+          "amount": 2
+        },
+        {
+          "number": 89,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Logan Thomas",
+          "nflTeam": "FA",
+          "position": "TE",
+          "amount": 1
+        },
+        {
+          "number": 90,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Keon Coleman",
+          "nflTeam": "Buf",
+          "position": "WR",
+          "amount": 7
+        },
+        {
+          "number": 91,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Broncos D/ST",
+          "nflTeam": "Den",
+          "position": "D/ST",
+          "amount": 5
+        },
+        {
+          "number": 92,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Dalton Kincaid",
+          "nflTeam": "Buf",
+          "position": "TE",
+          "amount": 2
+        },
+        {
+          "number": 93,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Justin Herbert",
+          "nflTeam": "LAC",
+          "position": "QB",
+          "amount": 8
+        },
+        {
+          "number": 94,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Evan Engram",
+          "nflTeam": "Den",
+          "position": "TE",
+          "amount": 2
+        },
+        {
+          "number": 95,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Justin Fields",
+          "nflTeam": "NYJ",
+          "position": "QB",
+          "amount": 2
+        },
+        {
+          "number": 96,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Rashee Rice",
+          "nflTeam": "KC",
+          "position": "WR",
+          "amount": 21
+        },
+        {
+          "number": 97,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Bhayshul Tuten",
+          "nflTeam": "Jax",
+          "position": "RB",
+          "amount": 3
+        },
+        {
+          "number": 98,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Rhamondre Stevenson",
+          "nflTeam": "NE",
+          "position": "RB",
+          "amount": 5
+        },
+        {
+          "number": 99,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Javonte Williams",
+          "nflTeam": "Dal",
+          "position": "RB",
+          "amount": 5
+        },
+        {
+          "number": 100,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Steelers D/ST",
+          "nflTeam": "Pit",
+          "position": "D/ST",
+          "amount": 2
+        },
+        {
+          "number": 101,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Texans D/ST",
+          "nflTeam": "Hou",
+          "position": "D/ST",
+          "amount": 7
+        },
+        {
+          "number": 102,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Zach Charbonnet",
+          "nflTeam": "Sea",
+          "position": "RB",
+          "amount": 12
+        },
+        {
+          "number": 103,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Brandon Aubrey",
+          "nflTeam": "Dal",
+          "position": "K",
+          "amount": 5
+        },
+        {
+          "number": 104,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Colston Loveland",
+          "nflTeam": "Chi",
+          "position": "TE",
+          "amount": 7
+        },
+        {
+          "number": 105,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Jake Bates",
+          "nflTeam": "Det",
+          "position": "K",
+          "amount": 4
+        },
+        {
+          "number": 106,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Matthew Golden",
+          "nflTeam": "GB",
+          "position": "WR",
+          "amount": 18
+        },
+        {
+          "number": 107,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Drake Maye",
+          "nflTeam": "NE",
+          "position": "QB",
+          "amount": 6
+        },
+        {
+          "number": 108,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Deebo Samuel",
+          "nflTeam": "Wsh",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 109,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Lions D/ST",
+          "nflTeam": "Det",
+          "position": "D/ST",
+          "amount": 3
+        },
+        {
+          "number": 110,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Wan'Dale Robinson",
+          "nflTeam": "NYG",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 111,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Michael Pittman Jr.",
+          "nflTeam": "Ind",
+          "position": "WR",
+          "amount": 7
+        },
+        {
+          "number": 112,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Cooper Kupp",
+          "nflTeam": "Sea",
+          "position": "WR",
+          "amount": 10
+        },
+        {
+          "number": 113,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Ravens D/ST",
+          "nflTeam": "Bal",
+          "position": "D/ST",
+          "amount": 2
+        },
+        {
+          "number": 114,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Cam Skattebo",
+          "nflTeam": "NYG",
+          "position": "RB",
+          "amount": 8
+        },
+        {
+          "number": 115,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Christian Kirk",
+          "nflTeam": "Hou",
+          "position": "WR",
+          "amount": 2
+        },
+        {
+          "number": 116,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Tucker Kraft",
+          "nflTeam": "GB",
+          "position": "TE",
+          "amount": 1
+        },
+        {
+          "number": 117,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Chase McLaughlin",
+          "nflTeam": "TB",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 118,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "J.K. Dobbins",
+          "nflTeam": "Den",
+          "position": "RB",
+          "amount": 5
+        },
+        {
+          "number": 119,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Jauan Jennings",
+          "nflTeam": "SF",
+          "position": "WR",
+          "amount": 4
+        },
+        {
+          "number": 120,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Khalil Shakir",
+          "nflTeam": "Buf",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 121,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Keenan Allen",
+          "nflTeam": "LAC",
+          "position": "WR",
+          "amount": 5
+        },
+        {
+          "number": 122,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Jordan Addison",
+          "nflTeam": "Min",
+          "position": "WR",
+          "amount": 3
+        },
+        {
+          "number": 123,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Chris Godwin Jr.",
+          "nflTeam": "TB",
+          "position": "WR",
+          "amount": 7
+        },
+        {
+          "number": 124,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Austin Ekeler",
+          "nflTeam": "Wsh",
+          "position": "RB",
+          "amount": 3
+        },
+        {
+          "number": 125,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Eagles D/ST",
+          "nflTeam": "Phi",
+          "position": "D/ST",
+          "amount": 9
+        },
+        {
+          "number": 126,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Jordan Mason",
+          "nflTeam": "Min",
+          "position": "RB",
+          "amount": 6
+        },
+        {
+          "number": 127,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Jerome Ford",
+          "nflTeam": "Cle",
+          "position": "RB",
+          "amount": 3
+        },
+        {
+          "number": 128,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Vikings D/ST",
+          "nflTeam": "Min",
+          "position": "D/ST",
+          "amount": 3
+        },
+        {
+          "number": 129,
+          "teamId": 9,
+          "manager": "Kevin Kurian",
+          "teamName": "Torsades de PAT",
+          "player": "Giants D/ST",
+          "nflTeam": "NYG",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 130,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Quinshon Judkins",
+          "nflTeam": "Cle",
+          "position": "RB",
+          "amount": 8
+        },
+        {
+          "number": 131,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "J.J. McCarthy",
+          "nflTeam": "Min",
+          "position": "QB",
+          "amount": 1
+        },
+        {
+          "number": 132,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Jake Ferguson",
+          "nflTeam": "Dal",
+          "position": "TE",
+          "amount": 2
+        },
+        {
+          "number": 133,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Let JOSH Cook",
+          "player": "Matt Gay",
+          "nflTeam": "FA",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 134,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Cameron Dicker",
+          "nflTeam": "LAC",
+          "position": "K",
+          "amount": 3
+        },
+        {
+          "number": 135,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Rashid Shaheed",
+          "nflTeam": "Sea",
+          "position": "WR",
+          "amount": 5
+        },
+        {
+          "number": 136,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Tank Bigsby",
+          "nflTeam": "Phi",
+          "position": "RB",
+          "amount": 4
+        },
+        {
+          "number": 137,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "Creatine Caucasians",
+          "player": "Bills D/ST",
+          "nflTeam": "Buf",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 138,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Braelon Allen",
+          "nflTeam": "NYJ",
+          "position": "RB",
+          "amount": 5
+        },
+        {
+          "number": 139,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Wil Lutz",
+          "nflTeam": "Den",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 140,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Ollie Gordon II",
+          "nflTeam": "Mia",
+          "position": "RB",
+          "amount": 5
+        },
+        {
+          "number": 141,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "The Consensual Cosby",
+          "player": "Tyler Bass",
+          "nflTeam": "Buf",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 142,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Harrison Butker",
+          "nflTeam": "KC",
+          "position": "K",
+          "amount": 2
+        },
+        {
+          "number": 143,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Travis Etienne Jr.",
+          "nflTeam": "Jax",
+          "position": "RB",
+          "amount": 4
+        },
+        {
+          "number": 144,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Nick Chubb",
+          "nflTeam": "Hou",
+          "position": "RB",
+          "amount": 3
+        },
+        {
+          "number": 145,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Josh Downs",
+          "nflTeam": "Ind",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 146,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Chiefs D/ST",
+          "nflTeam": "KC",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 147,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Jordan Love",
+          "nflTeam": "GB",
+          "position": "QB",
+          "amount": 1
+        },
+        {
+          "number": 148,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Blockbuster Promking",
+          "player": "Marvin Mims Jr.",
+          "nflTeam": "Den",
+          "position": "WR",
+          "amount": 3
+        },
+        {
+          "number": 149,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jake Elliott",
+          "nflTeam": "Phi",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 150,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Jaydon Blue",
+          "nflTeam": "Dal",
+          "position": "RB",
+          "amount": 4
+        },
+        {
+          "number": 151,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Darnell Mooney",
+          "nflTeam": "Atl",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 152,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Sean Tucker",
+          "nflTeam": "TB",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 153,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Kyle Monangai",
+          "nflTeam": "Chi",
+          "position": "RB",
+          "amount": 3
+        },
+        {
+          "number": 154,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Brian Robinson Jr.",
+          "nflTeam": "SF",
+          "position": "RB",
+          "amount": 2
+        },
+        {
+          "number": 155,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Najee Harris",
+          "nflTeam": "LAC",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 156,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Seahawks D/ST",
+          "nflTeam": "Sea",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 157,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Mr Rogers' Naberless Naberhood",
+          "player": "Brandon Aiyuk",
+          "nflTeam": "SF",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 158,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Jayden Reed",
+          "nflTeam": "GB",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 159,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Dameon Pierce",
+          "nflTeam": "KC",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 160,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Kyle Pitts Sr.",
+          "nflTeam": "Atl",
+          "position": "TE",
+          "amount": 1
+        },
+        {
+          "number": 161,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "New World Order",
+          "player": "Tyler Loop",
+          "nflTeam": "Bal",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 162,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Patriots D/ST",
+          "nflTeam": "NE",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 163,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Colts D/ST",
+          "nflTeam": "Ind",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 164,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Xavier Legette",
+          "nflTeam": "Car",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 165,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8==== D",
+          "player": "Kendre Miller",
+          "nflTeam": "NO",
+          "position": "RB",
+          "amount": 2
+        },
+        {
+          "number": 166,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Moaning Myrtle",
+          "player": "Ka'imi Fairbairn",
+          "nflTeam": "Hou",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 167,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Cairo Santos",
+          "nflTeam": "Chi",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 168,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Goff My Lawn",
+          "player": "Packers D/ST",
+          "nflTeam": "GB",
+          "position": "D/ST",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "source": "https://fantasy.espn.com/football/league/draftrecap?seasonId=2024&leagueId=555583",
+      "keepers": [
+        {
+          "number": 1,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Tyreek Hill",
+          "nflTeam": "Mia",
+          "position": "WR",
+          "amount": 21
+        },
+        {
+          "number": 2,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "CeeDee Lamb",
+          "nflTeam": "Dal",
+          "position": "WR",
+          "amount": 27
+        },
+        {
+          "number": 3,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "De'Von Achane",
+          "nflTeam": "Mia",
+          "position": "RB",
+          "amount": 12
+        },
+        {
+          "number": 4,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Nico Collins",
+          "nflTeam": "Hou",
+          "position": "WR",
+          "amount": 10
+        },
+        {
+          "number": 5,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Michael Pittman Jr.",
+          "nflTeam": "Ind",
+          "position": "WR",
+          "amount": 10
+        },
+        {
+          "number": 6,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Christian McCaffrey",
+          "nflTeam": "SF",
+          "position": "RB",
+          "amount": 64
+        },
+        {
+          "number": 7,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Drake London",
+          "nflTeam": "Atl",
+          "position": "WR",
+          "amount": 21
+        },
+        {
+          "number": 8,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "DeVonta Smith",
+          "nflTeam": "Phi",
+          "position": "WR",
+          "amount": 21
+        },
+        {
+          "number": 9,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Zay Flowers",
+          "nflTeam": "Bal",
+          "position": "WR",
+          "amount": 13
+        },
+        {
+          "number": 10,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "DK Metcalf",
+          "nflTeam": "Pit",
+          "position": "WR",
+          "amount": 23
+        },
+        {
+          "number": 11,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Rachaad White",
+          "nflTeam": "TB",
+          "position": "RB",
+          "amount": 15
+        },
+        {
+          "number": 12,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Brandon Aiyuk",
+          "nflTeam": "SF",
+          "position": "WR",
+          "amount": 10
+        },
+        {
+          "number": 13,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Travis Etienne Jr.",
+          "nflTeam": "Jax",
+          "position": "RB",
+          "amount": 38
+        },
+        {
+          "number": 14,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "James Cook",
+          "nflTeam": "Buf",
+          "position": "RB",
+          "amount": 15
+        },
+        {
+          "number": 15,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Josh Jacobs",
+          "nflTeam": "GB",
+          "position": "RB",
+          "amount": 38
+        },
+        {
+          "number": 16,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Garrett Wilson",
+          "nflTeam": "NYJ",
+          "position": "WR",
+          "amount": 15
+        },
+        {
+          "number": 17,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Trey McBride",
+          "nflTeam": "Ari",
+          "position": "TE",
+          "amount": 10
+        },
+        {
+          "number": 18,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Puka Nacua",
+          "nflTeam": "LAR",
+          "position": "WR",
+          "amount": 10
+        },
+        {
+          "number": 19,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Isiah Pacheco",
+          "nflTeam": "KC",
+          "position": "RB",
+          "amount": 19
+        },
+        {
+          "number": 20,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Breece Hall",
+          "nflTeam": "NYJ",
+          "position": "RB",
+          "amount": 37
+        },
+        {
+          "number": 21,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Chris Olave",
+          "nflTeam": "NO",
+          "position": "WR",
+          "amount": 37
+        },
+        {
+          "number": 22,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Ja'Marr Chase",
+          "nflTeam": "Cin",
+          "position": "WR",
+          "amount": 24
+        },
+        {
+          "number": 23,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Jonathan Taylor",
+          "nflTeam": "Ind",
+          "position": "RB",
+          "amount": 29
+        }
+      ],
+      "auctions": [
+        {
+          "number": 24,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Justin Jefferson",
+          "nflTeam": "Min",
+          "position": "WR",
+          "amount": 57
+        },
+        {
+          "number": 25,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Josh Allen",
+          "nflTeam": "Buf",
+          "position": "QB",
+          "amount": 25
+        },
+        {
+          "number": 26,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Marvin Harrison Jr.",
+          "nflTeam": "Ari",
+          "position": "WR",
+          "amount": 39
+        },
+        {
+          "number": 27,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Bijan Robinson",
+          "nflTeam": "Atl",
+          "position": "RB",
+          "amount": 66
+        },
+        {
+          "number": 28,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "A.J. Brown",
+          "nflTeam": "Phi",
+          "position": "WR",
+          "amount": 57
+        },
+        {
+          "number": 29,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Patrick Mahomes",
+          "nflTeam": "KC",
+          "position": "QB",
+          "amount": 23
+        },
+        {
+          "number": 30,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "C.J. Stroud",
+          "nflTeam": "Hou",
+          "position": "QB",
+          "amount": 17
+        },
+        {
+          "number": 31,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Mike Evans",
+          "nflTeam": "TB",
+          "position": "WR",
+          "amount": 32
+        },
+        {
+          "number": 32,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Malik Nabers",
+          "nflTeam": "NYG",
+          "position": "WR",
+          "amount": 29
+        },
+        {
+          "number": 33,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Jahmyr Gibbs",
+          "nflTeam": "Det",
+          "position": "RB",
+          "amount": 51
+        },
+        {
+          "number": 34,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Amon-Ra St. Brown",
+          "nflTeam": "Det",
+          "position": "WR",
+          "amount": 63
+        },
+        {
+          "number": 35,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Deebo Samuel Sr.",
+          "nflTeam": "Wsh",
+          "position": "WR",
+          "amount": 27
+        },
+        {
+          "number": 36,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Travis Kelce",
+          "nflTeam": "KC",
+          "position": "TE",
+          "amount": 36
+        },
+        {
+          "number": 37,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Joe Mixon",
+          "nflTeam": "Hou",
+          "position": "RB",
+          "amount": 33
+        },
+        {
+          "number": 38,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "George Pickens",
+          "nflTeam": "Pit",
+          "position": "WR",
+          "amount": 12
+        },
+        {
+          "number": 39,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jalen Hurts",
+          "nflTeam": "Phi",
+          "position": "QB",
+          "amount": 25
+        },
+        {
+          "number": 40,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Davante Adams",
+          "nflTeam": "LAR",
+          "position": "WR",
+          "amount": 36
+        },
+        {
+          "number": 41,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Anthony Richardson",
+          "nflTeam": "Ind",
+          "position": "QB",
+          "amount": 12
+        },
+        {
+          "number": 42,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Derrick Henry",
+          "nflTeam": "Bal",
+          "position": "RB",
+          "amount": 40
+        },
+        {
+          "number": 43,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Saquon Barkley",
+          "nflTeam": "Phi",
+          "position": "RB",
+          "amount": 65
+        },
+        {
+          "number": 44,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Alvin Kamara",
+          "nflTeam": "NO",
+          "position": "RB",
+          "amount": 42
+        },
+        {
+          "number": 45,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Chris Godwin",
+          "nflTeam": "TB",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 46,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Kyren Williams",
+          "nflTeam": "LAR",
+          "position": "RB",
+          "amount": 50
+        },
+        {
+          "number": 47,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Calvin Ridley",
+          "nflTeam": "Ten",
+          "position": "WR",
+          "amount": 6
+        },
+        {
+          "number": 48,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Javonte Williams",
+          "nflTeam": "Dal",
+          "position": "RB",
+          "amount": 16
+        },
+        {
+          "number": 49,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Kenneth Walker III",
+          "nflTeam": "Sea",
+          "position": "RB",
+          "amount": 47
+        },
+        {
+          "number": 50,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Jaxon Smith-Njigba",
+          "nflTeam": "Sea",
+          "position": "WR",
+          "amount": 16
+        },
+        {
+          "number": 51,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Jerome Ford",
+          "nflTeam": "Cle",
+          "position": "RB",
+          "amount": 11
+        },
+        {
+          "number": 52,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Stefon Diggs",
+          "nflTeam": "Hou",
+          "position": "WR",
+          "amount": 23
+        },
+        {
+          "number": 53,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Sam LaPorta",
+          "nflTeam": "Det",
+          "position": "TE",
+          "amount": 25
+        },
+        {
+          "number": 54,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "D'Andre Swift",
+          "nflTeam": "Chi",
+          "position": "RB",
+          "amount": 21
+        },
+        {
+          "number": 55,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "James Conner",
+          "nflTeam": "Ari",
+          "position": "RB",
+          "amount": 24
+        },
+        {
+          "number": 56,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Rhamondre Stevenson",
+          "nflTeam": "NE",
+          "position": "RB",
+          "amount": 10
+        },
+        {
+          "number": 57,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "George Kittle",
+          "nflTeam": "SF",
+          "position": "TE",
+          "amount": 8
+        },
+        {
+          "number": 58,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Evan Engram",
+          "nflTeam": "Den",
+          "position": "TE",
+          "amount": 13
+        },
+        {
+          "number": 59,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Kyle Pitts",
+          "nflTeam": "Atl",
+          "position": "TE",
+          "amount": 11
+        },
+        {
+          "number": 60,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Jaylen Waddle",
+          "nflTeam": "Mia",
+          "position": "WR",
+          "amount": 28
+        },
+        {
+          "number": 61,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Cooper Kupp",
+          "nflTeam": "Sea",
+          "position": "WR",
+          "amount": 30
+        },
+        {
+          "number": 62,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Rashee Rice",
+          "nflTeam": "KC",
+          "position": "WR",
+          "amount": 24
+        },
+        {
+          "number": 63,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Nick Chubb",
+          "nflTeam": "Cle",
+          "position": "RB",
+          "amount": 7
+        },
+        {
+          "number": 64,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Lamar Jackson",
+          "nflTeam": "Bal",
+          "position": "QB",
+          "amount": 16
+        },
+        {
+          "number": 65,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Tee Higgins",
+          "nflTeam": "Cin",
+          "position": "WR",
+          "amount": 18
+        },
+        {
+          "number": 66,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Najee Harris",
+          "nflTeam": "LAC",
+          "position": "RB",
+          "amount": 22
+        },
+        {
+          "number": 67,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "DJ Moore",
+          "nflTeam": "Chi",
+          "position": "WR",
+          "amount": 19
+        },
+        {
+          "number": 68,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Mark Andrews",
+          "nflTeam": "Bal",
+          "position": "TE",
+          "amount": 24
+        },
+        {
+          "number": 69,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Tank Dell",
+          "nflTeam": "Hou",
+          "position": "WR",
+          "amount": 26
+        },
+        {
+          "number": 70,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Terry McLaurin",
+          "nflTeam": "Wsh",
+          "position": "WR",
+          "amount": 24
+        },
+        {
+          "number": 71,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Dak Prescott",
+          "nflTeam": "Dal",
+          "position": "QB",
+          "amount": 6
+        },
+        {
+          "number": 72,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Brian Robinson Jr.",
+          "nflTeam": "Wsh",
+          "position": "RB",
+          "amount": 13
+        },
+        {
+          "number": 73,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Diontae Johnson",
+          "nflTeam": "Bal",
+          "position": "WR",
+          "amount": 12
+        },
+        {
+          "number": 74,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Xavier Worthy",
+          "nflTeam": "KC",
+          "position": "WR",
+          "amount": 14
+        },
+        {
+          "number": 75,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "J.K. Dobbins",
+          "nflTeam": "LAC",
+          "position": "RB",
+          "amount": 6
+        },
+        {
+          "number": 76,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Joe Burrow",
+          "nflTeam": "Cin",
+          "position": "QB",
+          "amount": 7
+        },
+        {
+          "number": 77,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jaylen Warren",
+          "nflTeam": "Pit",
+          "position": "RB",
+          "amount": 11
+        },
+        {
+          "number": 78,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Aaron Jones",
+          "nflTeam": "Min",
+          "position": "RB",
+          "amount": 21
+        },
+        {
+          "number": 79,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Zamir White",
+          "nflTeam": "LV",
+          "position": "RB",
+          "amount": 26
+        },
+        {
+          "number": 80,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Dalton Kincaid",
+          "nflTeam": "Buf",
+          "position": "TE",
+          "amount": 24
+        },
+        {
+          "number": 81,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Christian Watson",
+          "nflTeam": "GB",
+          "position": "WR",
+          "amount": 6
+        },
+        {
+          "number": 82,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Kyler Murray",
+          "nflTeam": "Ari",
+          "position": "QB",
+          "amount": 16
+        },
+        {
+          "number": 83,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Jordan Love",
+          "nflTeam": "GB",
+          "position": "QB",
+          "amount": 8
+        },
+        {
+          "number": 84,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Brock Bowers",
+          "nflTeam": "LV",
+          "position": "TE",
+          "amount": 6
+        },
+        {
+          "number": 85,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Raheem Mostert",
+          "nflTeam": "LV",
+          "position": "RB",
+          "amount": 9
+        },
+        {
+          "number": 86,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Amari Cooper",
+          "nflTeam": "Buf",
+          "position": "WR",
+          "amount": 19
+        },
+        {
+          "number": 87,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jordan Addison",
+          "nflTeam": "Min",
+          "position": "WR",
+          "amount": 2
+        },
+        {
+          "number": 88,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Rome Odunze",
+          "nflTeam": "Chi",
+          "position": "WR",
+          "amount": 17
+        },
+        {
+          "number": 89,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Courtland Sutton",
+          "nflTeam": "Den",
+          "position": "WR",
+          "amount": 6
+        },
+        {
+          "number": 90,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "David Montgomery",
+          "nflTeam": "Det",
+          "position": "RB",
+          "amount": 17
+        },
+        {
+          "number": 91,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Jake Ferguson",
+          "nflTeam": "Dal",
+          "position": "TE",
+          "amount": 14
+        },
+        {
+          "number": 92,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jayden Daniels",
+          "nflTeam": "Wsh",
+          "position": "QB",
+          "amount": 6
+        },
+        {
+          "number": 93,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Taysom Hill",
+          "nflTeam": "NO",
+          "position": "TE",
+          "amount": 2
+        },
+        {
+          "number": 94,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Brock Purdy",
+          "nflTeam": "SF",
+          "position": "QB",
+          "amount": 7
+        },
+        {
+          "number": 95,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Ezekiel Elliott",
+          "nflTeam": "FA",
+          "position": "RB",
+          "amount": 6
+        },
+        {
+          "number": 96,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Austin Ekeler",
+          "nflTeam": "Wsh",
+          "position": "RB",
+          "amount": 14
+        },
+        {
+          "number": 97,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Justin Tucker",
+          "nflTeam": "Bal",
+          "position": "K",
+          "amount": 3
+        },
+        {
+          "number": 98,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "LaPorta Potty",
+          "player": "Jets D/ST",
+          "nflTeam": "NYJ",
+          "position": "D/ST",
+          "amount": 7
+        },
+        {
+          "number": 99,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Keenan Allen",
+          "nflTeam": "Chi",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 100,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "DeAndre Hopkins",
+          "nflTeam": "Bal",
+          "position": "WR",
+          "amount": 4
+        },
+        {
+          "number": 101,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Harrison Butker",
+          "nflTeam": "KC",
+          "position": "K",
+          "amount": 5
+        },
+        {
+          "number": 102,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Jayden Reed",
+          "nflTeam": "GB",
+          "position": "WR",
+          "amount": 16
+        },
+        {
+          "number": 103,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Tony Pollard",
+          "nflTeam": "Ten",
+          "position": "RB",
+          "amount": 12
+        },
+        {
+          "number": 104,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Browns D/ST",
+          "nflTeam": "Cle",
+          "position": "D/ST",
+          "amount": 2
+        },
+        {
+          "number": 105,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Dalton Schultz",
+          "nflTeam": "Hou",
+          "position": "TE",
+          "amount": 3
+        },
+        {
+          "number": 106,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Cowboys D/ST",
+          "nflTeam": "Dal",
+          "position": "D/ST",
+          "amount": 6
+        },
+        {
+          "number": 107,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Brandon Aubrey",
+          "nflTeam": "Dal",
+          "position": "K",
+          "amount": 6
+        },
+        {
+          "number": 108,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Tyjae Spears",
+          "nflTeam": "Ten",
+          "position": "RB",
+          "amount": 6
+        },
+        {
+          "number": 109,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "49ers D/ST",
+          "nflTeam": "SF",
+          "position": "D/ST",
+          "amount": 7
+        },
+        {
+          "number": 110,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Keon Coleman",
+          "nflTeam": "Buf",
+          "position": "WR",
+          "amount": 10
+        },
+        {
+          "number": 111,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Chuba Hubbard",
+          "nflTeam": "Car",
+          "position": "RB",
+          "amount": 8
+        },
+        {
+          "number": 112,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Younghoe Koo",
+          "nflTeam": "Atl",
+          "position": "K",
+          "amount": 2
+        },
+        {
+          "number": 113,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Ladd McConkey",
+          "nflTeam": "LAC",
+          "position": "WR",
+          "amount": 3
+        },
+        {
+          "number": 114,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Rico Dowdle",
+          "nflTeam": "Car",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 115,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Christian Kirk",
+          "nflTeam": "Hou",
+          "position": "WR",
+          "amount": 18
+        },
+        {
+          "number": 116,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Aaron Rodgers",
+          "nflTeam": "FA",
+          "position": "QB",
+          "amount": 1
+        },
+        {
+          "number": 117,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Ravens D/ST",
+          "nflTeam": "Bal",
+          "position": "D/ST",
+          "amount": 7
+        },
+        {
+          "number": 118,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Jake Elliott",
+          "nflTeam": "Phi",
+          "position": "K",
+          "amount": 4
+        },
+        {
+          "number": 119,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Khalil Shakir",
+          "nflTeam": "Buf",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 120,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Dolphins D/ST",
+          "nflTeam": "Mia",
+          "position": "D/ST",
+          "amount": 3
+        },
+        {
+          "number": 121,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Devin Singletary",
+          "nflTeam": "NYG",
+          "position": "RB",
+          "amount": 8
+        },
+        {
+          "number": 122,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Greg Zuerlein",
+          "nflTeam": "NYJ",
+          "position": "K",
+          "amount": 2
+        },
+        {
+          "number": 123,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Cameron Dicker",
+          "nflTeam": "LAC",
+          "position": "K",
+          "amount": 3
+        },
+        {
+          "number": 124,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Zack Moss",
+          "nflTeam": "Cin",
+          "position": "RB",
+          "amount": 4
+        },
+        {
+          "number": 125,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Trevor Lawrence",
+          "nflTeam": "Jax",
+          "position": "QB",
+          "amount": 1
+        },
+        {
+          "number": 126,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Jonathon Brooks",
+          "nflTeam": "Car",
+          "position": "RB",
+          "amount": 5
+        },
+        {
+          "number": 127,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Jakobi Meyers",
+          "nflTeam": "LV",
+          "position": "WR",
+          "amount": 5
+        },
+        {
+          "number": 128,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Caleb Williams",
+          "nflTeam": "Chi",
+          "position": "QB",
+          "amount": 3
+        },
+        {
+          "number": 129,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Bengals D/ST",
+          "nflTeam": "Cin",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 130,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "David Njoku",
+          "nflTeam": "Cle",
+          "position": "TE",
+          "amount": 1
+        },
+        {
+          "number": 131,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Jordan Mason",
+          "nflTeam": "Min",
+          "position": "RB",
+          "amount": 4
+        },
+        {
+          "number": 132,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Jaleel McLaughlin",
+          "nflTeam": "Den",
+          "position": "RB",
+          "amount": 6
+        },
+        {
+          "number": 133,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Ka'imi Fairbairn",
+          "nflTeam": "Hou",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 134,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Steelers D/ST",
+          "nflTeam": "Pit",
+          "position": "D/ST",
+          "amount": 2
+        },
+        {
+          "number": 135,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Chase Brown",
+          "nflTeam": "Cin",
+          "position": "RB",
+          "amount": 7
+        },
+        {
+          "number": 136,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Medically Cleared 2 Crush Dix",
+          "player": "Evan McPherson",
+          "nflTeam": "Cin",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 137,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "Brian Thomas Jr.",
+          "nflTeam": "Jax",
+          "position": "WR",
+          "amount": 5
+        },
+        {
+          "number": 138,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Blake Corum",
+          "nflTeam": "LAR",
+          "position": "RB",
+          "amount": 5
+        },
+        {
+          "number": 139,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Joshua Palmer",
+          "nflTeam": "Buf",
+          "position": "WR",
+          "amount": 4
+        },
+        {
+          "number": 140,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Mahomeless",
+          "player": "Hollywood Brown",
+          "nflTeam": "KC",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 141,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Darnell Mooney",
+          "nflTeam": "Atl",
+          "position": "WR",
+          "amount": 2
+        },
+        {
+          "number": 142,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Zach Charbonnet",
+          "nflTeam": "Sea",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 143,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Tyrone Tracy Jr.",
+          "nflTeam": "NYG",
+          "position": "RB",
+          "amount": 2
+        },
+        {
+          "number": 144,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Brandin Cooks",
+          "nflTeam": "Dal",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 145,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Jake Moody",
+          "nflTeam": "SF",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 146,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Gus Edwards",
+          "nflTeam": "FA",
+          "position": "RB",
+          "amount": 4
+        },
+        {
+          "number": 147,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Ty Chandler",
+          "nflTeam": "Min",
+          "position": "RB",
+          "amount": 2
+        },
+        {
+          "number": 148,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Messenger Pigeons",
+          "player": "Rashid Shaheed",
+          "nflTeam": "NO",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 149,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Demarcus Robinson",
+          "nflTeam": "SF",
+          "position": "WR",
+          "amount": 2
+        },
+        {
+          "number": 150,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Trey Benson",
+          "nflTeam": "Ari",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 151,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Braelon Allen",
+          "nflTeam": "NYJ",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 152,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "Chiefs D/ST",
+          "nflTeam": "KC",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 153,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Saints D/ST",
+          "nflTeam": "NO",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 154,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Knuckles 🫵🏻🤜🏻",
+          "player": "Tyler Allgeier",
+          "nflTeam": "Atl",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 155,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "MarShawn Lloyd",
+          "nflTeam": "GB",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 156,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Let James COOK 🍳🙏🏻🙏🏻",
+          "player": "T.J. Hockenson",
+          "nflTeam": "Min",
+          "position": "TE",
+          "amount": 1
+        },
+        {
+          "number": 157,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Adonai Mitchell",
+          "nflTeam": "Ind",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 158,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "Fantasy Tech",
+          "player": "Ja'Lynn Polk",
+          "nflTeam": "NE",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 159,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Limp Brisket",
+          "player": "D'Onta Foreman",
+          "nflTeam": "Cle",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 160,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Ray Davis",
+          "nflTeam": "Buf",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 161,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Mike Williams",
+          "nflTeam": "LAC",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 162,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Texans D/ST",
+          "nflTeam": "Hou",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 163,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Moody Magic",
+          "player": "Dontayvion Wicks",
+          "nflTeam": "GB",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 164,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Bucky Irving",
+          "nflTeam": "TB",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 165,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Jake Bates",
+          "nflTeam": "Det",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 166,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Jaguars D/ST",
+          "nflTeam": "Jax",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 167,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "DeMario Douglas",
+          "nflTeam": "NE",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 168,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "The Mile High Club",
+          "player": "Cairo Santos",
+          "nflTeam": "Chi",
+          "position": "K",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "source": "https://fantasy.espn.com/football/league/draftrecap?seasonId=2023&leagueId=555583",
+      "keepers": [
+        {
+          "number": 1,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Tyreek Hill",
+          "nflTeam": "Mia",
+          "position": "WR",
+          "amount": 31
+        },
+        {
+          "number": 2,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "CeeDee Lamb",
+          "nflTeam": "Dal",
+          "position": "WR",
+          "amount": 22
+        },
+        {
+          "number": 3,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Rhamondre Stevenson",
+          "nflTeam": "NE",
+          "position": "RB",
+          "amount": 23
+        },
+        {
+          "number": 4,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Austin Ekeler",
+          "nflTeam": "Wsh",
+          "position": "RB",
+          "amount": 41
+        },
+        {
+          "number": 5,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "DeVonta Smith",
+          "nflTeam": "Phi",
+          "position": "WR",
+          "amount": 11
+        },
+        {
+          "number": 6,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Christian McCaffrey",
+          "nflTeam": "SF",
+          "position": "RB",
+          "amount": 55
+        },
+        {
+          "number": 7,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "James Cook",
+          "nflTeam": "Buf",
+          "position": "RB",
+          "amount": 10
+        },
+        {
+          "number": 8,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Darren Waller",
+          "nflTeam": "NYG",
+          "position": "TE",
+          "amount": 24
+        },
+        {
+          "number": 9,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Joe Burrow",
+          "nflTeam": "Cin",
+          "position": "QB",
+          "amount": 19
+        },
+        {
+          "number": 10,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "DK Metcalf",
+          "nflTeam": "Sea",
+          "position": "WR",
+          "amount": 18
+        },
+        {
+          "number": 11,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Rachaad White",
+          "nflTeam": "TB",
+          "position": "RB",
+          "amount": 10
+        },
+        {
+          "number": 12,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Tony Pollard",
+          "nflTeam": "Ten",
+          "position": "RB",
+          "amount": 14
+        },
+        {
+          "number": 13,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Josh Allen",
+          "nflTeam": "Buf",
+          "position": "QB",
+          "amount": 38
+        },
+        {
+          "number": 14,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Stefon Diggs",
+          "nflTeam": "Buf",
+          "position": "WR",
+          "amount": 25
+        },
+        {
+          "number": 15,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Derrick Henry",
+          "nflTeam": "Bal",
+          "position": "RB",
+          "amount": 44
+        },
+        {
+          "number": 16,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Josh Jacobs",
+          "nflTeam": "GB",
+          "position": "RB",
+          "amount": 28
+        },
+        {
+          "number": 17,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Garrett Wilson",
+          "nflTeam": "NYJ",
+          "position": "WR",
+          "amount": 0
+        },
+        {
+          "number": 18,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Nick Chubb",
+          "nflTeam": "Cle",
+          "position": "RB",
+          "amount": 30
+        },
+        {
+          "number": 19,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "A.J. Brown",
+          "nflTeam": "Phi",
+          "position": "WR",
+          "amount": 43
+        },
+        {
+          "number": 20,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Travis Kelce",
+          "nflTeam": "KC",
+          "position": "TE",
+          "amount": 53
+        },
+        {
+          "number": 21,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Justin Jefferson",
+          "nflTeam": "Min",
+          "position": "WR",
+          "amount": 44
+        },
+        {
+          "number": 22,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Chris Olave",
+          "nflTeam": "NO",
+          "position": "WR",
+          "amount": 14
+        },
+        {
+          "number": 23,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Ja'Marr Chase",
+          "nflTeam": "Cin",
+          "position": "WR",
+          "amount": 19
+        },
+        {
+          "number": 24,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "T.J. Hockenson",
+          "nflTeam": "Min",
+          "position": "TE",
+          "amount": 13
+        }
+      ],
+      "auctions": [
+        {
+          "number": 25,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Bijan Robinson",
+          "nflTeam": "Atl",
+          "position": "RB",
+          "amount": 61
+        },
+        {
+          "number": 26,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Mark Andrews",
+          "nflTeam": "Bal",
+          "position": "TE",
+          "amount": 34
+        },
+        {
+          "number": 27,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Travis Etienne Jr.",
+          "nflTeam": "Jax",
+          "position": "RB",
+          "amount": 33
+        },
+        {
+          "number": 28,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Saquon Barkley",
+          "nflTeam": "Phi",
+          "position": "RB",
+          "amount": 60
+        },
+        {
+          "number": 29,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Davante Adams",
+          "nflTeam": "LV",
+          "position": "WR",
+          "amount": 46
+        },
+        {
+          "number": 30,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Amon-Ra St. Brown",
+          "nflTeam": "Det",
+          "position": "WR",
+          "amount": 48
+        },
+        {
+          "number": 31,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Keenan Allen",
+          "nflTeam": "Chi",
+          "position": "WR",
+          "amount": 22
+        },
+        {
+          "number": 32,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Cooper Kupp",
+          "nflTeam": "LAR",
+          "position": "WR",
+          "amount": 29
+        },
+        {
+          "number": 33,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Joe Mixon",
+          "nflTeam": "Hou",
+          "position": "RB",
+          "amount": 55
+        },
+        {
+          "number": 34,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Jalen Hurts",
+          "nflTeam": "Phi",
+          "position": "QB",
+          "amount": 31
+        },
+        {
+          "number": 35,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Jaylen Waddle",
+          "nflTeam": "Mia",
+          "position": "WR",
+          "amount": 36
+        },
+        {
+          "number": 36,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Tyler Lockett",
+          "nflTeam": "Sea",
+          "position": "WR",
+          "amount": 14
+        },
+        {
+          "number": 37,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Quentin Johnston",
+          "nflTeam": "LAC",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 38,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Justin Fields",
+          "nflTeam": "Pit",
+          "position": "QB",
+          "amount": 24
+        },
+        {
+          "number": 39,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Aaron Jones",
+          "nflTeam": "Min",
+          "position": "RB",
+          "amount": 40
+        },
+        {
+          "number": 40,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "DJ Moore",
+          "nflTeam": "Chi",
+          "position": "WR",
+          "amount": 17
+        },
+        {
+          "number": 41,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "DeAndre Hopkins",
+          "nflTeam": "Ten",
+          "position": "WR",
+          "amount": 10
+        },
+        {
+          "number": 42,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Deebo Samuel",
+          "nflTeam": "SF",
+          "position": "WR",
+          "amount": 26
+        },
+        {
+          "number": 43,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Jahmyr Gibbs",
+          "nflTeam": "Det",
+          "position": "RB",
+          "amount": 49
+        },
+        {
+          "number": 44,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Lamar Jackson",
+          "nflTeam": "Bal",
+          "position": "QB",
+          "amount": 29
+        },
+        {
+          "number": 45,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Isiah Pacheco",
+          "nflTeam": "KC",
+          "position": "RB",
+          "amount": 13
+        },
+        {
+          "number": 46,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Patrick Mahomes",
+          "nflTeam": "KC",
+          "position": "QB",
+          "amount": 36
+        },
+        {
+          "number": 47,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Jonathan Taylor",
+          "nflTeam": "Ind",
+          "position": "RB",
+          "amount": 24
+        },
+        {
+          "number": 48,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Tee Higgins",
+          "nflTeam": "Cin",
+          "position": "WR",
+          "amount": 43
+        },
+        {
+          "number": 49,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Antonio Gibson",
+          "nflTeam": "NE",
+          "position": "RB",
+          "amount": 11
+        },
+        {
+          "number": 50,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Justin Herbert",
+          "nflTeam": "LAC",
+          "position": "QB",
+          "amount": 31
+        },
+        {
+          "number": 51,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Miles Sanders",
+          "nflTeam": "Car",
+          "position": "RB",
+          "amount": 23
+        },
+        {
+          "number": 52,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Amari Cooper",
+          "nflTeam": "Cle",
+          "position": "WR",
+          "amount": 26
+        },
+        {
+          "number": 53,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Najee Harris",
+          "nflTeam": "Pit",
+          "position": "RB",
+          "amount": 44
+        },
+        {
+          "number": 54,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Calvin Ridley",
+          "nflTeam": "Ten",
+          "position": "WR",
+          "amount": 35
+        },
+        {
+          "number": 55,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Breece Hall",
+          "nflTeam": "NYJ",
+          "position": "RB",
+          "amount": 32
+        },
+        {
+          "number": 56,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Dameon Pierce",
+          "nflTeam": "Hou",
+          "position": "RB",
+          "amount": 34
+        },
+        {
+          "number": 57,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Cam Akers",
+          "nflTeam": "Min",
+          "position": "RB",
+          "amount": 20
+        },
+        {
+          "number": 58,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Trevor Lawrence",
+          "nflTeam": "Jax",
+          "position": "QB",
+          "amount": 26
+        },
+        {
+          "number": 59,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Deshaun Watson",
+          "nflTeam": "Cle",
+          "position": "QB",
+          "amount": 5
+        },
+        {
+          "number": 60,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Alvin Kamara",
+          "nflTeam": "NO",
+          "position": "RB",
+          "amount": 13
+        },
+        {
+          "number": 61,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Jahan Dotson",
+          "nflTeam": "Wsh",
+          "position": "WR",
+          "amount": 18
+        },
+        {
+          "number": 62,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Skyy Moore",
+          "nflTeam": "KC",
+          "position": "WR",
+          "amount": 6
+        },
+        {
+          "number": 63,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Dalvin Cook",
+          "nflTeam": "Bal",
+          "position": "RB",
+          "amount": 8
+        },
+        {
+          "number": 64,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Christian Watson",
+          "nflTeam": "GB",
+          "position": "WR",
+          "amount": 28
+        },
+        {
+          "number": 65,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Diontae Johnson",
+          "nflTeam": "Car",
+          "position": "WR",
+          "amount": 26
+        },
+        {
+          "number": 66,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Chigoziem Okonkwo",
+          "nflTeam": "Ten",
+          "position": "TE",
+          "amount": 1
+        },
+        {
+          "number": 67,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Javonte Williams",
+          "nflTeam": "Den",
+          "position": "RB",
+          "amount": 26
+        },
+        {
+          "number": 68,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Chris Godwin",
+          "nflTeam": "TB",
+          "position": "WR",
+          "amount": 14
+        },
+        {
+          "number": 69,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "James Conner",
+          "nflTeam": "Ari",
+          "position": "RB",
+          "amount": 9
+        },
+        {
+          "number": 70,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Tua Tagovailoa",
+          "nflTeam": "Mia",
+          "position": "QB",
+          "amount": 23
+        },
+        {
+          "number": 71,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Mike Williams",
+          "nflTeam": "NYJ",
+          "position": "WR",
+          "amount": 13
+        },
+        {
+          "number": 72,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Terry McLaurin",
+          "nflTeam": "Wsh",
+          "position": "WR",
+          "amount": 17
+        },
+        {
+          "number": 73,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "De'Von Achane",
+          "nflTeam": "Mia",
+          "position": "RB",
+          "amount": 7
+        },
+        {
+          "number": 74,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Kenneth Walker III",
+          "nflTeam": "Sea",
+          "position": "RB",
+          "amount": 36
+        },
+        {
+          "number": 75,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Alexander Mattison",
+          "nflTeam": "LV",
+          "position": "RB",
+          "amount": 43
+        },
+        {
+          "number": 76,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Dallas Goedert",
+          "nflTeam": "Phi",
+          "position": "TE",
+          "amount": 12
+        },
+        {
+          "number": 77,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "George Kittle",
+          "nflTeam": "SF",
+          "position": "TE",
+          "amount": 6
+        },
+        {
+          "number": 78,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Isaiah Spiller",
+          "nflTeam": "LAC",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 79,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "J.K. Dobbins",
+          "nflTeam": "Bal",
+          "position": "RB",
+          "amount": 27
+        },
+        {
+          "number": 80,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "David Montgomery",
+          "nflTeam": "Det",
+          "position": "RB",
+          "amount": 15
+        },
+        {
+          "number": 81,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Brian Robinson Jr.",
+          "nflTeam": "Wsh",
+          "position": "RB",
+          "amount": 8
+        },
+        {
+          "number": 82,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Pat Freiermuth",
+          "nflTeam": "Pit",
+          "position": "TE",
+          "amount": 10
+        },
+        {
+          "number": 83,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Khalil Herbert",
+          "nflTeam": "Chi",
+          "position": "RB",
+          "amount": 10
+        },
+        {
+          "number": 84,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Mike Evans",
+          "nflTeam": "TB",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 85,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jaxon Smith-Njigba",
+          "nflTeam": "Sea",
+          "position": "WR",
+          "amount": 11
+        },
+        {
+          "number": 86,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "George Pickens",
+          "nflTeam": "Pit",
+          "position": "WR",
+          "amount": 20
+        },
+        {
+          "number": 87,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "AJ Dillon",
+          "nflTeam": "GB",
+          "position": "RB",
+          "amount": 10
+        },
+        {
+          "number": 88,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Evan Engram",
+          "nflTeam": "Jax",
+          "position": "TE",
+          "amount": 3
+        },
+        {
+          "number": 89,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Puka Nacua",
+          "nflTeam": "LAR",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 90,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Ravens D/ST",
+          "nflTeam": "Bal",
+          "position": "D/ST",
+          "amount": 3
+        },
+        {
+          "number": 91,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Drake London",
+          "nflTeam": "Atl",
+          "position": "WR",
+          "amount": 16
+        },
+        {
+          "number": 92,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Brandin Cooks",
+          "nflTeam": "Dal",
+          "position": "WR",
+          "amount": 3
+        },
+        {
+          "number": 93,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Jerry Jeudy",
+          "nflTeam": "Cle",
+          "position": "WR",
+          "amount": 4
+        },
+        {
+          "number": 94,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "David Njoku",
+          "nflTeam": "Cle",
+          "position": "TE",
+          "amount": 3
+        },
+        {
+          "number": 95,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Marquise Brown",
+          "nflTeam": "KC",
+          "position": "WR",
+          "amount": 4
+        },
+        {
+          "number": 96,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Brandon Aiyuk",
+          "nflTeam": "SF",
+          "position": "WR",
+          "amount": 5
+        },
+        {
+          "number": 97,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Jets D/ST",
+          "nflTeam": "NYJ",
+          "position": "D/ST",
+          "amount": 3
+        },
+        {
+          "number": 98,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Kyle Pitts",
+          "nflTeam": "Atl",
+          "position": "TE",
+          "amount": 17
+        },
+        {
+          "number": 99,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Michael Pittman Jr.",
+          "nflTeam": "Ind",
+          "position": "WR",
+          "amount": 5
+        },
+        {
+          "number": 100,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Christian Kirk",
+          "nflTeam": "Jax",
+          "position": "WR",
+          "amount": 5
+        },
+        {
+          "number": 101,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Cole Kmet",
+          "nflTeam": "Chi",
+          "position": "TE",
+          "amount": 3
+        },
+        {
+          "number": 102,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Nico Collins",
+          "nflTeam": "Hou",
+          "position": "WR",
+          "amount": 4
+        },
+        {
+          "number": 103,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Zay Flowers",
+          "nflTeam": "Bal",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 104,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Courtland Sutton",
+          "nflTeam": "Den",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 105,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Michael Thomas",
+          "nflTeam": "NO",
+          "position": "WR",
+          "amount": 2
+        },
+        {
+          "number": 106,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Cowboys D/ST",
+          "nflTeam": "Dal",
+          "position": "D/ST",
+          "amount": 6
+        },
+        {
+          "number": 107,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "D'Andre Swift",
+          "nflTeam": "Chi",
+          "position": "RB",
+          "amount": 5
+        },
+        {
+          "number": 108,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Dak Prescott",
+          "nflTeam": "Dal",
+          "position": "QB",
+          "amount": 1
+        },
+        {
+          "number": 109,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Deuce Vaughn",
+          "nflTeam": "Dal",
+          "position": "RB",
+          "amount": 3
+        },
+        {
+          "number": 110,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jordan Addison",
+          "nflTeam": "Min",
+          "position": "WR",
+          "amount": 8
+        },
+        {
+          "number": 111,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "49ers D/ST",
+          "nflTeam": "SF",
+          "position": "D/ST",
+          "amount": 10
+        },
+        {
+          "number": 112,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Romeo Doubs",
+          "nflTeam": "GB",
+          "position": "WR",
+          "amount": 3
+        },
+        {
+          "number": 113,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "JuJu Smith-Schuster",
+          "nflTeam": "NE",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 114,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Rashod Bateman",
+          "nflTeam": "Bal",
+          "position": "WR",
+          "amount": 2
+        },
+        {
+          "number": 115,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Jerick McKinnon",
+          "nflTeam": "KC",
+          "position": "RB",
+          "amount": 3
+        },
+        {
+          "number": 116,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Justin Tucker",
+          "nflTeam": "Bal",
+          "position": "K",
+          "amount": 4
+        },
+        {
+          "number": 117,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Steelers D/ST",
+          "nflTeam": "Pit",
+          "position": "D/ST",
+          "amount": 9
+        },
+        {
+          "number": 118,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Anthony Richardson",
+          "nflTeam": "Ind",
+          "position": "QB",
+          "amount": 3
+        },
+        {
+          "number": 119,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Jamaal Williams",
+          "nflTeam": "NO",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 120,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Raheem Mostert",
+          "nflTeam": "Mia",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 121,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Jaylen Warren",
+          "nflTeam": "Pit",
+          "position": "RB",
+          "amount": 3
+        },
+        {
+          "number": 122,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Rashee Rice",
+          "nflTeam": "KC",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 123,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Saints D/ST",
+          "nflTeam": "NO",
+          "position": "D/ST",
+          "amount": 3
+        },
+        {
+          "number": 124,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Younghoe Koo",
+          "nflTeam": "Atl",
+          "position": "K",
+          "amount": 2
+        },
+        {
+          "number": 125,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Bills D/ST",
+          "nflTeam": "Buf",
+          "position": "D/ST",
+          "amount": 3
+        },
+        {
+          "number": 126,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Treylon Burks",
+          "nflTeam": "Ten",
+          "position": "WR",
+          "amount": 2
+        },
+        {
+          "number": 127,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Evan McPherson",
+          "nflTeam": "Cin",
+          "position": "K",
+          "amount": 3
+        },
+        {
+          "number": 128,
+          "teamId": 1,
+          "manager": "Brett McKnight",
+          "teamName": "Ravenclaw Shirt Sunday",
+          "player": "Harrison Butker",
+          "nflTeam": "KC",
+          "position": "K",
+          "amount": 3
+        },
+        {
+          "number": 129,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Jakobi Meyers",
+          "nflTeam": "LV",
+          "position": "WR",
+          "amount": 2
+        },
+        {
+          "number": 130,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Aaron Rodgers",
+          "nflTeam": "NYJ",
+          "position": "QB",
+          "amount": 4
+        },
+        {
+          "number": 131,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Gabe Davis",
+          "nflTeam": "Jax",
+          "position": "WR",
+          "amount": 3
+        },
+        {
+          "number": 132,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Tyjae Spears",
+          "nflTeam": "Ten",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 133,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Tyler Allgeier",
+          "nflTeam": "Atl",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 134,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "K.J. Osborn",
+          "nflTeam": "NE",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 135,
+          "teamId": 16,
+          "manager": "Eric Boudreau",
+          "teamName": "Corn-fed Masseuses",
+          "player": "Sam LaPorta",
+          "nflTeam": "Det",
+          "position": "TE",
+          "amount": 5
+        },
+        {
+          "number": 136,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Ty Chandler",
+          "nflTeam": "Min",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 137,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Packers D/ST",
+          "nflTeam": "GB",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 138,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Odell Beckham Jr.",
+          "nflTeam": "FA",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 139,
+          "teamId": 7,
+          "manager": "Ebby Kurian",
+          "teamName": "The Splenic Flexture",
+          "player": "Daniel Carlson",
+          "nflTeam": "LV",
+          "position": "K",
+          "amount": 2
+        },
+        {
+          "number": 140,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Jalin Hyatt",
+          "nflTeam": "NYG",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 141,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Michael Gallup",
+          "nflTeam": "Dal",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 142,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Commanders D/ST",
+          "nflTeam": "Wsh",
+          "position": "D/ST",
+          "amount": 3
+        },
+        {
+          "number": 143,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Elijah Moore",
+          "nflTeam": "Cle",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 144,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Patriots D/ST",
+          "nflTeam": "NE",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 145,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Dolphins D/ST",
+          "nflTeam": "Mia",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 146,
+          "teamId": 4,
+          "manager": "Kendall Bicknell",
+          "teamName": "The Toothbrush Violater",
+          "player": "Tyler Bass",
+          "nflTeam": "Buf",
+          "position": "K",
+          "amount": 2
+        },
+        {
+          "number": 147,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Jake Elliott",
+          "nflTeam": "Phi",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 148,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Kirk Cousins",
+          "nflTeam": "Atl",
+          "position": "QB",
+          "amount": 2
+        },
+        {
+          "number": 149,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Allen Lazard",
+          "nflTeam": "NYJ",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 150,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Tank Bigsby",
+          "nflTeam": "Jax",
+          "position": "RB",
+          "amount": 4
+        },
+        {
+          "number": 151,
+          "teamId": 18,
+          "manager": "Dan Maland",
+          "teamName": "Fecal Fiasco",
+          "player": "Jason Myers",
+          "nflTeam": "Sea",
+          "position": "K",
+          "amount": 2
+        },
+        {
+          "number": 152,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Kadarius Toney",
+          "nflTeam": "KC",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 153,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "Graham Gano",
+          "nflTeam": "NYG",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 154,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Zach Charbonnet",
+          "nflTeam": "Sea",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 155,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Samaje Perine",
+          "nflTeam": "Den",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 156,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Daniel Jones",
+          "nflTeam": "NYG",
+          "position": "QB",
+          "amount": 1
+        },
+        {
+          "number": 157,
+          "teamId": 9,
+          "manager": "samir gandhi",
+          "teamName": "Old Money",
+          "player": "Deon Jackson",
+          "nflTeam": "NYG",
+          "position": "RB",
+          "amount": 1
+        },
+        {
+          "number": 158,
+          "teamId": 5,
+          "manager": "George Rakkar",
+          "teamName": "8================ D",
+          "player": "Dalton Schultz",
+          "nflTeam": "Hou",
+          "position": "TE",
+          "amount": 1
+        },
+        {
+          "number": 159,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Browns D/ST",
+          "nflTeam": "Cle",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 160,
+          "teamId": 19,
+          "manager": "Thomas Atwater",
+          "teamName": "Garbage Time",
+          "player": "John Metchie III",
+          "nflTeam": "Hou",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 161,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Adam Thielen",
+          "nflTeam": "Car",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 162,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Rashaad Penny",
+          "nflTeam": "Phi",
+          "position": "RB",
+          "amount": 2
+        },
+        {
+          "number": 163,
+          "teamId": 14,
+          "manager": "David Richards",
+          "teamName": "Rode and Dode",
+          "player": "Matt Gay",
+          "nflTeam": "Ind",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 164,
+          "teamId": 6,
+          "manager": "sangfroid bang",
+          "teamName": "Uncle C-ass",
+          "player": "Greg Zuerlein",
+          "nflTeam": "NYJ",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 165,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Eagles D/ST",
+          "nflTeam": "Phi",
+          "position": "D/ST",
+          "amount": 1
+        },
+        {
+          "number": 166,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Isaiah Hodgins",
+          "nflTeam": "NYG",
+          "position": "WR",
+          "amount": 1
+        },
+        {
+          "number": 167,
+          "teamId": 15,
+          "manager": "Ian Bates",
+          "teamName": "Ai Mike 🤖 From Orlando 🍺🤣",
+          "player": "Chris Boswell",
+          "nflTeam": "Pit",
+          "position": "K",
+          "amount": 1
+        },
+        {
+          "number": 168,
+          "teamId": 17,
+          "manager": "Scott McKnight",
+          "teamName": "Trophy Mahome Save me",
+          "player": "Ezekiel Elliott",
+          "nflTeam": "NE",
+          "position": "RB",
+          "amount": 1
+        }
+      ]
+    }
+  ]
+}

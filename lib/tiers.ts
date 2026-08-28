@@ -9,12 +9,12 @@ export function assignTiers(players: Omit<Player, "positionRank" | "tier">[]): P
   for (const position of positions) {
     const group = players
       .filter((player) => player.position === position)
-      .sort((a, b) => b.espnValue - a.espnValue || b.projectedPoints - a.projectedPoints || a.overallRank - b.overallRank);
+      .sort((a, b) => b.espnKeeperValue - a.espnKeeperValue || b.projectedPoints - a.projectedPoints || a.overallRank - b.overallRank);
     let tier = 1;
     let inTier = 0;
     group.forEach((player, index) => {
       const prior = group[index - 1];
-      const valueCliff = prior && inTier >= TIER_FLOOR[position] && prior.espnValue - player.espnValue >= 4;
+      const valueCliff = prior && inTier >= TIER_FLOOR[position] && prior.espnKeeperValue - player.espnKeeperValue >= 4;
       if (inTier >= TIER_CAP[position] || valueCliff) {
         tier += 1;
         inTier = 0;
@@ -23,5 +23,5 @@ export function assignTiers(players: Omit<Player, "positionRank" | "tier">[]): P
       inTier += 1;
     });
   }
-  return output.sort((a, b) => a.overallRank - b.overallRank || b.espnValue - a.espnValue);
+  return output.sort((a, b) => a.overallRank - b.overallRank || b.espnKeeperValue - a.espnKeeperValue);
 }

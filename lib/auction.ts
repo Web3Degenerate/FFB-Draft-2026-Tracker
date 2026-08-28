@@ -22,7 +22,8 @@ export function teamSnapshots(state: DraftState): TeamSnapshot[] {
     roster.forEach((player) => { counts[player.position] += 1; });
     const rosterCount = roster.length;
     const spotsLeft = Math.max(0, state.config.rosterSize - rosterCount);
-    const budgetLeft = state.config.budget - spent;
+    const startingBudget = state.relay.draftTeamBudgets?.[String(team.id)] ?? state.config.budget;
+    const budgetLeft = startingBudget - spent;
     const maxBid = spotsLeft > 0 ? Math.max(0, budgetLeft - Math.max(0, spotsLeft - 1)) : 0;
     const needs = (Object.keys(STARTER_TARGETS) as Position[]).filter((position) => counts[position] < STARTER_TARGETS[position]);
     const skillStarters = Math.min(counts.RB, 2) + Math.min(counts.WR, 2) + Math.min(counts.TE, 1);
@@ -31,7 +32,7 @@ export function teamSnapshots(state: DraftState): TeamSnapshot[] {
         if (!needs.includes(position)) needs.push(position);
       });
     }
-    return { ...team, spent, budgetLeft, rosterCount, keeperCount: keepers.length, spotsLeft, maxBid, counts, needs };
+    return { ...team, startingBudget, spent, budgetLeft, rosterCount, keeperCount: keepers.length, spotsLeft, maxBid, counts, needs };
   });
 }
 
@@ -45,10 +46,10 @@ export function availablePlayers(state: DraftState, players: Player[]): Player[]
 export function calculateInflation(state: DraftState, players: Player[]): number {
   const teams = teamSnapshots(state);
   const premiumCash = teams.reduce((sum, team) => sum + Math.max(0, team.budgetLeft - team.spotsLeft), 0);
-  const premiumValue = availablePlayers(state, players).reduce((sum, player) => sum + Math.max(0, player.espnValue - 1), 0);
+  const premiumValue = availablePlayers(state, players).reduce((sum, player) => sum + Math.max(0, player.espnKeeperValue - 1), 0);
   if (premiumValue <= 0) return 1;
-  const initialPremiumCash = state.teams.length * Math.max(0, state.config.budget - state.config.rosterSize);
-  const initialPremiumValue = players.reduce((sum, player) => sum + Math.max(0, player.espnValue - 1), 0);
+  const initialPremiumCash = teams.reduce((sum, team) => sum + Math.max(0, team.startingBudget - state.config.rosterSize), 0);
+  const initialPremiumValue = players.reduce((sum, player) => sum + Math.max(0, player.espnKeeperValue - 1), 0);
   const initialRatio = initialPremiumValue > 0 ? initialPremiumCash / initialPremiumValue : 1;
   return (premiumCash / premiumValue) / initialRatio;
 }
@@ -56,7 +57,7 @@ export function calculateInflation(state: DraftState, players: Player[]): number
 export function calculateMarketMultiplier(state: DraftState, players: Player[]): number {
   const teams = teamSnapshots(state);
   const premiumCash = teams.reduce((sum, team) => sum + Math.max(0, team.budgetLeft - team.spotsLeft), 0);
-  const premiumValue = availablePlayers(state, players).reduce((sum, player) => sum + Math.max(0, player.espnValue - 1), 0);
+  const premiumValue = availablePlayers(state, players).reduce((sum, player) => sum + Math.max(0, player.espnKeeperValue - 1), 0);
   return premiumValue > 0 ? premiumCash / premiumValue : 1;
 }
 
@@ -69,7 +70,7 @@ export function tierSnapshots(state: DraftState, players: Player[]): TierSnapsho
   });
   return [...groups.entries()].map(([, group]) => {
     const first = group[0];
-    const benchmark = Math.max(1, Math.round(group.reduce((sum, p) => sum + p.espnValue, 0) / group.length));
+    const benchmark = Math.max(1, Math.round(group.reduce((sum, p) => sum + p.espnKeeperValue, 0) / group.length));
     const teamsNeeding = teams.filter((team) => team.needs.includes(first.position)).length;
     const teamsCanAfford = teams.filter((team) => team.maxBid >= benchmark).length;
     const effectiveDemand = Math.min(teamsNeeding, teamsCanAfford);

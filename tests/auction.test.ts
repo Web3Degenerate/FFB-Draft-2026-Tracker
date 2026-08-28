@@ -3,14 +3,14 @@ import { assertValidKeeper, assertValidKeeperPrice, assertValidSale, availablePl
 import type { DraftState, Player } from "@/lib/types";
 
 const players: Player[] = [
-  { id: 1, name: "Alpha Back", position: "RB", nflTeam: "HOU", projectedPoints: 260, espnValue: 55, overallRank: 1, positionRank: 1, tier: "RB1" },
-  { id: 2, name: "Beta Back", position: "RB", nflTeam: "KC", projectedPoints: 240, espnValue: 48, overallRank: 2, positionRank: 2, tier: "RB1" },
+  { id: 1, name: "Alpha Back", position: "RB", nflTeam: "HOU", projectedPoints: 260, espnKeeperValue: 55, overallRank: 1, positionRank: 1, tier: "RB1" },
+  { id: 2, name: "Beta Back", position: "RB", nflTeam: "KC", projectedPoints: 240, espnKeeperValue: 48, overallRank: 2, positionRank: 2, tier: "RB1" },
 ];
 
 const state: DraftState = {
   config: { leagueId: 1, seasonId: 2026, myTeamId: 1, budget: 200, rosterSize: 14, leagueName: "Test" },
   teams: [{ id: 1, name: "One", abbreviation: "ONE" }, { id: 2, name: "Two", abbreviation: "TWO" }],
-  sales: [], keepers: [], nomination: null, tierOverrides: {},
+  sales: [], keepers: [], nomination: null, tierOverrides: {}, tierOrders: {}, watchList: [], watchListOrders: {},
   relay: { connected: false, lastSeenAt: null, message: "Manual" }, updatedAt: "2026-01-01T00:00:00Z",
 };
 
@@ -35,6 +35,17 @@ describe("auction math", () => {
       })),
     };
     expect(teamSnapshots(ebby)[0]).toMatchObject({ budgetLeft: 69, spotsLeft: 10, maxBid: 60 });
+  });
+
+  it("uses ESPN's individualized draft budget for traded auction dollars", () => {
+    const traded = {
+      ...state,
+      relay: { ...state.relay, draftTeamBudgets: { "1": 215, "2": 185 } },
+    };
+    expect(teamSnapshots(traded)).toMatchObject([
+      { id: 1, startingBudget: 215, budgetLeft: 215, maxBid: 202 },
+      { id: 2, startingBudget: 185, budgetLeft: 185, maxBid: 172 },
+    ]);
   });
 
   it("rejects a sale above the team's legal max bid", () => {
@@ -83,6 +94,9 @@ describe("auction math", () => {
       keepers: [{ id: "keeper-1", playerId: 1, playerName: "Alpha Back", position: "RB", teamId: 1, amount: 25, createdAt: "2026-01-01T00:00:00Z" }],
       sales: [{ id: "sale-1", playerId: 2, playerName: "Beta Back", position: "RB", teamId: 2, amount: 30, source: "manual", createdAt: "2026-01-01T00:00:00Z" }],
       tierOverrides: { "1": "RB2" },
+      tierOrders: { RB2: [1] },
+      watchList: [1, 2],
+      benchTargets: [2],
       nomination: { playerId: 2, source: "manual" },
     };
     clearAuctionResults(draft);
@@ -90,5 +104,9 @@ describe("auction math", () => {
     expect(draft.nomination).toBeNull();
     expect(draft.keepers).toHaveLength(1);
     expect(draft.tierOverrides).toEqual({ "1": "RB2" });
+    expect(draft.tierOrders).toEqual({ RB2: [1] });
+    expect(draft.watchList).toEqual([1, 2]);
+    expect(draft.benchTargets).toEqual([2]);
+    expect(draft.relay.draftTeamBudgets).toBeUndefined();
   });
 });

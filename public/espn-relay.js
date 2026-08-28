@@ -3,7 +3,7 @@
   const config = document.getElementById("codex-ffb-relay-config");
   const base = INJECTED_BASE.startsWith("http") ? INJECTED_BASE : (config?.getAttribute("content") || "http://localhost:3000");
   const ENDPOINT = `${base}/api/relay`;
-  const VERSION = "0.4.0";
+  const VERSION = "0.4.1";
   const existingMarker = document.getElementById("codex-ffb-relay-running");
   if (existingMarker?.getAttribute("content") === VERSION) {
     console.info("Codex Auction Relay is already running.");
@@ -49,6 +49,26 @@
     });
   }
 
+  function readLeadingBid() {
+    return [...document.querySelectorAll('[data-testid="auction-pick"]')].flatMap((card) => {
+      const bid = card.querySelector(".bid-amount");
+      if (!bid || bid.style?.opacity === "0" || bid.hidden || bid.getAttribute("aria-hidden") === "true") return [];
+      const amount = number(bid.textContent);
+      const numberedName = clean(card.querySelector(".team-name")?.textContent);
+      const teamName = clean(card.getAttribute("title") || numberedName.replace(/^\d+\.\s*/, ""));
+      return amount > 0 && teamName ? [{ teamName, amount }] : [];
+    })[0] ?? null;
+  }
+
+  function readDraftTeams() {
+    return [...document.querySelectorAll('[data-testid="auction-pick"]')].flatMap((card, index) => {
+      const numberedName = clean(card.querySelector(".team-name")?.textContent);
+      const slot = Number(numberedName.match(/^(\d+)\./)?.[1]) || index + 1;
+      const teamName = clean(card.getAttribute("title") || numberedName.replace(/^\d+\.\s*/, ""));
+      return teamName ? [{ slot, teamName }] : [];
+    }).sort((a, b) => a.slot - b.slot);
+  }
+
   function readNomination() {
     const offerNode = [...document.querySelectorAll("body *")]
       .find((node) => node.children.length === 0 && /^Current offer:\s*\$\d+$/i.test(clean(node.textContent)));
@@ -60,7 +80,8 @@
       if (!name || !pos) continue;
       const image = card.querySelector('img[src*="full/"]');
       const idMatch = image?.getAttribute("src")?.match(/full\/(\d+)\.png/);
-      return { playerId: idMatch ? Number(idMatch[1]) : undefined, playerName: clean(name.textContent), askingBid: number(offerNode.textContent) };
+      const leadingBid = readLeadingBid();
+      return { playerId: idMatch ? Number(idMatch[1]) : undefined, playerName: clean(name.textContent), askingBid: leadingBid?.amount ?? number(offerNode.textContent), leadingTeamName: leadingBid?.teamName };
     }
     return null;
   }
@@ -80,6 +101,7 @@
       },
       nomination,
       sales,
+      draftTeams: readDraftTeams(),
     };
     send(payload);
   };

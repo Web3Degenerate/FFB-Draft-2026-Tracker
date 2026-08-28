@@ -43,7 +43,8 @@ async function fetchEspnLeague(league) {
     abbreviation: team.abbrev || `T${team.id}`,
   }));
   if (!teams.length) throw new Error("ESPN returned no league teams.");
-  return { leagueName: data.settings?.name, teams };
+  const draftTeamOrder = (data.settings?.draftSettings?.pickOrder || []).map(Number).filter((teamId) => Number.isInteger(teamId) && teamId > 0);
+  return { leagueName: data.settings?.name, teams, draftTeamOrder: [...new Set(draftTeamOrder)] };
 }
 
 async function setBadge(tabId, state) {

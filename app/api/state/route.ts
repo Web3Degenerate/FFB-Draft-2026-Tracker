@@ -34,9 +34,14 @@ async function syncRestPicks(players: Player[]) {
 export async function GET(request: NextRequest) {
   try {
     let state = await getState();
-    if (request.nextUrl.searchParams.get("stateOnly") === "1") return NextResponse.json({ state });
+    if (request.nextUrl.searchParams.get("stateOnly") === "1") {
+      const players = request.nextUrl.searchParams.get("includePlayers") === "1" ? await getPlayers() : undefined;
+      return NextResponse.json(players ? { state, players } : { state });
+    }
     const players = await getPlayers();
-    state = await syncRestPicks(players);
+    if (!state.relay.draftLeagueId || state.relay.draftLeagueId === state.config.leagueId) {
+      state = await syncRestPicks(players);
+    }
     return NextResponse.json({ state, players });
   } catch (error) {
     return NextResponse.json({ error: error instanceof Error ? error.message : "Unable to load draft room" }, { status: 500 });

@@ -7,7 +7,10 @@ export type Player = {
   position: Position;
   nflTeam: string;
   projectedPoints: number;
-  espnValue: number;
+  projectionSource?: "espn" | "fantasy-index";
+  fantasyIndexRank?: number;
+  espnKeeperValue: number;
+  espnAuctionValue?: number;
   overallRank: number;
   positionRank: number;
   tier: string;
@@ -47,6 +50,7 @@ export type Nomination = {
   playerId: number;
   askingBid?: number;
   nominatingTeamId?: number;
+  leadingTeamId?: number;
   source: "manual" | "espn-relay";
 } | null;
 
@@ -64,7 +68,20 @@ export type RelayStatus = {
   lastSeenAt: string | null;
   message: string;
   source?: "extension" | "pasted" | null;
+  draftLeagueId?: number | null;
+  draftTeamOrder?: number[];
+  draftTeamAliases?: Record<string, number>;
+  draftTeamNames?: Record<string, string>;
+  draftTeamBudgets?: Record<string, number>;
 };
+
+export type BudgetPlannerEntry = {
+  note: string;
+  amount: number;
+  marketLocked?: boolean;
+};
+
+export type BudgetPlanner = Partial<Record<string, BudgetPlannerEntry>>;
 
 export type DraftState = {
   config: DraftConfig;
@@ -73,11 +90,17 @@ export type DraftState = {
   keepers: Keeper[];
   nomination: Nomination;
   tierOverrides: Record<string, string>;
+  tierOrders: Record<string, number[]>;
+  watchList: number[];
+  watchListOrders: Partial<Record<Position, number[]>>;
+  benchTargets?: number[];
+  budgetPlanner?: BudgetPlanner;
   relay: RelayStatus;
   updatedAt: string;
 };
 
 export type TeamSnapshot = LeagueTeam & {
+  startingBudget: number;
   spent: number;
   budgetLeft: number;
   rosterCount: number;

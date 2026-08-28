@@ -22,3 +22,31 @@ export function carryTeamAliases(current: LeagueTeam[], incoming: LeagueTeam[]):
   const aliasById = new Map(current.map((team) => [team.id, team.alias ?? ""]));
   return incoming.map((team) => ({ ...team, alias: aliasById.get(team.id) ?? "" }));
 }
+
+function normalizeTeamName(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+export function mapDraftTeamsById(configuredTeams: LeagueTeam[], draftTeams: LeagueTeam[]) {
+  const configuredById = new Map(configuredTeams.map((team) => [team.id, team]));
+  const compatibleTeams = draftTeams.flatMap((incoming) => {
+    const configured = configuredById.get(incoming.id);
+    return configured ? [{ incoming, configured }] : [];
+  });
+
+  return {
+    aliases: Object.fromEntries(compatibleTeams.map(({ incoming, configured }) => [normalizeTeamName(incoming.name), configured.id])),
+    names: Object.fromEntries(compatibleTeams.map(({ incoming, configured }) => [String(configured.id), incoming.name])),
+    changed: compatibleTeams
+      .filter(({ incoming, configured }) => incoming.name !== configured.name)
+      .map(({ incoming, configured }) => ({ id: configured.id, from: configured.name, to: incoming.name })),
+  };
+}
+
+export function validateDraftTeamOrder(value: unknown, teams: LeagueTeam[]): number[] {
+  if (!Array.isArray(value)) return [];
+  const order = value.map(Number);
+  const configuredIds = new Set(teams.map((team) => team.id));
+  if (order.length !== configuredIds.size || new Set(order).size !== order.length) return [];
+  return order.every((teamId) => Number.isInteger(teamId) && configuredIds.has(teamId)) ? order : [];
+}

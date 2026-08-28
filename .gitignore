@@ -1,7 +1,18 @@
 .next/
 node_modules/
+
+# Top-level data files are runtime state, regenerable caches, socket captures,
+# or licensed subscriber exports. Keep them local in this public repository.
 data/*.json
 data/*.ndjson
-!.gitkeep
+data/*.zip
+
+# Curated historical source snapshots are reviewed and intentionally tracked.
+!data/raw/
+!data/raw/**
+!data/.gitkeep
+
 .DS_Store
 *.log
+*.tsbuildinfo
+~$*.xlsx

@@ -1,9 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { assertValidKeeper, assertValidKeeperPrice, assertValidSale, clearAuctionResults } from "@/lib/auction";
+import { parseBudgetPlanner } from "@/lib/budget-planner";
 import { getPlayers, mutateState } from "@/lib/store";
-import type { Keeper, Sale } from "@/lib/types";
+import { isCompleteTierOrder } from "@/lib/tier-order";
+import { isCompleteWatchListOrder } from "@/lib/watch-list-order";
+import type { BudgetPlanner, Keeper, Sale } from "@/lib/types";
+import type { Position } from "@/lib/types";
 
 export const runtime = "nodejs";
+const VALID_POSITIONS = new Set<Position>(["QB", "RB", "WR", "TE", "K", "DST"]);
 
 type Action =
   | { type: "nominate"; playerId: number }
@@ -11,10 +16,16 @@ type Action =
   | { type: "sell"; playerId: number; teamId: number; amount: number }
   | { type: "undo" }
   | { type: "set-tier"; playerId: number; tier: string }
+  | { type: "set-tier-order"; tier: string; playerIds: number[] }
+  | { type: "set-watch-list-player"; playerId: number; included: boolean }
+  | { type: "set-watch-list-order"; position: Position; playerIds: number[] }
+  | { type: "set-bench-target-player"; playerId: number; included: boolean }
+  | { type: "set-budget-planner"; planner: BudgetPlanner }
   | { type: "add-keeper"; playerId: number; teamId: number; amount: number }
   | { type: "update-keeper-price"; keeperId: string; amount: number }
   | { type: "remove-keeper"; keeperId: string }
   | { type: "set-team-alias"; teamId: number; alias: string }
+  | { type: "set-relay-league"; leagueId: number | null }
   | { type: "reset" };
 
 export async function POST(request: NextRequest) {
@@ -48,6 +59,33 @@ export async function POST(request: NextRequest) {
         if (!tier) delete draft.tierOverrides[String(action.playerId)];
         else if (!tier.startsWith(player.position)) throw new Error(`${player.name}'s tier must begin with ${player.position}.`);
         else draft.tierOverrides[String(action.playerId)] = tier;
+      } else if (action.type === "set-tier-order") {
+        const tier = String(action.tier ?? "").trim().toUpperCase();
+        const playerIds = Array.isArray(action.playerIds) ? action.playerIds.map(Number) : [];
+        if (!tier || !playerIds.every(Number.isInteger) || !isCompleteTierOrder(draft, players, tier, playerIds)) throw new Error("Tier order must include every player in that tier exactly once.");
+        draft.tierOrders[tier] = playerIds;
+      } else if (action.type === "set-watch-list-player") {
+        const player = players.find((item) => item.id === action.playerId);
+        if (!player) throw new Error("Player not found.");
+        const watchList = new Set(draft.watchList ?? []);
+        if (action.included) watchList.add(player.id);
+        else watchList.delete(player.id);
+        draft.watchList = [...watchList];
+        if (!action.included) Object.keys(draft.watchListOrders).forEach((position) => { draft.watchListOrders[position as Position] = draft.watchListOrders[position as Position]?.filter((playerId) => playerId !== player.id); });
+      } else if (action.type === "set-watch-list-order") {
+        const position = String(action.position ?? "").toUpperCase() as Position;
+        const playerIds = Array.isArray(action.playerIds) ? action.playerIds.map(Number) : [];
+        if (!VALID_POSITIONS.has(position) || !playerIds.every(Number.isInteger) || !isCompleteWatchListOrder(draft, players, position, playerIds)) throw new Error("Watch List order must include every watched player in that position exactly once.");
+        draft.watchListOrders[position] = playerIds;
+      } else if (action.type === "set-bench-target-player") {
+        const player = players.find((item) => item.id === action.playerId);
+        if (!player) throw new Error("Player not found.");
+        const benchTargets = new Set(draft.benchTargets ?? []);
+        if (action.included) benchTargets.add(player.id);
+        else benchTargets.delete(player.id);
+        draft.benchTargets = [...benchTargets];
+      } else if (action.type === "set-budget-planner") {
+        draft.budgetPlanner = parseBudgetPlanner(action.planner);
       } else if (action.type === "add-keeper") {
         const player = players.find((item) => item.id === action.playerId);
         if (!player) throw new Error("Player not found.");
@@ -75,6 +113,18 @@ export async function POST(request: NextRequest) {
         const alias = String(action.alias ?? "").trim();
         if (alias.length > 24) throw new Error("Team nickname must be 24 characters or fewer.");
         team.alias = alias;
+      } else if (action.type === "set-relay-league") {
+        const leagueId = action.leagueId === null ? null : Number(action.leagueId);
+        if (leagueId !== null && (!Number.isSafeInteger(leagueId) || leagueId <= 0)) throw new Error("Enter a valid ESPN league ID.");
+        draft.relay.draftLeagueId = leagueId;
+        draft.relay.connected = false;
+        draft.relay.lastSeenAt = null;
+        draft.relay.source = null;
+        draft.relay.draftTeamOrder = [];
+        draft.relay.draftTeamAliases = {};
+        draft.relay.draftTeamNames = {};
+        draft.relay.draftTeamBudgets = {};
+        draft.relay.message = leagueId ? `Waiting for ESPN draft league ${leagueId}` : "Manual mode ready";
       } else if (action.type === "reset") {
         clearAuctionResults(draft);
       }
